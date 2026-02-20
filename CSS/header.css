@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: darkgray;
+}
+/*===========================================*/
+.zero_line {
+    display: inline-block;
+}
+/* Boton idioma */
+.idioma {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+/* Desplegables (se programa después con js)*/
+.dropdown_language {
+    display: none; /* oculto hasta que se haga clic */
+    position: absolute;
+    top: 100%; /* justo debajo del botón */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 120px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Links dentro del desplegable */
+.dropdown_language a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+/*===========================================*/
+.first_line {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr auto 2fr;
+    padding: 0 20px;
+    gap: 30px;
+}
+/* Titulo de la página*/
+.first_line h1 {
+    margin: 0;
+    font-size: 65px;
+}
+
+/* centro de la linea uno (buscador y filtro)*/
+.center_group {
+    justify-self: center;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: left;
+}
+
+.filter-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Boton usuario */
+.btn_user {
+    justify-self: end;
+    width: 80px;              /* mismo ancho */
+    height: 80px;             /* mismo alto */
+    border-radius: 50%;       /* lo hace circular */
+    overflow: hidden;         /* recorta la imagen al círculo */
+    border: none;             /* quita borde por defecto */
+    padding: 0;               /* quita padding interno */
+    cursor: pointer;
+    background: white;         /* quita fondo gris del botón */
+    margin-right: 50px;
+}
+
+.usuario {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*===========================================*/
+.second_line ul {
+    display: flex;
+    list-style: disc;
+    justify-content: center;
+    gap: 25px;
+    margin: 10px;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.second_line ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}

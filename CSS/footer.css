@@ -1,0 +1,122 @@
+/* Reset básico para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer principal */
+footer {
+    background: gray;
+    color: white;
+    padding: 50px 0 30px;
+    margin-top: auto;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+}
+
+.footer_top {
+    max-width: 1200px;
+    margin: 0 auto -35px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.social_icons{
+    display: flex;
+    gap: 20px;
+}
+
+.social_icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Contenedor principal del footer */
+.first_line_fo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilo para el logo/título */
+.first_line_fo h1 {
+    font-size: 55px;
+    font-weight: 700;
+    background: whitesmoke;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 50px;
+}
+
+/* Contenedor de las secciones de navegación */
+.nav-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+/* Estilo común para todas las secciones */
+.seccion1, .seccion2 {
+    min-width: 160px;
+}
+
+/* Títulos de las secciones */
+.seccion1 h3, .seccion2 h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Línea decorativa debajo de los títulos */
+.seccion1 h3::after, .seccion2 h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+}
+
+/* Efecto hover para la línea decorativa */
+.seccion1:hover h3::after, .seccion2:hover h3::after {
+    width: 80px;
+}
+
+/* Estilos para la navegación */
+.seccion1 nav ul, .seccion2 nav ul {
+    list-style: none;
+}
+
+.seccion1 nav ul li, .seccion2 nav ul li {
+    margin-bottom: 12px;
+}
+
+/* Estilos para los enlaces */
+.seccion1 nav ul li a, .seccion2 nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
