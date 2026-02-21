@@ -32,6 +32,10 @@ main h1 {
     margin-top: 15px;
 }
 
+.boton input {
+    cursor: pointer;
+}
+
 .contenedor input {
     margin-bottom: 30px;
     padding: 5px;
