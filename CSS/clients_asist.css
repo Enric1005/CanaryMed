@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+label {
+    display: block;
+}
+
+main h1 {
+    text-align: center;
+}
+
+.contenedor {
+    width: 500px;
+    background-color: lightgray;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 40px;
+    height: 420px;
+    box-sizing: border-box;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.contenedor input {
+    width: 25%;
+    height: 30px;
+    margin-bottom: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+}
