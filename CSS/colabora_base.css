@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+.text-section {
+    background-color: #d3d3d3;
+    padding: 60px 80px;
+}
+
+.title-wrapper {
+    display: flex;
+    text-align: left;
+    margin-bottom: 10px;
+    justify-self: center;
+
+}
+
+.text-section h1 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+
+.title-line {
+    display: block;
+    border: none;
+    height: 2px;
+    background-color: #aaa;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+}
+
+.text-section p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
