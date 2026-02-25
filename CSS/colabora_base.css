@@ -3,20 +3,25 @@ body {
 }
 
 .text-section {
-    background-color: #d3d3d3;
     padding: 60px 80px;
 }
 
-.title-wrapper {
+.text-header {
     display: flex;
+<<<<<<< HEAD
     align-items: center;      /* centra verticalmente */
     justify-content: space-between;  /* separa título y botón */
     gap: 20px;
+=======
+    justify-content: space-between;
+    align-items: center;
+>>>>>>> 4ea1af39509e0d1d3fbc985d03ee8a0d80c688dc
 }
 
 .title-wrapper h1 {
     color: red;
     font-size: 48px;
+<<<<<<< HEAD
     margin: 0;
     display: inline-block;
 }
@@ -27,23 +32,28 @@ body {
     height: 2px;
     background-color: #aaa;
     width: 100%;
+=======
+>>>>>>> 4ea1af39509e0d1d3fbc985d03ee8a0d80c688dc
     margin: 0;
-    padding: 0;
 }
-
 
 .section-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #333;
-    color: white;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    height: 2px;
+    background-color: #aaa;
+    width: 300px;
 }
 
 .text-section p {
     max-width: 700px;
     font-size: 18px;
     line-height: 1.6;
-    margin-top: 20px;
 }
