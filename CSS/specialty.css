@@ -1,16 +1,9 @@
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 main {
     display: flex;
-    gap: 200px;
     width: 100%;
     max-width: 1400px;
+    margin-left: 30px;
+
 }
 
 .specialty-section {
@@ -20,6 +13,7 @@ main {
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
+    margin: 20px;
 }
 
 .specialty-content {
