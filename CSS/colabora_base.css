@@ -8,12 +8,32 @@ body {
 
 .text-header {
     display: flex;
+<<<<<<< HEAD
+    align-items: center;      /* centra verticalmente */
+    justify-content: space-between;  /* separa título y botón */
+    gap: 20px;
+=======
     justify-content: space-between;
     align-items: center;
+>>>>>>> 4ea1af39509e0d1d3fbc985d03ee8a0d80c688dc
 }
 
-.text-section h1 {
+.title-wrapper h1 {
+    color: red;
     font-size: 48px;
+<<<<<<< HEAD
+    margin: 0;
+    display: inline-block;
+}
+
+.title-line {
+    display: block;
+    border: none;
+    height: 2px;
+    background-color: #aaa;
+    width: 100%;
+=======
+>>>>>>> 4ea1af39509e0d1d3fbc985d03ee8a0d80c688dc
     margin: 0;
 }
 
