@@ -9,15 +9,16 @@ body {
 
 .title-wrapper {
     display: flex;
-    text-align: left;
-    margin-bottom: 10px;
-    justify-self: center;
-
+    align-items: center;      /* centra verticalmente */
+    justify-content: space-between;  /* separa título y botón */
+    gap: 20px;
 }
 
-.text-section h1 {
+.title-wrapper h1 {
+    color: red;
     font-size: 48px;
-    margin: 0 0 10px 0;
+    margin: 0;
+    display: inline-block;
 }
 
 .title-line {
