@@ -1,21 +1,15 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: darkgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 50px auto;
-}
+
 
 .formulario {
-    width: 400px;
+    width: 20%;
     background-color: lightgray;
     border: 3px solid black;
     border-radius: 20px;
     padding: 20px;
-    height: 620px;
+    height: 100%;
     box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .formulario h1 {
