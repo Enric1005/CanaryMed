@@ -1,0 +1,34 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: lightgray;
+}
+
+#main_header {
+    width: 100%;
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* empezamos desde la izquierda */
+}
+
+#new_appointment {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 90%;
+}
+
+.appointments-container {
+    display: flex;
+    flex-direction: column; /* apilar en columna */
+    gap: 20px;
+    background-color: lightgray;
+}
+
+.appointments-container > div {
+    width: 100%;
+}
