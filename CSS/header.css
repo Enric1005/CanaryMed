@@ -22,28 +22,6 @@ header {
     margin-left: 25px;
     margin-top: 10px;
 }
-
-/* Desplegables (se programa después con js)*/
-.dropdown_language {
-    display: none; /* oculto hasta que se haga clic */
-    position: absolute;
-    top: 100%; /* justo debajo del botón */
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    min-width: 120px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 10;
-}
-
-/* Links dentro del desplegable */
-.dropdown_language a {
-    display: block;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #333;
-}
 /*===========================================*/
 .first_line {
     display: grid;
