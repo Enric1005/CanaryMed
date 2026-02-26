@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanaryMed</title>
+
+    <script src="../JS/xlu-include-file.js"></script>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/pending_appointments.css">
+
+</head>
+
+<body>
+<div class="page-container">
+    <header id="main_header" xlu-include-file="../Templates/header.html"></header>
+
+    <!-- Botón entre header y citas -->
+    <div class="button-container">
+        <button id="new_appointment">Nueva cita</button>
+    </div>
+
+    <div class="appointments-container">
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+        <div xlu-include-file="../Templates/pending_appointment.html"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        xLuIncludeFile();
+    });
+</script>
+</body>
+
+</html>
+
