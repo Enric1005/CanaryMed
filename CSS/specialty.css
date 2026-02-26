@@ -2,7 +2,7 @@ main {
     display: flex;
     width: 100%;
     max-width: 1400px;
-    margin-left: 30px;
+    margin: 0 auto;
 
 }
 
