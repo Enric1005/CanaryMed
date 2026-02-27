@@ -9,15 +9,14 @@ main {
 }
 
 .section {
-    width: 600px;
-    height: 250px;
+    width: 100%;
+    min-height: 250px;
     background-color: #cfcfcf;
     border-radius: 40px;
     padding: 25px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .section-header {

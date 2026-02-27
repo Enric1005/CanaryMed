@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanaryMed - Profile</title>
+
+    <script src="../JS/xlu-include-file.js"></script>
+    <link rel="stylesheet" href="../CSS/header.css">
+
+    <link rel="stylesheet" href="../CSS/profile.css">
+    <link rel="stylesheet" href="../CSS/profile_section.css">
+</head>
+<body>
+
+<div id="main_header" xlu-include-file="../Templates/header.html"></div>
+
+<div class="content-wrapper">
+
+    <!-- COLUMNA IZQUIERDA: Perfil -->
+    <div class="profile-left">
+        <div class="section profile-card">
+            <!-- Foto + info -->
+            <div class="profile-top">
+                <img src="https://via.placeholder.com/120" alt="Foto de perfil" class="profile-photo">
+                <div class="profile-info">
+                    <h3>Lorem ipsum</h3>
+                </div>
+            </div>
+
+            <!-- Texto adicional -->
+            <div class="profile-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="divider"></div>
+                <p>Phasellus imperdiet, nulla et dictum interdum, nisi lorem.</p>
+                <div class="divider"></div>
+                <p>Maecenas malesuada, quam in varius tincidunt, justo.</p>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Botones al final -->
+            <div class="profile-buttons">
+                <button type="button">Lorem ipsum</button>
+                <button type="button">Lorem ipsum</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: Secciones -->
+    <div class="profile-right">
+        <div class="profile-sections">
+            <div id="profile_section1" xlu-include-file="../Templates/profile_section.html"></div>
+            <div id="profile_section2" xlu-include-file="../Templates/profile_section.html"></div>
+            <div id="profile_section3" xlu-include-file="../Templates/profile_section.html"></div>
+        </div>
+    </div>
+
+</div>
+<script>
+xLuIncludeFile();
+</script>
+
+</body>
+</html>
