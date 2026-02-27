@@ -10,7 +10,7 @@ body {
 .appointment_block {
     width: 1200px;
     margin: 5px auto;
-    background-color: pink;
+    background-color: lightgray;
     border: 3px solid black;
     border-radius: 5px;
     padding: 10px;
