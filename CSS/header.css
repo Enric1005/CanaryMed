@@ -80,7 +80,7 @@ header {
     list-style: disc;
     justify-content: center;
     gap: 25px;
-    margin: 10px;
+    margin: 0px;
     padding: 0;
     padding-bottom: 10px;
 }
