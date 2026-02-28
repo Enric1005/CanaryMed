@@ -1,0 +1,52 @@
+
+.image {
+    position: relative;
+    width: 100%;
+    min-height: 30vh;
+    border-radius: 1px;
+    border: 3px solid;
+}
+
+.main-image {
+    width: 100%;
+    display: block;
+}
+
+.title {
+    position: relative;
+    z-index: 5;
+    margin: -50px auto 10px auto; /* ajusta según quieras */
+    text-align: left;
+    font-size: 24px;
+    color: black;
+    width: 80%;           /* igual que overlay para alinear */
+    max-width: 600px;
+}
+
+/* Overlay */
+.overlay {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    min-height: 100vh;
+    background-color: lightgray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 40px;
+    border: 3px solid black;
+    margin: 0 auto 100px auto;
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.overlay p {
+    margin: 0;
+    width: 100%;
+    color: black;
+    word-wrap: break-word;
+}
