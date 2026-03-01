@@ -43,7 +43,7 @@ El sistema deberá cumplir las siguientes requisitos:
 11. Permitir comparar centros médicos en función de precio, valoración y especialidades disponibles.
 ## Documentación
 
-En el interior del proyecto se encuentra una carpeta llamada documents, donde se encuentran 3 archivos pdf que contienen lo siguiente:
+En el interior del proyecto se encuentra una carpeta llamada Documents, donde se encuentran 3 archivos pdf que contienen lo siguiente:
 
 El listado de páginas HTML junto con sus respectivos mockups.
 
