@@ -57,14 +57,14 @@ header {
 /* Boton usuario */
 .btn_user {
     justify-self: end;
-    width: 80px;              /* mismo ancho */
-    height: 80px;             /* mismo alto */
-    border-radius: 50%;       /* lo hace circular */
-    overflow: hidden;         /* recorta la imagen al círculo */
-    border: none;             /* quita borde por defecto */
-    padding: 0;               /* quita padding interno */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+    padding: 0;
     cursor: pointer;
-    background: white;         /* quita fondo gris del botón */
+    background: white;
     margin-right: 50px;
 }
 
@@ -80,7 +80,7 @@ header {
     list-style: disc;
     justify-content: center;
     gap: 25px;
-    margin: 0px;
+    margin: 0;
     padding: 0;
     padding-bottom: 10px;
 }

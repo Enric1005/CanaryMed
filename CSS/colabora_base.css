@@ -4,8 +4,8 @@
 
 .text-header {
     display: flex;
-    align-items: center;      /* centra verticalmente */
-    justify-content: space-between;  /* separa título y botón */
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 
 }
