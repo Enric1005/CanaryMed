@@ -46,8 +46,8 @@ footer {
 
 /* Estilo para el logo/título */
 .first_line_fo h1 {
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 70px;
+    font-weight: 1000;
     background: whitesmoke;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -63,7 +63,7 @@ footer {
 
 /* Estilo común para todas las secciones */
 .seccion1, .seccion2 {
-    min-width: 160px;
+    min-width: 200px;
 }
 
 /* Títulos de las secciones */
@@ -100,10 +100,11 @@ footer {
     list-style: none;
 }
 
-.seccion1 nav ul li, .seccion2 nav ul li {
-    margin-bottom: 12px;
+.seccion1 nav ul,
+.seccion2 nav ul {
+    list-style: none;
+    padding-left: 0;
 }
-
 /* Estilos para los enlaces */
 .seccion1 nav ul li a, .seccion2 nav ul li a {
     color: #333333;

@@ -1,28 +1,78 @@
 {
   "centers": [
     {
-      "id": 1,
       "name": "Hospital San José",
       "description": "Centro médico especializado",
       "image": "/Assets/San_jose.jpg"
     },
     {
-      "id": 2,
       "name": "Hospital Vithas",
       "description": "Instalaciones modernas",
       "image": "/Assets/vithas.jpg"
     },
     {
-      "id": 3,
       "name": "Hospital Perpetuo Socorro",
       "description": "Instalaciones modernas",
       "image": "/Assets/Perpetuo_socorro.jpg"
     },
     {
-      "id": 4,
       "name": "Hospital San Roque",
       "description": "Instalaciones modernas",
       "image": "/Assets/San_roque.jpg"
     }
-  ]
+  ],
+  "header": {
+    "logo": "CanaryMed",
+    "languages": [
+      {
+       "code": "es", "name": "Español"
+      },
+      {
+       "code": "en", "name": "Inglés"
+      },
+      {
+       "code": "de", "name": "Alemán"
+      },
+      {
+       "code": "fr", "name": "Francés"
+      }
+    ],
+    "browser": {
+      "text": "Busca Centro/Especialidad",
+      "filter": "Filtro"
+    },
+
+    "nav": [
+      {
+        "text": "Centros",
+        "url": "../Paginas/centers.html"
+      },
+      {
+        "text": "Especialidades",
+        "url": "../Paginas/specialtys.html"
+      },
+      {
+        "text": "Trabaja con nosotros",
+        "url": "../Paginas/work_with_us.html"
+      },
+      {
+        "text": "Sobre nosotros",
+        "url": "../Paginas/about_us.html"
+      }
+    ],
+    "user_icon":"/Assets/Usuario.webp"
+  },
+  "footer": {
+    "logos": [
+      {"icon": "/Assets/insta.png", "url": "https://instagram.com"},
+      {"icon": "/Assets/tw.png", "url": "https://twitter.com"},
+      {"icon": "/Assets/YT.png", "url": "https://youtube.com"}
+    ],
+    "logo": "CanaryMed",
+    "títulos_nav": [
+      {"name": "El Hospital"},
+      {"name": "Nuestros Servicios"},
+      {"name": "Enlaces de interés"}
+    ]
+  }
 }
