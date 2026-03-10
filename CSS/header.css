@@ -37,6 +37,11 @@ header {
     cursor: pointer;
 }
 
+.name_of_company{
+    text-decoration: none;
+    color: black;
+}
+
 /* centro de la linea uno (buscador y filtro)*/
 .center_group {
     justify-self: center;
