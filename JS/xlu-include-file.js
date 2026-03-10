@@ -85,3 +85,52 @@ async function xLuIncludeFile() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', async function() {
+    loadDynamicContent();
+});
+
+async function loadDynamicContent() {
+    let path = window.location.pathname;
+    let routes = {
+        'home_page.html': 'home'
+    };
+
+    let routeKey = Object.keys(routes).find(key => path.includes(key));
+    let slug = routeKey ? routes[routeKey] : 'home';
+
+    try {
+        let response = await fetch("/tsconfig.json");
+        let db = await response.json();
+        let container = document.querySelector('#main');
+        let page = db.data.find(p => p.slug === slug);
+
+        if (page && container) {
+            container.innerHTML = page.content.map(block =>
+                block.children.map(child => child.text).join("")
+            ).join("");
+
+            await processSubTemplates(container);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function processSubTemplates(dynamicContentSection) {
+    let subElements = dynamicContentSection.querySelectorAll('[xlu-include-file]');
+
+    for (let el of subElements) {
+        let url = el.getAttribute('xlu-include-file');
+        let response = await fetch(url);
+        let html = await response.text();
+
+        Object.keys(el.dataset).forEach(key => {
+            let value = el.dataset[key];
+            let regex = new RegExp(`{{${key}}}|__${key.toUpperCase()}__`, "g");
+            html = html.replace(regex, value);
+        });
+
+        el.innerHTML = html;
+        el.removeAttribute('xlu-include-file');
+    }
+}
