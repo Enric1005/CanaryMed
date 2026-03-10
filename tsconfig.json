@@ -1,14 +1,28 @@
 {
   "centers": [
-  {
-  "name": "Hospital San José",
-  "description": "Centro médico especializado",
-  "image": "San_jose.jpg"
-  },
-  {
-    "name": "Hospital Vithas",
-    "description": "Instalaciones modernas",
-    "image": "vithas.jpg"
+    {
+      "id": 1,
+      "name": "Hospital San José",
+      "description": "Centro médico especializado",
+      "image": "/Assets/San_jose.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Hospital Vithas",
+      "description": "Instalaciones modernas",
+      "image": "/Assets/vithas.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Hospital Perpetuo Socorro",
+      "description": "Instalaciones modernas",
+      "image": "/Assets/Perpetuo_socorro.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Hospital San Roque",
+      "description": "Instalaciones modernas",
+      "image": "/Assets/San_roque.jpg"
     }
   ]
 }
