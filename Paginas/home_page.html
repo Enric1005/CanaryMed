@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CanaryMed</title>
+
     <script src="../JS/xlu-include-file.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/home.css">
 
 </head>
+
 <body>
 
 <header id="main_header" xlu-include-file="../Templates/header.html"></header>
 
-<main id="main_home" xlu-include-file="../Paginas/home.html"></main>
+<main>
+    <section id="main_home" xlu-include-file="../Paginas/home.html"></section>
+    <section class="map_section">
+        <div id="map"></div>
+    </section>
+
+</main>
+
+<script src="../JS/map.js"></script>
 
 <footer id="main_footer" xlu-include-file="../Templates/footer.html"></footer>
-
 
 </body>
 </html>

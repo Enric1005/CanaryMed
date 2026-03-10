@@ -136,6 +136,12 @@ async function processSubTemplates(dynamicContentSection) {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
+
     await xLuIncludeFile();
     await loadDynamicContent();
+
+    if (typeof initMap === "function") {
+        initMap();
+    }
+
 });
