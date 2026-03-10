@@ -134,3 +134,8 @@ async function processSubTemplates(dynamicContentSection) {
         el.removeAttribute('xlu-include-file');
     }
 }
+
+document.addEventListener('DOMContentLoaded', async function () {
+    await xLuIncludeFile();
+    await loadDynamicContent();
+});
