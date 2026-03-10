@@ -1,97 +1,14 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "title": "Inicio",
-      "slug": "home",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<section class=\"image_section\">" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<div class=\"image_text\"><h1>Bienvenido a CanaryMed</h1><button class=\"image-btn\">Solicitar Cita</button></div>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "</section>" }] },
-
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<section class=\"main_center\"><h2 class=\"title\">Nuestros Centros Médicos</h2><div class=\"centers\">" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<div class=\"center\"><img src=\"../Assets/San_jose.jpg\" class=\"hospital\"><h3>Hospital San José</h3><p>Centro médico especializado en múltiples áreas clínicas con atención profesional.</p></div>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<div class=\"center\"><img src=\"../Assets/Vithas.webp\" class=\"hospital\"><h3>Hospital Vithas</h3><p>Instalaciones modernas con especialistas en diferentes ramas de la salud.</p></div>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "</div></section>" }] },
-
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<section class=\"main_center\"><div class=\"centers\">" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<div class=\"center\"><img src=\"../Assets/Perpetuo_socorro.jpg\" class=\"hospital\"><h3>Hospital Perpetuo Socorro</h3><p>Centro sanitario con servicios integrales y atención personalizada.</p></div>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<div class=\"center\"><img src=\"../Assets/San_roque.webp\" class=\"hospital\"><h3>Hospital San Roque</h3><p>Especialistas médicos y tecnología avanzada para el cuidado del paciente.</p></div>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "</div></section>" }] },
-
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<section class=\"map_section\"><h2>Encuéntranos</h2><div id=\"map\"></div></section>" }] }
-      ]
-    },
-
-    {
-      "id": 2,
-      "title": "Sobre Nosotros",
-      "slug": "about",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Sobre Nosotros</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>CanaryMed es una plataforma diseñada para facilitar el acceso a servicios médicos digitales.</p>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>Nuestro objetivo es conectar pacientes con centros médicos y especialistas de forma rápida y eficiente.</p>" }] }
-      ]
-    },
-
-    {
-      "id": 3,
-      "title": "Centros Médicos",
-      "slug": "centers",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Centros Médicos</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>Consulta los centros médicos disponibles y su información detallada.</p>" }] }
-      ]
-    },
-
-    {
-      "id": 4,
-      "title": "Especialidades",
-      "slug": "specialties",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Especialidades Médicas</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<ul><li>Cardiología</li><li>Pediatría</li><li>Dermatología</li><li>Neurología</li><li>Traumatología</li></ul>" }] }
-      ]
-    },
-
-    {
-      "id": 5,
-      "title": "Perfil",
-      "slug": "profile",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Perfil de Usuario</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>Consulta tu información personal y gestiona tus citas médicas.</p>" }] }
-      ]
-    },
-
-    {
-      "id": 6,
-      "title": "Citas Pendientes",
-      "slug": "appointments",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Citas Pendientes</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>Aquí podrás ver y gestionar tus próximas citas médicas.</p>" }] }
-      ]
-    },
-
-    {
-      "id": 7,
-      "title": "Asistencia",
-      "slug": "support",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Asistencia al Cliente</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>Contacta con nuestro equipo para resolver cualquier duda o incidencia.</p>" }] }
-      ]
-    },
-
-    {
-      "id": 8,
-      "title": "Trabaja con Nosotros",
-      "slug": "jobs",
-      "content": [
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<h1>Trabaja con Nosotros</h1>" }] },
-        { "type": "paragraph", "children": [{ "type": "text", "text": "<p>Forma parte de nuestro equipo de profesionales sanitarios.</p>" }] }
-      ]
+  "centers": [
+  {
+  "name": "Hospital San José",
+  "description": "Centro médico especializado",
+  "image": "San_jose.jpg"
+  },
+  {
+    "name": "Hospital Vithas",
+    "description": "Instalaciones modernas",
+    "image": "vithas.jpg"
     }
   ]
 }
