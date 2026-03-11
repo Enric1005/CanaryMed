@@ -74,5 +74,9 @@
       {"name": "Nuestros Servicios"},
       {"name": "Enlaces de interés"}
     ]
+  },
+  "Bienvenida_página" :{
+    "Texto_bienvenida":"La medicina canaria a un click",
+    "texto_boton": "Ver centros"
   }
 }
