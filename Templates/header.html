@@ -1,25 +1,22 @@
 <header>
     <!-- header -->
     <div class="zero_line">
-        <select name="desplegable" class="idioma">
-            <option value="" selected disabled>Lorem</option>
-            <option value="es">Lorem</option>
-            <option value="en">Lorem</option>
-            <option value="fr">Lorem</option>
+        <select name="desplegable" class="idioma" id="languages">
+            <option value="" selected disabled>Idioma</option>
         </select>
     </div>
 
     <div class="first_line">
-        <a class="name_of_company" href="../Paginas/home_page.html">
+        <a class="name_of_company" href="../Paginas/home_page.html" id="logo">
             <h1>Lorem ipsum</h1>
         </a>
         <div class="center_group">
-            <input type="text" placeholder="🔎 Lorem ipsum" style="text-align: left;" class="search-bar">
-            <button class="filter-btn">Lorem</button>
+            <input id="searchInput" type="text" placeholder="Lorem ipsum" style="text-align: left;" class="search-bar">
+            <button id="filterButton" class="filter-btn">Lorem</button>
         </div>
         <button class="btn_user">
             <a href="../Paginas/register_edit.html">
-                <img src="image.pnj" alt="X" class="usuario">
+                <img id="userIcon" src="image.png" alt="X" class="usuario">
             </a>
         </button>
     </div>
@@ -27,12 +24,7 @@
 
     <div class="second_line">
         <nav>
-            <ul>
-                <li><a href="../Paginas/centers.html">Lorem</a></li>
-                <li><a href="../Paginas/specialtys.html">Lorem</a></li>
-                <li><a href="../Paginas/work_with_us.html">Lorem</a></li>
-                <li><a href="../Paginas/about_us.html">Lorem</a></li>
-            </ul>
+            <ul id="navMenu"></ul>
         </nav>
     </div>
 </header>

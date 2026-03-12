@@ -3,22 +3,22 @@
     {
       "name": "Hospital San José",
       "description": "Centro médico especializado",
-      "image": "/Assets/San_jose.jpg"
+      "image": "../Assets/San_jose.jpg"
     },
     {
       "name": "Hospital Vithas",
       "description": "Instalaciones modernas",
-      "image": "/Assets/vithas.jpg"
+      "image": "../Assets/vithas.jpg"
     },
     {
       "name": "Hospital Perpetuo Socorro",
       "description": "Instalaciones modernas",
-      "image": "/Assets/Perpetuo_socorro.jpg"
+      "image": "../Assets/Perpetuo_socorro.jpg"
     },
     {
       "name": "Hospital San Roque",
       "description": "Instalaciones modernas",
-      "image": "/Assets/San_roque.jpg"
+      "image": "../Assets/San_roque.jpg"
     }
   ],
   "header": {
@@ -60,23 +60,23 @@
         "url": "../Paginas/about_us.html"
       }
     ],
-    "user_icon":"/Assets/Usuario.webp"
+    "user_icon":"../Assets/Usuario.webp"
   },
   "footer": {
     "logos": [
-      {"icon": "/Assets/insta.png", "url": "https://instagram.com"},
-      {"icon": "/Assets/tw.png", "url": "https://twitter.com"},
-      {"icon": "/Assets/YT.png", "url": "https://youtube.com"}
+      {"icon": "../Assets/insta.png", "url": "https://instagram.com"},
+      {"icon": "../Assets/tw.png", "url": "https://twitter.com"},
+      {"icon": "../Assets/YT.png", "url": "https://youtube.com"}
     ],
     "logo": "CanaryMed",
-    "títulos_nav": [
+    "titulos_nav": [
       {"name": "El Hospital"},
       {"name": "Nuestros Servicios"},
       {"name": "Enlaces de interés"}
     ]
   },
-  "Bienvenida_página" :{
-    "Texto_bienvenida":"La medicina canaria a un click",
+  "Bienvenida_home" :{
+    "texto_bienvenida":"La medicina canaria a un click",
     "texto_boton": "Ver centros"
   }
 }

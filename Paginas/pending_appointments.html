@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CanaryMed</title>
 
-    <script src="../JS/xlu-include-file.js"></script>
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/pending_appointments.css">
     <link rel="stylesheet" href="../CSS/pending_appointment.css">
+    <link rel="stylesheet" href="../CSS/pending_line.css">
 
 </head>
 
@@ -17,9 +17,13 @@
     <header id="main_header" xlu-include-file="../Templates/header.html"></header>
 
     <!-- Botón entre header y citas -->
-    <div class="button-container">
-        <button id="new_appointment">Lorem ipsum</button>
-    </div>
+    <main class="text-section">
+        <div class="text-header">
+            <h1>Lorem ipsum</h1>
+            <button class="section-btn">Lorem ipsum</button>
+        </div>
+        <hr>
+    </main>
 
     <div class="appointments-container">
         <div xlu-include-file="../Templates/pending_appointment.html"></div>
@@ -33,11 +37,7 @@
     </div>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        xLuIncludeFile();
-    });
-</script>
+<script type="module" src="../JS/data.js"></script>
 </body>
 
 </html>
