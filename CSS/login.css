@@ -57,3 +57,10 @@ body {
     margin-top: 20px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .login {
+        width: 100%;
+    }
+
+}

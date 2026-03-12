@@ -48,7 +48,8 @@ header {
 }
 
 .search-bar {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 10px 20px;
     border-radius: 50px;
     text-align: left;
@@ -94,4 +95,31 @@ header {
     text-decoration: none;
     color: black;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+    .first_line {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .first_line h1 {
+        font-size: 40px;
+    }
+
+    .center_group {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .btn_user {
+        justify-self: center;
+        margin-right: 0;
+    }
+
 }

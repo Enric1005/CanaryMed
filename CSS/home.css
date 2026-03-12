@@ -14,7 +14,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
 
 }
 
@@ -81,4 +80,25 @@ body {
 #map {
     height: 500px;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .image_section {
+        height: 50vh;
+    }
+
+    .centers {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main_center {
+        margin: 30px auto;
+    }
+
+    #map {
+        height: 350px;
+    }
+
 }

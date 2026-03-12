@@ -42,5 +42,16 @@ main h1 {
     box-sizing: border-box;
 }
 
-.checkboxs {
+.contenedor textarea {
+    width: 100%;
+    height: 80%;
+
+}
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        width: 300px
+    }
+
 }

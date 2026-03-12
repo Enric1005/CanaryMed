@@ -38,10 +38,30 @@ hr {
     border: none;
     height: 2px;
     background-color: #aaa;
-    width: 300px;
+    width: 70%;
 }
 
 .text-section p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .text-section {
+        padding: 20px;
+    }
+
+    .text-header {
+        justify-content: space-between;
+    }
+
+    .title-wrapper {
+        flex: 1;
+    }
+
+    .section-btn {
+        margin-left: auto;
+    }
+
 }
