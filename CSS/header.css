@@ -44,11 +44,12 @@ header {
 
 /* centro de la linea uno (buscador y filtro)*/
 .center_group {
+    display: flex;
     justify-self: center;
 }
 
 .search-bar {
-    width: 100%;
+    width: 400px;
     max-width: 400px;
     padding: 10px 20px;
     border-radius: 50px;
