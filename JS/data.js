@@ -9,6 +9,7 @@ export async function loadDynamicContent(){
 
     loadHeader();
     loadMain();
+    loadCenters();
     loadFooter();
 }
 
@@ -78,10 +79,8 @@ function loadHeader(){
 }
 
 function loadMain() {
-
     const bienvenida = DATA.Bienvenida_home;
 
-    // TEXTO BIENVENIDA
     const welcomeTitle = document.querySelector(".image_text h1");
     if (welcomeTitle) {
         welcomeTitle.textContent = bienvenida.texto_bienvenida;
@@ -92,13 +91,11 @@ function loadMain() {
         welcomeButton.textContent = bienvenida.texto_boton;
     }
 
-    // TITULO CENTROS
     const mainCenterTitle = document.querySelector(".main_center h2.title");
     if (mainCenterTitle && bienvenida.texto_centros_recomendarios) {
         mainCenterTitle.textContent = bienvenida.texto_centros_recomendarios;
     }
 
-    // CENTROS
     const centersData = DATA.centers;
     const centersHTML = document.querySelectorAll(".center");
 
@@ -120,6 +117,28 @@ function loadMain() {
         });
 
     }
+}
+
+function loadCenters() {
+    const centersData = DATA.centers;
+    const centersHTML = document.querySelectorAll("main .center-section");
+
+    centersHTML.forEach((element, index) => {
+        const center = centersData[index];
+        if (!center) return;
+
+        const img = element.querySelector("img.center");
+        const h1 = element.querySelector("h1");
+        const h3 = element.querySelector("h3");
+        const p = element.querySelector("p");
+        const button = element.querySelector(".center-button");
+
+        if (img) img.src = center.image;
+        if (h1) h1.textContent = center.name;
+        if (h3) h3.textContent = center.name;
+        if (p) p.textContent = center.description;
+        if (button) button.textContent = "Ver más"; // o lo que quieras
+    });
 }
 
 function loadFooter() {
