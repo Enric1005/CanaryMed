@@ -9,6 +9,7 @@ export async function loadDynamicContent(){
 
     loadMain();
     loadHeader();
+    loadFooter();
 }
 
 function loadHeader(){
@@ -80,13 +81,65 @@ function loadMain() {
     });
 }
 
+function loadFooter() {
+    const footer = DATA.footer;
+
+    // ------------------------
+    // Logo del footer
+    // ------------------------
+    const logoH1 = document.querySelector("#footerLogo h1");
+    if (logoH1) {
+        logoH1.textContent = footer.logo;
+    }
+
+    // ------------------------
+    // Secciones del footer
+    // ------------------------
+    const secciones = document.querySelectorAll(".first_line_fo .nav-sections > div");
+    secciones.forEach((seccion, index) => {
+        const title = seccion.querySelector("h3");
+        const ul = seccion.querySelector("ul");
+
+        if (!title || !ul) return;
+
+        if (footer.titulos_nav[index]) title.textContent = footer.titulos_nav[index].name;
+
+        ul.innerHTML = "";
+        for (let i = 1; i <= 3; i++) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = "#";
+            a.textContent = `Enlace ${i}`;
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+    });
+
+    // ------------------------
+    // Iconos sociales
+    // ------------------------
+    const socialContainer = document.querySelector(".footer_top .social_icons");
+    if (socialContainer) {
+        socialContainer.innerHTML = "";
+        footer.logos.forEach(logo => {
+            const a = document.createElement("a");
+            a.href = logo.url;
+            a.target = "_blank";
+
+            const img = document.createElement("img");
+            img.src = logo.icon;
+            img.alt = "Red social";
+
+            a.appendChild(img);
+            socialContainer.appendChild(a);
+        });
+    }
+}
 
 document.addEventListener('DOMContentLoaded', async function () {
-
     if (!window.includesLoaded) {
         window.includesLoaded = true;
         await xLuIncludeFile();
     }
     await loadDynamicContent();
-
 });
