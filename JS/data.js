@@ -4,7 +4,7 @@ let DATA = null;
 
 export async function loadDynamicContent(){
 
-    const response = await fetch("../tsconfig.json");
+    const response = await fetch("/tsconfig.json");
     DATA = await response.json();
 
     loadMain();
