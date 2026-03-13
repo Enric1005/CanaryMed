@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+
+    .text-header h1 {
+        margin-bottom: 5px;
+        font-size: 26px;
+    }
+
+    hr {
+        margin-top: 5px;
+        height: 2px;
+        width: 50%;
+    }
+
+    .center-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .section-btn {
+        margin-top: 4px;
+    }
+
+    .p {
+        font-size: 10px;
+    }
+
+}

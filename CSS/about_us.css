@@ -1,52 +1,74 @@
-
-.image {
-    position: relative;
-    width: 99.70%;
-    min-height: 30vh;
-    border-radius: 1px;
-    border: 3px solid;
-}
-
-.main-image {
+.image-section {
+    background-image: url(../assets/Home.png);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
     width: 100%;
-    display: block;
-}
-
-.title {
-    position: relative;
-    z-index: 5;
-    margin: -50px auto 10px auto; /* ajusta según quieras */
-    text-align: left;
-    font-size: 24px;
-    color: black;
-    width: 80%;           /* igual que overlay para alinear */
-    max-width: 600px;
-}
-
-/* Overlay */
-.overlay {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    min-height: 100vh;
-    background-color: lightgray;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+}
+
+/* título dentro de la imagen */
+.title {
+    color: black;
+    font-size: 40px;
+}
+
+/* caja de texto */
+.overlay {
+    width: 80%;
+    height: 100vh;
+    max-width: 700px;
+    background-color: lightgray;
     border-radius: 40px;
     border: 3px solid black;
-    margin: 0 auto 100px auto;
-    z-index: 10;
-    padding: 20px;
+    padding: 30px;
+    margin: -80px auto 100px auto; /* esto la sube sobre la imagen */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-section {
+    background-image: url(../assets/about_us.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* título dentro de la imagen */
+
+
+/* caja de texto */
+.overlay {
+    width: 60%;
+    height: 100vh;
+    max-width: 700px;
+    background-color: lightgray;
+    border-radius: 40px;
+    border: 3px solid black;
+    padding: 30px;
+    margin: -80px auto 100px auto; /* esto la sube sobre la imagen */
     box-sizing: border-box;
     text-align: center;
 }
 
 .overlay p {
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
     color: black;
-    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 400px;
+
+}
+
+@media (max-width: 768px) {
+    .overlay  p{
+        font-size: 11px;
+    }
+
 }
