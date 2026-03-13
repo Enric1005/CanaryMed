@@ -7,8 +7,8 @@ export async function loadDynamicContent(){
     const response = await fetch("../tsconfig.json");
     DATA = await response.json();
 
+    loadMain();
     loadHeader();
-
 }
 
 function loadHeader(){
@@ -51,10 +51,36 @@ function loadHeader(){
 
         li.appendChild(link);
         navMenu.appendChild(li);
-
     });
-
 }
+function loadMain() {
+    // BIENVENIDA
+    const bienvenida = DATA.Bienvenida_home;
+
+    document.querySelector(".image_text h1").textContent = bienvenida.texto_bienvenida;
+    document.querySelector(".image-btn").textContent = bienvenida.texto_boton;
+
+    // CENTROS RECOMENDADOS (título)
+    const mainCenterTitle = document.querySelector(".main_center h2.title");
+    if (mainCenterTitle) {
+        mainCenterTitle.textContent = bienvenida.texto_centros_recomendarios;
+    }
+
+    // CENTROS
+    const centersData = DATA.centers;
+    const centersHTML = document.querySelectorAll(".center");
+
+    centersData.forEach((center, index) => {
+        const element = centersHTML[index];
+        if (!element) return;
+
+        element.querySelector(".hospital").src = center.image;
+        element.querySelector("h3").textContent = center.name;
+        element.querySelector("p").textContent = center.description;
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded', async function () {
 
     if (!window.includesLoaded) {
