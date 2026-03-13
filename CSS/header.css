@@ -5,7 +5,11 @@ body {
 }
 
 header {
-    background-color: darkgray;
+    background: linear-gradient(
+            to bottom,
+            #2A7DE1 92%,
+            rgba(42, 125, 225, 0)
+    );
 }
 /*===========================================*/
 .zero_line {
@@ -16,7 +20,6 @@ header {
     width: 100px;
     height: 25px;
     cursor: pointer;
-    border: 2px solid black;
     background-color: whitesmoke;
     border-radius: 4px;
     margin-left: 25px;
@@ -39,7 +42,7 @@ header {
 
 .name_of_company{
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
 }
 
 /* centro de la linea uno (buscador y filtro)*/
@@ -53,12 +56,16 @@ header {
     max-width: 400px;
     padding: 10px 20px;
     border-radius: 50px;
+    border: none;
     text-align: left;
 }
 
 .filter-btn {
+    margin-left: 10px;
     padding: 5px 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 15px;
 }
 
 /* Boton usuario */
@@ -94,8 +101,12 @@ header {
 
 .second_line ul li a{
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
     font-weight: 500;
+}
+
+nav li::marker{
+    color: yellow;
 }
 
 @media (max-width: 768px) {
