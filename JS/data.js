@@ -2,108 +2,90 @@ import { xLuIncludeFile } from "./xlu-include-file.js";
 
 let DATA = null;
 
-export async function loadDynamicContent(){
-
+export async function loadDynamicContent() {
     const response = await fetch("../tsconfig.json");
     DATA = await response.json();
 
-    loadMain();
     loadHeader();
+    loadCenters();
     loadFooter();
 }
 
-function loadHeader(){
-
+function loadHeader() {
     const header = DATA.header;
+    const logoH1 = document.querySelector("#logo h1");
+    if (logoH1) logoH1.textContent = header.logo;
 
-    // LOGO
-    document.querySelector("#logo h1").textContent = header.logo;
+    const searchInput = document.getElementById("searchInput");
+    const filterButton = document.getElementById("filterButton");
+    if (searchInput) searchInput.placeholder = header.browser.text;
+    if (filterButton) filterButton.textContent = header.browser.filter;
 
-    // BUSCADOR
-    document.getElementById("searchInput").placeholder = header.browser.text;
-    document.getElementById("filterButton").textContent = header.browser.filter;
+    const userIcon = document.getElementById("userIcon");
+    if (userIcon) userIcon.src = header.user_icon;
 
-    // ICONO USUARIO
-    document.getElementById("userIcon").src = header.user_icon;
-
-    // IDIOMAS
     const select = document.getElementById("languages");
-    console.log(select);
-    header.languages.forEach(lang => {
-
-        const option = document.createElement("option");
-        option.value = lang.code;
-        option.textContent = lang.name;
-
-        select.appendChild(option);
-
-    });
-
-    // NAV
-    const navMenu = document.getElementById("navMenu");
-    navMenu.innerHTML = "";
-    header.nav.forEach(item => {
-
-        const li = document.createElement("li");
-        const link = document.createElement("a");
-
-        link.href = item.url;
-        link.textContent = item.text;
-
-        li.appendChild(link);
-        navMenu.appendChild(li);
-    });
-}
-function loadMain() {
-    // BIENVENIDA
-    const bienvenida = DATA.Bienvenida_home;
-
-    document.querySelector(".image_text h1").textContent = bienvenida.texto_bienvenida;
-    document.querySelector(".image-btn").textContent = bienvenida.texto_boton;
-
-    // CENTROS RECOMENDADOS (título)
-    const mainCenterTitle = document.querySelector(".main_center h2.title");
-    if (mainCenterTitle) {
-        mainCenterTitle.textContent = bienvenida.texto_centros_recomendarios;
+    if (select) {
+        select.innerHTML = "";
+        header.languages.forEach(lang => {
+            const option = document.createElement("option");
+            option.value = lang.code;
+            option.textContent = lang.name;
+            select.appendChild(option);
+        });
     }
 
-    // CENTROS
+    const navMenu = document.getElementById("navMenu");
+    if (navMenu) {
+        navMenu.innerHTML = "";
+        header.nav.forEach(item => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = item.url;
+            a.textContent = item.text;
+            li.appendChild(a);
+            navMenu.appendChild(li);
+        });
+    }
+}
+
+function loadCenters() {
     const centersData = DATA.centers;
-    const centersHTML = document.querySelectorAll(".center");
+    const templates = document.querySelectorAll('main[xlu-include-file="../Templates/center.html"]');
 
-    centersData.forEach((center, index) => {
-        const element = centersHTML[index];
-        if (!element) return;
+    templates.forEach((template, index) => {
+        const center = centersData[index];
+        if (!center) return;
 
-        element.querySelector(".hospital").src = center.image;
-        element.querySelector("h3").textContent = center.name;
-        element.querySelector("p").textContent = center.description;
+        const img = template.querySelector(".center");
+        const h1 = template.querySelector(".center-text h1");
+        const h3 = template.querySelector(".center-text h3");
+        const p = template.querySelector(".center-text p");
+        const btn = template.querySelector(".center-button");
+
+        if (img) img.src = center.image;
+        if (h1) h1.textContent = center.name;
+        if (h3) h3.textContent = center.description;
+        if (btn) btn.textContent = DATA.Bienvenida_home.texto_boton;
+        if (p && !p.textContent.trim()) {
+            p.textContent = "Descripción adicional disponible aquí.";
+        }
     });
 }
 
 function loadFooter() {
     const footer = DATA.footer;
 
-    // ------------------------
-    // Logo del footer
-    // ------------------------
     const logoH1 = document.querySelector("#footerLogo h1");
-    if (logoH1) {
-        logoH1.textContent = footer.logo;
-    }
+    if (logoH1) logoH1.textContent = footer.logo;
 
-    // ------------------------
-    // Secciones del footer
-    // ------------------------
     const secciones = document.querySelectorAll(".first_line_fo .nav-sections > div");
     secciones.forEach((seccion, index) => {
         const title = seccion.querySelector("h3");
         const ul = seccion.querySelector("ul");
-
         if (!title || !ul) return;
 
         if (footer.titulos_nav[index]) title.textContent = footer.titulos_nav[index].name;
-
         ul.innerHTML = "";
         for (let i = 1; i <= 3; i++) {
             const li = document.createElement("li");
@@ -115,9 +97,6 @@ function loadFooter() {
         }
     });
 
-    // ------------------------
-    // Iconos sociales
-    // ------------------------
     const socialContainer = document.querySelector(".footer_top .social_icons");
     if (socialContainer) {
         socialContainer.innerHTML = "";
@@ -136,7 +115,7 @@ function loadFooter() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener("DOMContentLoaded", async () => {
     if (!window.includesLoaded) {
         window.includesLoaded = true;
         await xLuIncludeFile();
