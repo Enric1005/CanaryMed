@@ -1,0 +1,159 @@
+{ "filtro_centros": ["Precio Bajo", "Precio Medio", "Precio Alto", "Norte", "Sur", "Ciudad"],
+  "centers": [
+    {
+      "name": "Hospital San José",
+      "description": "El Hospital San José (Las Palmas de Gran Canaria, 1891) es un referente de la sanidad privada en Canarias, en constante modernización y crecimiento. Cuenta con tecnología avanzada, un bloque quirúrgico de vanguardia y ofrece todas las especialidades médicas, con profesionales de prestigio y tratamientos personalizados de alta calidad y complejidad.",
+      "image": "../Assets/San_jose.jpg",
+      "desc": ""
+    },
+    {
+      "name": "Hospital Vithas",
+      "description": "El Grupo hospitalario Vithas, del Grupo Goodgrower, se fundó en 2012 con el objetivo de mejorar la vida de las personas. Actualmente cuenta con 22 hospitales y 39 centros médicos en 14 provincias españolas, dispone de 1.846 camas y reúne a 12.600 profesionales, que atienden más de 6,4 millones de encuentros médicos al año.",
+      "image": "../Assets/Vithas.webp",
+      "desc": ""
+    },
+    {
+      "name": "Hospital Perpetuo Socorro",
+      "description": "Somos un centro médico quirúrgico privado en el que encontrará la tecnología más avanzada y una alta cualificación técnica y profesional. Hospital Perpetuo Socorro cubre prácticamente todas las especialidades médicas con una prioridad: ofrecer a nuestros pacientes la máxima calidad asistencial. El compromiso de nuestro equipo, el modelo de gestión y nuestros resultados nos avalan. En HPS, su salud es lo primero.",
+      "image": "../Assets/Perpetuo_socorro.jpg",
+      "desc": ""
+    },
+    {
+      "name": "Hospital San Roque",
+      "description": "Hospitales Universitarios San Roque surge con el propósito de mejorar el bienestar de las personas. Para ello pone a disposición de la sociedad servicios integrales de asistencia sanitaria a través de la tecnología de última generación en los ámbitos de consultas, diagnóstico y hospitalización.",
+      "image": "../Assets/San_roque.webp",
+      "desc": ""
+    }
+  ],
+  "header": {
+    "logo": "CanaryMed",
+    "languages": [
+      {
+       "code": "es", "name": "Español"
+      },
+      {
+       "code": "en", "name": "Inglés"
+      }
+    ],
+    "browser": {
+      "text": "Busca Centro/Especialidad",
+      "filter": "Filtro"
+    },
+
+    "nav": [
+      {
+        "text": "Centros",
+        "url": "../Paginas/centers.html"
+      },
+      {
+        "text": "Especialidades",
+        "url": "../Paginas/specialtys.html"
+      },
+      {
+        "text": "Trabaja con nosotros",
+        "url": "../Paginas/work_with_us.html"
+      },
+      {
+        "text": "Sobre nosotros",
+        "url": "../Paginas/about_us.html"
+      }
+    ],
+    "user_icon":"../Assets/Usuario.webp"
+  },
+  "footer": {
+    "logos": [
+      {"icon": "../Assets/insta.png", "url": "https://www.instagram.com/"},
+      {"icon": "../Assets/tw.png", "url": "https://x.com/?lang=es"},
+      {"icon": "../Assets/YT.png", "url": "https://youtube.com"}
+    ],
+    "logo": "CanaryMed",
+    "titulos_nav": [
+      {"name": "El Hospital"},
+      {"name": "Nuestros Servicios"},
+      {"name": "Enlaces de interés"}
+    ]
+  },
+  "Bienvenida_home": {
+    "texto_bienvenida":"La medicina canaria a un click",
+    "texto_boton": "Ver centros",
+    "texto_centros_recomendados": "Centros recomendados"
+  },
+  "Especialtys": {
+    "filtros": [
+      {"name": "Respiratorio"},
+      {"name":  "Quirúrgico"},
+      {"name":  "No Quirúrgico"},
+      {"name":  "Diagnóstico"},
+      {"name":  "Médicina General"},
+      {"name":  "Oncología Médica"}
+    ],
+    "Especialidades": [
+      {"name": "Quimioterapia", "desc":  "Oncología Médica", "src": "../Assets/Quimio.png"},
+      {"name": "Traumotología", "desc":  "Quirúrgico", "src": "../Assets/Traumotologia.png"},
+      {"name": "Cardiología", "desc":  "No Quirúrgico", "src": "../Assets/Cardiologia.png"},
+      {"name": "Radiodiagnóstico", "desc":  "Diagnóstico", "src": "../Assets/Radiodiagnóstico.png"},
+      {"name": "Enfermedades Crónicas", "desc":  "Medicina General", "src": "../Assets/EC.png"},
+      {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png"}
+    ]
+  },
+  "work_with_us": {
+    "title_page": "Trabaja con nosotros",
+    "description": "Así como facilitamos a nuestros usuarios a buscar los centros que mejor les conviene ya sea por el precio, lugar o especialidades que busca, también queremos facilitar a las diferentes instituciones sanitarias a aportar su granito de arena trabajando con nosotros para que la medicina en la isla esté a disposición de todos.       * (Campo obligatorio)",
+    "form_title": "Colabora",
+    "buton_inscription": "Colaborar",
+    "campos_formulario": [
+      {"campo":  "*Institución Sanitaria", "texto_ejemplo": "Perpetuo Socorro"},
+      {"campo":  "*Correo Institucional", "texto_ejemplo": "hospital123@gmail.com"},
+      {"campo":  "*Número Telefónico", "texto_ejemplo": "Teléfono de la institución"},
+      {"campo":  "*Dirección", "texto_ejemplo": "Calle Mayor 12, Las Palmas"},
+      {"campo":  "*Tipo de Especialidad", "texto_ejemplo": "Respiratorio", "opciones": ["Oncología Médica", "Qirúrgico", "No Quirúrgico", "Diagnóstico", "Medicina General", "Respiratorio", "Otro"]},
+      {"campo":  "*Especialidad", "texto_ejemplo": "Cardiología"}
+    ]
+  },
+  "register_edit": {
+    "title": "Registro",
+    "boton_register": "Confirmar",
+    "casilla": "* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad.",
+    "campos": [
+      {"campo":  "*Nombre", "texto_ejemplo":  "Sergio"},
+      {"campo":  "*Apellidos", "texto_ejemplo":  "Bañol Castaño"},
+      {"campo":  "*email", "texto_ejemplo":  "usuario123@gmail.com"},
+      {"campo":  "*Verificar email", "texto_ejemplo":  ""},
+      {"campo":  "*Contraseña", "texto_ejemplo":  ""},
+      {"campo":  "*Verificar Contraseña", "texto_ejemplo":  ""},
+      {"campo":  "*NIF", "texto_ejemplo":  "XXXXXXXXH"},
+      {"campo":  "*Número Telefónico", "texto_ejemplo":  ""}
+    ]
+  },
+  "log_in":{
+    "titulo": "Inicio Sesión",
+    "campos": [
+      {"campo": "Cuenta Usuario", "texto_ejemplo":  "usuario123@gmail.com"},
+      {"campo": "Contraseña", "texto_ejemplo":  ""}
+    ],
+    "boton_log_in": "Iniciar Sesión",
+    "boton_cancel": "Cancelar",
+    "link_register": "Nueva Cuenta"
+  },
+  "client_asist": {
+    "title": "Asistencia Cliente",
+    "campo_text": "Escriba su consulta o queja", "texto_ejemplo": "Empieza aquí...",
+    "boton": "Subir"
+  },
+  "about_us": {
+    "title": "Sobre nosotros",
+    "Description": "En CanaryMed trabajamos con el objetivo de facilitar el acceso a la información sanitaria a todas las personas que viven o se encuentran en las Islas Canarias. Nuestro propósito es ayudar a los usuarios a encontrar de forma rápida y sencilla los centros médicos que mejor se adapten a sus necesidades, contribuyendo así a mejorar su bienestar y su salud.\n\nNuestra plataforma funciona como un comparador de centros médicos, donde los usuarios pueden consultar diferentes opciones disponibles y acceder a información relevante como la ubicación de los centros, las especialidades que ofrecen, o los precios de determinados servicios. De esta manera, buscamos ofrecer una herramienta clara y útil que permita tomar decisiones informadas sobre la atención sanitaria.\n\nEn esta primera etapa, CanaryMed se centra principalmente en centros médicos ubicados en Gran Canaria. Sin embargo, nuestro objetivo a medio y largo plazo es ampliar la plataforma para incluir centros de otras islas del archipiélago, ofreciendo así un servicio cada vez más completo a toda la comunidad canaria.\n\nDesde el punto de vista del modelo de negocio, CanaryMed se sostiene mediante colaboraciones con centros médicos, que pueden participar en la plataforma a través de comisiones por servicios o mediante cuotas de uso. Este modelo nos permite seguir desarrollando la plataforma y mejorar continuamente la experiencia de los usuarios.\n\nEn CanaryMed creemos que acceder a información sanitaria clara, organizada y accesible puede marcar la diferencia, y trabajamos cada día para acercar la sanidad a las personas de una manera más sencilla y transparente."
+  },
+  "perfil": {
+    "boton_salir": "Cerrar Sesión",
+    "boton_editar": "Editar",
+    "cajetillas": [
+      {"titulo":  "Citas Pendientes", "link":  "Ver más"},
+      {"titulo":  "Historial", "link":  "Ver más"},
+      {"titulo":  "Favoritos", "link":  "Ver más"}
+    ]
+  },
+  "button_back": "Volver atrás",
+  "boton_esp": "Ver más",
+  "boton_filtrar": "Filtrar"
+}

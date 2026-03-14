@@ -2,15 +2,23 @@ import { xLuIncludeFile } from "./xlu-include-file.js";
 
 let DATA = null;
 
-export async function loadDynamicContent(){
+export async function loadDynamicContent(lang = "es") {
 
-    const response = await fetch("../tsconfig.json");
-    DATA = await response.json();
+    try {
 
-    loadHeader();
-    loadMain();
-    loadCenters();
-    loadFooter();
+        const response = await fetch(`../data-${lang}.json`);
+        DATA = await response.json();
+
+        console.log("Idioma cargado:", lang);
+
+        loadHeader();
+        loadMain();
+        loadCenters();
+        loadFooter();
+
+    } catch(error) {
+        console.error("Error cargando JSON:", error);
+    }
 }
 
 function loadHeader(){
@@ -42,9 +50,10 @@ function loadHeader(){
 
     // IDIOMAS
     const select = document.getElementById("languages");
+
     if (select) {
 
-        select.innerHTML = '<option value="" selected disabled>Idioma</option>';
+        select.innerHTML = "";
 
         header.languages.forEach(lang => {
 
@@ -55,10 +64,25 @@ function loadHeader(){
             select.appendChild(option);
 
         });
+
+        // idioma guardado
+        const savedLang = localStorage.getItem("lang") || "es";
+        select.value = savedLang;
+
+        select.addEventListener("change", function(){
+
+            const selectedLang = this.value;
+
+            localStorage.setItem("lang", selectedLang);
+
+            loadDynamicContent(selectedLang);
+
+        });
     }
 
     // NAV
     const navMenu = document.getElementById("navMenu");
+
     if (navMenu) {
 
         navMenu.innerHTML = "";
@@ -79,6 +103,7 @@ function loadHeader(){
 }
 
 function loadMain() {
+
     const bienvenida = DATA.Bienvenida_home;
 
     const welcomeTitle = document.querySelector(".image_text h1");
@@ -92,8 +117,8 @@ function loadMain() {
     }
 
     const mainCenterTitle = document.querySelector(".main_center h2.title");
-    if (mainCenterTitle && bienvenida.texto_centros_recomendarios) {
-        mainCenterTitle.textContent = bienvenida.texto_centros_recomendarios;
+    if (mainCenterTitle && bienvenida.texto_centros_recomendados) {
+        mainCenterTitle.textContent = bienvenida.texto_centros_recomendados;
     }
 
     const centersData = DATA.centers;
@@ -120,10 +145,12 @@ function loadMain() {
 }
 
 function loadCenters() {
+
     const centersData = DATA.centers;
     const centersHTML = document.querySelectorAll("main .center-section");
 
     centersHTML.forEach((element, index) => {
+
         const center = centersData[index];
         if (!center) return;
 
@@ -137,7 +164,11 @@ function loadCenters() {
         if (h1) h1.textContent = center.name;
         if (h3) h3.textContent = center.name;
         if (p) p.textContent = center.description;
-        if (button) button.textContent = "Ver más"; // o lo que quieras
+
+        if (button) {
+            button.textContent = DATA.boton_esp || "Ver más";
+        }
+
     });
 }
 
@@ -147,6 +178,7 @@ function loadFooter() {
 
     // LOGO FOOTER
     const logoH1 = document.querySelector("#footerLogo h1");
+
     if (logoH1) {
         logoH1.textContent = footer.logo;
     }
@@ -178,6 +210,7 @@ function loadFooter() {
             li.appendChild(a);
             ul.appendChild(li);
         }
+
     });
 
     // ICONOS REDES
@@ -201,6 +234,7 @@ function loadFooter() {
             socialContainer.appendChild(a);
 
         });
+
     }
 }
 
@@ -211,6 +245,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         await xLuIncludeFile();
     }
 
-    await loadDynamicContent();
+    const lang = localStorage.getItem("lang") || "es";
+
+    await loadDynamicContent(lang);
 
 });

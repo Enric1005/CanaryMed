@@ -1,0 +1,160 @@
+{
+  "filtro_centros": ["Low Price", "Medium Price", "High Price", "North", "South", "City"],
+  "centers": [
+    {
+      "name": "San José Hospital",
+      "description": "San José Hospital (Las Palmas de Gran Canaria, 1891) is a reference in private healthcare in the Canary Islands, constantly modernizing and expanding. It features advanced technology, a state-of-the-art surgical block, and offers all medical specialties with prestigious professionals and highly personalized, high-quality treatments.",
+      "image": "../Assets/San_jose.jpg",
+      "desc": ""
+    },
+    {
+      "name": "Vithas Hospital",
+      "description": "The Vithas hospital group, part of the Goodgrower Group, was founded in 2012 with the goal of improving people's lives. It currently has 22 hospitals and 39 medical centers across 14 Spanish provinces, with 1,846 beds and a team of 12,600 professionals providing more than 6.4 million medical consultations per year.",
+      "image": "../Assets/Vithas.webp",
+      "desc": ""
+    },
+    {
+      "name": "Perpetuo Socorro Hospital",
+      "description": "We are a private medical and surgical center equipped with the most advanced technology and highly qualified professionals. Perpetuo Socorro Hospital covers almost all medical specialties with one priority: providing our patients with the highest quality healthcare. The commitment of our team, our management model, and our results support our work. At HPS, your health comes first.",
+      "image": "../Assets/Perpetuo_socorro.jpg",
+      "desc": ""
+    },
+    {
+      "name": "San Roque Hospital",
+      "description": "San Roque University Hospitals were created with the purpose of improving people's well-being. To achieve this, they offer comprehensive healthcare services using the latest technology in consultations, diagnostics, and hospitalization.",
+      "image": "../Assets/San_roque.webp",
+      "desc": ""
+    }
+  ],
+  "header": {
+    "logo": "CanaryMed",
+    "languages": [
+      { "code": "es", "name": "Spanish" },
+      { "code": "en", "name": "English" }
+    ],
+    "browser": {
+      "text": "Search Center/Specialty",
+      "filter": "Filter"
+    },
+    "nav": [
+      {
+        "text": "Centers",
+        "url": "../Paginas/centers.html"
+      },
+      {
+        "text": "Specialties",
+        "url": "../Paginas/specialtys.html"
+      },
+      {
+        "text": "Work With Us",
+        "url": "../Paginas/work_with_us.html"
+      },
+      {
+        "text": "About Us",
+        "url": "../Paginas/about_us.html"
+      }
+    ],
+    "user_icon": "../Assets/Usuario.webp"
+  },
+  "footer": {
+    "logos": [
+      { "icon": "../Assets/insta.png", "url": "https://www.instagram.com/" },
+      { "icon": "../Assets/tw.png", "url": "https://x.com/?lang=en" },
+      { "icon": "../Assets/YT.png", "url": "https://youtube.com" }
+    ],
+    "logo": "CanaryMed",
+    "titulos_nav": [
+      { "name": "The Hospital" },
+      { "name": "Our Services" },
+      { "name": "Useful Links" }
+    ]
+  },
+  "Bienvenida_home": {
+    "texto_bienvenida": "Canary medicine just one click away",
+    "texto_boton": "View centers",
+    "texto_centros_recomendados": "Recommended centers"
+  },
+  "Especialtys": {
+    "filtros": [
+      { "name": "Respiratory" },
+      { "name": "Surgical" },
+      { "name": "Non-Surgical" },
+      { "name": "Diagnostic" },
+      { "name": "General Medicine" },
+      { "name": "Medical Oncology" }
+    ],
+    "Especialidades": [
+      { "name": "Chemotherapy", "desc": "Medical Oncology", "src": "../Assets/Quimio.png" },
+      { "name": "Traumatology", "desc": "Surgical", "src": "../Assets/Traumotologia.png" },
+      { "name": "Cardiology", "desc": "Non-Surgical", "src": "../Assets/Cardiologia.png" },
+      { "name": "Radiodiagnosis", "desc": "Diagnostic", "src": "../Assets/Radiodiagnóstico.png" },
+      { "name": "Chronic Diseases", "desc": "General Medicine", "src": "../Assets/EC.png" },
+      { "name": "Pulmonology", "desc": "Respiratory", "src": "../Assets/Neumología.png" }
+    ]
+  },
+  "work_with_us": {
+    "title_page": "Work With Us",
+    "description": "Just as we help users find the medical centers that best suit them based on price, location, or specialties, we also want to make it easier for healthcare institutions to contribute by working with us so that healthcare on the island is accessible to everyone. * (Required field)",
+    "form_title": "Collaborate",
+    "buton_inscription": "Collaborate",
+    "campos_formulario": [
+      { "campo": "*Healthcare Institution", "texto_ejemplo": "Perpetuo Socorro" },
+      { "campo": "*Institutional Email", "texto_ejemplo": "hospital123@gmail.com" },
+      { "campo": "*Phone Number", "texto_ejemplo": "Institution phone number" },
+      { "campo": "*Address", "texto_ejemplo": "Main Street 12, Las Palmas" },
+      {
+        "campo": "*Type of Specialty",
+        "texto_ejemplo": "Respiratory",
+        "opciones": ["Medical Oncology", "Surgical", "Non-Surgical", "Diagnostic", "General Medicine", "Respiratory", "Other"]
+      },
+      { "campo": "*Specialty", "texto_ejemplo": "Cardiology" }
+    ]
+  },
+  "register_edit": {
+    "title": "Register",
+    "boton_register": "Confirm",
+    "casilla": "* You agree that we store and process your data through this website following our privacy policy.",
+    "campos": [
+      { "campo": "*First Name", "texto_ejemplo": "Sergio" },
+      { "campo": "*Last Name", "texto_ejemplo": "Bañol Castaño" },
+      { "campo": "*Email", "texto_ejemplo": "user123@gmail.com" },
+      { "campo": "*Verify Email", "texto_ejemplo": "" },
+      { "campo": "*Password", "texto_ejemplo": "" },
+      { "campo": "*Verify Password", "texto_ejemplo": "" },
+      { "campo": "*NIF", "texto_ejemplo": "XXXXXXXXH" },
+      { "campo": "*Phone Number", "texto_ejemplo": "" }
+    ]
+  },
+  "log_in": {
+    "titulo": "Login",
+    "campos": [
+      { "campo": "User Account", "texto_ejemplo": "user123@gmail.com" },
+      { "campo": "Password", "texto_ejemplo": "" }
+    ],
+    "boton_log_in": "Log In",
+    "boton_cancel": "Cancel",
+    "link_register": "New Account"
+  },
+  "client_asist": {
+    "title": "Customer Support",
+    "campo_text": "Write your question or complaint",
+    "texto_ejemplo": "Start here...",
+    "boton": "Upload"
+  },
+  "about_us": {
+    "title": "About Us",
+    "Description": "At CanaryMed we work with the goal of facilitating access to healthcare information for all people who live in or visit the Canary Islands. Our purpose is to help users quickly and easily find medical centers that best fit their needs, contributing to improving their well-being and health.\n\nOur platform works as a medical center comparison tool where users can explore different options and access relevant information such as location, specialties offered, or prices for certain services. In this way, we aim to provide a clear and useful tool that helps users make informed decisions about their healthcare.\n\nIn this first stage, CanaryMed mainly focuses on medical centers located in Gran Canaria. However, our medium and long-term goal is to expand the platform to include centers from other islands in the archipelago, offering an increasingly comprehensive service to the entire Canary community.\n\nFrom a business perspective, CanaryMed operates through collaborations with medical centers, which can participate in the platform through service commissions or usage fees. This model allows us to continue developing the platform and constantly improve the user experience.\n\nAt CanaryMed we believe that having access to clear, organized, and accessible healthcare information can make a difference, and we work every day to bring healthcare closer to people in a simpler and more transparent way."
+  },
+  "perfil": {
+    "boton_salir": "Log Out",
+    "boton_editar": "Edit",
+    "cajetillas": [
+      { "titulo": "Pending Appointments", "link": "View more" },
+      { "titulo": "History", "link": "View more" },
+      { "titulo": "Favorites", "link": "View more" }
+    ]
+  },
+  "button_back": "Go back",
+  "boton_esp": "View more",
+  "boton_filtrar": "Filter"
+}
