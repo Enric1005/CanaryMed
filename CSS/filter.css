@@ -1,7 +1,5 @@
-
 .filter_zone {
     width: 90%;
-    height: 70px;
     border-radius: 10px;
     border: 3px solid black;
     background-color: lightgray;
@@ -16,15 +14,13 @@
     margin-left: 20px;
     width: 50px;
     height: 20px;
-
 }
+
 .filter_zone2 {
     border-radius: 10px;
     border: 3px solid black;
     background-color: whitesmoke;
-    height: 40px;
     width: 95%;
-
     display: flex;
     align-items: center;
     gap: 20px;
@@ -34,5 +30,39 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    margin-bottom: 5px;
+}
+
+.filter_toggle {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .filter_toggle {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 8px;
+        border: 3px solid black;
+        background: lightgray;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .filter_zone {
+        display: none;
+    }
+
+    .filter_zone2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #toggle_filters:checked + .filter_toggle + .filter_zone {
+        display: block;
+    }
 }

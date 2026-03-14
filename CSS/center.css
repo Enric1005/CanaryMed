@@ -1,3 +1,13 @@
+.center-button {
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    margin-top: 130px;
+}
+
 .center-section {
     width: 90%;
     margin: 20px auto;
@@ -37,7 +47,7 @@
 }
 
 .center-text p {
-    margin-top: 110px;
+    margin-top: 80px;
 }
 
 
@@ -45,20 +55,28 @@
     .center-content {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 
     .center-image img {
         width: 200px;
     }
-}
 
+    .center-button {
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: #333;
+        color: white;
+        margin-top: 130px;
+    }
+    .center-text p {
+        margin-top: 10px;
+    }
 
-.center-button {
-    width: 150px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #333;
-    color: white;
-    margin-top: 130px;
+    .center-button {
+        margin-top: 10px;
+    }
+
 }
