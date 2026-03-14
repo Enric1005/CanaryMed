@@ -25,6 +25,12 @@ export function register_user_form() {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
+        const terminos = document.getElementsByName("casilla");
+        if (!terminos.checked) {
+            alert("Acepte los terminos y condiciones");
+            return;
+        }
+
         const nombre = document.getElementById("nombre").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
