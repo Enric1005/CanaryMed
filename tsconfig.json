@@ -79,5 +79,25 @@
     "texto_bienvenida":"La medicina canaria a un click",
     "texto_boton": "Ver centros",
     "texto_centros_recomendarios": "Centros recomendados"
-  }
+  },
+  "Especialtys": {
+    "filtros": [
+      {"name": "Respiratorio"},
+      {"name":  "Quirúrgico"},
+      {"name":  "No Quirúrgico"},
+      {"name":  "Diagnóstico"},
+      {"name":  "Médicina General"},
+      {"name":  "Oncología Médica"}
+    ],
+    "Especialidades": [
+      {"name": "Quimioterapia", "desc":  "Oncología Médica", "src": "../Assets/Quimio.png"},
+      {"name": "Traumotología", "desc":  "Quirúrgico", "src": "../Assets/Traumotologia.png"},
+      {"name": "Cardiología", "desc":  "No Quirúrgico", "src": "../Assets/Cardiologia.png"},
+      {"name": "Radiodiagnóstico", "desc":  "Diagnóstico", "src": "../Assets/Radiodiagnóstico.png"},
+      {"name": "Enfermedades Crónicas", "desc":  "Medicina General", "src": "../Assets/EC.png"},
+      {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png"}
+    ],
+    "boton_esp": "Ver más"
+  },
+
 }
