@@ -1,4 +1,5 @@
 import { xLuIncludeFile } from "./xlu-include-file.js";
+import { register_user_form } from "./users.js";
 
 let DATA = null;
 
@@ -11,6 +12,7 @@ export async function loadDynamicContent(lang = "es") {
 
         console.log("Idioma cargado:", lang);
 
+        register_user_form();
         loadHeader();
         loadMain();
         loadCenters();
