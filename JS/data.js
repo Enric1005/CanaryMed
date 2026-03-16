@@ -4,36 +4,29 @@ import { register_user_form } from "./users.js";
 let DATA = null;
 
 export async function loadDynamicContent(lang = "es") {
-
     try {
-
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
-
-        console.log("Idioma cargado:", lang);
 
         register_user_form();
         loadHeader();
         loadMain();
         loadCenters();
+        loadWorkWithUs();
         loadFooter();
-
     } catch(error) {
         console.error("Error cargando JSON:", error);
     }
 }
 
 function loadHeader(){
-
     const header = DATA.header;
 
-    // LOGO
     const logo = document.querySelector("#logo h1");
     if (logo) {
         logo.textContent = header.logo;
     }
 
-    // BUSCADOR
     const searchInput = document.getElementById("searchInput");
     if (searchInput) {
         searchInput.placeholder = header.browser.text;
@@ -44,41 +37,28 @@ function loadHeader(){
         filterButton.textContent = header.browser.filter;
     }
 
-    // ICONO USUARIO
     const userIcon = document.getElementById("userIcon");
     if (userIcon) {
         userIcon.src = header.user_icon;
     }
 
-    // IDIOMAS
     const select = document.getElementById("languages");
-
     if (select) {
-
         select.innerHTML = "";
-
         header.languages.forEach(lang => {
-
             const option = document.createElement("option");
             option.value = lang.code;
             option.textContent = lang.name;
-
             select.appendChild(option);
-
         });
 
-        // idioma guardado
         const savedLang = localStorage.getItem("lang") || "es";
         select.value = savedLang;
 
         select.addEventListener("change", function(){
-
             const selectedLang = this.value;
-
             localStorage.setItem("lang", selectedLang);
-
             loadDynamicContent(selectedLang);
-
         });
     }
 
@@ -86,26 +66,19 @@ function loadHeader(){
     const navMenu = document.getElementById("navMenu");
 
     if (navMenu) {
-
         navMenu.innerHTML = "";
-
         header.nav.forEach(item => {
-
             const li = document.createElement("li");
             const link = document.createElement("a");
-
             link.href = item.url;
             link.textContent = item.text;
-
             li.appendChild(link);
             navMenu.appendChild(li);
-
         });
     }
 }
 
 function loadMain() {
-
     const bienvenida = DATA.Bienvenida_home;
 
     const welcomeTitle = document.querySelector(".image_text h1");
@@ -127,9 +100,7 @@ function loadMain() {
     const centersHTML = document.querySelectorAll(".center");
 
     if (centersHTML.length > 0) {
-
         centersData.forEach((center, index) => {
-
             const element = centersHTML[index];
             if (!element) return;
 
@@ -140,19 +111,15 @@ function loadMain() {
             if (img) img.src = center.image;
             if (title) title.textContent = center.name;
             if (description) description.textContent = center.description;
-
         });
-
     }
 }
 
 function loadCenters() {
-
     const centersData = DATA.centers;
     const centersHTML = document.querySelectorAll("main .center-section");
 
     centersHTML.forEach((element, index) => {
-
         const center = centersData[index];
         if (!center) return;
 
@@ -170,39 +137,69 @@ function loadCenters() {
         if (button) {
             button.textContent = DATA.boton_esp || "Ver más";
         }
-
     });
 }
 
-function loadFooter() {
+function loadWorkWithUs(){
+    const workWithUsData = DATA.work_with_us;
 
+    const workWithUsTitle = document.querySelector(".text-section h1");
+    if(workWithUsTitle){
+        workWithUsTitle.textContent = workWithUsData.title_page;
+    }
+
+    const workWithUsDescription = document.querySelector(".text-section p");
+    if(workWithUsDescription){
+        workWithUsDescription.textContent = workWithUsData.description;
+    }
+
+    const workWithUsFormTitle = document.querySelector(".formulario h1");
+    if(workWithUsFormTitle){
+        workWithUsFormTitle.textContent = workWithUsData.form_title;
+    }
+
+    const workWithUsFormLabels = document.querySelectorAll(".formulario form label");
+    const workWithUsFormInputs = document.querySelectorAll(".formulario form input");
+
+    if(workWithUsFormLabels){
+        workWithUsFormLabels.forEach(((label, index) => {
+            label.textContent = workWithUsData.campos_formulario[index].campo;
+        }))
+    }
+    if(workWithUsFormInputs){
+        workWithUsFormInputs.forEach(((example_text, index) => {
+            example_text.placeholder = workWithUsData.campos_formulario[index].texto_ejemplo;
+        }))
+    }
+
+    const workWithUsFormButton = document.querySelector(".formulario .boton button");
+    if(workWithUsFormButton){
+        workWithUsFormButton.textContent = workWithUsData.buton_inscription
+    }
+}
+
+
+
+function loadFooter() {
     const footer = DATA.footer;
 
-    // LOGO FOOTER
     const logoH1 = document.querySelector("#footerLogo h1");
-
     if (logoH1) {
         logoH1.textContent = footer.logo;
     }
 
-    // SECCIONES FOOTER
     const secciones = document.querySelectorAll(".first_line_fo .nav-sections > div");
 
     secciones.forEach((seccion, index) => {
-
         const title = seccion.querySelector("h3");
         const ul = seccion.querySelector("ul");
 
         if (!title || !ul) return;
-
         if (footer.titulos_nav[index]) {
             title.textContent = footer.titulos_nav[index].name;
         }
-
         ul.innerHTML = "";
-
         for (let i = 1; i <= 3; i++) {
-
             const li = document.createElement("li");
             const a = document.createElement("a");
 
@@ -212,18 +209,12 @@ function loadFooter() {
             li.appendChild(a);
             ul.appendChild(li);
         }
-
     });
 
-    // ICONOS REDES
     const socialContainer = document.querySelector(".footer_top .social_icons");
-
     if (socialContainer) {
-
         socialContainer.innerHTML = "";
-
         footer.logos.forEach(logo => {
-
             const a = document.createElement("a");
             a.href = logo.url;
             a.target = "_blank";
@@ -234,9 +225,7 @@ function loadFooter() {
 
             a.appendChild(img);
             socialContainer.appendChild(a);
-
         });
-
     }
 }
 
@@ -248,7 +237,5 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     const lang = localStorage.getItem("lang") || "es";
-
     await loadDynamicContent(lang);
-
 });
