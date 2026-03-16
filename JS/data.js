@@ -13,6 +13,7 @@ export async function loadDynamicContent(lang = "es") {
         loadMain();
         loadCenters();
         loadWorkWithUs();
+        loadAboutUs();
         loadFooter();
     } catch(error) {
         console.error("Error cargando JSON:", error);
@@ -178,7 +179,19 @@ function loadWorkWithUs(){
     }
 }
 
+function loadAboutUs() {
+    const aboutUsData = DATA.about_us;
 
+    const aboutUsTitle = document.querySelector(".image-section h2");
+    if (aboutUsTitle){
+        aboutUsTitle.textContent = aboutUsData.title;
+    }
+
+    const aboutUsDescription = document.querySelector(".overlay p");
+    if (aboutUsDescription){
+        aboutUsDescription.textContent = aboutUsData.description;
+    }
+}
 
 function loadFooter() {
     const footer = DATA.footer;
