@@ -2,7 +2,7 @@
     background-image: url(../assets/Home.png);
     background-size: cover;
     background-position: center;
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,15 +18,23 @@
 /* caja de texto */
 .overlay {
     width: 80%;
-    height: 100vh;
     max-width: 700px;
     background-color: lightgray;
     border-radius: 40px;
     border: 3px solid black;
-    padding: 30px;
     margin: -80px auto 100px auto; /* esto la sube sobre la imagen */
     box-sizing: border-box;
-    text-align: center;
+    padding: 30px;
+}
+
+.overlay p {
+    margin: 0 auto;
+    color: black;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: justify;
+
 }
 
 .image-section {
@@ -40,31 +48,6 @@
     align-items: center;
 }
 
-/* título dentro de la imagen */
-
-
-/* caja de texto */
-.overlay {
-    width: 60%;
-    height: 100vh;
-    max-width: 700px;
-    background-color: lightgray;
-    border-radius: 40px;
-    border: 3px solid black;
-    padding: 30px;
-    margin: -80px auto 100px auto; /* esto la sube sobre la imagen */
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.overlay p {
-    margin: 0 auto;
-    color: black;
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 400px;
-
-}
 
 @media (max-width: 768px) {
     .overlay  p{
