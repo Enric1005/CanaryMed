@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
     background-color: white;
+    align-items: center;
 }
 
 #main_header {
@@ -10,16 +11,30 @@
     display: block;
 }
 
-.button-container {
-    display: flex;
-    justify-content: flex-start;
-}
-
 #new_appointment {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    margin-left: 90%;
+}
+
+.text-section {
+    width: 71%;
+}
+
+.text-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-header h1 {
+    margin: 0;
+}
+
+.section-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .appointments-container {
@@ -36,6 +51,14 @@
 }
 
 @media (max-width: 768px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .text-section {
+        width: 74%;
+    }
 
     .text-header h1 {
         margin: 0;
@@ -44,7 +67,7 @@
     }
 
     .text-section hr {
-        width: 40px;
+        width: 130px;
         margin-left: 0;
         border: 1px solid #ccc;
     }
