@@ -10,7 +10,7 @@ main {
 
 .section {
     width: 100%;
-    min-height: 250px;
+    min-height: 400px;
     background-color: #cfcfcf;
     border-radius: 40px;
     padding: 25px;
@@ -45,4 +45,13 @@ main {
 
 .arrow {
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+
+    .card-footer {
+        justify-content: center;
+        gap: 15px;
+    }
+
 }

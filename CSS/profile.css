@@ -1,7 +1,7 @@
 .content-wrapper {
     display: flex;
     align-items: flex-start;
-    background-color: gray;
+    background-color: white;
     padding: 60px;
     box-sizing: border-box;
 }
@@ -59,6 +59,11 @@
     font-size: 20px;
 }
 
+.profile-info h4 {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
 .profile-info p {
     margin: 5px 0 0 0;
     font-size: 14px;
@@ -76,6 +81,7 @@
     display: flex;
     gap: 15px;
     margin-top: 15px;
+    justify-content: center;
 }
 
 .profile-buttons button {
@@ -109,4 +115,40 @@
     border: 3px solid;
     border-radius: 20px;
     background-color: lightgray;
+}
+
+@media (max-width: 768px) {
+
+    .content-wrapper {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .profile-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-card {
+        width: 90%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .profile-sections {
+        margin-left: 0;
+        margin-right: 0;
+        width: 335px;
+    }
+
+
+    .profile-top {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
 }

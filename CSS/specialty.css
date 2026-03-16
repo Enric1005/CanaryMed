@@ -1,13 +1,13 @@
 main {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-
 }
 
 .specialty-section {
-    flex: 1;
+    flex: 1 1 45%;
     background-color: lightgray;
     border: 3px solid black;
     border-radius: 20px;
@@ -28,7 +28,6 @@ main {
     border-radius: 15px;
     border: 3px solid black;
 }
-
 
 .specialty-text {
     flex: 1;
@@ -54,4 +53,16 @@ main {
     color: white;
     border: none;
     margin-top: 30px;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .specialty-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }

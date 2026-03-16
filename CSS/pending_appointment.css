@@ -1,10 +1,18 @@
 .appointment_block {
     width: 1200px;
     margin: 5px auto;
-    background-color: lightgray;
+    background-color: rgba(255,254,134,0.84);
     border: 3px solid black;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    .appointment_block {
+        width: 100%;
+    }
+
 }
 

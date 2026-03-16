@@ -11,11 +11,12 @@ header {
             rgba(42, 125, 225, 0)
     );
 }
-/*===========================================*/
+
+/* linea idioma */
 .zero_line {
     display: inline-block;
 }
-/* Boton idioma */
+
 .idioma {
     width: 100px;
     height: 25px;
@@ -25,7 +26,8 @@ header {
     margin-left: 25px;
     margin-top: 10px;
 }
-/*===========================================*/
+
+/* primera linea */
 .first_line {
     display: grid;
     align-items: center;
@@ -33,11 +35,10 @@ header {
     padding: 0 20px;
     gap: 30px;
 }
-/* Titulo de la página*/
+
 .first_line h1 {
     margin: 0;
     font-size: 65px;
-    cursor: pointer;
 }
 
 .name_of_company{
@@ -45,7 +46,7 @@ header {
     color: whitesmoke;
 }
 
-/* centro de la linea uno (buscador y filtro)*/
+/* buscador */
 .center_group {
     display: flex;
     justify-self: center;
@@ -57,7 +58,6 @@ header {
     padding: 10px 20px;
     border-radius: 50px;
     border: none;
-    text-align: left;
 }
 
 .filter-btn {
@@ -68,7 +68,8 @@ header {
     border-radius: 15px;
 }
 
-/* Boton usuario */
+/* boton usuario */
+
 .btn_user {
     justify-self: end;
     width: 80px;
@@ -88,14 +89,15 @@ header {
     border-radius: 50%;
     object-fit: cover;
 }
-/*===========================================*/
+
+/* menu normal */
+
 .second_line ul {
     display: flex;
     list-style: disc;
     justify-content: center;
     gap: 25px;
     margin: 0;
-    padding: 0;
     padding-bottom: 10px;
 }
 
@@ -109,6 +111,19 @@ nav li::marker{
     color: yellow;
 }
 
+/* boton hamburguesa */
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== MOVIL ===== */
+
 @media (max-width: 768px) {
 
     .first_line {
@@ -121,17 +136,42 @@ nav li::marker{
         font-size: 40px;
     }
 
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+
     .center_group {
         width: 100%;
+        justify-content: center;
     }
 
     .search-bar {
-        width: 90%;
+        width: 80%;
     }
 
     .btn_user {
         justify-self: center;
         margin-right: 0;
+    }
+
+    .second_line ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: #2A7DE1;
+        padding: 20px 0;
+    }
+
+    .second_line ul.show {
+        display: flex;
+    }
+
+    .second_line ul li {
+        list-style: none;
+        margin: 10px 0;
     }
 
 }
