@@ -12,6 +12,7 @@ export async function loadDynamicContent(lang = "es") {
         loadHeader();
         loadMain();
         loadCenters();
+        // loadSpecialities();
         loadWorkWithUs();
         loadAboutUs();
         loadFooter();

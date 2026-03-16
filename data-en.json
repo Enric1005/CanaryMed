@@ -74,8 +74,8 @@
     "texto_boton": "View centers",
     "texto_centros_recomendados": "Recommended centers"
   },
-  "Especialtys": {
-    "filtros": [
+  "specialities": {
+    "filters": [
       { "name": "Respiratory" },
       { "name": "Surgical" },
       { "name": "Non-Surgical" },
@@ -83,7 +83,7 @@
       { "name": "General Medicine" },
       { "name": "Medical Oncology" }
     ],
-    "Especialidades": [
+    "specialities": [
       { "name": "Chemotherapy", "desc": "Medical Oncology", "src": "../Assets/Quimio.png" },
       { "name": "Traumatology", "desc": "Surgical", "src": "../Assets/Traumotologia.png" },
       { "name": "Cardiology", "desc": "Non-Surgical", "src": "../Assets/Cardiologia.png" },
