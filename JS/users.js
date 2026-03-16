@@ -33,7 +33,18 @@ export function register_user_form() {
 
         const nombre = document.getElementById("nombre").value;
         const email = document.getElementById("email").value;
+        const email_confirm = document.getElementById("email_confirm").value;
+        if (email !== email_confirm) {
+            alert("Los correos no coinciden");
+            return;
+        }
+
         const password = document.getElementById("password").value;
+        const password_confirmed = document.getElementById("password_confirmed").value;
+        if (password !== password_confirmed) {
+            alert("Las contraseñas no coinciden");
+            return;
+        }
 
         const user = {
             nombre: nombre,
