@@ -173,6 +173,18 @@ function loadWorkWithUs(){
             example_text.placeholder = workWithUsData.campos_formulario[index].texto_ejemplo;
         }))
     }
+    const workWithUsFormSelect = document.querySelector(".formulario form select");
+    if(workWithUsFormSelect){
+        const options = DATA.work_with_us.campos_formulario[4].opciones;
+        workWithUsFormSelect.appendChild(document.createElement("option"))
+        options.forEach(o => {
+            const option = document.createElement("option");
+            option.textContent = o;
+            workWithUsFormSelect.appendChild(option);
+        })
+    }
+
+
 
     const workWithUsFormButton = document.querySelector(".formulario .boton button");
     if(workWithUsFormButton){
