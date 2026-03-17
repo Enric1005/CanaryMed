@@ -19,7 +19,7 @@
 .overlay {
     width: 80%;
     max-width: 700px;
-    background-color: lightgray;
+    background-color: #E8F2FF;
     border-radius: 40px;
     border: 3px solid black;
     margin: -80px auto 100px auto; /* esto la sube sobre la imagen */
