@@ -1,5 +1,6 @@
 import { xLuIncludeFile } from "./xlu-include-file.js";
 import { register_user_form } from "./users.js";
+import { log_in } from "./users.js";
 
 let DATA = null;
 
@@ -8,11 +9,11 @@ export async function loadDynamicContent(lang = "es") {
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
 
+        log_in();
         register_user_form();
         loadHeader();
         loadMain();
         loadCenters();
-        // loadSpecialities();
         loadWorkWithUs();
         loadAboutUs();
         loadFooter();
