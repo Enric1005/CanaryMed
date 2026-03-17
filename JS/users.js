@@ -71,21 +71,27 @@ export function register_user_form() {
 }
 
 export function log_in(){
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const form = document.getElementById("login_form");
+    if (!form) return;
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    const usuario = usuarios.find(u => u.email === email && u.password === password);
+        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    if (!usuario) {
-        alert("Usuario o contraseña incorrecta");
-        return;
-    }
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-    // Guardar usuario activo
-    localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
+        const usuario = usuarios.find(
+            u => u.email === email && u.password === password
+        );
 
-    // Redirigir
-    window.location.href = "../Paginas/profile.html";
+        if (!usuario) {
+            alert("Usuario o contraseña incorrecta");
+            return;
+        }
+
+        localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
+        window.location.href = "../Paginas/profile.html";
+    });
 }
