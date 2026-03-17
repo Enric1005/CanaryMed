@@ -126,6 +126,10 @@ nav li::marker{
 
 @media (max-width: 768px) {
 
+    header {
+        padding-bottom: 25px;
+    }
+
     .first_line {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -139,8 +143,8 @@ nav li::marker{
     .menu-toggle {
         display: block;
         position: absolute;
-        left: 15px;
-        top: 15px;
+        left: 5px;
+        top: 0px;
     }
 
     .center_group {
@@ -155,6 +159,14 @@ nav li::marker{
     .btn_user {
         justify-self: center;
         margin-right: 0;
+        width: 55px;
+        height: 55px;
+    }
+    /* mover idioma a la derecha */
+    .zero_line {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
     }
 
     .second_line ul {
