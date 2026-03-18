@@ -18,7 +18,7 @@ function register_user(usuario) {
 }
 
 export function register_user_form() {
-    const form = document.getElementById("login_form");
+    const form = document.getElementById("register_form");
 
     if (!form) return;
 
@@ -82,9 +82,7 @@ export function log_in(){
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        const usuario = usuarios.find(
-            u => u.email === email && u.password === password
-        );
+        const usuario = usuarios.find(u => u.email === email && u.password === password);
 
         if (!usuario) {
             alert("Usuario o contraseña incorrecta");
