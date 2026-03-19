@@ -134,7 +134,7 @@
   "register_edit": {
     "title": "Registro",
     "register_button": "Confirmar",
-    "box": "* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad.",
+    "checkbox": "* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad",
     "fields": [
       {"field":  "*Nombre", "example_text":  "Sergio"},
       {"field":  "*Apellidos", "example_text":  "Bañol Castaño"},
