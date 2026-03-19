@@ -12,12 +12,13 @@ export async function loadDynamicContent(lang = "es") {
         log_in();
         register_user_form();
         loadHeader();
+        loadFooter();
+        loadLogin();
         loadMain();
         loadCenters();
-        loadSpecialities();
         loadWorkWithUs();
         loadAboutUs();
-        loadFooter();
+
     } catch(error) {
         console.error("Error cargando JSON:", error);
     }
@@ -144,11 +145,17 @@ function loadCenters() {
     });
 }
 
-function loadSpecialities(){
-    const filtersSpecialitiesData = DATA.specialities.filters;
+function loadLogin(){
+    const loginTitle = document.querySelector(".login h1");
+    if (loginTitle) loginTitle.textContent = DATA.login.title;
 
+    const loginLabels = document.querySelectorAll(".login #login_form label");
+    if (loginLabels) {
+        loginLabels.forEach((label, index) => {
+            label.textContent = DATA.login.fields[index].field;
+        })
+    }
 }
-
 
 function loadWorkWithUs(){
     const workWithUsData = DATA.work_with_us;

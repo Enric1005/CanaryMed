@@ -131,11 +131,11 @@
       {"campo":  "*Número Telefónico", "texto_ejemplo":  ""}
     ]
   },
-  "log_in":{
-    "titulo": "Inicio Sesión",
-    "campos": [
-      {"campo": "Cuenta Usuario", "texto_ejemplo":  "usuario123@gmail.com"},
-      {"campo": "Contraseña", "texto_ejemplo":  ""}
+  "login":{
+    "title": "Inicio Sesión",
+    "fields": [
+      {"field": "Cuenta Usuario"},
+      {"field": "Contraseña"}
     ],
     "boton_log_in": "Iniciar Sesión",
     "boton_cancel": "Cancelar",
