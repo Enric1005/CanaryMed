@@ -169,6 +169,9 @@ function loadLogin(){
 }
 
 function loadRegisterAndEdit(){
+    const title = document.querySelector(".text h1");
+    if (title) title.textContent = DATA.register_edit.title;
+
     const labels = document.querySelectorAll("#register_form label:not(.chbox label)");
     labels.forEach((label, index) => {
         label.textContent = DATA.register_edit.fields[index].field;
