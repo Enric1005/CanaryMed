@@ -21,6 +21,7 @@ export async function loadDynamicContent(lang = "es") {
         loadCenters();
         loadWorkWithUs();
         loadAboutUs();
+        loadClientsAsist();
 
     } catch(error) {
         console.error("Error cargando JSON:", error);
@@ -48,6 +49,16 @@ function loadHeader(){
     const userIcon = document.getElementById("userIcon");
     if (userIcon) {
         userIcon.src = header.user_icon;
+    }
+    const activo = JSON.parse(localStorage.getItem("usuarioActivo"));
+    const user_link = document.querySelector("#btn_user a");
+
+    if (user_link) {
+        if (activo) {
+            user_link.href = "../Paginas/profile.html";
+        } else {
+            user_link.href = "../Paginas/login.html";
+        }
     }
 
     const select = document.getElementById("languages");
@@ -316,3 +327,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     const lang = localStorage.getItem("lang") || "es";
     await loadDynamicContent(lang);
 });
+
+function loadClientsAsist() {
+    const title = document.querySelector("main h1");
+    if (title) title.textContent = DATA.client_asist.title;
+
+    const label = document.querySelector(".contenedor label[for='lorem']");
+    if (label) label.textContent = DATA.client_asist.campo_text;
+
+    const textarea = document.querySelector("#lorem");
+    if (textarea) textarea.placeholder = DATA.client_asist.texto_ejemplo;
+
+    const button = document.querySelector(".contenedor input[type='submit']");
+    if (button) button.value = DATA.client_asist.boton;
+}
