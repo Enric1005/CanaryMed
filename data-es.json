@@ -84,8 +84,8 @@
     "texto_boton": "Ver centros",
     "texto_centros_recomendados": "Centros recomendados"
   },
-  "Especialtys": {
-    "filtros": [
+  "specialities": {
+    "filters": [
       {"name": "Respiratorio"},
       {"name":  "Quirúrgico"},
       {"name":  "No Quirúrgico"},
@@ -158,6 +158,7 @@
       {"titulo":  "Historial", "link":  "Ver más"},
       {"titulo":  "Favoritos", "link":  "Ver más"}
     ]
+
   },
   "button_back": "Volver atrás",
   "boton_esp": "Ver más",

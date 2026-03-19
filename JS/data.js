@@ -9,11 +9,12 @@ export async function loadDynamicContent(lang = "es") {
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
 
-        //log_in();
+        log_in();
         register_user_form();
         loadHeader();
         loadMain();
         loadCenters();
+        loadSpecialities();
         loadWorkWithUs();
         loadAboutUs();
         loadFooter();
@@ -143,6 +144,12 @@ function loadCenters() {
     });
 }
 
+function loadSpecialities(){
+    const filtersSpecialitiesData = DATA.specialities.filters;
+
+}
+
+
 function loadWorkWithUs(){
     const workWithUsData = DATA.work_with_us;
 
@@ -190,8 +197,6 @@ function loadWorkWithUs(){
         })
     }
 
-
-
     const workWithUsFormButton = document.querySelector(".formulario .boton button");
     if(workWithUsFormButton){
         workWithUsFormButton.textContent = workWithUsData.buton_inscription
@@ -221,7 +226,6 @@ function loadFooter() {
     }
 
     const secciones = document.querySelectorAll(".first_line_fo .nav-sections > div");
-
     secciones.forEach((seccion, index) => {
         const title = seccion.querySelector("h3");
         const ul = seccion.querySelector("ul");
@@ -262,7 +266,6 @@ function loadFooter() {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-
     if (!window.includesLoaded) {
         window.includesLoaded = true;
         await xLuIncludeFile();
