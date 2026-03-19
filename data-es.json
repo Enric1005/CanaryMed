@@ -162,5 +162,35 @@
   },
   "button_back": "Volver atrás",
   "boton_esp": "Ver más",
-  "boton_filtrar": "Filtrar"
+  "boton_filtrar": "Filtrar",
+  "make_an_appointment": {
+    "texto_cita": "Pedir cita",
+    "boton_confirmar": "Confirmar cita",
+    "formCita": [
+      {
+        "campo": "*centro",
+        "texto_ejemplo": "Centros"
+      },
+      {
+        "campo": "*especialidad_input",
+        "texto_ejemplo": "Especialidades"
+      },
+      {
+        "campo": "*dni",
+        "texto_ejemplo": "DNI"
+      },
+      {
+        "campo": "*fecha",
+        "texto_ejemplo": "**/**/****"
+      },
+      {
+        "campo": "*hora",
+        "texto_ejemplo": "**:**"
+      },
+      {
+        "campo": "*medico",
+        "texto_ejemplo": "Medicos"
+      }
+    ]
+  }
 }
