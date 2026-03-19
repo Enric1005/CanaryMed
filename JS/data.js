@@ -14,11 +14,14 @@ export async function loadDynamicContent(lang = "es") {
         log_out();
         register_user_form();
         loadHeader();
+        loadFooter();
+        loadLogin();
+        loadRegisterAndEdit();
         loadMain();
         loadCenters();
         loadWorkWithUs();
         loadAboutUs();
-        loadFooter();
+
     } catch(error) {
         console.error("Error cargando JSON:", error);
     }
@@ -145,6 +148,40 @@ function loadCenters() {
     });
 }
 
+function loadLogin(){
+    const loginTitle = document.querySelector(".login h1");
+    if (loginTitle) loginTitle.textContent = DATA.login.title;
+
+    const loginLabels = document.querySelectorAll(".login #login_form label");
+    if (loginLabels) {
+        loginLabels.forEach((label, index) => {
+            label.textContent = DATA.login.fields[index].field;
+        })
+    }
+
+    const loginButton = document.querySelector(".login .botones button[type=submit]");
+    const cancelButton = document.querySelector(".login .botones button[type=button]");
+    if (loginButton) {loginButton.textContent = DATA.login.login_button;}
+    if (cancelButton) {cancelButton.textContent = DATA.login.cancel_button;}
+
+    const registerLink = document.querySelector(".login nav a");
+    if (registerLink) {registerLink.textContent = DATA.login.register_link}
+}
+
+function loadRegisterAndEdit(){
+    const labels = document.querySelectorAll(".contenedor .text_box #register_form label");
+    if (labels) {
+        labels.forEach((label, index) => {
+            label.textContent = DATA.register_edit.fields[index].field;
+        })
+    }
+    const inputs = document.querySelectorAll(".contenedor .text_box #register_form input");
+    inputs.forEach((input, index) => {
+        input.placeholder = DATA.register_edit.fields[index].example_text;
+    });
+}
+
+
 function loadWorkWithUs(){
     const workWithUsData = DATA.work_with_us;
 
@@ -192,8 +229,6 @@ function loadWorkWithUs(){
         })
     }
 
-
-
     const workWithUsFormButton = document.querySelector(".formulario .boton button");
     if(workWithUsFormButton){
         workWithUsFormButton.textContent = workWithUsData.buton_inscription
@@ -223,7 +258,6 @@ function loadFooter() {
     }
 
     const secciones = document.querySelectorAll(".first_line_fo .nav-sections > div");
-
     secciones.forEach((seccion, index) => {
         const title = seccion.querySelector("h3");
         const ul = seccion.querySelector("ul");
@@ -233,7 +267,7 @@ function loadFooter() {
             title.textContent = footer.titulos_nav[index].name;
         }
         ul.innerHTML = "";
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= 2; i++) {
             const li = document.createElement("li");
             const a = document.createElement("a");
 
@@ -264,7 +298,6 @@ function loadFooter() {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-
     if (!window.includesLoaded) {
         window.includesLoaded = true;
         await xLuIncludeFile();

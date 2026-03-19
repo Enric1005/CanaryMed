@@ -99,8 +99,8 @@
     "texto_boton": "Ver centros",
     "texto_centros_recomendados": "Centros recomendados"
   },
-  "Especialtys": {
-    "filtros": [
+  "specialities": {
+    "filters": [
       {"name": "Respiratorio"},
       {"name":  "Quirúrgico"},
       {"name":  "No Quirúrgico"},
@@ -133,28 +133,28 @@
   },
   "register_edit": {
     "title": "Registro",
-    "boton_register": "Confirmar",
-    "casilla": "* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad.",
-    "campos": [
-      {"campo":  "*Nombre", "texto_ejemplo":  "Sergio"},
-      {"campo":  "*Apellidos", "texto_ejemplo":  "Bañol Castaño"},
-      {"campo":  "*email", "texto_ejemplo":  "usuario123@gmail.com"},
-      {"campo":  "*Verificar email", "texto_ejemplo":  ""},
-      {"campo":  "*Contraseña", "texto_ejemplo":  ""},
-      {"campo":  "*Verificar Contraseña", "texto_ejemplo":  ""},
-      {"campo":  "*NIF", "texto_ejemplo":  "XXXXXXXXH"},
-      {"campo":  "*Número Telefónico", "texto_ejemplo":  ""}
+    "register_button": "Confirmar",
+    "box": "* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad.",
+    "fields": [
+      {"field":  "*Nombre", "example_text":  "Sergio"},
+      {"field":  "*Apellidos", "example_text":  "Bañol Castaño"},
+      {"field":  "*email", "example_text":  "usuario123@gmail.com"},
+      {"field":  "*Verificar email", "example_text":  ""},
+      {"field":  "*Contraseña", "example_text":  ""},
+      {"field":  "*Verificar Contraseña", "example_text":  ""},
+      {"field":  "*DNI", "example_text":  "XXXXXXXXH"},
+      {"field":  "*Número Telefónico", "example_text":  ""}
     ]
   },
-  "log_in":{
-    "titulo": "Inicio Sesión",
-    "campos": [
-      {"campo": "Cuenta Usuario", "texto_ejemplo":  "usuario123@gmail.com"},
-      {"campo": "Contraseña", "texto_ejemplo":  ""}
+  "login":{
+    "title": "Inicio Sesión",
+    "fields": [
+      {"field": "Cuenta Usuario"},
+      {"field": "Contraseña"}
     ],
-    "boton_log_in": "Iniciar Sesión",
-    "boton_cancel": "Cancelar",
-    "link_register": "Nueva Cuenta"
+    "login_button": "Iniciar Sesión",
+    "cancel_button": "Cancelar",
+    "register_link": "Nueva Cuenta"
   },
   "client_asist": {
     "title": "Asistencia Cliente",
@@ -173,6 +173,7 @@
       {"titulo":  "Historial", "link":  "../Paginas/pending_appoinments.html"},
       {"titulo":  "Favoritos", "link":  "../Paginas/pending_appoinments.html"}
     ]
+
   },
   "button_back": "Volver atrás",
   "boton_esp": "Ver más",
