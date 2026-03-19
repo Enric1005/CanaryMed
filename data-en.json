@@ -156,5 +156,35 @@
   },
   "button_back": "Go back",
   "boton_esp": "View more",
-  "boton_filtrar": "Filter"
+  "boton_filtrar": "Filter",
+  "make_an_appointment": {
+    "texto_cita": "Make an appointment",
+    "boton_confirmar": "Confirm appointment",
+    "formCita": [
+      {
+        "campo": "*centro",
+        "texto_ejemplo": "Centers"
+      },
+      {
+        "campo": "*especialidad_input",
+        "texto_ejemplo": "Specialties"
+      },
+      {
+        "campo": "*dni",
+        "texto_ejemplo": "ID"
+      },
+      {
+        "campo": "*fecha",
+        "texto_ejemplo": "**/**/****"
+      },
+      {
+        "campo": "*hora",
+        "texto_ejemplo": "**:**"
+      },
+      {
+        "campo": "*medico",
+        "texto_ejemplo": "Doctors"
+      }
+    ]
+  }
 }

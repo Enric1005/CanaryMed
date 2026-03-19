@@ -252,7 +252,7 @@ function loadFooter() {
             title.textContent = footer.titulos_nav[index].name;
         }
         ul.innerHTML = "";
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= 2; i++) {
             const li = document.createElement("li");
             const a = document.createElement("a");
 
