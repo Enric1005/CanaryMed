@@ -154,9 +154,9 @@
     "boton_salir": "Cerrar Sesión",
     "boton_editar": "Editar",
     "cajetillas": [
-      {"titulo":  "Citas Pendientes", "link":  "Ver más"},
-      {"titulo":  "Historial", "link":  "Ver más"},
-      {"titulo":  "Favoritos", "link":  "Ver más"}
+      {"titulo":  "Citas Pendientes", "link":  "../Paginas/pending_appoinments.html"},
+      {"titulo":  "Historial", "link":  "../Paginas/pending_appoinments.html"},
+      {"titulo":  "Favoritos", "link":  "../Paginas/pending_appoinments.html"}
     ]
 
   },
