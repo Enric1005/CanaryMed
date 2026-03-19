@@ -64,9 +64,24 @@
     ],
     "logo": "CanaryMed",
     "titulos_nav": [
-      { "name": "The Hospital" },
-      { "name": "Our Services" },
-      { "name": "Useful Links" }
+      { "name": "The Hospital",
+        "navs": [
+          {"nav": "Work with us", "src": "../Paginas/work_with_us.html"},
+          {"nav": "About us", "src": "../Paginas/about_us.html"}
+        ]
+      },
+      { "name": "Our Services",
+        "navs": [
+          {"nav": "Collaborating centers", "src": "../Paginas/centers.html"},
+          {"nav": "Especialtys", "src": "../Paginas/specialtys.html"}
+        ]
+      },
+      { "name": "Useful Links",
+        "navs": [
+          {"nav": "History of Canarian medicine", "src": "https://guanchipedia.com/historia-de-la-medicina-en-canarias/"},
+          {"nav": "Important figures from the Canary Islands", "src": "https://www.cienciacanaria.es/secciones/a-fondo/1220-cientificos-y-cientificas-canarios-que-son-referentes-en-el-mundo"}
+        ]
+      }
     ]
   },
   "Bienvenida_home": {

@@ -74,9 +74,24 @@
     ],
     "logo": "CanaryMed",
     "titulos_nav": [
-      {"name": "El Hospital"},
-      {"name": "Nuestros Servicios"},
-      {"name": "Enlaces de interés"}
+      {"name": "El Hospital",
+        "navs": [
+          {"nav": "Colabora con nosotros", "src": "../Paginas/work_with_us.html"},
+          {"nav": "Sobre nosotros", "src": "../Paginas/about_us.html"}
+        ]
+      },
+      {"name": "Nuestros Servicios",
+        "navs": [
+          {"nav": "Centros colaboradores", "src": "../Paginas/centers.html"},
+          {"nav": "Especialidades", "src": "../Paginas/specialtys.html"}
+        ]
+      },
+      {"name": "Enlaces de interés",
+        "navs": [
+          {"nav": "Historia de la medicina canaria", "src": "https://guanchipedia.com/historia-de-la-medicina-en-canarias/"},
+          {"nav": "Figuras importantes Canarias", "src": "https://www.cienciacanaria.es/secciones/a-fondo/1220-cientificos-y-cientificas-canarios-que-son-referentes-en-el-mundo"}
+        ]
+      }
     ]
   },
   "Bienvenida_home": {
