@@ -169,7 +169,16 @@ function loadLogin(){
 }
 
 function loadRegisterAndEdit(){
-    const
+    const labels = document.querySelectorAll(".contenedor .text_box #register_form label");
+    if (labels) {
+        labels.forEach((label, index) => {
+            label.textContent = DATA.register_edit.fields[index].field;
+        })
+    }
+    const inputs = document.querySelectorAll(".contenedor .text_box #register_form input");
+    inputs.forEach((input, index) => {
+        input.placeholder = DATA.register_edit.fields[index].example_text;
+    });
 }
 
 

@@ -127,7 +127,7 @@
       {"field":  "*Verificar email", "example_text":  ""},
       {"field":  "*Contraseña", "example_text":  ""},
       {"field":  "*Verificar Contraseña", "example_text":  ""},
-      {"field":  "*NIF", "example_text":  "XXXXXXXXH"},
+      {"field":  "*DNI", "example_text":  "XXXXXXXXH"},
       {"field":  "*Número Telefónico", "example_text":  ""}
     ]
   },
