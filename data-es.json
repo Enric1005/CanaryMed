@@ -137,9 +137,9 @@
       {"field": "Cuenta Usuario"},
       {"field": "Contraseña"}
     ],
-    "boton_log_in": "Iniciar Sesión",
-    "boton_cancel": "Cancelar",
-    "link_register": "Nueva Cuenta"
+    "login_button": "Iniciar Sesión",
+    "cancel_button": "Cancelar",
+    "register_link": "Nueva Cuenta"
   },
   "client_asist": {
     "title": "Asistencia Cliente",

@@ -157,6 +157,14 @@ function loadLogin(){
             label.textContent = DATA.login.fields[index].field;
         })
     }
+
+    const loginButton = document.querySelector(".login .botones button[type=submit]");
+    const cancelButton = document.querySelector(".login .botones button[type=button]");
+    if (loginButton) {loginButton.textContent = DATA.login.login_button;}
+    if (cancelButton) {cancelButton.textContent = DATA.login.cancel_button;}
+
+    const registerLink = document.querySelector(".login nav a");
+    if (registerLink) {registerLink.textContent = DATA.login.register_link}
 }
 
 function loadWorkWithUs(){
