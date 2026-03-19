@@ -25,7 +25,7 @@ export function register_user_form() {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const terminos = document.getElementsByName("casilla");
+        const terminos = document.querySelector("#mi-check");
         if (!terminos.checked) {
             alert("Acepte los terminos y condiciones");
             return;
@@ -92,4 +92,15 @@ export function log_in(){
         localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
         window.location.href = "../Paginas/profile.html";
     });
+}
+
+export function log_out() {
+    const btn = document.getElementById("log_out_btn");
+    if (!btn) return;
+
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.removeItem("usuarioActivo");
+        window.location.href = "../Paginas/home_page.html";
+    })
 }
