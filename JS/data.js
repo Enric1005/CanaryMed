@@ -169,16 +169,23 @@ function loadLogin(){
 }
 
 function loadRegisterAndEdit(){
-    const labels = document.querySelectorAll(".contenedor .text_box #register_form label");
-    if (labels) {
-        labels.forEach((label, index) => {
-            label.textContent = DATA.register_edit.fields[index].field;
-        })
-    }
-    const inputs = document.querySelectorAll(".contenedor .text_box #register_form input");
+    const labels = document.querySelectorAll("#register_form label:not(.chbox label)");
+    labels.forEach((label, index) => {
+        label.textContent = DATA.register_edit.fields[index].field;
+    });
+
+    const inputs = document.querySelectorAll(
+        "#register_form input:not([type='checkbox']):not([type='submit'])"
+    );
     inputs.forEach((input, index) => {
         input.placeholder = DATA.register_edit.fields[index].example_text;
     });
+
+    const checkBox = document.querySelector(".chbox label");
+    if (checkBox) checkBox.textContent = DATA.register_edit.checkbox;
+
+    const acceptButton = document.querySelector(".boton input[type='submit']");
+    if(acceptButton) acceptButton.value = DATA.register_edit.register_button;
 }
 
 
