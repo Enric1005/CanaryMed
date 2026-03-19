@@ -1,3 +1,13 @@
+.formulario input,
+.formulario select {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 .text-section {
     padding: 30px 80px;
 }
