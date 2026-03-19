@@ -16,6 +16,7 @@ export async function loadDynamicContent(lang = "es") {
         loadHeader();
         loadFooter();
         loadLogin();
+        loadRegisterAndEdit();
         loadMain();
         loadCenters();
         loadWorkWithUs();
@@ -167,6 +168,11 @@ function loadLogin(){
     if (registerLink) {registerLink.textContent = DATA.login.register_link}
 }
 
+function loadRegisterAndEdit(){
+    const
+}
+
+
 function loadWorkWithUs(){
     const workWithUsData = DATA.work_with_us;
 
@@ -252,7 +258,7 @@ function loadFooter() {
             title.textContent = footer.titulos_nav[index].name;
         }
         ul.innerHTML = "";
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i <= 2; i++) {
             const li = document.createElement("li");
             const a = document.createElement("a");
 
