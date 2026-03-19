@@ -206,7 +206,7 @@ function loadRegisterAndEdit(){
 function loadWorkWithUs(){
     const workWithUsData = DATA.work_with_us;
 
-    const workWithUsTitle = document.querySelector(".text-section h1");
+    const workWithUsTitle = document.querySelector("#text-section h1");
     if(workWithUsTitle){
         workWithUsTitle.textContent = workWithUsData.title_page;
     }
@@ -318,18 +318,8 @@ function loadFooter() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', async function () {
-    if (!window.includesLoaded) {
-        window.includesLoaded = true;
-        await xLuIncludeFile();
-    }
-
-    const lang = localStorage.getItem("lang") || "es";
-    await loadDynamicContent(lang);
-});
-
 function loadClientsAsist() {
-    const title = document.querySelector("main h1");
+    const title = document.querySelector("#main_asist_header h1");
     if (title) title.textContent = DATA.client_asist.title;
 
     const label = document.querySelector(".contenedor label[for='lorem']");
@@ -341,3 +331,13 @@ function loadClientsAsist() {
     const button = document.querySelector(".contenedor input[type='submit']");
     if (button) button.value = DATA.client_asist.boton;
 }
+
+document.addEventListener('DOMContentLoaded', async function () {
+    if (!window.includesLoaded) {
+        window.includesLoaded = true;
+        await xLuIncludeFile();
+    }
+
+    const lang = localStorage.getItem("lang") || "es";
+    await loadDynamicContent(lang);
+});
