@@ -82,7 +82,7 @@ export function log_in(){
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        const usuario = usuarios.find(u => u.email === email && u.password === password);
+        const usuario = usuarios.find(u => u.correo === email && u.password === password);
 
         if (!usuario) {
             alert("Usuario o contraseña incorrecta");

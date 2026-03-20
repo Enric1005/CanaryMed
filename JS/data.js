@@ -9,7 +9,6 @@ export async function loadDynamicContent(lang = "es") {
     try {
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
-
         log_in();
         log_out();
         register_user_form();
