@@ -56,12 +56,12 @@
 
 .profile-info h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 50px;
 }
 
 .profile-info h4 {
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .profile-info p {
@@ -73,7 +73,7 @@
 .profile-text p {
     margin: 0;
     padding: 8px 0;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.4;
 }
 

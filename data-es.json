@@ -168,12 +168,18 @@
   "perfil": {
     "boton_salir": "Cerrar Sesión",
     "boton_editar": "Editar",
-    "cajetillas": [
-      {"titulo":  "Citas Pendientes", "link":  "../Paginas/pending_appoinments.html"},
-      {"titulo":  "Historial", "link":  "../Paginas/pending_appoinments.html"},
-      {"titulo":  "Favoritos", "link":  "../Paginas/pending_appoinments.html"}
+    "secciones": [
+      {
+        "titulo": "Citas Pendientes",
+        "texto": "Ver más"
+      }, {
+        "titulo": "Historial",
+        "texto": "Ver más"
+      }, {
+        "titulo": "Favoritos",
+        "texto": "Ver más"
+      }
     ]
-
   },
   "button_back": "Volver atrás",
   "boton_esp": "Ver más",

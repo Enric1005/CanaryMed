@@ -163,10 +163,17 @@
   "perfil": {
     "boton_salir": "Log Out",
     "boton_editar": "Edit",
-    "cajetillas": [
-      { "titulo": "Pending Appointments", "link": "View more" },
-      { "titulo": "History", "link": "View more" },
-      { "titulo": "Favorites", "link": "View more" }
+    "secciones": [
+      {
+        "titulo": "Pending Appointments",
+        "texto": "See more"
+      }, {
+        "titulo": "History",
+        "texto": "See more"
+      }, {
+        "titulo": "Favourites",
+        "texto": "See more"
+      }
     ]
   },
   "button_back": "Go back",

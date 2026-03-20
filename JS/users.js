@@ -52,7 +52,7 @@ export function register_user_form() {
         const user = {
             nombre: nombre,
             apellidos: apellidos,
-            email: email,
+            correo: email,
             password: password,
             NIF: nif,
             telefono: telefono,
