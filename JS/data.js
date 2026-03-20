@@ -5,10 +5,11 @@ import { log_out } from "./users.js";
 
 let DATA = null;
 
-export async function loadDynamicContent(lang = "es") {
+async function loadDynamicContent(lang = "es") {
     try {
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
+
         log_in();
         log_out();
         register_user_form();
@@ -22,6 +23,7 @@ export async function loadDynamicContent(lang = "es") {
         loadWorkWithUs();
         loadAboutUs();
         loadClientsAsist();
+        loadSeccion();
 
     } catch(error) {
         console.error("Error cargando JSON:", error);
@@ -46,10 +48,7 @@ function loadHeader(){
         filterButton.textContent = header.browser.filter;
     }
 
-    const userIcon = document.getElementById("userIcon");
-    if (userIcon) {
-        userIcon.src = header.user_icon;
-    }
+
     const activo = JSON.parse(localStorage.getItem("usuarioActivo"));
     const user_link = document.querySelector("#btn_user a");
 
@@ -58,6 +57,14 @@ function loadHeader(){
             user_link.href = "../Paginas/profile.html";
         } else {
             user_link.href = "../Paginas/login.html";
+        }
+    }
+    const userIcon = document.getElementById("userIcon");
+    if (userIcon) {
+        if (!activo) {
+            userIcon.src = header.user_icon;
+        } else {
+            userIcon.src = "../Assets/icono_check.png";
         }
     }
 
@@ -348,7 +355,13 @@ function loadProfile() {
         const link = container.querySelector(".card-footer a");
 
         if (title) title.textContent = sec.titulo;
-        if (link) link.textContent = sec.texto;
+        if (link) {
+            link.textContent = sec.texto;
+
+            link.addEventListener("click", () => {
+                localStorage.setItem("seccionActiva", sec.key);
+            });
+        }
     });
 
     const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
@@ -373,6 +386,20 @@ function loadProfile() {
         if (all_name) all_name.textContent = fullname;
         if (mail) mail.textContent = email_user;
         if (phone) phone.textContent = phone_user;
+    }
+}
+
+function loadSeccion() {
+    if (!DATA?.perfil?.secciones) return;
+
+    const key = localStorage.getItem("seccionActiva");
+
+    const seccion = DATA.perfil.secciones.find(s => s.key === key);
+
+    const titulo = document.querySelector(".text-header h1");
+
+    if (titulo && seccion) {
+        titulo.textContent = seccion.titulo;
     }
 }
 

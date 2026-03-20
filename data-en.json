@@ -165,14 +165,19 @@
     "boton_editar": "Edit",
     "secciones": [
       {
+        "key": "citas",
         "titulo": "Pending Appointments",
-        "texto": "See more"
-      }, {
+        "texto": "See More"
+      },
+      {
+        "key": "historial",
         "titulo": "History",
-        "texto": "See more"
-      }, {
+        "texto": "See More"
+      },
+      {
+        "key": "favs",
         "titulo": "Favourites",
-        "texto": "See more"
+        "texto": "See More"
       }
     ]
   },

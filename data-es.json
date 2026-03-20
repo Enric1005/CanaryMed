@@ -170,12 +170,17 @@
     "boton_editar": "Editar",
     "secciones": [
       {
+        "key": "citas",
         "titulo": "Citas Pendientes",
         "texto": "Ver más"
-      }, {
+      },
+      {
+        "key": "historial",
         "titulo": "Historial",
         "texto": "Ver más"
-      }, {
+      },
+      {
+        "key": "favs",
         "titulo": "Favoritos",
         "texto": "Ver más"
       }
