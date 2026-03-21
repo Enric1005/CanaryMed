@@ -20,7 +20,6 @@ async function loadDynamicContent(lang = "es") {
         loadRegisterAndEdit();
         loadMain();
         loadCenters();
-        loadCenter();
         // loadWorkWithUs();
         loadAboutUs();
         loadClientsAsist();
@@ -309,39 +308,62 @@ function loadMakeAnAppointment() {
         button.textContent = DATA.make_an_appointment.boton_confirmar;
     }
 }
+function loadCenter() {
+    const page = window.location.pathname.split("/").pop();
 
-function loadCenter(){
-    const title = document.querySelector(".text-section .text-header h1");
-    if(title) title.textContent = DATA.centers[0].name;
+    // === Si estamos en la lista de centros ===
+    if (page === "centers.html") {
+        const centerButtons = document.querySelectorAll('.center-section .center-content .center-button');
+        console.log("Botones encontrados:", centerButtons.length);
 
-    const image = document.querySelector(".text-section .center-image img");
-    if(image) image.src = DATA.centers[0].image;
-
-    const centerSpecialitiesImages = document.querySelectorAll(
-        ".specialty_center-section .specialty_center-content .specialty_center-image img"
-    );
-    if(centerSpecialitiesImages){
-        centerSpecialitiesImages.forEach((images, i) => {
-            images.src = DATA.centers[0].specialities[i].src;
-        })
+        centerButtons.forEach((centerButton, index) => {
+            centerButton.addEventListener('click', () => {
+                localStorage.setItem("selectedCenterIndex", index);
+                window.location.href = "center_page.html";
+            });
+        });
     }
-    const centerSpecialities = document.querySelectorAll(
-        ".specialty_center-section .specialty_center-content .specialty_center-text"
-    );
-    if(centerSpecialities) {
+
+    // === Si estamos en la página de un centro específico ===
+    if (page === "center_page.html") {
+        const index = localStorage.getItem("selectedCenterIndex");
+        if (index === null) return;
+
+        const center = DATA.centers[index];
+
+        // Actualizamos título e imagen principal
+        const title = document.querySelector(".text-section .text-header h1");
+        if(title) title.textContent = center.name;
+
+        const image = document.querySelector(".text-section .center-image img");
+        if(image) image.src = center.image;
+
+        // Actualizamos especialidades
+        const centerSpecialitiesImages = document.querySelectorAll(
+            ".specialty_center-section .specialty_center-content .specialty_center-image img"
+        );
+        centerSpecialitiesImages.forEach((img, i) => {
+            if(center.specialities[i]) img.src = center.specialities[i].src;
+        });
+
+        const centerSpecialities = document.querySelectorAll(
+            ".specialty_center-section .specialty_center-content .specialty_center-text"
+        );
         centerSpecialities.forEach((speciality, i) => {
-            const title = speciality.querySelector("h1");
-            title.textContent = DATA.centers[0].specialities[i].name;
+            if(center.specialities[i]){
+                const title = speciality.querySelector("h1");
+                if(title) title.textContent = center.specialities[i].name;
 
-            const price = speciality.querySelector("p[data-type='price']");
-            if(price) price.textContent = DATA.centers[0].specialities[i].price;
+                const price = speciality.querySelector("p[data-type='price']");
+                if(price) price.textContent = center.specialities[i].price;
 
-            const location = speciality.querySelector("p[data-type='location']");
-            if(location) location.textContent = DATA.centers[0].specialities[i].location;
+                const location = speciality.querySelector("p[data-type='location']");
+                if(location) location.textContent = center.specialities[i].location;
 
-            const doctor = speciality.querySelector("p[data-type='doctor']");
-            if(doctor) doctor.textContent = DATA.centers[0].specialities[i].doctor;
-        })
+                const doctor = speciality.querySelector("p[data-type='doctor']");
+                if(doctor) doctor.textContent = center.specialities[i].doctor;
+            }
+        });
     }
 }
 
@@ -541,17 +563,18 @@ function loadSeccion() {
 document.addEventListener('DOMContentLoaded', async function () {
     if (!window.includesLoaded) {
         window.includesLoaded = true;
-        await xLuIncludeFile();
+        await xLuIncludeFile(); // esperar a que los includes se carguen
     }
 
     const lang = localStorage.getItem("lang") || "es";
     await loadDynamicContent(lang);
 
-    const page = window.location.pathname.split("/").pop(); // ej: centers.html o specialtys.html
+    loadCenter();
+
+    const page = window.location.pathname.split("/").pop();
     if (page === "centers.html") {
         loadFilters("centers");
     } else if (page === "specialtys.html") {
         loadFilters("specialities");
     }
 });
-//co
