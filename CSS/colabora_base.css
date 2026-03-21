@@ -12,6 +12,10 @@
     padding: 30px 80px;
 }
 
+.text-section2 {
+    padding: 30px 80px;
+}
+
 .text-header {
     display: flex;
     align-items: center;
@@ -55,10 +59,17 @@ hr {
     font-size: 18px;
     line-height: 1.6;
 }
+.text-section2 p {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 @media (max-width: 768px) {
 
     .text-section {
+        padding: 20px;
+    }
+    .text-section2 {
         padding: 20px;
     }
 

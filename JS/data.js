@@ -21,7 +21,7 @@ async function loadDynamicContent(lang = "es") {
         loadMain();
         loadCenters();
         loadCenter();
-        // loadWorkWithUs();
+        loadWorkWithUs();
         loadAboutUs();
         loadClientsAsist();
         loadSeccion();
@@ -255,26 +255,64 @@ function loadLogin(){
 }
 
 function loadRegisterAndEdit(){
-    const title = document.querySelector(".text h1");
-    if (title) title.textContent = DATA.register_edit.title;
+    const edit_activo = localStorage.getItem("editMode");
 
     const labels = document.querySelectorAll("#register_form label:not(.chbox label)");
     labels.forEach((label, index) => {
         label.textContent = DATA.register_edit.fields[index].field;
     });
 
-    const inputs = document.querySelectorAll(
-        "#register_form input:not([type='checkbox']):not([type='submit'])"
-    );
-    inputs.forEach((input, index) => {
-        input.placeholder = DATA.register_edit.fields[index].example_text;
-    });
+    if (edit_activo) {
+        const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+        if (usuario) {
+            const title = document.querySelector(".text h1");
+            if (title) title.textContent = "Editar";
 
-    const checkBox = document.querySelector(".chbox label");
-    if (checkBox) checkBox.textContent = DATA.register_edit.checkbox;
+            // Rellenar inputs con los datos actuales del usuario
+            const inputs = document.querySelectorAll(
+                "#register_form input:not([type='checkbox']):not([type='submit'])"
+            );
 
-    const acceptButton = document.querySelector(".boton input[type='submit']");
-    if(acceptButton) acceptButton.value = DATA.register_edit.register_button;
+            const valores = [
+                usuario.nombre,
+                usuario.apellidos,
+                usuario.correo,
+                usuario.correo,
+                "",
+                "",
+                usuario.NIF,
+                usuario.telefono
+            ];
+
+            inputs.forEach((input, index) => {
+                input.value = valores[index] || "";
+            });
+
+            // Ocultar checkbox en modo edición
+            const checkBox = document.querySelector(".chbox");
+            if (checkBox) checkBox.style.display = "none";
+
+            // Cambiar texto del botón
+            const acceptButton = document.querySelector(".contenedor2 .boton input[type='submit']");
+            if (acceptButton) acceptButton.value = "Guardar cambios";
+        }
+    } else {
+        const title = document.querySelector(".text h1");
+        if (title) title.textContent = DATA.register_edit.title;
+
+        const inputs = document.querySelectorAll(
+            "#register_form input:not([type='checkbox']):not([type='submit'])"
+        );
+        inputs.forEach((input, index) => {
+            input.placeholder = DATA.register_edit.fields[index].example_text;
+        });
+
+        const checkBox = document.querySelector(".chbox label");
+        if (checkBox) checkBox.textContent = DATA.register_edit.checkbox;
+
+        const acceptButton = document.querySelector(".contenedor2 .boton input[type='submit']");
+        if (acceptButton) acceptButton.value = DATA.register_edit.register_button;
+    }
 }
 
 function loadMakeAnAppointment() {
@@ -331,6 +369,9 @@ function loadCenter() {
         if (index === null) return;
 
         const center = DATA.centers[index];
+
+        const buton_back = document.querySelector(".text-section2 .text-header button");
+        if(buton_back) buton_back.textContent = DATA.button_back;
 
         const title = document.querySelector(".text-section2 .text-header h1");
         if(title) title.textContent = center.name;
@@ -508,7 +549,12 @@ function loadProfile() {
     if (btn_exit) btn_exit.textContent = profile.boton_salir;
 
     const btn_esp = document.getElementById("btn_esp");
-    if (btn_esp) btn_esp.textContent = profile.boton_editar;
+    if (btn_esp) {
+        btn_esp.textContent = profile.boton_editar;
+        btn_esp.addEventListener("click", () => {
+            localStorage.setItem("editMode", "true");
+        })
+    }
 
     profile.secciones.forEach((sec, index) => {
         const container = document.getElementById(`profile_section${index + 1}`);
@@ -559,11 +605,14 @@ function loadSeccion() {
 
     const seccion = DATA.perfil.secciones.find(s => s.key === key);
 
-    const titulo = document.querySelector(".text-header h1");
+    const titulo = document.querySelector(".text-section3 .text-header h1");
 
     if (titulo && seccion) {
         titulo.textContent = seccion.titulo;
     }
+
+    const buton_back = document.querySelector(".text-section3 .text-header button");
+    if(buton_back) buton_back.textContent = DATA.button_back;
 }
 
 document.addEventListener('DOMContentLoaded', async function () {

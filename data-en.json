@@ -79,7 +79,7 @@
       { "name": "Useful Links",
         "navs": [
           {"nav": "History of Canarian medicine", "src": "https://guanchipedia.com/historia-de-la-medicina-en-canarias/"},
-          {"nav": "Important figures from the Canary Islands", "src": "https://www.cienciacanaria.es/secciones/a-fondo/1220-cientificos-y-cientificas-canarios-que-son-referentes-en-el-mundo"}
+          {"nav": "User Asist", "src": "../Paginas/clients_asist.html"}
         ]
       }
     ]

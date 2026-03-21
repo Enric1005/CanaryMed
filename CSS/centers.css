@@ -1,3 +1,13 @@
+.center-image {
+    width: 100%;
+    height: 100vh;
+}
+
+.center-image img {
+    width: 100%;
+    height: 100vh;
+}
+
 @media (max-width: 768px) {
 
     .text-header h1 {
@@ -12,6 +22,11 @@
     }
 
     .center-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .center-image img {
         width: 100%;
         height: 50vh;
     }

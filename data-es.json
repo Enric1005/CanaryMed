@@ -13,13 +13,13 @@
       "desc": "",
       "specialities": [
         {"name": "Quimioterapia", "desc": "Oncología Médica", "src": "../Assets/Quimio.png",
-          "price": "40.00€", "location": "(Ubicación Quimioterapia)", "doctor": "Sergio Andrés Bañol Castaño"
+          "price": "40.00€", "location": "Oncología Médica", "doctor": "Dr. Sergio.A Bañol"
         },
         {"name": "Traumotología", "desc":  "Quirúrgico", "src": "../Assets/Traumotologia.png",
-          "price": "50.00€", "location": "(Ubicación Traumatología)", "doctor": "Enrique Sosa Ojeda"
+          "price": "50.00€", "location": "Quirúrgico", "doctor": "Dr. Enrique Sosa"
         },
         {"name": "Cardiología", "desc":  "No Quirúrgico", "src": "../Assets/Cardiologia.png",
-          "price": "60.00€", "location": "(Ubicación, Cardiología)","doctor": "Erick Justo Sosa"
+          "price": "60.00€", "location": "No Quirúrgico","doctor": "Dr. Erick Justo"
         }
       ]
     },
@@ -30,13 +30,13 @@
       "desc": "",
       "specialities": [
         {"name": "Radiodiagnóstico", "desc":  "Diagnóstico", "src": "../Assets/Radiodiagnóstico.png",
-          "price": "70.00€", "location": "(Ubicación Radiodiagnóstico)", "doctor": "Sergio Andrés Bañol Castaño"
+          "price": "70.00€", "location": "Diagnóstico", "doctor": "Dr. Sergio.A Bañol"
         },
         {"name": "Enfermedades Crónicas", "desc":  "Medicina General", "src": "../Assets/EC.png",
-          "price": "80.00€", "location": "(Ubicación Enfermedades Crónicas)", "doctor": "Enrique Sosa Ojeda"
+          "price": "80.00€", "location": "Medicina General", "doctor": "Dr. Enrique Sosa"
         },
         {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png",
-          "price": "90.00€", "location": "(Ubicación Neumología)", "doctor": "Erick Justo Sosa"
+          "price": "90.00€", "location": "Respiratorio", "doctor": "Dr. Erick Justo"
         }
       ]
     },
@@ -47,13 +47,13 @@
       "desc": "",
       "specialities": [
         {"name": "Cardiología", "desc":  "No Quirúrgico", "src": "../Assets/Cardiologia.png",
-          "price": "100.00€", "location": "(Ubicación Cardiología)", "doctor": "Sergio Andrés Bañol Castaño"
+          "price": "100.00€", "location": "No Quirúrgico", "doctor": "Dr. Sergio.A Bañol"
         },
         {"name": "Radiodiagnóstico", "desc":  "Diagnóstico", "src": "../Assets/Radiodiagnóstico.png",
-          "price": "110.00€", "location": "(Ubicación Radiodiagnóstico)", "doctor": "Enrique Sosa Ojeda"
+          "price": "110.00€", "location": "Diagnóstico", "doctor": "Dr. Enrique Sosa"
         },
         {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png",
-          "price": "120.00€", "location": "(Ubicación Neumología)", "doctor": "Erick Justo Sosa"
+          "price": "120.00€", "location": "Respiratorio", "doctor": "Dr. Erick Justo"
         }
       ]
     },
@@ -64,13 +64,13 @@
       "desc": "",
       "specialities": [
         {"name": "Traumotología", "desc":  "Quirúrgico", "src": "../Assets/Traumotologia.png",
-          "price": "130.00€", "location": "(Ubicación Traumotología)", "doctor": "Sergio Andrés Bañol Castaño"
+          "price": "130.00€", "location": "Quirúrgico", "doctor": "Dr. Sergio.A Bañol"
         },
         {"name": "Enfermedades Crónicas", "desc":  "Medicina General", "src": "../Assets/EC.png",
-          "price": "140.00€", "location": "(Ubicación Enfermedades Crónicas)", "doctor": "Enrique Sosa Ojeda"
+          "price": "140.00€", "location": "Medicina General", "doctor": "Dr. Enrique Sosa"
         },
         {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png",
-          "price": "150.00€", "location": "(Ubicación Neumología)", "doctor": "Erick Justo Sosa"
+          "price": "150.00€", "location": "Respiratorio", "doctor": "Dr. Erick Justo"
         }
       ]
     }
@@ -133,7 +133,7 @@
       {"name": "Enlaces de interés",
         "navs": [
           {"nav": "Historia de la medicina canaria", "src": "https://guanchipedia.com/historia-de-la-medicina-en-canarias/"},
-          {"nav": "Figuras importantes Canarias", "src": "https://www.cienciacanaria.es/secciones/a-fondo/1220-cientificos-y-cientificas-canarios-que-son-referentes-en-el-mundo"}
+          {"nav": "Asistencia de usuario", "src": "../Paginas/clients_asist.html"}
         ]
       }
     ]

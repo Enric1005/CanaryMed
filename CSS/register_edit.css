@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-.contenedor {
+.contenedor2 {
     width: 500px;
     background-color: #E8F2FF;
     border: 3px solid black;
@@ -74,7 +74,7 @@ input[type="checkbox"] {
 
 @media (max-width: 768px) {
 
-    .contenedor {
+    .contenedor2 {
         width: 300px;
         margin: 20px;
         height: 100vh;
