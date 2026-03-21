@@ -144,6 +144,33 @@ function loadMain() {
 }
 
 function loadCenters() {
+    const filterData = DATA.filtro_centros;
+    const filtersContainer = document.querySelector("main .filter_zone2");
+
+    if (!filtersContainer || !filterData) return;
+
+    filtersContainer.innerHTML = "";
+
+    const applyButton = document.createElement("input");
+    applyButton.type = "submit";
+    applyButton.value = "Aplicar";
+    applyButton.classList.add("filter_zone_input");
+    filtersContainer.appendChild(applyButton);
+
+    filterData.forEach(filtro => {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = filtro;
+        checkbox.classList.add("filter_zone_ch");
+        checkbox.id = `filter_${filtro.replace(/\s+/g, "_")}`;
+
+        const label = document.createElement("label");
+        label.htmlFor = checkbox.id;
+        label.textContent = filtro;
+
+        filtersContainer.appendChild(checkbox);
+        filtersContainer.appendChild(label);
+    });
     const centersData = DATA.centers;
     const centersHTML = document.querySelectorAll("main .center-section");
 
@@ -169,6 +196,7 @@ function loadCenters() {
 }
 
 function loadSpecialtys() {
+
     const specialtysData = DATA.specialities.Especialidades;
     const specialtysHTML = document.querySelectorAll("main .specialty-section");
 

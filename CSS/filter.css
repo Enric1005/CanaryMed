@@ -39,6 +39,16 @@
     display: none;
 }
 
+.filter_zone_input {
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+
+}
+
 
 @media (max-width: 768px) {
 

@@ -1,5 +1,6 @@
 
-{"filtro_centros":  ["Precio Bajo",
+{
+  "filtro_centros":  ["Precio Bajo",
                       "Precio Medio",
                       "Precio Alto",
                       "Norte",
