@@ -1,4 +1,3 @@
-
 {
   "filtro_centros":  ["Precio Bajo",
                       "Precio Medio",
@@ -11,25 +10,69 @@
       "name": "Hospital San José",
       "description": "El Hospital San José (Las Palmas de Gran Canaria, 1891) es un referente de la sanidad privada en Canarias, en constante modernización y crecimiento. Cuenta con tecnología avanzada, un bloque quirúrgico de vanguardia y ofrece todas las especialidades médicas, con profesionales de prestigio y tratamientos personalizados de alta calidad y complejidad.",
       "image": "../Assets/San_jose.jpg",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {"name": "Quimioterapia", "desc": "Oncología Médica", "src": "../Assets/Quimio.png",
+          "price": "40.00€", "location": "(Ubicación Quimioterapia)", "doctor": "Sergio Andrés Bañol Castaño"
+        },
+        {"name": "Traumotología", "desc":  "Quirúrgico", "src": "../Assets/Traumotologia.png",
+          "price": "50.00€", "location": "(Ubicación Traumatología)", "doctor": "Enrique Sosa Ojeda"
+        },
+        {"name": "Cardiología", "desc":  "No Quirúrgico", "src": "../Assets/Cardiologia.png",
+          "price": "60.00€", "location": "(Ubicación, Cardiología)","doctor": "Erick Justo Sosa"
+        }
+      ]
     },
     {
       "name": "Hospital Vithas",
       "description": "El Grupo hospitalario Vithas, del Grupo Goodgrower, se fundó en 2012 con el objetivo de mejorar la vida de las personas. Actualmente cuenta con 22 hospitales y 39 centros médicos en 14 provincias españolas, dispone de 1.846 camas y reúne a 12.600 profesionales, que atienden más de 6,4 millones de encuentros médicos al año.",
       "image": "../Assets/Vithas.webp",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {"name": "Radiodiagnóstico", "desc":  "Diagnóstico", "src": "../Assets/Radiodiagnóstico.png",
+          "price": "70.00€", "location": "(Ubicación Radiodiagnóstico)", "doctor": "Sergio Andrés Bañol Castaño"
+        },
+        {"name": "Enfermedades Crónicas", "desc":  "Medicina General", "src": "../Assets/EC.png",
+          "price": "80.00€", "location": "(Ubicación Enfermedades Crónicas)", "doctor": "Enrique Sosa Ojeda"
+        },
+        {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png",
+          "price": "90.00€", "location": "(Ubicación Neumología)", "doctor": "Erick Justo Sosa"
+        }
+      ]
     },
     {
       "name": "Hospital Perpetuo Socorro",
       "description": "Somos un centro médico quirúrgico privado en el que encontrará la tecnología más avanzada y una alta cualificación técnica y profesional. Hospital Perpetuo Socorro cubre prácticamente todas las especialidades médicas con una prioridad: ofrecer a nuestros pacientes la máxima calidad asistencial. El compromiso de nuestro equipo, el modelo de gestión y nuestros resultados nos avalan. En HPS, su salud es lo primero.",
       "image": "../Assets/Perpetuo_socorro.jpg",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {"name": "Cardiología", "desc":  "No Quirúrgico", "src": "../Assets/Cardiologia.png",
+          "price": "100.00€", "location": "(Ubicación Cardiología)", "doctor": "Sergio Andrés Bañol Castaño"
+        },
+        {"name": "Radiodiagnóstico", "desc":  "Diagnóstico", "src": "../Assets/Radiodiagnóstico.png",
+          "price": "110.00€", "location": "(Ubicación Radiodiagnóstico)", "doctor": "Enrique Sosa Ojeda"
+        },
+        {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png",
+          "price": "120.00€", "location": "(Ubicación Neumología)", "doctor": "Erick Justo Sosa"
+        }
+      ]
     },
     {
       "name": "Hospital San Roque",
       "description": "Hospitales Universitarios San Roque surge con el propósito de mejorar el bienestar de las personas. Para ello pone a disposición de la sociedad servicios integrales de asistencia sanitaria a través de la tecnología de última generación en los ámbitos de consultas, diagnóstico y hospitalización.",
       "image": "../Assets/San_roque.webp",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {"name": "Traumotología", "desc":  "Quirúrgico", "src": "../Assets/Traumotologia.png",
+          "price": "130.00€", "location": "(Ubicación Traumotología)", "doctor": "Sergio Andrés Bañol Castaño"
+        },
+        {"name": "Enfermedades Crónicas", "desc":  "Medicina General", "src": "../Assets/EC.png",
+          "price": "140.00€", "location": "(Ubicación Enfermedades Crónicas)", "doctor": "Enrique Sosa Ojeda"
+        },
+        {"name": "Neumología", "desc":  "Respiratorio", "src": "../Assets/Neumología.png",
+          "price": "150.00€", "location": "(Ubicación Neumología)", "doctor": "Erick Justo Sosa"
+        }
+      ]
     }
   ],
   "header": {

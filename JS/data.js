@@ -20,7 +20,8 @@ async function loadDynamicContent(lang = "es") {
         loadRegisterAndEdit();
         loadMain();
         loadCenters();
-        loadWorkWithUs();
+        loadCenter();
+        // loadWorkWithUs();
         loadAboutUs();
         loadClientsAsist();
         loadSeccion();
@@ -309,11 +310,45 @@ function loadMakeAnAppointment() {
     }
 }
 
+function loadCenter(){
+    const title = document.querySelector(".text-section .text-header h1");
+    if(title) title.textContent = DATA.centers[0].name;
+
+    const image = document.querySelector(".text-section .center-image img");
+    if(image) image.src = DATA.centers[0].image;
+
+    const centerSpecialitiesImages = document.querySelectorAll(
+        ".specialty_center-section .specialty_center-content .specialty_center-image img"
+    );
+    if(centerSpecialitiesImages){
+        centerSpecialitiesImages.forEach((images, i) => {
+            images.src = DATA.centers[0].specialities[i].src;
+        })
+    }
+    const centerSpecialities = document.querySelectorAll(
+        ".specialty_center-section .specialty_center-content .specialty_center-text"
+    );
+    if(centerSpecialities) {
+        centerSpecialities.forEach((speciality, i) => {
+            const title = speciality.querySelector("h1");
+            title.textContent = DATA.centers[0].specialities[i].name;
+
+            const price = speciality.querySelector("p[data-type='price']");
+            if(price) price.textContent = DATA.centers[0].specialities[i].price;
+
+            const location = speciality.querySelector("p[data-type='location']");
+            if(location) location.textContent = DATA.centers[0].specialities[i].location;
+
+            const doctor = speciality.querySelector("p[data-type='doctor']");
+            if(doctor) doctor.textContent = DATA.centers[0].specialities[i].doctor;
+        })
+    }
+}
 
 function loadWorkWithUs(){
     const workWithUsData = DATA.work_with_us;
 
-    const workWithUsTitle = document.querySelector(".text-section h1");
+    const workWithUsTitle = document.querySelector(".text-section .text-header h1");
     if(workWithUsTitle){
         workWithUsTitle.textContent = workWithUsData.title_page;
     }
