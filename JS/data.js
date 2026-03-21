@@ -20,6 +20,7 @@ async function loadDynamicContent(lang = "es") {
         loadRegisterAndEdit();
         loadMain();
         loadCenters();
+        loadCenter();
         // loadWorkWithUs();
         loadAboutUs();
         loadClientsAsist();
@@ -311,7 +312,7 @@ function loadMakeAnAppointment() {
 function loadCenter() {
     const page = window.location.pathname.split("/").pop();
 
-    // === Si estamos en la lista de centros ===
+    // Si estamos en la lista de centros
     if (page === "centers.html") {
         const centerButtons = document.querySelectorAll('.center-section .center-content .center-button');
         console.log("Botones encontrados:", centerButtons.length);
@@ -324,21 +325,22 @@ function loadCenter() {
         });
     }
 
-    // === Si estamos en la página de un centro específico ===
+    // Si estamos en la página de un centro específico
     if (page === "center_page.html") {
         const index = localStorage.getItem("selectedCenterIndex");
         if (index === null) return;
 
         const center = DATA.centers[index];
 
-        // Actualizamos título e imagen principal
-        const title = document.querySelector(".text-section .text-header h1");
+        const title = document.querySelector(".text-section2 .text-header h1");
         if(title) title.textContent = center.name;
 
-        const image = document.querySelector(".text-section .center-image img");
+        const image = document.querySelector(".text-section2 .center-image img");
         if(image) image.src = center.image;
 
-        // Actualizamos especialidades
+        const description = document.querySelector(".text-section2 p");
+        if(description) description.textContent = center.description;
+
         const centerSpecialitiesImages = document.querySelectorAll(
             ".specialty_center-section .specialty_center-content .specialty_center-image img"
         );
@@ -350,18 +352,22 @@ function loadCenter() {
             ".specialty_center-section .specialty_center-content .specialty_center-text"
         );
         centerSpecialities.forEach((speciality, i) => {
-            if(center.specialities[i]){
+            if(center.specialities[i]) {
                 const title = speciality.querySelector("h1");
-                if(title) title.textContent = center.specialities[i].name;
+                if (title) title.textContent = center.specialities[i].name;
 
                 const price = speciality.querySelector("p[data-type='price']");
-                if(price) price.textContent = center.specialities[i].price;
+                if (price) price.textContent = center.specialities[i].price;
 
                 const location = speciality.querySelector("p[data-type='location']");
-                if(location) location.textContent = center.specialities[i].location;
+                if (location) location.textContent = center.specialities[i].location;
 
                 const doctor = speciality.querySelector("p[data-type='doctor']");
-                if(doctor) doctor.textContent = center.specialities[i].doctor;
+                if (doctor) doctor.textContent = center.specialities[i].doctor;
+
+                const button = speciality.closest(".specialty_center-content")
+                                                  .querySelector(".specialty_center-button");
+                if (button) {button.textContent = DATA.make_an_appointment.title;}
             }
         });
     }
