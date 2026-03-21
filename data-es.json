@@ -190,31 +190,31 @@
   "boton_esp": "Ver más",
   "boton_filtrar": "Filtrar",
   "make_an_appointment": {
-    "texto_cita": "Pedir cita",
+    "title": "Pedir cita",
     "boton_confirmar": "Confirmar cita",
-    "formCita": [
+    "fields": [
       {
-        "campo": "*centro",
+        "campo": "*Centro",
         "texto_ejemplo": "Centros"
       },
       {
-        "campo": "*especialidad_input",
+        "campo": "*Especialidad",
         "texto_ejemplo": "Especialidades"
       },
       {
-        "campo": "*dni",
+        "campo": "*DNI",
         "texto_ejemplo": "DNI"
       },
       {
-        "campo": "*fecha",
+        "campo": "*Fecha",
         "texto_ejemplo": "**/**/****"
       },
       {
-        "campo": "*hora",
+        "campo": "*Hora",
         "texto_ejemplo": "**:**"
       },
       {
-        "campo": "*medico",
+        "campo": "*Médico",
         "texto_ejemplo": "Medicos"
       }
     ]

@@ -24,6 +24,7 @@ async function loadDynamicContent(lang = "es") {
         loadAboutUs();
         loadClientsAsist();
         loadSeccion();
+        loadMakeAnAppointment();
 
     } catch(error) {
         console.error("Error cargando JSON:", error);
@@ -207,6 +208,39 @@ function loadRegisterAndEdit(){
 
     const acceptButton = document.querySelector(".boton input[type='submit']");
     if(acceptButton) acceptButton.value = DATA.register_edit.register_button;
+}
+
+function loadMakeAnAppointment() {
+    const title = document.querySelector("#title");
+    if (title) title.textContent = DATA.make_an_appointment.title;
+
+    const labels = document.querySelectorAll("#formCita label");
+    labels.forEach((label, index) => {
+        if (DATA.make_an_appointment.fields[index]) {
+            label.textContent = DATA.make_an_appointment.fields[index].campo;
+        }
+    });
+
+    const inputs = document.querySelectorAll("#formCita input");
+    inputs.forEach((input, index) => {
+        if (DATA.make_an_appointment.fields[index]) {
+            input.placeholder = DATA.make_an_appointment.fields[index].texto_ejemplo;
+        }
+    });
+
+    const selects = document.querySelectorAll("#formCita select");
+    selects.forEach((select, index) => {
+        if (DATA.make_an_appointment.fields[index]) {
+            select.options[0].textContent =
+                DATA.make_an_appointment.fields[index+3].texto_ejemplo;
+        }
+    });
+
+    // Botón
+    const button = document.querySelector("#boton_confirmar");
+    if (button) {
+        button.textContent = DATA.make_an_appointment.boton_confirmar;
+    }
 }
 
 
