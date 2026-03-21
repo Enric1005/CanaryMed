@@ -25,6 +25,7 @@ async function loadDynamicContent(lang = "es") {
         loadClientsAsist();
         loadSeccion();
         loadMakeAnAppointment();
+        loadSpecialtys();
 
     } catch(error) {
         console.error("Error cargando JSON:", error);
@@ -160,6 +161,29 @@ function loadCenters() {
         if (h1) h1.textContent = center.name;
         if (h3) h3.textContent = center.name;
         if (p) p.textContent = center.description;
+
+        if (button) {
+            button.textContent = DATA.boton_esp || "Ver más";
+        }
+    });
+}
+
+function loadSpecialtys() {
+    const specialtysData = DATA.specialities.Especialidades;
+    const specialtysHTML = document.querySelectorAll("main .specialty-section");
+
+    specialtysHTML.forEach((element, index) => {
+        const specialty = specialtysData[index];
+        if (!specialty) return;
+
+        const img = element.querySelector("img.specialty");
+        const h1 = element.querySelector("h1");
+        const h3 = element.querySelector("h3");
+        const button = element.querySelector(".specialty-button");
+
+        if (img) img.src = specialty.src;
+        if (h1) h1.textContent = specialty.name;
+        if (h3) h3.textContent = specialty.desc;
 
         if (button) {
             button.textContent = DATA.boton_esp || "Ver más";
