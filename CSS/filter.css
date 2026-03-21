@@ -66,16 +66,45 @@
 
     .filter_zone {
         display: none;
-    }
-
-    .filter_zone2 {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        width: 90%;
+        margin: 10px auto;
         padding: 10px;
+        border-radius: 10px;
+        border: 3px solid black;
+        background-color: #fff7cc;
+        box-sizing: border-box;
     }
 
     #toggle_filters:checked + .filter_toggle + .filter_zone {
         display: block;
+    }
+
+    .filter_zone2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .filter_zone_input {
+        width: 100px;
+        height: 30px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        margin-left: 0;
+    }
+
+    .filter_zone2 label {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+        width: auto;
+    }
+
+    .filter_zone_ch {
+        margin: 0;
     }
 }

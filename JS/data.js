@@ -143,17 +143,27 @@ function loadMain() {
     }
 }
 
-function loadCenters() {
-    const filterData = DATA.filtro_centros;
+function loadFilters(type) {
+    // type: "centers" o "specialities"
     const filtersContainer = document.querySelector("main .filter_zone2");
+    if (!filtersContainer) return;
 
-    if (!filtersContainer || !filterData) return;
+    filtersContainer.innerHTML = ""; // Limpiar filtros previos
 
-    filtersContainer.innerHTML = "";
+    let filterData = [];
+    let buttonText = "Aplicar";
+
+    if (type === "centers") {
+        filterData = DATA.filtro_centros;
+        buttonText = "Aplicar";
+    } else if (type === "specialities") {
+        filterData = DATA.specialities.filters.map(f => f.name);
+        buttonText = "Aplicar";
+    }
 
     const applyButton = document.createElement("input");
     applyButton.type = "submit";
-    applyButton.value = "Aplicar";
+    applyButton.value = buttonText;
     applyButton.classList.add("filter_zone_input");
     filtersContainer.appendChild(applyButton);
 
@@ -171,6 +181,10 @@ function loadCenters() {
         filtersContainer.appendChild(checkbox);
         filtersContainer.appendChild(label);
     });
+}
+
+function loadCenters() {
+    loadFilters("centers");
     const centersData = DATA.centers;
     const centersHTML = document.querySelectorAll("main .center-section");
 
@@ -196,7 +210,7 @@ function loadCenters() {
 }
 
 function loadSpecialtys() {
-
+    loadFilters("specialities");
     const specialtysData = DATA.specialities.Especialidades;
     const specialtysHTML = document.querySelectorAll("main .specialty-section");
 
@@ -497,4 +511,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const lang = localStorage.getItem("lang") || "es";
     await loadDynamicContent(lang);
+
+    const page = window.location.pathname.split("/").pop(); // ej: centers.html o specialtys.html
+    if (page === "centers.html") {
+        loadFilters("centers");
+    } else if (page === "specialtys.html") {
+        loadFilters("specialities");
+    }
 });
