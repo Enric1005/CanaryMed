@@ -10,6 +10,7 @@ async function loadDynamicContent(lang = "es") {
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
 
+        // localStorage.clear()
         log_in();
         log_out();
         register_user_form();
@@ -260,7 +261,7 @@ function loadLogin(){
 }
 
 function loadRegisterAndEdit(){
-    const edit_activo = localStorage.getItem("editMode");
+    const edit_activo = localStorage.getItem("editMode") === "true";
 
     const labels = document.querySelectorAll("#register_form label:not(.chbox label)");
     labels.forEach((label, index) => {
@@ -269,6 +270,7 @@ function loadRegisterAndEdit(){
 
     if (edit_activo) {
         const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+        localStorage.removeItem("editMode");
         if (usuario) {
             const title = document.querySelector(".text h1");
             if (title) title.textContent = "Editar";
