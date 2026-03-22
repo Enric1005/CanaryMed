@@ -10,7 +10,11 @@ async function loadDynamicContent(lang = "es") {
         const response = await fetch(`../data-${lang}.json`);
         DATA = await response.json();
 
+        //Solo descomentar cuando se necesite comprobar
         // localStorage.clear()
+        // let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        // console.log(usuarios);
+        
         log_in();
         log_out();
         register_user_form();
@@ -540,10 +544,10 @@ function loadClientsAsist() {
     const title = document.querySelector("#main_asist_header h1");
     if (title) title.textContent = DATA.client_asist.title;
 
-    const label = document.querySelector(".contenedor label[for='lorem']");
+    const label = document.querySelector(".contenedor label[for='lorem01']");
     if (label) label.textContent = DATA.client_asist.campo_text;
 
-    const textarea = document.querySelector("#lorem");
+    const textarea = document.querySelector("#lorem01");
     if (textarea) textarea.placeholder = DATA.client_asist.texto_ejemplo;
 
     const button = document.querySelector(".contenedor input[type='submit']");

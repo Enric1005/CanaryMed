@@ -4,7 +4,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
 .contenedor2 {
@@ -77,7 +76,7 @@ input[type="checkbox"] {
     .contenedor2 {
         width: 300px;
         margin: 20px;
-        height: 100vh;
+        height: 125vh;
     }
 
     .text h1 {
@@ -88,4 +87,9 @@ input[type="checkbox"] {
         height: 20px;
     }
 
+    .boton input {
+        text-align: center;
+        line-height: 10px;
+        height: 30px;
+    }
 }

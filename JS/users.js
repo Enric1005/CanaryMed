@@ -2,9 +2,15 @@ function register_user(usuario) {
 
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    const existe = usuarios.find(u => u.email === usuario.email);
+    const existe = usuarios.find(u => u.correo === usuario.correo);
 
     if(existe){
+        return false;
+    }
+
+    const passw_repetida = usuarios.find(u => u.password === usuario.password);
+    if (passw_repetida){
+        alert("Contraseña no válida");
         return false;
     }
 
@@ -46,6 +52,7 @@ export function register_user_form() {
             alert("Las contraseñas no coinciden");
             return;
         }
+
         const nif = document.getElementById("NIF").value;
         const telefono = document.getElementById("tel").value;
 
