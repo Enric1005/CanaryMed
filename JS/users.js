@@ -104,4 +104,3 @@ export function log_out() {
         window.location.href = "../Paginas/home_page.html";
     })
 }
-//con

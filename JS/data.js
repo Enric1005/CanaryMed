@@ -499,12 +499,12 @@ function loadFooter() {
             title.textContent = footer.titulos_nav[index].name;
         }
         ul.innerHTML = "";
-        for (let i = 1; i <= 2; i++) {
+        for (let i = 0; i < footer.titulos_nav[index].navs.length; i++) {
             const li = document.createElement("li");
             const a = document.createElement("a");
 
-            a.href = "#";
-            a.textContent = `Enlace ${i}`;
+            a.href = footer.titulos_nav[index].navs[i].src;
+            a.textContent = footer.titulos_nav[index].navs[i].nav;
 
             li.appendChild(a);
             ul.appendChild(li);
