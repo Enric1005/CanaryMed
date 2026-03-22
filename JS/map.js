@@ -28,4 +28,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 600);
 
 });
-//co

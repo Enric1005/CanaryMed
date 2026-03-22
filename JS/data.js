@@ -19,14 +19,22 @@ async function loadDynamicContent(lang = "es") {
         loadLogin();
         loadRegisterAndEdit();
         loadMain();
-        loadCenters();
-        loadCenter();
         loadWorkWithUs();
         loadAboutUs();
         loadClientsAsist();
         loadSeccion();
         loadMakeAnAppointment();
-        loadSpecialtys();
+
+        const page = window.location.pathname.split("/").pop();
+
+        if (page === "centers.html") {
+            loadCenters();
+        }
+        else if (page === "specialtys.html") {
+            loadSpecialtys();
+        }
+
+        loadCenter();
 
     } catch(error) {
         console.error("Error cargando JSON:", error);
@@ -145,21 +153,18 @@ function loadMain() {
 }
 
 function loadFilters(type) {
-    // type: "centers" o "specialities"
     const filtersContainer = document.querySelector("main .filter_zone2");
     if (!filtersContainer) return;
 
-    filtersContainer.innerHTML = ""; // Limpiar filtros previos
+    filtersContainer.innerHTML = "";
 
     let filterData = [];
-    let buttonText = "Aplicar";
+    let buttonText = DATA.boton_filtro;
 
     if (type === "centers") {
         filterData = DATA.filtro_centros;
-        buttonText = "Aplicar";
     } else if (type === "specialities") {
         filterData = DATA.specialities.filters.map(f => f.name);
-        buttonText = "Aplicar";
     }
 
     const applyButton = document.createElement("input");
