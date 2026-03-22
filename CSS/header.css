@@ -162,7 +162,7 @@ nav li::marker{
         width: 55px;
         height: 55px;
     }
-    /* mover idioma a la derecha */
+
     .zero_line {
         display: flex;
         justify-content: flex-end;
@@ -170,15 +170,39 @@ nav li::marker{
     }
 
     .second_line ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 180px;
+        max-width: 70%;
+        height: auto;
         background: #2A7DE1;
-        padding: 20px 0;
+        padding-top: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 0 8px 8px 0;
     }
 
     .second_line ul.show {
-        display: flex;
+        transform: translateX(0);
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 900;
+    }
+
+    .menu-overlay.show {
+        display: block;
     }
 
     .second_line ul li {
@@ -186,4 +210,11 @@ nav li::marker{
         margin: 10px 0;
     }
 
+    .second_line ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        display: block;
+        font-weight: 500;
+    }
 }

@@ -639,4 +639,26 @@ document.addEventListener('DOMContentLoaded', async function () {
     } else if (page === "specialtys.html") {
         loadFilters("specialities");
     }
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".second_line ul");
+    const overlay = document.querySelector(".menu-overlay");
+
+    function closeMenu() {
+        navMenu.classList.remove("show");
+        overlay.classList.remove("show");
+    }
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", closeMenu);
+
+    window.addEventListener("scroll", () => {
+        if (navMenu.classList.contains("show")) {
+            closeMenu();
+        }
+    });
 });
