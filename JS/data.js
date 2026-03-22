@@ -181,10 +181,10 @@ function loadFilters(type) {
         checkbox.id = `filter_${filtro.replace(/\s+/g, "_")}`;
 
         const label = document.createElement("label");
-        label.htmlFor = checkbox.id;
-        label.textContent = filtro;
 
-        filtersContainer.appendChild(checkbox);
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(filtro));
+
         filtersContainer.appendChild(label);
     });
 }

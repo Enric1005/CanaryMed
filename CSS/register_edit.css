@@ -46,7 +46,7 @@ body {
 
 /* Ajuste opcional para el input */
 input[type="checkbox"] {
-    width: 20px;  /* Controla el tamaño manualmente */
+    width: 20px;
     height: 20px;
     cursor: pointer;
     margin: 0;
