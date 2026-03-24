@@ -16,6 +16,10 @@
     padding: 30px 80px;
 }
 
+.text-section4 {
+    padding: 30px 80px;
+}
+
 .text-header {
     display: flex;
     align-items: center;
@@ -64,12 +68,20 @@ hr {
     line-height: 1.6;
 }
 
+.text-section4 p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
 
     .text-section {
         padding: 20px;
     }
     .text-section2 {
+        padding: 20px;
+    }
+    .text-section4 {
         padding: 20px;
     }
 
