@@ -13,6 +13,11 @@ function register_user(usuario) {
         alert("Contraseña no válida");
         return false;
     }
+    const nif_repetida = usuarios.find(u => u.NIF === usuario.NIF);
+    if (nif_repetida){
+        alert("DNI no válida");
+        return false;
+    }
 
     usuarios.push(usuario);
 
