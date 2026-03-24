@@ -14,6 +14,15 @@ export function loadCenters(DATA) {
         const p = element.querySelector("p");
         const button = element.querySelector(".center-button");
 
+        const favInput = element.querySelector(".favorite input");
+        const favLabel = element.querySelector(".favorite label");
+
+        if (favInput && favLabel) {
+            const favId = "fav-" + index;
+            favInput.id = favId;
+            favLabel.setAttribute("for", favId);
+        }
+
         if (img) img.src = center.image;
         if (h1) h1.textContent = center.name;
         if (h3) h3.textContent = center.name;
