@@ -1,0 +1,60 @@
+{
+  "email": "test@gmail.com",
+  "password": "12345678A",
+  "NIF": "12345678A",
+  "phone": "600111222",
+  "pending_appointments": [
+    {
+      "center":  "Vithas Hospital",
+      "speciality": "Cardiología",
+      "date":  "18/04/2026, 14:15"
+    },
+    {
+      "center":  "Perpetuo Socorro Hospital",
+      "speciality": "Traumatología",
+      "date":  "23/04/2026, 19:00"
+    },
+    {
+      "center":  "San Roque Hospital",
+      "speciality": "Neumología",
+      "date":  "04/06/2026, 10:45"
+    }
+  ],
+  "record": [
+    {
+      "center":  "Perpetuo Socorro Hospital",
+      "speciality": "Cardiología",
+      "date":  "18/02/2026, 14:15"
+    },
+    {
+      "center":  "San José Hospital",
+      "speciality": "Cardiología",
+      "date":  "18/01/2026, 14:00"
+    },
+    {
+      "center":  "Vithas Hospital",
+      "speciality": "Cardiología",
+      "date":  "10/01/2026, 12:15"
+    }
+  ],
+  "favourite_centers": [
+    "Vithas Hospital",
+    "Perpetuo Socorro Hospital",
+    "San Roque Hospital",
+    {
+      "center":  "Hospital San Jose",
+      "speciality": "Cardiología",
+      "location": "C. Padre Cueto, 26, 35008 Las Palmas de Gran Canaria, Las Palmas, España"
+    },
+    {
+      "center":  "Hospital Perpetuo Socorro",
+      "speciality": "Neumología",
+      "location": "C. León y Castillo, 407, 35007 Las Palmas de Gran Canaria, Las Palmas, España"
+    },
+    {
+      "center":  "Hospital San Roque Hospital",
+      "speciality": "Neumología",
+      "": "C. Dolores de la Rocha, 3, 35001 Las Palmas de Gran Canaria, Las Palmas, España"
+    }
+  ]
+}
