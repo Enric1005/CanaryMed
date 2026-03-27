@@ -23,16 +23,9 @@ export function loadMakeAnAppointment(DATA) {
     const selectedCenter = localStorage.getItem("selectedCenter");
     const selectedSpecialty = localStorage.getItem("selectedSpecialty");
 
-    // 🔹 AUTORELLENO INPUTS
-    if (inputs[0] && selectedCenter) {
-        inputs[0].value = selectedCenter;
-    }
+    if (inputs[0] && selectedCenter) inputs[0].value = selectedCenter;
+    if (inputs[1] && selectedSpecialty) inputs[1].value = selectedSpecialty;
 
-    if (inputs[1] && selectedSpecialty) {
-        inputs[1].value = selectedSpecialty;
-    }
-
-    // 🔹 SELECTS (placeholder)
     selects.forEach((select, index) => {
         if (DATA.make_an_appointment.fields[index + inputs.length]) {
             select.options[0].textContent =
@@ -40,12 +33,43 @@ export function loadMakeAnAppointment(DATA) {
         }
     });
 
-    // 🔹 CARGAR MÉDICOS DINÁMICAMENTE
+    const selectFecha  = selects[0];
+    const selectHora   = selects[1];
     const selectMedico = selects[2];
+
+
+    function loadDatesForDoctor(doctor) {
+        selectFecha.innerHTML = '<option value="">Selecciona una fecha</option>';
+        selectHora.innerHTML  = '<option value="">Selecciona una hora</option>';
+
+        if (!doctor || !doctor.schedule) return;
+
+        Object.keys(doctor.schedule).forEach(date => {
+            const option = document.createElement("option");
+            option.value = date;
+            option.textContent = date;
+            selectFecha.appendChild(option);
+        });
+    }
+
+    function loadHoursForDate(doctor, date) {
+        selectHora.innerHTML = '<option value="">Selecciona una hora</option>';
+
+        if (!doctor || !doctor.schedule || !doctor.schedule[date]) return;
+
+        doctor.schedule[date].forEach(hora => {
+            const option = document.createElement("option");
+            option.value = hora;
+            option.textContent = hora;
+            selectHora.appendChild(option);
+        });
+    }
+
+
 
     if (selectMedico && selectedCenter && selectedSpecialty) {
 
-        selectMedico.innerHTML = "";
+        selectMedico.innerHTML = '<option value="">Selecciona un médico</option>';
 
         const center = DATA.centers.find(c => c.name === selectedCenter);
 
@@ -53,16 +77,33 @@ export function loadMakeAnAppointment(DATA) {
             const specialty = center.specialities.find(s => s.name === selectedSpecialty);
 
             if (specialty) {
-
                 const doctors = Array.isArray(specialty.doctor)
                     ? specialty.doctor
                     : [specialty.doctor];
 
                 doctors.forEach(doc => {
                     const option = document.createElement("option");
-                    option.value = doc;
-                    option.textContent = doc;
+                    option.value = doc.name;
+                    option.textContent = doc.name;
                     selectMedico.appendChild(option);
+                });
+
+                selectMedico.value = doctors[0].name;
+
+                loadDatesForDoctor(doctors[0]);
+
+                selectMedico.addEventListener("change", () => {
+                    const doctorSeleccionado = doctors.find(
+                        d => d.name === selectMedico.value
+                    );
+                    loadDatesForDoctor(doctorSeleccionado);
+                });
+
+                selectFecha.addEventListener("change", () => {
+                    const doctorSeleccionado = doctors.find(
+                        d => d.name === selectMedico.value
+                    );
+                    loadHoursForDate(doctorSeleccionado, selectFecha.value);
                 });
             }
         }
@@ -71,6 +112,41 @@ export function loadMakeAnAppointment(DATA) {
     const button = document.querySelector("#boton_confirmar");
     if (button) {
         button.textContent = DATA.make_an_appointment.boton_confirmar;
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const dni = inputs[2].value.trim();
+            const fecha = selectFecha.value;
+            const hora = selectHora.value;
+            const medico = selectMedico.value;
+            const regex = /^\d{8}[A-Z]$/;
+
+            if (!dni) {
+                alert("Por favor, introduce tu DNI.");
+                return;
+            }
+
+            if (!regex.test(dni)) {
+                alert("DNI no válido. Formato correcto: 12345678A");
+                return;
+            }
+
+            if (!medico) {
+                alert("Por favor, selecciona un médico.");
+                return;
+            }
+
+            if (!fecha) {
+                alert("Por favor, selecciona una fecha.");
+                return;
+            }
+
+            if (!hora) {
+                alert("Por favor, selecciona una hora.");
+                return;
+            }
+        });
     }
 }
 //-------------------------------------------TRABAJA CON NOSOTROS--------------------------------------------

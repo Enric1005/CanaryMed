@@ -117,7 +117,15 @@ export function loadCenter(DATA) {
                 if (location) location.textContent = center.specialities[i].location;
 
                 const doctor = speciality.querySelector("p[data-type='doctor']");
-                if (doctor) doctor.textContent = center.specialities[i].doctor;
+                if (doctor) {
+                    const doc = center.specialities[i].doctor;
+
+                    if (Array.isArray(doc)) {
+                        doctor.textContent = doc.map(d => d.name).join(", ");
+                    } else {
+                        doctor.textContent = doc;
+                    }
+                }
 
                 const button = speciality.closest(".specialty_center-content")
                     .querySelector(".specialty_center-button");
@@ -187,7 +195,11 @@ export function loadSpecialty(DATA) {
                         <h1>${center.name}</h1>
                         <p data-type="price">${center.price}</p>
                         <p data-type="location">${center.location}</p>
-                        <p data-type="doctor">${center.doctor}</p>
+                        <p data-type="doctor">${
+                            Array.isArray(center.doctor)
+                                ? center.doctor.map(d => d.name).join(", ")
+                                : center.doctor
+                        }</p>
                     </div>
                     <button class="specialty_center-button">
                         ${DATA.make_an_appointment.title}
