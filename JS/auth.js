@@ -1,31 +1,6 @@
-function register_user(usuario) {
-
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    const existe = usuarios.find(u => u.correo === usuario.correo);
-
-    if(existe){
-        return false;
-    }
-
-    const passw_repetida = usuarios.find(u => u.password === usuario.password);
-    if (passw_repetida){
-        alert("Contraseña no válida");
-        return false;
-    }
-    const nif_repetida = usuarios.find(u => u.NIF === usuario.NIF);
-    if (nif_repetida){
-        alert("DNI no válida");
-        return false;
-    }
-
-    usuarios.push(usuario);
-
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-    localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
-
-    return true;
+async function getData() {
+    const response = await fetch("../test_profile_data.json");
+    return await response.json();
 }
 
 export function register_user_form() {
@@ -33,17 +8,15 @@ export function register_user_form() {
 
     if (!form) return;
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async(e) => {
         e.preventDefault();
+        const data = await getData();
 
         const terminos = document.querySelector("#mi-check");
         if (!terminos.checked) {
             alert("Acepte los terminos y condiciones");
             return;
         }
-
-        const nombre = document.getElementById("nombre").value;
-        const apellidos = document.getElementById("apellidos").value;
         const email = document.getElementById("email").value;
         const email_confirm = document.getElementById("email_confirm").value;
         if (email !== email_confirm) {
@@ -61,47 +34,53 @@ export function register_user_form() {
         const nif = document.getElementById("NIF").value;
         const telefono = document.getElementById("tel").value;
 
-        const user = {
-            nombre: nombre,
-            apellidos: apellidos,
-            correo: email,
-            password: password,
-            NIF: nif,
-            telefono: telefono,
-            favs: [],
-            hist: [],
-            citas: []
+        const nif_confirm = data.NIF;
+        const email_confirmed = data.email;
+        const telefono_confirm = data.phone;
+
+        const regex = /^\d{8}[A-Z]$/;
+        let valido = regex.test(nif);
+        if (!valido) {
+            alert("Formato incorrecto");
+            return;
         }
 
-        const creado = register_user(user);
-        if (creado) {
-            window.location.href = "../Paginas/profile.html";
-        } else {
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*[^A-Za-z0-9]).{8,}$/;
+        valido = regex.test(passwordRegex);
+        if (!valido) {
+            alert("Formato incorrecto");
+            return;
+        }
+
+        if (nif !== nif_confirm || telefono !== telefono_confirm || email !== email_confirmed) {
             alert("Usuario ya registrado");
+            return;
         }
     })
 }
 
 export function log_in(){
+
     const form = document.getElementById("login_form");
     if (!form) return;
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async(e) => {
         e.preventDefault();
 
-        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        const data = await getData();
 
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        const usuario = usuarios.find(u => u.correo === email && u.password === password);
+        const email_confirm = data.email;
+        const password_confirmed = data.password;
 
-        if (!usuario) {
+        if (email !== email_confirm || password !== password_confirmed) {
             alert("Usuario o contraseña incorrecta");
             return;
         }
 
-        localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
+        localStorage.setItem("usuarioActivo", "True");
         window.location.href = "../Paginas/profile.html";
     });
 }

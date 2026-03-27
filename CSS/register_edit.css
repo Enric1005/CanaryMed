@@ -71,7 +71,7 @@ input[type="checkbox"] {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
     .contenedor2 {
         width: 300px;

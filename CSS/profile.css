@@ -118,7 +118,7 @@
     background-color: #E8F2FF;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
     .content-wrapper {
         flex-direction: column;
