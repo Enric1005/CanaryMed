@@ -115,7 +115,7 @@ footer {
     position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
     footer {
         padding: 40px 0 20px;

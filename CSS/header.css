@@ -131,7 +131,7 @@ nav li::marker{
 
 /* ===== MOVIL ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
     header {
         padding-bottom: 25px;

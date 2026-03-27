@@ -1,6 +1,8 @@
 {
+  "nombre": "Luis",
+  "apellidos": "Hernandez Gil",
   "email": "test@gmail.com",
-  "password": "12345678A",
+  "password": "1234567@A",
   "NIF": "12345678A",
   "phone": "600111222",
   "pending_appointments": [
@@ -37,10 +39,7 @@
       "date":  "10/01/2026, 12:15"
     }
   ],
-  "favourite_centers": [
-    "Vithas Hospital",
-    "Perpetuo Socorro Hospital",
-    "San Roque Hospital",
+  "favorite_centers": [
     {
       "center":  "Hospital San Jose",
       "speciality": "Cardiología",
@@ -54,7 +53,7 @@
     {
       "center":  "Hospital San Roque Hospital",
       "speciality": "Neumología",
-      "": "C. Dolores de la Rocha, 3, 35001 Las Palmas de Gran Canaria, Las Palmas, España"
+      "location": "C. Dolores de la Rocha, 3, 35001 Las Palmas de Gran Canaria, Las Palmas, España"
     }
   ]
 }

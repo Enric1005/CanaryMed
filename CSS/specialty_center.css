@@ -57,7 +57,7 @@
     border: 3px solid black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 
     .specialty_center-content {
         flex-direction: column;
