@@ -1,5 +1,9 @@
+async function getData() {
+    const response = await fetch("../test_profile_data.json");
+    return await response.json();
+}
 
-export function loadProfile(DATA) {
+export async function loadProfile(DATA) {
     const profile = DATA.perfil;
     const btn_exit = document.getElementById("log_out_btn");
     if (btn_exit) btn_exit.textContent = profile.boton_salir;
@@ -31,11 +35,12 @@ export function loadProfile(DATA) {
 
     const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
     if (usuario) {
-        const name_user = usuario?.nombre;
-        const surname_user = usuario?.apellidos;
-        const email_user = usuario?.correo;
-        const phone_user = usuario?.telefono;
-        const DNI = usuario?.NIF;
+        const data = await getData();
+        const name_user = data.nombre;
+        const surname_user = data.apellidos;
+        const email_user = data.email;
+        const phone_user = data.phone;
+        const DNI = data.NIF;
 
         const name_title = document.querySelector(".profile-info h3");
         const nif = document.querySelector(".profile-info h4");

@@ -1,4 +1,6 @@
 {
+  "nombre": "Luis",
+  "apellidos": "Hernandez Gil",
   "email": "test@gmail.com",
   "password": "1234567@A",
   "NIF": "12345678A",

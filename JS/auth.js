@@ -80,7 +80,7 @@ export function log_in(){
             return;
         }
 
-        localStorage.setItem("usuarioActivo", "True");
+        localStorage.setItem("usuarioActivo", "true");
         window.location.href = "../Paginas/profile.html";
     });
 }
