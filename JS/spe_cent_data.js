@@ -227,7 +227,7 @@ export function loadFilters(type, DATA) {
     filtersContainer.innerHTML = "";
 
     let filterData = [];
-    let buttonText = DATA.boton_filtro;
+    const buttonText = DATA.boton_filtro;
 
     if (type === "centers") {
         filterData = DATA.filtro_centros;
@@ -249,10 +249,67 @@ export function loadFilters(type, DATA) {
         checkbox.id = `filter_${filtro.replace(/\s+/g, "_")}`;
 
         const label = document.createElement("label");
-
         label.appendChild(checkbox);
         label.appendChild(document.createTextNode(filtro));
-
         filtersContainer.appendChild(label);
     });
+
+    if (type === "centers") {
+        applyButton.addEventListener("click", () => {
+            const checkboxes = filtersContainer.querySelectorAll(".filter_zone_ch");
+            const filtrosActivos = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            const centerSections = document.querySelectorAll("main.center");
+
+            centerSections.forEach((section, index) => {
+                const center = DATA.centers[index];
+                if (!center) return;
+
+                if (filtrosActivos.length === 0) {
+                    section.style.display = "";
+                    return;
+                }
+
+                // Filtros de precio y sitio por separado
+                const filtrosPrecio = filtrosActivos.filter(f =>
+                    ["Precio Bajo", "Precio Medio", "Precio Alto"].includes(f)
+                );
+                const filtrosSitio = filtrosActivos.filter(f =>
+                    ["Norte", "Sur", "Ciudad"].includes(f)
+                );
+
+                const pasaPrecio = filtrosPrecio.length === 0 || filtrosPrecio.includes(center.precio);
+                const pasaSitio  = filtrosSitio.length === 0  || filtrosSitio.includes(center.sitio);
+
+                section.style.display = (pasaPrecio && pasaSitio) ? "" : "none";
+            });
+        });
+    }
+    if (type === "specialities") {
+        applyButton.addEventListener("click", () => {
+            const checkboxes = filtersContainer.querySelectorAll(".filter_zone_ch");
+            const filtrosActivos = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            const specialtySections = Array.from(document.querySelectorAll("main"))
+                .filter(m => m.id !== "main_filter");
+
+            specialtySections.forEach((section, index) => {
+                const specialty = DATA.specialities.Especialidades[index];
+                if (!specialty) return;
+
+                console.log(`[${index}] desc: "${specialty.desc}" | filtros: ${JSON.stringify(filtrosActivos)}`);
+
+                if (filtrosActivos.length === 0) {
+                    section.style.display = "";
+                    return;
+                }
+
+                section.style.display = filtrosActivos.includes(specialty.desc) ? "" : "none";
+            });
+        });
+    }
 }
