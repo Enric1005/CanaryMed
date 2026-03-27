@@ -94,7 +94,7 @@ header {
 
 .second_line ul {
     display: flex;
-    list-style: disc;
+    list-style: None;
     justify-content: center;
     gap: 25px;
     margin: 0;
@@ -109,6 +109,13 @@ header {
 
 nav li::marker{
     color: yellow;
+}
+
+.second_line ul li::before {
+    content: "•";
+    color: yellow;
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 /* boton hamburguesa */

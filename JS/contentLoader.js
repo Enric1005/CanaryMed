@@ -1,5 +1,9 @@
 //-------------------------------------------PEDIR UNA CITA--------------------------------------------
 export function loadMakeAnAppointment(DATA) {
+
+    const inputs = document.querySelectorAll("#formCita input");
+    const selects = document.querySelectorAll("#formCita select");
+
     const title = document.querySelector("#title");
     if (title) title.textContent = DATA.make_an_appointment.title;
 
@@ -10,22 +14,60 @@ export function loadMakeAnAppointment(DATA) {
         }
     });
 
-    const inputs = document.querySelectorAll("#formCita input");
     inputs.forEach((input, index) => {
         if (DATA.make_an_appointment.fields[index]) {
             input.placeholder = DATA.make_an_appointment.fields[index].texto_ejemplo;
         }
     });
 
-    const selects = document.querySelectorAll("#formCita select");
+    const selectedCenter = localStorage.getItem("selectedCenter");
+    const selectedSpecialty = localStorage.getItem("selectedSpecialty");
+
+    // 🔹 AUTORELLENO INPUTS
+    if (inputs[0] && selectedCenter) {
+        inputs[0].value = selectedCenter;
+    }
+
+    if (inputs[1] && selectedSpecialty) {
+        inputs[1].value = selectedSpecialty;
+    }
+
+    // 🔹 SELECTS (placeholder)
     selects.forEach((select, index) => {
-        if (DATA.make_an_appointment.fields[index]) {
+        if (DATA.make_an_appointment.fields[index + inputs.length]) {
             select.options[0].textContent =
-                DATA.make_an_appointment.fields[index+3].texto_ejemplo;
+                DATA.make_an_appointment.fields[index + inputs.length].texto_ejemplo;
         }
     });
 
-    // Botón
+    // 🔹 CARGAR MÉDICOS DINÁMICAMENTE
+    const selectMedico = selects[2];
+
+    if (selectMedico && selectedCenter && selectedSpecialty) {
+
+        selectMedico.innerHTML = "";
+
+        const center = DATA.centers.find(c => c.name === selectedCenter);
+
+        if (center) {
+            const specialty = center.specialities.find(s => s.name === selectedSpecialty);
+
+            if (specialty) {
+
+                const doctors = Array.isArray(specialty.doctor)
+                    ? specialty.doctor
+                    : [specialty.doctor];
+
+                doctors.forEach(doc => {
+                    const option = document.createElement("option");
+                    option.value = doc;
+                    option.textContent = doc;
+                    selectMedico.appendChild(option);
+                });
+            }
+        }
+    }
+
     const button = document.querySelector("#boton_confirmar");
     if (button) {
         button.textContent = DATA.make_an_appointment.boton_confirmar;

@@ -121,7 +121,16 @@ export function loadCenter(DATA) {
 
                 const button = speciality.closest(".specialty_center-content")
                     .querySelector(".specialty_center-button");
-                if (button) {button.textContent = DATA.make_an_appointment.title;}
+                if (button) {
+                    button.textContent = DATA.make_an_appointment.title;
+
+                    button.addEventListener("click", () => {
+                        localStorage.setItem("selectedCenter", center.name);
+                        localStorage.setItem("selectedSpecialty", center.specialities[i].name);
+
+                        window.location.href = "make_an_appointment.html";
+                    });
+                }
             }
         });
     }
@@ -187,11 +196,12 @@ export function loadSpecialty(DATA) {
             `;
             const button = div.querySelector(".specialty_center-button");
 
-            if (button) {
-                button.addEventListener("click", () => {
-                    window.location.href = "../Paginas/make_an_appointment.html";
-                });
-            }
+            button.addEventListener("click", () => {
+                localStorage.setItem("selectedCenter", center.name);
+                localStorage.setItem("selectedSpecialty", specialitie.name);
+
+                window.location.href = "../Paginas/make_an_appointment.html";
+            });
 
             container.appendChild(div);
         });
