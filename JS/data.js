@@ -6,6 +6,7 @@ import * as lre from "./LRE_data.js";
 import * as SC from "./spe_cent_data.js";
 import * as cl from "./contentLoader.js";
 import {loadSpecialty} from "./spe_cent_data.js";
+import {seeMoreFavoriteCenters, seeMoreRecord} from "./profile_data.js";
 
 let DATA = null;
 
@@ -18,7 +19,7 @@ async function loadDynamicContent(lang = "es") {
         // localStorage.clear()
         // let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
         // console.log(usuarios);
-        
+
         users.log_in();
         users.log_out();
         users.register_user_form();
@@ -32,6 +33,9 @@ async function loadDynamicContent(lang = "es") {
 
         profileData.loadProfile(DATA);
         profileData.loadSeccion(DATA);
+        profileData.seeMorePendingAppointments();
+        profileData.seeMoreRecord();
+        profileData.seeMoreFavoriteCenters();
 
         cl.loadWorkWithUs(DATA);
         cl.loadAboutUs(DATA);
