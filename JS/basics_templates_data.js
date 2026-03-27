@@ -18,7 +18,7 @@ export function loadHeader(DATA){
     }
 
 
-    const activo = JSON.parse(localStorage.getItem("usuarioActivo"));
+    const activo = localStorage.getItem("usuarioActivo");
     const user_link = document.querySelector("#btn_user a");
 
     if (user_link) {
@@ -158,4 +158,55 @@ export function loadFooter(DATA) {
             socialContainer.appendChild(a);
         });
     }
+}
+//-------------------------------------------BROWSER & FILTER--------------------------------------------
+export function browser(DATA) {
+    const searchInput = document.getElementById("searchInput");
+    if (!searchInput) return;
+
+    // Recupera la búsqueda si viene de otra página
+    const query = localStorage.getItem("searchQuery");
+    if (query) {
+        searchInput.value = query;
+        localStorage.removeItem("searchQuery");
+        filtrar(query, DATA); // filtra automáticamente al cargar
+    }
+
+    // Filtra en tiempo real mientras escribe
+    searchInput.addEventListener("input", () => {
+        filtrar(searchInput.value, DATA);
+    });
+
+    // Al pulsar Enter redirige
+    searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            const texto = searchInput.value.trim();
+            if (texto) {
+                localStorage.setItem("searchQuery", texto);
+                window.location.href = "../Paginas/centers.html";
+            }
+        }
+    });
+}
+
+function filtrar(texto, DATA) {
+    texto = texto.toLowerCase();
+
+    const specialtySections = document.querySelectorAll("main.specialidad .specialty-section");
+    specialtySections.forEach((section, index) => {
+        const specialty = DATA.specialities.Especialidades[index];
+        if (!specialty) return;
+        const coincide = specialty.name.toLowerCase().includes(texto) ||
+            specialty.desc.toLowerCase().includes(texto);
+        section.style.display = coincide ? "" : "none";
+    });
+
+    const centerSections = document.querySelectorAll("main.center");
+    centerSections.forEach((section, index) => {
+        const center = DATA.centers[index];
+        if (!center) return;
+        const coincide = center.name.toLowerCase().includes(texto) ||
+            center.description.toLowerCase().includes(texto);
+        section.style.display = coincide ? "" : "none";
+    });
 }

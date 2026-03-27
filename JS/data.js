@@ -23,6 +23,7 @@ async function loadDynamicContent(lang = "es") {
         users.register_user_form();
 
         templates.loadHeader(DATA);
+        templates.browser(DATA);
         templates.loadFooter(DATA);
         templates.loadMain(DATA);
 

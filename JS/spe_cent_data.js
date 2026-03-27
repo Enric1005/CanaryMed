@@ -294,7 +294,7 @@ export function loadFilters(type, DATA) {
                 .filter(cb => cb.checked)
                 .map(cb => cb.value);
 
-            const specialtySections = Array.from(document.querySelectorAll("main"))
+            const specialtySections = Array.from(document.querySelectorAll("main.specialidad .specialty-section"))
                 .filter(m => m.id !== "main_filter");
 
             specialtySections.forEach((section, index) => {
@@ -302,7 +302,7 @@ export function loadFilters(type, DATA) {
                 if (!specialty) return;
 
                 console.log(`[${index}] desc: "${specialty.desc}" | filtros: ${JSON.stringify(filtrosActivos)}`);
-
+                console.log(filtrosActivos.includes(specialty.desc));
                 if (filtrosActivos.length === 0) {
                     section.style.display = "";
                     return;
