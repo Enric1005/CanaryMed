@@ -6,7 +6,13 @@ import * as lre from "./LRE_data.js";
 import * as SC from "./spe_cent_data.js";
 import * as cl from "./contentLoader.js";
 import {loadSpecialty} from "./spe_cent_data.js";
-import {seeMoreFavoriteCenters, seeMoreRecord} from "./profile_data.js";
+import {
+    loadFavoriteCenters,
+    loadPendingAppointments,
+    loadRecord,
+    seeMoreFavoriteCenters,
+    seeMoreRecord
+} from "./profile_data.js";
 
 let DATA = null;
 
@@ -33,6 +39,9 @@ async function loadDynamicContent(lang = "es") {
 
         profileData.loadProfile(DATA);
         profileData.loadSeccion(DATA);
+        profileData.loadPendingAppointments();
+        profileData.loadRecord();
+        profileData.loadFavoriteCenters();
         profileData.seeMorePendingAppointments();
         profileData.seeMoreRecord();
         profileData.seeMoreFavoriteCenters();

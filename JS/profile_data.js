@@ -68,6 +68,48 @@ export function loadSeccion(DATA) {
     if(buton_back) buton_back.textContent = DATA.button_back;
 }
 
+export async function loadPendingAppointments() {
+    const section = document.getElementById("profile_section1");
+
+    let DATA = await fetch("../test_profile_data.json");
+    DATA = await DATA.json();
+
+    const body = section.querySelector(".card-body");
+    body.innerHTML = DATA.pending_appointments.map(item => `
+        <div class="appointment_preview">
+            <p>${item.date} - ${item.speciality} - ${item.center}</p>
+        </div>
+    `).join("");
+}
+
+export async function loadRecord() {
+    const section = document.getElementById("profile_section2");
+
+    let DATA = await fetch("../test_profile_data.json");
+    DATA = await DATA.json();
+
+    const body = section.querySelector(".card-body");
+    body.innerHTML = DATA.record.map(item => `
+        <div class="appointment_preview">
+            <p>${item.date} - ${item.speciality} - ${item.center}</p>
+        </div>
+    `).join("");
+}
+
+export async function loadFavoriteCenters() {
+    const section = document.getElementById("profile_section3");
+
+    let DATA = await fetch("../test_profile_data.json");
+    DATA = await DATA.json();
+
+    const body = section.querySelector(".card-body");
+    body.innerHTML = DATA.favorite_centers.map(item => `
+        <div class="appointment_preview">
+            <p>${item.center} - ${item.speciality} - ${item.location}</p>
+        </div>
+    `).join("");
+}
+
 // Carga de información dentro de 'Ver más' para las citas pendientes
 export async function seeMorePendingAppointments() {
     // 1. SOLO se ejecuta en profile (donde existen las secciones)
