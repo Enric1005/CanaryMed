@@ -66,7 +66,9 @@
             }
           ]
         }
-      ]
+      ],
+      "precio": "Precio Bajo",
+      "sitio": "Ciudad"
     },
     {
       "name": "Hospital Vithas",
@@ -128,7 +130,9 @@
             }
           ]
         }
-      ]
+      ],
+      "precio": "Precio Medio",
+      "sitio": "Ciudad"
     },
     {
       "name": "Hospital Perpetuo Socorro",
@@ -190,7 +194,9 @@
             }
           ]
         }
-      ]
+      ],
+      "precio": "Precio Alto",
+      "sitio": "Ciudad"
     },
     {
       "name": "Hospital San Roque",
@@ -252,7 +258,9 @@
             }
           ]
         }
-      ]
+      ],
+      "precio": "Precio Bajo",
+      "sitio": "Sur"
     }
   ],
   "specialitie": [
