@@ -30,20 +30,23 @@
             <input id="especialidad_input" type="text" placeholder="Lorem ipsum" readonly>
 
             <label for="dni"></label>
-            <input id="dni" type="text" placeholder="Lorem ipsum">
+            <input id="dni" type="text" placeholder="Lorem ipsum"
+                   required
+                   pattern="\d{8}[A-Z]"
+                   title="Formato: 12345678A">
 
             <label for="fecha"></label>
-            <select id="fecha">
+            <select id="fecha" required>
                 <option value=""></option>
             </select>
 
             <label for="hora"></label>
-            <select id="hora">
+            <select id="hora" required>
                 <option value=""></option>
             </select>
 
             <label for="medico"></label>
-            <select id="medico">
+            <select id="medico" required>
                 <option value=""></option>
             </select>
 

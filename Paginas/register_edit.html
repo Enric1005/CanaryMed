@@ -15,29 +15,32 @@
             <div class="text_box">
                 <form id="register_form">
                     <label for="nombre"></label>
-                    <input type="text" name="lor1" id="nombre" placeholder="lorem ipsum" required>
+                    <input type="text" name="lor1" id="nombre" placeholder="" required>
 
                     <label for="apellidos"></label>
-                    <input type="text" name="lor2" id="apellidos" placeholder="lorem ipsum" required>
+                    <input type="text" name="lor2" id="apellidos" placeholder="" required>
 
                     <label for="email"></label>
-                    <input type="email" name="lor3" id="email" placeholder="lorem ipsum" required>
+                    <input type="email" name="lor3" id="email" placeholder="" required>
 
                     <label for="email_confirm"></label>
-                    <input type="email" name="lor4" id="email_confirm" placeholder="lorem ipsum" required>
+                    <input type="email" name="lor4" id="email_confirm" placeholder="" required>
 
                     <label for="password"></label>
-                    <input type="password" name="lor5" id="password" placeholder="lorem ipsum" required>
+                    <input type="password" id="password" placeholder="" required
+                           pattern="(?=.*[A-Za-z])(?=.*[^A-Za-z0-9]).{8,}"
+                           title="Mínimo 8 caracteres, una letra y un carácter especial">
 
                     <label for="password_confirmed"></label>
-                    <input type="password" name="lor6" id="password_confirmed" placeholder="lorem ipsum" required>
+                    <input type="password" name="lor6" id="password_confirmed" placeholder="" required>
 
                     <label for="NIF"></label>
-                    <input type="text" name="lor7" id="NIF" placeholder="lorem ipsum" required>
+                    <input type="text" id="NIF" placeholder="lorem ipsum" required
+                           pattern="\d{8}[A-Z]" title="Formato: 12345678A">
 
                     <label for="tel"></label>
-                    <input type="text" name="lor8" id="tel" placeholder="lorem ipsum" required>
-
+                    <input type="tel" id="tel" placeholder="lorem ipsum" required
+                           pattern="\d{9}" title="9 dígitos">
                     <div class="chbox">
                         <input type="checkbox" class="check" id="mi-check">
                         <label for="mi-check">Lorem ipsum dolor</label>

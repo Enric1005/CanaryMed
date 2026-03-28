@@ -498,7 +498,7 @@
     "fields": [
       {"field":  "*Nombre", "example_text":  "Sergio"},
       {"field":  "*Apellidos", "example_text":  "Bañol Castaño"},
-      {"field":  "*email", "example_text":  "usuario123@gmail.com"},
+      {"field":  "*Email", "example_text":  "usuario123@gmail.com"},
       {"field":  "*Verificar email", "example_text":  ""},
       {"field":  "*Contraseña", "example_text":  "1234567@A"},
       {"field":  "*Verificar Contraseña", "example_text":  ""},

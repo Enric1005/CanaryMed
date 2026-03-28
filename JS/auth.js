@@ -17,6 +17,7 @@ export function register_user_form() {
             alert("Acepte los terminos y condiciones");
             return;
         }
+
         const email = document.getElementById("email").value;
         const email_confirm = document.getElementById("email_confirm").value;
         if (email !== email_confirm) {
@@ -34,29 +35,11 @@ export function register_user_form() {
         const nif = document.getElementById("NIF").value;
         const telefono = document.getElementById("tel").value;
 
-        const nif_confirm = data.NIF;
-        const email_confirmed = data.email;
-        const telefono_confirm = data.phone;
-
-        const regex = /^\d{8}[A-Z]$/;
-        let valido = regex.test(nif);
-        if (!valido) {
-            alert("Formato incorrecto");
-            return;
-        }
-
-        const passwordRegex = /^(?=.*[A-Za-z])(?=.*[^A-Za-z0-9]).{8,}$/;
-        valido = regex.test(passwordRegex);
-        if (!valido) {
-            alert("Formato incorrecto");
-            return;
-        }
-
         if (nif !== nif_confirm || telefono !== telefono_confirm || email !== email_confirmed) {
             alert("Usuario ya registrado");
             return;
         }
-    })
+    });
 }
 
 export function log_in(){

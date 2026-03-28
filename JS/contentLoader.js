@@ -116,37 +116,29 @@ export function loadMakeAnAppointment(DATA) {
         button.addEventListener("click", (e) => {
             e.preventDefault();
 
-            const dni = inputs[2].value.trim();
-            const fecha = selectFecha.value;
-            const hora = selectHora.value;
-            const medico = selectMedico.value;
-            const regex = /^\d{8}[A-Z]$/;
+            const dniInput = inputs[2];
 
-            if (!dni) {
-                alert("Por favor, introduce tu DNI.");
+            if (!dniInput.checkValidity()) {
+                dniInput.reportValidity();
                 return;
             }
 
-            if (!regex.test(dni)) {
-                alert("DNI no válido. Formato correcto: 12345678A");
-                return;
-            }
-
-            if (!medico) {
+            if (!selectMedico.value) {
                 alert("Por favor, selecciona un médico.");
                 return;
             }
 
-            if (!fecha) {
+            if (!selectFecha.value) {
                 alert("Por favor, selecciona una fecha.");
                 return;
             }
 
-            if (!hora) {
+            if (!selectHora.value) {
                 alert("Por favor, selecciona una hora.");
                 return;
             }
         });
+
     }
 }
 //-------------------------------------------TRABAJA CON NOSOTROS--------------------------------------------
@@ -198,8 +190,19 @@ export function loadWorkWithUs(DATA){
     }
 
     const workWithUsFormButton = document.querySelector(".formulario .boton button");
-    if(workWithUsFormButton){
-        workWithUsFormButton.textContent = workWithUsData.buton_inscription
+    if (workWithUsFormButton) {
+        workWithUsFormButton.textContent = workWithUsData.buton_inscription;
+
+        workWithUsFormButton.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const select = document.querySelector(".formulario form select");
+
+            if (!select.value) {
+                alert("Por favor, selecciona un tipo de especialidad.");
+                return;
+            }
+        });
     }
 }
 //-------------------------------------------SOBRE NOSOTROS--------------------------------------------
@@ -229,4 +232,20 @@ export function loadClientsAsist(DATA) {
 
     const button = document.querySelector(".contenedor input[type='submit']");
     if (button) button.value = DATA.client_asist.boton;
+    const form = document.getElementById("formAsist");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const textarea = document.querySelector("#lorem01");
+
+            if (!textarea.value.trim()) {
+                textarea.setCustomValidity("Por favor, escribe tu consulta antes de enviar.");
+                textarea.reportValidity();
+                return;
+            }
+
+            textarea.setCustomValidity("");
+        });
+    }
 }

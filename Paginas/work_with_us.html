@@ -16,28 +16,28 @@
     <main xlu-include-file="../Templates/colabora_base.html"></main>
     <main>
         <div class="formulario">
-            <h1>Lorem ipsum</h1>
-            <form>
-                <label for="lorem">Lorem ipsum</label>
-                <input id="lorem" type="text" placeholder="Lorem ipsum" name="lorem ipsum">
+            <h1></h1>
+            <form id="formColabora">
+                <label for="institucion">Lorem ipsum</label>
+                <input id="institucion" type="text" placeholder="Lorem ipsum" required minlength="2">
 
-                <label for="lorem2">Lorem ipsum</label>
-                <input id="lorem2" type="text" placeholder="Lorem ipsum" name="lorem ipsum2">
+                <label for="correo">Lorem ipsum</label>
+                <input id="correo" type="email" placeholder="Lorem ipsum" required>
 
-                <label for="lorem3">Lorem ipsum</label>
-                <input id="lorem3" type="text" placeholder="Lorem ipsum" name="lorem ipsum2">
+                <label for="telefono">Lorem ipsum</label>
+                <input id="telefono" type="tel" placeholder="Lorem ipsum" required pattern="\d{9}" title="9 dígitos">
 
-                <label for="lorem4">Lorem ipsum</label>
-                <input id="lorem4" type="text" placeholder="Lorem ipsum" name="lorem ipsum2">
+                <label for="direccion">Lorem ipsum</label>
+                <input id="direccion" type="text" placeholder="Lorem ipsum" required minlength="5">
 
-                <label for="lorem5">Lorem ipsum</label>
-                <select id="lorem5" name="desplegable">
+                <label for="tipo">Lorem ipsum</label>
+                <select id="tipo" required>
                 </select>
 
-                <label for="lorem6">Lorem ipsum</label>
-                <input id="lorem6" type="text" placeholder="Lorem ipsum" name="lorem ipsum2">
+                <label for="especialidad">Lorem ipsum</label>
+                <input id="especialidad" type="text" placeholder="Lorem ipsum" required minlength="2">
 
-                <div class="boton"><button type="button">lorem</button></div>
+                <div class="boton"><button type="submit">lorem</button></div>
             </form>
         </div>
     </main>
