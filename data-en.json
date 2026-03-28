@@ -1,31 +1,400 @@
 {
-  "filtro_centros": ["Low Price", "Medium Price", "High Price", "North", "South", "City"],
+  "filtro_centros": [
+    "Low Price",
+    "Medium Price",
+    "High Price",
+    "North",
+    "South",
+    "City"
+  ],
   "centers": [
     {
       "name": "San José Hospital",
-      "description": "San José Hospital (Las Palmas de Gran Canaria, 1891) is a reference in private healthcare in the Canary Islands, constantly modernizing and expanding. It features advanced technology, a state-of-the-art surgical block, and offers all medical specialties with prestigious professionals and highly personalized, high-quality treatments.",
+      "description": "San José Hospital (Las Palmas de Gran Canaria, 1891) is a benchmark in private healthcare in the Canary Islands, constantly modernizing and growing. It has advanced technology, a state-of-the-art surgical block and offers all medical specialties, with prestigious professionals and high-quality, complex personalized treatments.",
       "image": "../Assets/San_jose.jpg",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {
+          "name": "Chemotherapy",
+          "desc": "Medical Oncology",
+          "src": "../Assets/Quimio.png",
+          "price": "40.00€",
+          "location": "Medical Oncology",
+          "doctor": [
+            {
+              "name": "Dr. Sergio.A Bañol",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Traumatology",
+          "desc": "Surgical",
+          "src": "../Assets/Traumotologia.png",
+          "price": "50.00€",
+          "location": "Surgical",
+          "doctor": [
+            {
+              "name": "Dr. Enrique Sosa",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Cardiology",
+          "desc": "Non-Surgical",
+          "src": "../Assets/Cardiologia.png",
+          "price": "60.00€",
+          "location": "Non-Surgical",
+          "doctor": [
+            {
+              "name": "Dr. Erick Justo",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        }
+      ],
+      "precio": "Low Price",
+      "sitio": "City"
     },
     {
       "name": "Vithas Hospital",
-      "description": "The Vithas hospital group, part of the Goodgrower Group, was founded in 2012 with the goal of improving people's lives. It currently has 22 hospitals and 39 medical centers across 14 Spanish provinces, with 1,846 beds and a team of 12,600 professionals providing more than 6.4 million medical consultations per year.",
+      "description": "The Vithas hospital group, part of the Goodgrower Group, was founded in 2012 with the aim of improving people's lives. It currently has 22 hospitals and 39 medical centers in 14 Spanish provinces, has 1,846 beds and brings together 12,600 professionals, attending more than 6.4 million medical visits per year.",
       "image": "../Assets/Vithas.webp",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {
+          "name": "Radiodiagnosis",
+          "desc": "Diagnosis",
+          "src": "../Assets/Radiodiagnóstico.png",
+          "price": "70.00€",
+          "location": "Diagnosis",
+          "doctor": [
+            {
+              "name": "Dr. Sergio.A Bañol",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Chronic Diseases",
+          "desc": "General Medicine",
+          "src": "../Assets/EC.png",
+          "price": "80.00€",
+          "location": "General Medicine",
+          "doctor": [
+            {
+              "name": "Dr. Enrique Sosa",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Pulmonology",
+          "desc": "Respiratory",
+          "src": "../Assets/Neumología.png",
+          "price": "90.00€",
+          "location": "Respiratory",
+          "doctor": [
+            {
+              "name": "Dr. Erick Justo",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        }
+      ],
+      "precio": "Medium Price",
+      "sitio": "City"
     },
     {
       "name": "Perpetuo Socorro Hospital",
-      "description": "We are a private medical and surgical center equipped with the most advanced technology and highly qualified professionals. Perpetuo Socorro Hospital covers almost all medical specialties with one priority: providing our patients with the highest quality healthcare. The commitment of our team, our management model, and our results support our work. At HPS, your health comes first.",
+      "description": "We are a private medical-surgical center where you will find the most advanced technology and highly qualified technical and professional staff. Hospital Perpetuo Socorro covers almost all medical specialties with one priority: to offer our patients the highest quality of care. The commitment of our team, our management model and our results support us. At HPS, your health comes first.",
       "image": "../Assets/Perpetuo_socorro.jpg",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {
+          "name": "Cardiology",
+          "desc": "Non-Surgical",
+          "src": "../Assets/Cardiologia.png",
+          "price": "100.00€",
+          "location": "Non-Surgical",
+          "doctor": [
+            {
+              "name": "Dr. Sergio.A Bañol",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Radiodiagnosis",
+          "desc": "Diagnosis",
+          "src": "../Assets/Radiodiagnóstico.png",
+          "price": "110.00€",
+          "location": "Diagnosis",
+          "doctor": [
+            {
+              "name": "Dr. Enrique Sosa",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Pulmonology",
+          "desc": "Respiratory",
+          "src": "../Assets/Neumología.png",
+          "price": "120.00€",
+          "location": "Respiratory",
+          "doctor": [
+            {
+              "name": "Dr. Erick Justo",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        }
+      ],
+      "precio": "High Price",
+      "sitio": "City"
     },
     {
       "name": "San Roque Hospital",
-      "description": "San Roque University Hospitals were created with the purpose of improving people's well-being. To achieve this, they offer comprehensive healthcare services using the latest technology in consultations, diagnostics, and hospitalization.",
+      "description": "San Roque University Hospitals was created with the purpose of improving people's well-being. To do this, it provides society with comprehensive healthcare services through state-of-the-art technology in consultations, diagnostics and hospitalization.",
       "image": "../Assets/San_roque.webp",
-      "desc": ""
+      "desc": "",
+      "specialities": [
+        {
+          "name": "Traumatology",
+          "desc": "Surgical",
+          "src": "../Assets/Traumotologia.png",
+          "price": "130.00€",
+          "location": "Surgical",
+          "doctor": [
+            {
+              "name": "Dr. Sergio.A Bañol",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Chronic Diseases",
+          "desc": "General Medicine",
+          "src": "../Assets/EC.png",
+          "price": "140.00€",
+          "location": "General Medicine",
+          "doctor": [
+            {
+              "name": "Dr. Enrique Sosa",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Pulmonology",
+          "desc": "Respiratory",
+          "src": "../Assets/Neumología.png",
+          "price": "150.00€",
+          "location": "Respiratory",
+          "doctor": [
+            {
+              "name": "Dr. Erick Justo",
+              "hours": ["09:00", "10:00", "11:00", "12:00"],
+              "schedule": {
+                "2026-04-01": ["09:00", "10:00"],
+                "2026-04-02": ["11:00", "12:00"],
+                "2026-04-03": ["09:00", "11:00"]
+              }
+            }
+          ]
+        }
+      ],
+      "precio": "Low Price",
+      "sitio": "South"
     }
   ],
+
+  "specialitie": [
+    {
+      "name": "Chemotherapy",
+      "description": "Oncological treatment to fight cancer using specialized drugs.",
+      "desc": "",
+      "centers": [
+        {
+          "name": "San José Hospital",
+          "location": "Medical Oncology",
+          "price": "40.00€",
+          "doctor": "Dr. Sergio.A Bañol",
+          "image": "../Assets/San_jose.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Traumatology",
+      "description": "Medical specialty dedicated to the study and treatment of injuries of the musculoskeletal system.",
+      "desc": "",
+      "centers": [
+        {
+          "name": "San José Hospital",
+          "location": "Surgical",
+          "price": "50.00€",
+          "doctor": "Dr. Enrique Sosa",
+          "image": "../Assets/San_jose.jpg"
+        },
+        {
+          "name": "San Roque Hospital",
+          "location": "Surgical",
+          "price": "130.00€",
+          "doctor": "Dr. Sergio.A Bañol",
+          "image": "../Assets/San_roque.webp"
+        }
+      ]
+    },
+    {
+      "name": "Cardiology",
+      "description": "Diagnosis and treatment of heart diseases.",
+      "desc": "",
+      "centers": [
+        {
+          "name": "San José Hospital",
+          "location": "Non-Surgical",
+          "price": "60.00€",
+          "doctor": "Dr. Erick Justo",
+          "image": "../Assets/San_jose.jpg"
+        },
+        {
+          "name": "Perpetuo Socorro Hospital",
+          "location": "Non-Surgical",
+          "price": "100.00€",
+          "doctor": "Dr. Sergio.A Bañol",
+          "image": "../Assets/Perpetuo_socorro.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Radiodiagnosis",
+      "description": "Imaging diagnostic techniques to detect diseases.",
+      "desc": "",
+      "centers": [
+        {
+          "name": "Vithas Hospital",
+          "location": "Diagnosis",
+          "price": "70.00€",
+          "doctor": "Dr. Sergio.A Bañol",
+          "image": "../Assets/Vithas.webp"
+        },
+        {
+          "name": "Perpetuo Socorro Hospital",
+          "location": "Diagnosis",
+          "price": "110.00€",
+          "doctor": "Dr. Enrique Sosa",
+          "image": "../Assets/Perpetuo_socorro.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Chronic Diseases",
+      "description": "Treatment and monitoring of long-term diseases.",
+      "desc": "",
+      "centers": [
+        {
+          "name": "Vithas Hospital",
+          "location": "General Medicine",
+          "price": "80.00€",
+          "doctor": "Dr. Enrique Sosa",
+          "image": "../Assets/Vithas.webp"
+        },
+        {
+          "name": "San Roque Hospital",
+          "location": "General Medicine",
+          "price": "140.00€",
+          "doctor": "Dr. Enrique Sosa",
+          "image": "../Assets/San_roque.webp"
+        }
+      ]
+    },
+    {
+      "name": "Pulmonology",
+      "description": "Medical specialty focused on the respiratory system.",
+      "desc": "",
+      "centers": [
+        {
+          "name": "Vithas Hospital",
+          "location": "Respiratory",
+          "price": "90.00€",
+          "doctor": "Dr. Erick Justo",
+          "image": "../Assets/Vithas.webp"
+        },
+        {
+          "name": "Perpetuo Socorro Hospital",
+          "location": "Respiratory",
+          "price": "120.00€",
+          "doctor": "Dr. Erick Justo",
+          "image": "../Assets/Perpetuo_socorro.jpg"
+        },
+        {
+          "name": "San Roque Hospital",
+          "location": "Respiratory",
+          "price": "150.00€",
+          "doctor": "Dr. Erick Justo",
+          "image": "../Assets/San_roque.webp"
+        }
+      ]
+    }
+  ],
+
   "header": {
     "logo": "CanaryMed",
     "languages": [
@@ -34,82 +403,77 @@
     ],
     "browser": {
       "text": "Search Center/Specialty",
-      "filter": "Filter"
+      "filter": "Search"
     },
     "nav": [
-      {
-        "text": "Centers",
-        "url": "../Paginas/centers.html"
-      },
-      {
-        "text": "Specialties",
-        "url": "../Paginas/specialtys.html"
-      },
-      {
-        "text": "Work With Us",
-        "url": "../Paginas/work_with_us.html"
-      },
-      {
-        "text": "About Us",
-        "url": "../Paginas/about_us.html"
-      }
+      { "text": "Centers", "url": "../Paginas/centers.html" },
+      { "text": "Specialties", "url": "../Paginas/specialtys.html" },
+      { "text": "Work with us", "url": "../Paginas/work_with_us.html" },
+      { "text": "About us", "url": "../Paginas/about_us.html" }
     ],
     "user_icon": "../Assets/Usuario.webp"
   },
+
   "footer": {
     "logos": [
       { "icon": "../Assets/insta.png", "url": "https://www.instagram.com/" },
-      { "icon": "../Assets/tw.png", "url": "https://x.com/?lang=en" },
+      { "icon": "../Assets/tw.png", "url": "https://x.com/?lang=es" },
       { "icon": "../Assets/YT.png", "url": "https://youtube.com" }
     ],
     "logo": "CanaryMed",
     "titulos_nav": [
-      { "name": "The Hospital",
+      {
+        "name": "The Hospital",
         "navs": [
-          {"nav": "Work with us", "src": "../Paginas/work_with_us.html"},
-          {"nav": "About us", "src": "../Paginas/about_us.html"}
+          { "nav": "Collaborate with us", "src": "../Paginas/work_with_us.html" },
+          { "nav": "About us", "src": "../Paginas/about_us.html" }
         ]
       },
-      { "name": "Our Services",
+      {
+        "name": "Our Services",
         "navs": [
-          {"nav": "Collaborating centers", "src": "../Paginas/centers.html"},
-          {"nav": "Especialtys", "src": "../Paginas/specialtys.html"}
+          { "nav": "Partner centers", "src": "../Paginas/centers.html" },
+          { "nav": "Specialties", "src": "../Paginas/specialtys.html" }
         ]
       },
-      { "name": "Useful Links",
+      {
+        "name": "Useful links",
         "navs": [
-          {"nav": "History of Canarian medicine", "src": "https://guanchipedia.com/historia-de-la-medicina-en-canarias/"},
-          {"nav": "User Asist", "src": "../Paginas/clients_asist.html"}
+          { "nav": "History of Canarian medicine", "src": "https://guanchipedia.com/historia-de-la-medicina-en-canarias/" },
+          { "nav": "User assistance", "src": "../Paginas/clients_asist.html" }
         ]
       }
     ]
   },
+
   "Bienvenida_home": {
-    "texto_bienvenida": "Canary medicine just one click away",
+    "texto_bienvenida": "Canarian medicine one click away",
     "texto_boton": "View centers",
     "texto_centros_recomendados": "Recommended centers"
   },
+
   "specialities": {
     "filters": [
       { "name": "Respiratory" },
       { "name": "Surgical" },
       { "name": "Non-Surgical" },
-      { "name": "Diagnostic" },
+      { "name": "Diagnosis" },
       { "name": "General Medicine" },
       { "name": "Medical Oncology" }
     ],
-    "specialities": [
+    "Especialidades": [
       { "name": "Chemotherapy", "desc": "Medical Oncology", "src": "../Assets/Quimio.png" },
       { "name": "Traumatology", "desc": "Surgical", "src": "../Assets/Traumotologia.png" },
       { "name": "Cardiology", "desc": "Non-Surgical", "src": "../Assets/Cardiologia.png" },
-      { "name": "Radiodiagnosis", "desc": "Diagnostic", "src": "../Assets/Radiodiagnóstico.png" },
+      { "name": "Radiodiagnosis", "desc": "Diagnosis", "src": "../Assets/Radiodiagnóstico.png" },
       { "name": "Chronic Diseases", "desc": "General Medicine", "src": "../Assets/EC.png" },
       { "name": "Pulmonology", "desc": "Respiratory", "src": "../Assets/Neumología.png" }
     ]
   },
+
   "work_with_us": {
-    "title_page": "Work With Us",
-    "description": "Just as we help users find the medical centers that best suit them based on price, location, or specialties, we also want to make it easier for healthcare institutions to contribute by working with us so that healthcare on the island is accessible to everyone. * (Required field)",
+    "title_page": "Work with us",
+    "description": "Just as we help our users find the centers that best suit them (whether by price, location or specialties), we also help healthcare institutions contribute by working with us, so that healthcare on the island is available to everyone.",
     "form_title": "Collaborate",
     "buton_inscription": "Collaborate",
     "campos_formulario": [
@@ -117,102 +481,75 @@
       { "campo": "*Institutional Email", "texto_ejemplo": "hospital123@gmail.com" },
       { "campo": "*Phone Number", "texto_ejemplo": "Institution phone number" },
       { "campo": "*Address", "texto_ejemplo": "Main Street 12, Las Palmas" },
-      {
-        "campo": "*Type of Specialty",
-        "texto_ejemplo": "Respiratory",
-        "opciones": ["Medical Oncology", "Surgical", "Non-Surgical", "Diagnostic", "General Medicine", "Respiratory", "Other"]
-      },
+      { "campo": "*Type of Specialty", "texto_ejemplo": "Respiratory", "opciones": ["Medical Oncology", "Surgical", "Non-Surgical", "Diagnosis", "General Medicine", "Respiratory", "Other"] },
       { "campo": "*Specialty", "texto_ejemplo": "Cardiology" }
     ]
   },
+
   "register_edit": {
     "title": "Register",
-    "boton_register": "Confirm",
-    "casilla": "* You agree that we store and process your data through this website following our privacy policy.",
-    "campos": [
-      { "campo": "*First Name", "texto_ejemplo": "Sergio" },
-      { "campo": "*Last Name", "texto_ejemplo": "Bañol Castaño" },
-      { "campo": "*Email", "texto_ejemplo": "user123@gmail.com" },
-      { "campo": "*Verify Email", "texto_ejemplo": "" },
-      { "campo": "*Password", "texto_ejemplo": "" },
-      { "campo": "*Verify Password", "texto_ejemplo": "" },
-      { "campo": "*NIF", "texto_ejemplo": "XXXXXXXXH" },
-      { "campo": "*Phone Number", "texto_ejemplo": "" }
+    "register_button": "Confirm",
+    "checkbox": "* Accept that we store and process your data through this website following our privacy policy",
+    "fields": [
+      { "field": "*First Name", "example_text": "Sergio" },
+      { "field": "*Last Name", "example_text": "Bañol Castaño" },
+      { "field": "*Email", "example_text": "usuario123@gmail.com" },
+      { "field": "*Verify email", "example_text": "" },
+      { "field": "*Password", "example_text": "1234567@A" },
+      { "field": "*Verify Password", "example_text": "" },
+      { "field": "*ID", "example_text": "XXXXXXXXH" },
+      { "field": "*Phone Number", "example_text": "" }
     ]
   },
-  "log_in": {
-    "titulo": "Login",
-    "campos": [
-      { "campo": "User Account", "texto_ejemplo": "user123@gmail.com" },
-      { "campo": "Password", "texto_ejemplo": "" }
+
+  "login": {
+    "title": "Login",
+    "fields": [
+      { "field": "User Account" },
+      { "field": "Password" }
     ],
-    "boton_log_in": "Log In",
-    "boton_cancel": "Cancel",
-    "link_register": "New Account"
+    "login_button": "Log in",
+    "cancel_button": "Cancel",
+    "register_link": "New Account"
   },
+
   "client_asist": {
     "title": "Customer Support",
-    "campo_text": "Write your question or complaint",
+    "campo_text": "Write your query or complaint",
     "texto_ejemplo": "Start here...",
     "boton": "Upload"
   },
+
   "about_us": {
-    "title": "About Us",
-    "description": "At CanaryMed we work with the goal of facilitating access to healthcare information for all people who live in or visit the Canary Islands. Our purpose is to help users quickly and easily find medical centers that best fit their needs, contributing to improving their well-being and health.\n\nOur platform works as a medical center comparison tool where users can explore different options and access relevant information such as location, specialties offered, or prices for certain services. In this way, we aim to provide a clear and useful tool that helps users make informed decisions about their healthcare.\n\nIn this first stage, CanaryMed mainly focuses on medical centers located in Gran Canaria. However, our medium and long-term goal is to expand the platform to include centers from other islands in the archipelago, offering an increasingly comprehensive service to the entire Canary community.\n\nFrom a business perspective, CanaryMed operates through collaborations with medical centers, which can participate in the platform through service commissions or usage fees. This model allows us to continue developing the platform and constantly improve the user experience.\n\nAt CanaryMed we believe that having access to clear, organized, and accessible healthcare information can make a difference, and we work every day to bring healthcare closer to people in a simpler and more transparent way."
+    "title": "About us",
+    "description": "At CanaryMed we work with the goal of facilitating access to healthcare information for all people living in or visiting the Canary Islands. Our purpose is to help users quickly and easily find the medical centers that best suit their needs, thus contributing to improving their well-being and health.\n\nOur platform works as a medical center comparator, where users can consult different available options and access relevant information such as location, specialties offered, and prices of certain services. In this way, we aim to provide a clear and useful tool to make informed decisions about healthcare.\n\nIn this first stage, CanaryMed mainly focuses on medical centers located in Gran Canaria. However, our medium and long-term goal is to expand the platform to include centers from other islands of the archipelago, offering an increasingly complete service to the entire Canarian community.\n\nFrom a business model perspective, CanaryMed is sustained through collaborations with medical centers, which can participate through service commissions or subscription fees. This model allows us to continue developing the platform and continuously improve the user experience.\n\nAt CanaryMed we believe that access to clear, organized and accessible healthcare information can make a difference, and we work every day to bring healthcare closer to people in a simpler and more transparent way."
   },
+
   "perfil": {
-    "boton_salir": "Log Out",
+    "boton_salir": "Log out",
     "boton_editar": "Edit",
     "secciones": [
-      {
-        "key": "citas",
-        "titulo": "Pending Appointments",
-        "texto": "See More"
-      },
-      {
-        "key": "historial",
-        "titulo": "History",
-        "texto": "See More"
-      },
-      {
-        "key": "favs",
-        "titulo": "Favourites",
-        "texto": "See More"
-      }
+      { "key": "citas", "titulo": "Pending Appointments", "texto": "See more" },
+      { "key": "historial", "titulo": "History", "texto": "See more" },
+      { "key": "favs", "titulo": "Favorites", "texto": "See more" }
     ]
   },
+
   "button_back": "Go back",
-  "boton_esp": "View more",
+  "boton_esp": "See more",
   "boton_filtrar": "Filter",
   "boton_filtro": "Apply",
+
   "make_an_appointment": {
-    "title": "Make appointment",
-    "boton_confirmar": "Confirm appintment",
+    "title": "Make an appointment",
+    "boton_confirmar": "Confirm appointment",
     "fields": [
-      {
-        "campo": "*Center",
-        "texto_ejemplo": "Centers"
-      },
-      {
-        "campo": "*Specialty",
-        "texto_ejemplo": "Specialtys"
-      },
-      {
-        "campo": "*ID",
-        "texto_ejemplo": "ID"
-      },
-      {
-        "campo": "*Date",
-        "texto_ejemplo": "**/**/****"
-      },
-      {
-        "campo": "*Hour",
-        "texto_ejemplo": "**:**"
-      },
-      {
-        "campo": "*Doctor",
-        "texto_ejemplo": "Doctors"
-      }
+      { "campo": "*Center", "texto_ejemplo": "Centers" },
+      { "campo": "*Specialty", "texto_ejemplo": "Specialties" },
+      { "campo": "*ID", "texto_ejemplo": "ID" },
+      { "campo": "*Date", "texto_ejemplo": "**/**/****" },
+      { "campo": "*Time", "texto_ejemplo": "**:**" },
+      { "campo": "*Doctor", "texto_ejemplo": "Doctors" }
     ]
   }
 }

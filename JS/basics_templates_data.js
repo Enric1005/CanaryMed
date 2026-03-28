@@ -1,5 +1,5 @@
 //-------------------------------------------HEADER--------------------------------------------
-export function loadHeader(DATA){
+export function loadHeader(DATA, loadDynamicContent) {
     const header = DATA.header;
 
     const logo = document.querySelector("#logo h1");
@@ -66,7 +66,7 @@ export function loadHeader(DATA){
             const li = document.createElement("li");
             const link = document.createElement("a");
             link.href = item.url;
-            link.textContent = item.text;
+            link.innerHTML = item.text;
             li.appendChild(link);
             navMenu.appendChild(li);
         });
