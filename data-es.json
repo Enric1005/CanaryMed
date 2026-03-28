@@ -403,7 +403,7 @@
     ],
     "browser": {
       "text": "Busca Centro/Especialidad",
-      "filter": "Filtro"
+      "filter": "Buscar"
     },
 
     "nav": [

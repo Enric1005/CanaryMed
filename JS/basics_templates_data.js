@@ -162,6 +162,7 @@ export function loadFooter(DATA) {
 //-------------------------------------------BROWSER & FILTER--------------------------------------------
 export function browser(DATA) {
     const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("filterButton");
     if (!searchInput) return;
 
     // Recupera la búsqueda si viene de otra página
@@ -169,7 +170,7 @@ export function browser(DATA) {
     if (query) {
         searchInput.value = query;
         localStorage.removeItem("searchQuery");
-        filtrar(query, DATA); // filtra automáticamente al cargar
+        filtrar(query, DATA);
     }
 
     // Filtra en tiempo real mientras escribe
@@ -177,16 +178,43 @@ export function browser(DATA) {
         filtrar(searchInput.value, DATA);
     });
 
-    // Al pulsar Enter redirige
-    searchInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            const texto = searchInput.value.trim();
-            if (texto) {
-                localStorage.setItem("searchQuery", texto);
-                window.location.href = "../Paginas/centers.html";
-            }
+    // Función reutilizable para redirigir
+    const redirigir = () => {
+        const texto = searchInput.value.trim().toLowerCase();
+        if (!texto) return;
+
+        localStorage.setItem("searchQuery", texto);
+
+        // Comprueba si coincide con alguna especialidad
+        const esEspecialidad = DATA.specialities.Especialidades.some(
+            (esp) => esp.name.toLowerCase().includes(texto) ||
+                esp.desc.toLowerCase().includes(texto)
+        );
+
+        // Comprueba si coincide con algún centro
+        const esCentro = DATA.centers.some(
+            (center) => center.name.toLowerCase().includes(texto) ||
+                center.description.toLowerCase().includes(texto)
+        );
+
+        if (esEspecialidad && !esCentro) {
+            window.location.href = "../Paginas/specialtys.html"; // solo especialidades
+        } else if (esCentro && !esEspecialidad) {
+            window.location.href = "../Paginas/centers.html";     // solo centros
+        } else {
+            window.location.href = "../Paginas/centers.html";     // ambos o ninguno → decide tú
         }
+    };
+
+    // Al pulsar Enter
+    searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") redirigir();
     });
+
+    // Al pulsar el botón
+    if (searchBtn) {
+        searchBtn.addEventListener("click", redirigir);
+    }
 }
 
 function filtrar(texto, DATA) {
