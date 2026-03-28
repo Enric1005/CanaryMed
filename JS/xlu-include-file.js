@@ -1,50 +1,56 @@
 export async function xLuIncludeFile() {
-    let z = document.getElementsByTagName("*");
+    const elements = document.getElementsByTagName("*");
 
-    for (let i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("xlu-include-file")) {
-            let a = z[i].cloneNode(false);
-            let file = z[i].getAttribute("xlu-include-file");
+    for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
+        const file = element.getAttribute("xlu-include-file");
 
-            try {
-                let response = await fetch(file);
-                if (response.ok) {
+        if (!file) continue;
 
-                    let content = await response.text();
+        const clone = element.cloneNode(false);
 
-                    // Si el archivo es una plantilla, reemplazamos los placeholders
-                    if (file === "article-template.html") {
-                        let articleData = {
-                            title: z[i].getAttribute("data-title"),
-                            subtitle: z[i].getAttribute("data-subtitle"),
-                            date: z[i].getAttribute("data-date"),
-                            displayDate: z[i].getAttribute("data-display-date"),
-                            content: z[i].getAttribute("data-content"),
-                            image: z[i].getAttribute("data-image"),
-                            imageCaption: z[i].getAttribute("data-image-caption")
-                        };
+        try {
+            const response = await fetch(file);
 
-                        content = content.replace(/{{title}}/g, articleData.title)
-                            .replace(/{{subtitle}}/g, articleData.subtitle)
-                            .replace(/{{date}}/g, articleData.date)
-                            .replace(/{{displayDate}}/g, articleData.displayDate)
-                            .replace(/{{content}}/g, articleData.content)
-                            .replace(/{{image}}/g, articleData.image || '')
-                            .replace(/{{imageCaption}}/g, articleData.imageCaption || '');
-                    }
-
-
-                    a.removeAttribute("xlu-include-file");
-                    //a.innerHTML = await response.text();
-                    a.innerHTML = content;
-                    z[i].parentNode.replaceChild(a, z[i]);
-                    await xLuIncludeFile();
-                }
-            } catch (error) {
-                console.error("Error fetching file:", error);
+            if (!response.ok) {
+                console.warn(`No se pudo cargar el archivo: ${file} (${response.status})`);
+                continue;
             }
 
-            return;
+            let content = await response.text();
+
+            if (file === "article-template.html") {
+                const articleData = {
+                    title:        element.getAttribute("data-title"),
+                    subtitle:     element.getAttribute("data-subtitle"),
+                    date:         element.getAttribute("data-date"),
+                    displayDate:  element.getAttribute("data-display-date"),
+                    content:      element.getAttribute("data-content"),
+                    image:        element.getAttribute("data-image") || "",
+                    imageCaption: element.getAttribute("data-image-caption") || ""
+                };
+
+                for (const [key, value] of Object.entries(articleData)) {
+                    content = content.replace(new RegExp(`{{${key}}}`, "g"), value);
+                }
+            }
+
+            clone.removeAttribute("xlu-include-file");
+            clone.innerHTML = content;
+            element.parentNode.replaceChild(clone, element);
+
+            await xLuIncludeFile();
+
+        } catch (error) {
+            console.error(`Error al cargar "${file}":`, error);
         }
+
+        return;
+    }
+
+    const loader = document.getElementById("loader");
+    if (loader) {
+        loader.style.opacity = "0";
+        setTimeout(() => loader.remove(), 300);
     }
 }
