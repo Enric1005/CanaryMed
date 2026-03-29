@@ -22,7 +22,7 @@ async function loadDynamicContent(lang = "es") {
         users.log_out();
         users.register_user_form();
 
-        templates.loadHeader(DATA);
+        templates.loadHeader(DATA, loadDynamicContent);
         templates.browser(DATA);
         templates.loadFooter(DATA);
         templates.loadMain(DATA);
