@@ -43,17 +43,31 @@ El sistema deberá cumplir las siguientes requisitos:
 11. Permitir comparar centros médicos en función de precio, valoración y especialidades disponibles.
 ## Documentación
 
-En el interior del proyecto se encuentra una carpeta llamada Documents, donde se encuentran 3 archivos pdf que contienen lo siguiente:
+En el interior del proyecto se encuentra una carpeta llamada Documents, donde se encuentran los siguientes archivos:
 
-El listado de páginas HTML junto con sus respectivos mockups.
-
--El listado de templates.
-
--Los mockups utilizados y el storyboard.
-
--La explicación de los diferentes mockups es la siguiente:
+- `lista_HTML_MOCKUPS.pdf` → Listado de la relación entre los HMTL y lo mockups.
+- `Listado_De_Paginas_HTML.pdf` → Listado de páginas HTML, aspectos responsive, carga de templates y JSON, formularios, validaciones y especificación de la página de inicio.
+- `Listado_templates.pdf` → Listado de los diferentes templates y donde se usan.
+- `MockupsWeb_storyboard.pdf` → Mockups de la versión web y storyboard.
+- `MockupsTabletMovil.pdf` → Mockups de la versión tablet y móvil.
 
 ---
+
+## Usuario y contraseña de prueba
+
+- **Usuario:** test@gmail.com
+- **Contraseña:** 1234567@A
+
+---
+
+## Ubicación del contenido JSON
+
+El contenido JSON se encuentra de forma **local** en el proyecto, dentro de la carpeta `JSON`, dividido en 3 archivos:
+
+- `data-es.json` → Contenido de la aplicación en español.
+- `data-en.json` → Contenido de la aplicación en inglés.
+- `test_profile_data.json` → Datos de usuario para la autenticación de prueba.
+
 
 ### **HOME**
 
@@ -73,7 +87,7 @@ El listado de páginas HTML junto con sus respectivos mockups.
 
 ### **Registro / Editar**
 
-- Nombre, Email, Teléfono, Contraseña, Confirmar Contraseña, Fecha de nacimiento, Género, DNI
+- Nombre, Apellidos, Email, Verificar email, Contraseña, Verificar contraseña, DNI, Teléfono
 - Casilla Términos y privacidad
 - Botón: Crear cuenta / Guardar
 
@@ -81,27 +95,27 @@ El listado de páginas HTML junto con sus respectivos mockups.
 
 ### **Perfil**
 
-- Datos: Foto, Nombre de usuario, Nombre, Teléfono, Email
+- Datos: Foto, Nombre de usuario, Nombre, Apellidos, Teléfono, DNI
 - Opción: Editar perfil, Cerrar sesión
-- Secciones: citas pendientes, centros y especialistas favoritos, historial de citas
+- Secciones: citas pendientes, centros, historial de citas
 
 ---
 
 ### **Centros**
 
-- Lista de centros: Imagen, Nombre, Ubicación, Descripción
+- Lista de centros: Imagen, Nombre, Descripción
 
 ---
 
 ### **Especialidades**
 
-- Lista de especialidades: Imagen, Nombre, Descripción, Botón Ver centros
+- Lista de especialidades: Imagen, Nombre, Especificación, Botón Ver centros
 
 ---
 
 ### **Centro (detalle)**
 
-- Nombre, Foto, Rating, Dirección
+- Nombre, Foto, Precio, Doctor
 - Servicios, Especialidades disponibles
 - Botón: Reservar cita
 
@@ -109,34 +123,33 @@ El listado de páginas HTML junto con sus respectivos mockups.
 
 ### **Especialidad (detalle)**
 
-- Nombre, Imagen, Descripción corta, Precio
-- Centros disponibles con botón Reservar
+- Nombre, Foto, Precio, Doctor
+- Centros disponibles con botón Pedir Cita
 
 ---
 
 ### **Citas pendientes**
 
-- Lista de citas: Especialidad, Centro, Descripción
+- Lista de citas: Centro, Especialidad y Fecha
 
 ---
 
 ### **Historial de citas**
 
-- Lista de citas pasadas: Especialidad, Centro, Fecha
+- Lista de citas: Centro, Especialidad y Fecha
 
 ---
 
-### **Centros y especialistas favoritos**
+### **Centros favoritos**
 
-- Lista de centros y especialistas favoritos: Especialidad, Centro, Especialista, Descripción
+- Lista de citas: Centro, Especialidad y Fecha
 
 ---
 
 ### **Colabora con Nosotros**
 
-- Formulario rápido: Nombre, Email, Tipo de usuario
+- Formulario rápido: Centro, Email, Teléfono, Dirección, Especialidades y Tipo de especialidad
 - Descripción corta: Cómo puedes unirte al proyecto
-- Info de contacto adicional
 - Botón: Enviar solicitud
 
 ---
@@ -145,7 +158,14 @@ El listado de páginas HTML junto con sus respectivos mockups.
 
 - Breve descripción de la empresa
 - Misión y valores
-- Equipo (opcional, fotos + nombres)
+- Equipo
 - Redes sociales y contacto
 
+---
+
+## **Pedir Cita**
+
+- Formulario: Centro, Especialidad, DNI, Fecha, Hora y Médico
+- Botón: Confirmar cita
+  
 ---
