@@ -10,7 +10,7 @@ let DATA = null;
 
 async function loadDynamicContent(lang = "es") {
     try {
-        const response = await fetch(`../data-${lang}.json`);
+        const response = await fetch(`../JSON/data-${lang}.json`);
         DATA = await response.json();
 
         //Solo descomentar cuando se necesite comprobar

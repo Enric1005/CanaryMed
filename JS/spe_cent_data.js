@@ -274,10 +274,10 @@ export function loadFilters(type, DATA) {
 
                 // Filtros de precio y sitio por separado
                 const filtrosPrecio = filtrosActivos.filter(f =>
-                    ["Precio Bajo", "Precio Medio", "Precio Alto"].includes(f)
+                    ["Precio Bajo", "Precio Medio", "Precio Alto", "Low Price", "Medium Price", "High Price"].includes(f)
                 );
                 const filtrosSitio = filtrosActivos.filter(f =>
-                    ["Norte", "Sur", "Ciudad"].includes(f)
+                    ["Norte", "Sur", "Ciudad", "North", "South", "City"].includes(f)
                 );
 
                 const pasaPrecio = filtrosPrecio.length === 0 || filtrosPrecio.includes(center.precio);

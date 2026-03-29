@@ -1,5 +1,5 @@
 async function getData() {
-    const response = await fetch("../test_profile_data.json");
+    const response = await fetch("../JSON/test_profile_data.json");
     return await response.json();
 }
 
@@ -76,7 +76,7 @@ export function loadSeccion(DATA) {
 export async function loadPendingAppointments() {
     const section = document.getElementById("profile_section1");
 
-    let DATA = await fetch("../test_profile_data.json");
+    let DATA = await fetch("../JSON/test_profile_data.json");
     DATA = await DATA.json();
 
     const body = section.querySelector(".card-body");
@@ -90,7 +90,7 @@ export async function loadPendingAppointments() {
 export async function loadRecord() {
     const section = document.getElementById("profile_section2");
 
-    let DATA = await fetch("../test_profile_data.json");
+    let DATA = await fetch("../JSON/test_profile_data.json");
     DATA = await DATA.json();
 
     const body = section.querySelector(".card-body");
@@ -104,7 +104,7 @@ export async function loadRecord() {
 export async function loadFavoriteCenters() {
     const section = document.getElementById("profile_section3");
 
-    let DATA = await fetch("../test_profile_data.json");
+    let DATA = await fetch("../JSON/test_profile_data.json");
     DATA = await DATA.json();
 
     const body = section.querySelector(".card-body");
@@ -134,7 +134,7 @@ export async function seeMorePendingAppointments() {
     if (type !== "pending") return;
 
     try {
-        let DATA = await fetch(`../test_profile_data.json`);
+        let DATA = await fetch(`../JSON/test_profile_data.json`);
         DATA = await DATA.json();
 
         const list = DATA.pending_appointments;
@@ -169,7 +169,7 @@ export async function seeMoreRecord() {
     const type = new URLSearchParams(location.search).get("type");
     if (type !== "record") return;
     try {
-        let DATA = await fetch(`../test_profile_data.json`);
+        let DATA = await fetch(`../JSON/test_profile_data.json`);
         DATA = await DATA.json();
 
         const list = DATA.record;
@@ -204,7 +204,7 @@ export async function seeMoreFavoriteCenters() {
     if (type !== "favorites") return;
 
     try {
-        let DATA = await fetch(`../test_profile_data.json`);
+        let DATA = await fetch(`../JSON/test_profile_data.json`);
         DATA = await DATA.json();
 
         const list = DATA.favorite_centers;
