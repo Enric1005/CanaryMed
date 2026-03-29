@@ -76,7 +76,7 @@ input[type="checkbox"] {
     .contenedor2 {
         width: 300px;
         margin: 20px;
-        height: 125vh;
+        height: 100%;
     }
 
     .text h1 {
