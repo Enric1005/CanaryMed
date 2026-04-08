@@ -1,171 +1,59 @@
 # CanaryMed
 
-## Autores
-Enrique Sosa Ojeda
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
 
-Sergio Bañol Castaño
+## Development server
 
-Erick Justo Sosa
+To start a local development server, run:
 
-## Descripción del proyecto
-El propósito de CanaryMed es facilitar la vida de la gente que resida o se encuentre en canarias y contribuir a mejorar su salud. Con ese objetivo, se crea este proyecto con el cual se podrán ver los diferentes centros médicos que estén disponibles en una lista, mostrando información importante entre las cuales estaría su ubicación, precios o especialidades.
+```bash
+ng serve
+```
 
-La funcionalidad principal se basa en actuar como un comparador de centros médicos, permitiendo a los diferentes usuarios buscar los centros que mejor se adapten a sus necesidades.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-En un comienzo, el software solo incluirá unicamente centros ubicados en Gran canaria, con el objetivo de expandirlo en un futuro con más centros de dentro de la isla como del resto del archipiélago.
+## Code scaffolding
 
-Desde un punto de vista comercial, el proyecto encontraría su rentabilidad mediante el cobro de comisiones a los centros médicos o través de una cuota por el uso de la web.
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-## Requisitos funcionales
+```bash
+ng generate component component-name
+```
 
-El sistema deberá cumplir las siguientes requisitos:
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-1. Permitir al usuario visualizar un listado de los diferentes centros médicos y las especialidades que ofrece cada uno.
+```bash
+ng generate --help
+```
 
-2. Permitir a los usuarios registrarse (alta) y darse de baja en la plataforma.
+## Building
 
-3. Permitir a los centros médicos registrarse en la plataforma.
+To build the project run:
 
-4. Permitir a los centros médicos añadir, modificar o eliminar especialidades asociadas a su perfil.
+```bash
+ng build
+```
 
-5. Notificar por correo electrónico la validación del alta o baja de usuarios y centros médicos.
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-6. Permitir filtrar centros médicos por especialidad.
+## Running unit tests
 
-7. Permitir ordenar los centros médicos según criterios como valoración o rango de precios.
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-8. Permitir consultar la información detallada de una especialidad.
+```bash
+ng test
+```
 
-9. Mostrar la ubicación de los diferentes centros médicos mediante un mapa interactivo.
+## Running end-to-end tests
 
-10. Permitir a los usuarios marcar centros médicos o especialidades como favoritos.
+For end-to-end (e2e) testing, run:
 
-11. Permitir comparar centros médicos en función de precio, valoración y especialidades disponibles.
-## Documentación
+```bash
+ng e2e
+```
 
-En el interior del proyecto se encuentra una carpeta llamada Documents, donde se encuentran los siguientes archivos:
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-- `lista_HTML_MOCKUPS.pdf` → Listado de la relación entre los HMTL y lo mockups.
-- `Listado_De_Paginas_HTML.pdf` → Listado de páginas HTML, aspectos responsive, carga de templates y JSON, formularios, validaciones y especificación de la página de inicio.
-- `Listado_templates.pdf` → Listado de los diferentes templates y donde se usan.
-- `MockupsWeb_storyboard.pdf` → Mockups de la versión web y storyboard.
-- `MockupsTabletMovil.pdf` → Mockups de la versión tablet y móvil.
+## Additional Resources
 
----
-
-## Usuario y contraseña de prueba
-
-- **Usuario:** test@gmail.com
-- **Contraseña:** 1234567@A
-
----
-
-## Ubicación del contenido JSON
-
-El contenido JSON se encuentra de forma **local** en el proyecto, dentro de la carpeta `JSON`, dividido en 3 archivos:
-
-- `data-es.json` → Contenido de la aplicación en español.
-- `data-en.json` → Contenido de la aplicación en inglés.
-- `test_profile_data.json` → Datos de usuario para la autenticación de prueba.
-
-
-### **HOME**
-
-- Header → Perfil, Buscador, Tabs (Home, Centros, Especialidades, Colabora con Nosotros)
-- Main → Mapa con centros cercanos, 4 centros destacados con nombre y breve descripción
-- Footer: Info básica, contacto, redes
-
----
-
-### **Inicio de sesión**
-
-- Celdas → Email/Usuario, Contraseña
-- Botones → Iniciar sesión, Registrarse
-- Links: Olvidé contraseña
-
----
-
-### **Registro / Editar**
-
-- Nombre, Apellidos, Email, Verificar email, Contraseña, Verificar contraseña, DNI, Teléfono
-- Casilla Términos y privacidad
-- Botón: Crear cuenta / Guardar
-
----
-
-### **Perfil**
-
-- Datos: Foto, Nombre de usuario, Nombre, Apellidos, Teléfono, DNI
-- Opción: Editar perfil, Cerrar sesión
-- Secciones: citas pendientes, centros, historial de citas
-
----
-
-### **Centros**
-
-- Lista de centros: Imagen, Nombre, Descripción
-
----
-
-### **Especialidades**
-
-- Lista de especialidades: Imagen, Nombre, Especificación, Botón Ver centros
-
----
-
-### **Centro (detalle)**
-
-- Nombre, Foto, Precio, Doctor
-- Servicios, Especialidades disponibles
-- Botón: Reservar cita
-
----
-
-### **Especialidad (detalle)**
-
-- Nombre, Foto, Precio, Doctor
-- Centros disponibles con botón Pedir Cita
-
----
-
-### **Citas pendientes**
-
-- Lista de citas: Centro, Especialidad y Fecha
-
----
-
-### **Historial de citas**
-
-- Lista de citas: Centro, Especialidad y Fecha
-
----
-
-### **Centros favoritos**
-
-- Lista de citas: Centro, Especialidad y Fecha
-
----
-
-### **Colabora con Nosotros**
-
-- Formulario rápido: Centro, Email, Teléfono, Dirección, Especialidades y Tipo de especialidad
-- Descripción corta: Cómo puedes unirte al proyecto
-- Botón: Enviar solicitud
-
----
-
-## **Acerca de Nosotros**
-
-- Breve descripción de la empresa
-- Misión y valores
-- Equipo
-- Redes sociales y contacto
-
----
-
-## **Pedir Cita**
-
-- Formulario: Centro, Especialidad, DNI, Fecha, Hora y Médico
-- Botón: Confirmar cita
-  
----
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
