@@ -1,1 +1,36 @@
-<p>work-with-us works!</p>
+<body>
+<header id="main_header" xlu-include-file="../Templates/header.html"></header>
+<main xlu-include-file="../Templates/colabora_base.html"></main>
+<main>
+  <div class="formulario">
+    <h1></h1>
+    <form id="formColabora">
+      <label for="institucion">Lorem ipsum</label>
+      <input id="institucion" type="text" placeholder="Lorem ipsum" required minlength="2">
+
+      <label for="correo">Lorem ipsum</label>
+      <input id="correo" type="email" placeholder="Lorem ipsum" required>
+
+      <label for="telefono">Lorem ipsum</label>
+      <input id="telefono" type="tel" placeholder="Lorem ipsum" required pattern="\d{9}" title="9 dígitos">
+
+      <label for="direccion">Lorem ipsum</label>
+      <input id="direccion" type="text" placeholder="Lorem ipsum" required minlength="5">
+
+      <label for="tipo">Lorem ipsum</label>
+      <select id="tipo" required>
+      </select>
+
+      <label for="especialidad">Lorem ipsum</label>
+      <input id="especialidad" type="text" placeholder="Lorem ipsum" required minlength="2">
+
+      <div class="boton"><button type="submit">lorem</button></div>
+    </form>
+  </div>
+</main>
+<footer id="main_footer" xlu-include-file="../Templates/footer.html"></footer>
+<script type="module" src="../JS/data.js"></script>
+</body>
+<div id="loader">
+  <div class="spinner"></div>
+</div>
