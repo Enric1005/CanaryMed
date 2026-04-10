@@ -1,25 +1,26 @@
 <main>
   <div class="center-section">
-
     <div class="center-content">
 
       <div class="favorite">
-        <input type="checkbox" id="fav1">
-        <label for="fav1"></label>
+        <input type="checkbox" [id]="'fav-' + item.id" [(ngModel)]="item.isFavorite">
+        <label [for]="'fav-' + item.id"></label>
       </div>
 
       <div class="center-image">
-        <img class="center">
+        <img class="center" [src]="item.imageUrl" [alt]="item.title">
       </div>
 
       <div class="center-text">
-        <h1></h1>
-        <h3></h3>
-        <p>
-        </p>
+        <h1>{{ item.title }}</h1>
+        <h3>{{ item.subtitle }}</h3>
+        <p>{{ item.description }}</p>
       </div>
-      <button type="button" class="center-button"></button>
-    </div>
 
+      <button type="button" class="center-button" (click)="onButtonClick()">
+        {{ item.buttonLabel }}
+      </button>
+
+    </div>
   </div>
 </main>
