@@ -1,48 +1,49 @@
 <body>
 <main>
-  <div class="text"><h1>Lorem ipsum</h1></div>
+  <div class="text"><h1>Registrarse</h1></div>
   <div class="contenedor2">
     <div class="text_box">
       <form id="register_form">
-        <label for="nombre"></label>
+        <label for="nombre">Nombre</label>
         <input type="text" name="lor1" id="nombre" placeholder="" required>
 
-        <label for="apellidos"></label>
+        <label for="apellidos">Apellidos</label>
         <input type="text" name="lor2" id="apellidos" placeholder="" required>
 
-        <label for="email"></label>
-        <input type="email" name="lor3" id="email" placeholder="" required>
+        <label for="email">Correo</label>
+        <input type="email" name="lor3" id="email" placeholder="ejemplo123@gmail.com" required>
 
-        <label for="email_confirm"></label>
+        <label for="email_confirm">Confirmar Correo</label>
         <input type="email" name="lor4" id="email_confirm" placeholder="" required>
 
-        <label for="password"></label>
-        <input type="password" id="password" placeholder="" required
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="123456A@" required
                pattern="(?=.*[A-Za-z])(?=.*[^A-Za-z0-9]).{8,}"
                title="Mínimo 8 caracteres, una letra y un carácter especial">
 
-        <label for="password_confirmed"></label>
+        <label for="password_confirmed">Confirmar Contraseña</label>
         <input type="password" name="lor6" id="password_confirmed" placeholder="" required>
 
-        <label for="NIF"></label>
-        <input type="text" id="NIF" placeholder="lorem ipsum" required
+        <label for="NIF">DNI</label>
+        <input type="text" id="NIF" placeholder="XXXXXXXXH" required
                pattern="\d{8}[A-Z]" title="Formato: 12345678A">
 
-        <label for="tel"></label>
-        <input type="tel" id="tel" placeholder="lorem ipsum" required
+        <label for="tel">Teléfono</label>
+        <input type="tel" id="tel" placeholder="" required
                pattern="\d{9}" title="9 dígitos">
         <div class="chbox">
           <input type="checkbox" class="check" id="mi-check">
-          <label for="mi-check">Lorem ipsum dolor</label>
+          <label for="mi-check">* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad</label>
         </div>
 
-        <div class="boton"> <input type="submit" value="Lorem ipsum" class="button">  </div>
+        <div class="boton"> <input type="submit" value="Registrarse" class="button" routerLink="/profile">  </div>
       </form>
     </div>
   </div>
 </main>
-<script type="module" src="../JS/data.js"></script>
 </body>
+<!-----------
 <div id="loader">
   <div class="spinner"></div>
 </div>
+------------>

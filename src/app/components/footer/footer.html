@@ -4,9 +4,19 @@
     <!-- Logo + iconos juntos -->
     <div class="logo_section">
       <div class="social_icons">
-        <img id="youtube" [src]="youtube" class="redes_sociales" src="https://www.youtube.com/">
-        <img id="x" [src]="x" class="redes_sociales" src="">
-        <img id="instagram" [src]="instagram" class="redes_sociales" src="">
+
+        <a href="https://www.youtube.com/" target="_blank">
+          <img [src]="youtube" class="redes_sociales">
+        </a>
+
+        <a href="https://x.com/" target="_blank">
+          <img [src]="x" class="redes_sociales">
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <img [src]="instagram" class="redes_sociales">
+        </a>
+
       </div>
       <a class="name_of_company" routerLink="/" id="footerLogo">
         <h1>CanaryMed</h1>
@@ -18,7 +28,7 @@
         <h3>El Hospital</h3>
         <nav>
           <ul>
-            <li><a routerLink="/">Colabora con nosotros</a></li>
+            <li><a routerLink="/work-with-us">Colabora con nosotros</a></li>
             <li><a routerLink="/about-us">Sobre nosotros</a></li>
           </ul>
         </nav>
@@ -29,8 +39,8 @@
         <h3>Nuestros Servicios</h3>
         <nav>
           <ul>
-            <li><a routerLink="/">Centros colaboradores</a></li>
-            <li><a routerLink="/">Especialidades</a></li>
+            <li><a routerLink="/centers">Centros colaboradores</a></li>
+            <li><a routerLink="/specialtys">Especialidades</a></li>
           </ul>
         </nav>
       </div>
