@@ -29,26 +29,27 @@ body {
 }
 
 
-/* Contenedor del checkbox y el texto */
 .chbox {
-  display: flex;          /* Alinea el checkbox y el texto en la misma línea */
-  justify-content: flex-start; /* Centra el conjunto horizontalmente */
-  gap: 10px;              /* Da espacio entre el cuadradito y el texto */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
   margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegura que el checkbox no se estire */
+.chbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
 }
 
 .chbox label {
-  display: inline;
-  margin: 0;
-  cursor: pointer;
-}
-
-/* Ajuste opcional para el input */
-input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin: 0;
+  flex: 1;
+  text-align: left;
 }
 
 .boton {
