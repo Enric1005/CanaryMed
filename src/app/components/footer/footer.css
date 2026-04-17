@@ -2,8 +2,6 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Footer principal */
@@ -13,13 +11,25 @@ footer {
   padding: 50px 0 30px;
   margin-top: auto;
   box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-.footer_top {
-  max-width: 1200px;
-  margin: 0 auto -35px;
-  padding: 0 20px;
-  text-align: center;
+.logo_section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.first_line_fo h1 {
+  font-size: 70px;
+  font-weight: 1000;
+  background: whitesmoke;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .social_icons{
@@ -44,14 +54,21 @@ footer {
   align-items: flex-start;
 }
 
-/* Estilo para el logo/título */
 .first_line_fo h1 {
   font-size: 70px;
   font-weight: 1000;
   background: whitesmoke;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.name_of_company {
+  text-decoration: none;
+  display: block;
+  line-height: 1;      /* ← elimina espacio extra */
+  margin: 0;           /* ← elimina márgenes */
+  padding: 0;          /* ← elimina padding */
 }
 
 /* Contenedor de las secciones de navegación */
@@ -121,8 +138,9 @@ footer {
     padding: 40px 0 20px;
   }
 
-  .footer_top {
-    margin-bottom: 10px;
+  .logo_section {
+    align-items: center;  /* ← centra iconos y título */
+    width: 100%;
   }
 
   .social_icons {

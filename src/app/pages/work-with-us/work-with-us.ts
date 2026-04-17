@@ -1,9 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Footer} from '../../components/footer/footer';
+import {Header} from '../../components/header/header';
+import {FormsModule} from '@angular/forms';
+import {ColaboraBase} from '../../components/colabora-base/colabora-base';
 
 @Component({
   selector: 'app-work-with-us',
-  imports: [],
+  standalone: true,
+  imports: [Header, Footer, FormsModule, ColaboraBase],
   templateUrl: './work-with-us.html',
   styleUrl: './work-with-us.css',
 })
-export class WorkWithUs {}
+
+export class WorkWithUs {
+  onSubmit(form: any) {
+    if (form.invalid) return;
+    console.log(form.value);
+  }
+}

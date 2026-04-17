@@ -479,8 +479,7 @@
   },
   "work_with_us": {
     "title_page": "Trabaja con nosotros",
-    "description": "Así como facilitamos a nuestros usuarios buscar los centros que mejor les conviene (ya sea por el precio, lugar o especialidades que busca) también facilitamos a las diferentes instituciones sanitarias a aportar su granito de arena trabajando con nosotros, para que la medicina en la isla esté a disposición de todos",
-    "form_title": "Colabora",
+    "description":  "form_title": "Colabora",
     "buton_inscription": "Colaborar",
     "campos_formulario": [
       {"campo":  "*Institución Sanitaria", "texto_ejemplo": "Perpetuo Socorro"},
@@ -494,7 +493,7 @@
   "register_edit": {
     "title": "Registro",
     "register_button": "Confirmar",
-    "checkbox": "* Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad",
+    "checkbox": "*Acepta que almacenemos y tratemos sus datos mediante este sitio web y siguiendo nuestra política de privacidad",
     "fields": [
       {"field":  "*Nombre", "example_text":  "Sergio"},
       {"field":  "*Apellidos", "example_text":  "Bañol Castaño"},

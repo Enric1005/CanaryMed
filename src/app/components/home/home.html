@@ -1,26 +1,25 @@
-
 <main class="image_section">
   <div class="image_text">
-    <h1></h1>
-    <button class="image-btn" onclick="window.location.href='../Paginas/centers.html'">Lorem Ipsum</button>
+    <h1>La medicina canaria a un click</h1>
+    <button class="image-btn" routerLink="/centers">Ver centros</button>
   </div>
 </main>
 
 <main class="main_center">
-  <h2 class="title"></h2>
+  <h2 class="title">Centros recomendados</h2>
 
   <div class="centers">
 
     <div class="center">
-      <img class="hospital">
-      <h3></h3>
-      <p></p>
+      <img id="hospital1" [src]="image_hospital1" class="hospital">
+      <h3>Hospital Perpetuo Socorro</h3>
+      <p>Somos un centro médico quirúrgico privado en el que encontrará la tecnología más avanzada y una alta cualificación técnica y profesional. Hospital Perpetuo Socorro cubre prácticamente todas las especialidades médicas con una prioridad: ofrecer a nuestros pacientes la máxima calidad asistencial. El compromiso de nuestro equipo, el modelo de gestión y nuestros resultados nos avalan. En HPS, su salud es lo primero.</p>
     </div>
 
     <div class="center">
-      <img class="hospital">
-      <h3></h3>
-      <p></p>
+      <img id="hospital2" [src]="image_hospital2" class="hospital">
+      <h3>Hospital San José</h3>
+      <p>El Hospital San José (Las Palmas de Gran Canaria, 1891) es un referente de la sanidad privada en Canarias, en constante modernización y crecimiento. Cuenta con tecnología avanzada, un bloque quirúrgico de vanguardia y ofrece todas las especialidades médicas, con profesionales de prestigio y tratamientos personalizados de alta calidad y complejidad.</p>
     </div>
   </div>
 </main>
@@ -29,15 +28,15 @@
   <div class="centers">
 
     <div class="center">
-      <img class="hospital">
-      <h3></h3>
-      <p></p>
+      <img id="hospital3" [src]="image_hospital3" class="hospital">
+      <h3>Hospital Vithas</h3>
+      <p>El Grupo hospitalario Vithas, del Grupo Goodgrower, se fundó en 2012 con el objetivo de mejorar la vida de las personas. Actualmente cuenta con 22 hospitales y 39 centros médicos en 14 provincias españolas, dispone de 1.846 camas y reúne a 12.600 profesionales, que atienden más de 6,4 millones de encuentros médicos al año.</p>
     </div>
 
     <div class="center">
-      <img class="hospital">
-      <h3></h3>
-      <p></p>
+      <img id="hospital4" [src]="image_hospital4" class="hospital">
+      <h3>Hospital San Roque</h3>
+      <p>Hospitales Universitarios San Roque surge con el propósito de mejorar el bienestar de las personas. Para ello pone a disposición de la sociedad servicios integrales de asistencia sanitaria a través de la tecnología de última generación en los ámbitos de consultas, diagnóstico y hospitalización.</p>
     </div>
   </div>
 </main>

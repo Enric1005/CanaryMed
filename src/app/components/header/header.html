@@ -1,35 +1,33 @@
 <header>
   <div class="zero_line">
     <select name="desplegable" class="idioma" id="languages">
-      <option value="" selected disabled></option>
+      <option value="" selected disabled>Idioma</option>
     </select>
   </div>
 
   <div class="first_line">
     <button class="menu-toggle">☰</button>
 
-    <a class="name_of_company" href="../Paginas/home_page.html" id="logo">
-      <h1></h1>
+    <a class="name_of_company" routerLink="/" id="logo">
+      <h1>CanaryMed</h1>
     </a>
 
     <div class="center_group">
-      <input id="searchInput" type="search" placeholder="" class="search-bar">
-      <button id="filterButton" class="filter-btn"></button>
+      <input id="searchInput" type="search" placeholder="Busca Centro/Especialidad" class="search-bar">
+      <button id="filterButton" class="filter-btn">Buscar</button>
     </div>
 
-    <button class="btn_user" id="btn_user">
-      <a href="">
-        <img id="userIcon" alt="X" class="usuario">
-      </a>
+    <button class="btn_user" id="btn_user" routerLink="/login">
+      <img id="userIcon" [src]="imagenUser" class="usuario">
     </button>
   </div>
 
   <div class="second_line">
     <ul id="navMenu">
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
+      <li><a routerLink="/centers">Centros</a></li>
+      <li><a routerLink="/specialtys">Especialidades</a></li>
+      <li><a routerLink="/work-with-us">Trabaja con nosotros</a></li>
+      <li><a routerLink="/about-us">Sobre nosotros</a></li>
     </ul>
   </div>
 

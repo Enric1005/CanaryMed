@@ -1,5 +1,5 @@
 .image-section {
-  background-image: url(../assets/Home.png);
+  background-image: url(../../../../public/assets/Home.png);
   background-size: cover;
   background-position: center;
   height: 50vh;
@@ -38,7 +38,7 @@
 }
 
 .image-section {
-  background-image: url(../assets/about_us.jpg);
+  background-image: url(../../../../public/assets/about_us.jpg);
   background-size: cover;
   background-position: center;
   height: 40vh;

@@ -1,36 +1,36 @@
-<body>
-<header id="main_header" xlu-include-file="../Templates/header.html"></header>
-<main xlu-include-file="../Templates/colabora_base.html"></main>
-<main>
-  <div class="formulario">
-    <h1></h1>
-    <form id="formColabora">
-      <label for="institucion">Lorem ipsum</label>
-      <input id="institucion" type="text" placeholder="Lorem ipsum" required minlength="2">
+<app-header></app-header>
 
-      <label for="correo">Lorem ipsum</label>
-      <input id="correo" type="email" placeholder="Lorem ipsum" required>
+<app-colabora-base></app-colabora-base>
+<div class="formulario">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <label>*Institución Sanitaria</label>
+    <input name="institucion" ngModel required minlength="2" placeholder="Perpetuo Socorro">
 
-      <label for="telefono">Lorem ipsum</label>
-      <input id="telefono" type="tel" placeholder="Lorem ipsum" required pattern="\d{9}" title="9 dígitos">
+    <label>*Correo Institucional</label>
+    <input name="correo" type="email" ngModel required placeholder="hospital123@gmail.com">
 
-      <label for="direccion">Lorem ipsum</label>
-      <input id="direccion" type="text" placeholder="Lorem ipsum" required minlength="5">
+    <label for="telefono">*Número Telefónico</label>
+    <input name="telefono" ngModel required pattern="\d{9}" placeholder="Teléfono de la institución">
 
-      <label for="tipo">Lorem ipsum</label>
-      <select id="tipo" required>
-      </select>
+    <label for="direccion">*Dirección</label>
+    <input name="direccion" type="text" ngModel required minlength="5" placeholder="Calle Mayor 12, Las Palmas">
 
-      <label for="especialidad">Lorem ipsum</label>
-      <input id="especialidad" type="text" placeholder="Lorem ipsum" required minlength="2">
+    <label for="tipo">*Tipo de Especialidad</label>
+    <select name="tipo" ngModel required>
+      <option value="oncología">Oncología Médica</option>
+      <option value="quirúrgico">Qirúrgico</option>
+      <option value="no_quirúrgico">No Quirúrgico</option>
+      <option value="diagnóstico">Diagnóstico</option>
+      <option value="medicina_general">Medicina General</option>
+      <option value="respiratorio">Respiratorio</option>
+      <option value="otro">Otro</option>
+    </select>
 
-      <div class="boton"><button type="submit">lorem</button></div>
-    </form>
-  </div>
-</main>
-<footer id="main_footer" xlu-include-file="../Templates/footer.html"></footer>
-<script type="module" src="../JS/data.js"></script>
-</body>
-<div id="loader">
-  <div class="spinner"></div>
+    <label for="especialidad">*Especialidad</label>
+    <input name="especialidad" ngModel required minlength="2" placeholder="Cardiologia">
+
+    <div class="boton"><button type="submit">Colaborar</button></div>
+  </form>
 </div>
+
+<app-footer></app-footer>

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-center',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './center.html',
   styleUrl: './center.css',
 })
-export class CenterComponent {
-
+export class Center {
+  @Input() item: any;
 }

@@ -1,27 +1,61 @@
 <footer>
-  <div class="footer_top">
-    <div class="social_icons">
-      <a *ngFor="let s of socialLinks" [href]="s.url" target="_blank">
-        <img [src]="s.icon" alt="social">
+  <div class="first_line_fo">
+
+    <!-- Logo + iconos juntos -->
+    <div class="logo_section">
+      <div class="social_icons">
+
+        <a href="https://www.youtube.com/" target="_blank">
+          <img [src]="youtube" class="redes_sociales">
+        </a>
+
+        <a href="https://x.com/" target="_blank">
+          <img [src]="x" class="redes_sociales">
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <img [src]="instagram" class="redes_sociales">
+        </a>
+
+      </div>
+      <a class="name_of_company" routerLink="/" id="footerLogo">
+        <h1>CanaryMed</h1>
       </a>
     </div>
-  </div>
-
-  <div class="first_line_fo">
-    <a class="name_of_company" id="footerLogo">
-      <h1>{{ logo }}</h1>
-    </a>
     <div class="nav-sections">
-      <div *ngFor="let section of sections">
-        <h3>{{ section.title }}</h3>
+      <!-- Sección 1 -->
+      <div class="seccion1">
+        <h3>El Hospital</h3>
         <nav>
           <ul>
-            <li *ngFor="let link of section.links">
-              <a [href]="link.url">{{ link.text }}</a>
-            </li>
+            <li><a routerLink="/work-with-us">Colabora con nosotros</a></li>
+            <li><a routerLink="/about-us">Sobre nosotros</a></li>
           </ul>
         </nav>
       </div>
+
+      <!-- Sección 2 -->
+      <div class="seccion2">
+        <h3>Nuestros Servicios</h3>
+        <nav>
+          <ul>
+            <li><a routerLink="/centers">Centros colaboradores</a></li>
+            <li><a routerLink="/specialtys">Especialidades</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Sección 3 -->
+      <div class="seccion2">
+        <h3>Enlaces de interés</h3>
+        <nav>
+          <ul>
+            <li><a href="https://guanchipedia.com/historia-de-la-medicina-en-canarias/">Historia de la medicina canaria</a></li>
+            <li><a routerLink="/client-asist">Asistencia de usuario</a></li>
+          </ul>
+        </nav>
+      </div>
+
     </div>
   </div>
 </footer>
