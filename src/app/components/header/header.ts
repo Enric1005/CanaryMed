@@ -10,5 +10,5 @@ import {RouterLink, RouterModule} from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
-  imagenUser = "assets/Usuario.webp"
+  imagenUser = "/assets/Usuario.webp"
 }

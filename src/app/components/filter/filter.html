@@ -4,13 +4,11 @@
 
   <div class="filter_zone">
     <div class="filter_zone2">
-      <input type="submit" value="Lorem" class="filter_zone_input">
-      <label><input type="checkbox" class="filter_zone_ch"></label>
-      <label><input type="checkbox" class="filter_zone_ch"></label>
-      <label><input type="checkbox" class="filter_zone_ch"></label>
-      <label><input type="checkbox" class="filter_zone_ch"></label>
-      <label><input type="checkbox" class="filter_zone_ch"></label>
-      <label><input type="checkbox" class="filter_zone_ch"></label>
+      <input type="submit" value="Filtrar" class="filter_zone_input">
+      @for (option of filtro.options; track option) {
+        <label><input type="checkbox" class="filter_zone_ch"></label>
+        {{option}}
+      }
     </div>
   </div>
 </main>

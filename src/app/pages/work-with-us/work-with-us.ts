@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Footer} from '../../components/footer/footer';
 import {Header} from '../../components/header/header';
 import {FormsModule} from '@angular/forms';
 import {ColaboraBase} from '../../components/colabora-base/colabora-base';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-work-with-us',
@@ -13,8 +14,17 @@ import {ColaboraBase} from '../../components/colabora-base/colabora-base';
 })
 
 export class WorkWithUs {
+  constructor(private router: Router) {}
+  isLoggedAsCompany = false;
+
   onSubmit(form: any) {
     if (form.invalid) return;
-    console.log(form.value);
+  }
+  goHome() {
+    this.router.navigate([""])
+  }
+
+  goRegister() {
+    this.router.navigate(["/register-edit"]);
   }
 }

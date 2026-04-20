@@ -1,24 +1,34 @@
 <app-header></app-header>
 
 <app-colabora-base></app-colabora-base>
+
+@if(!isLoggedAsCompany){
+<div class="no-login">
+  <button (click)="goHome()">Volver atrás</button>
+  <button (click)="goRegister()">Registrarse como empresa</button>
+</div>
+}
+
+@if(isLoggedAsCompany){
 <div class="formulario">
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label>*Institución Sanitaria</label>
-    <input name="institucion" ngModel required minlength="2" placeholder="Perpetuo Socorro">
+    <input name="institucion" ngModel required minlength="2">
 
     <label>*Correo Institucional</label>
-    <input name="correo" type="email" ngModel required placeholder="hospital123@gmail.com">
+    <input name="correo" type="email" ngModel required>
 
-    <label for="telefono">*Número Telefónico</label>
-    <input name="telefono" ngModel required pattern="\d{9}" placeholder="Teléfono de la institución">
+    <label>*Número Telefónico</label>
+    <input name="telefono" ngModel required pattern="\d{9}">
 
-    <label for="direccion">*Dirección</label>
-    <input name="direccion" type="text" ngModel required minlength="5" placeholder="Calle Mayor 12, Las Palmas">
+    <label>*Dirección</label>
+    <input name="direccion" ngModel required minlength="5">
 
-    <label for="tipo">*Tipo de Especialidad</label>
-    <select name="tipo" ngModel required>
+    <label>*Tipo de Especialidad</label>
+    <select name="tipoEspecialidad" ngModel required>
+      <option value="" disabled selected></option>
       <option value="oncología">Oncología Médica</option>
-      <option value="quirúrgico">Qirúrgico</option>
+      <option value="quirúrgico">Quirúrgico</option>
       <option value="no_quirúrgico">No Quirúrgico</option>
       <option value="diagnóstico">Diagnóstico</option>
       <option value="medicina_general">Medicina General</option>
@@ -26,11 +36,13 @@
       <option value="otro">Otro</option>
     </select>
 
-    <label for="especialidad">*Especialidad</label>
-    <input name="especialidad" ngModel required minlength="2" placeholder="Cardiologia">
+    <label>*Especialidad</label>
+    <input name="especialidad" ngModel required minlength="2">
 
-    <div class="boton"><button type="submit">Colaborar</button></div>
+    <div class="boton">
+      <button type="submit">Colaborar</button>
+    </div>
   </form>
 </div>
-
+}
 <app-footer></app-footer>

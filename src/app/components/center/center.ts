@@ -4,10 +4,10 @@ import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-center',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './center.html',
   styleUrl: './center.css',
 })
 export class Center {
-  @Input() item: any;
-}
+  @Input() center: any;}
