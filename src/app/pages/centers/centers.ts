@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import {Header} from '../../components/header/header';
-import {Center} from '../../components/center/center';
-import {Footer} from '../../components/footer/footer';
-import {Filter} from '../../components/filter/filter';
+import { CommonModule } from '@angular/common';
+import { Header } from '../../components/header/header';
+import { Center } from '../../components/center/center';
+import { Footer } from '../../components/footer/footer';
+import { Filter } from '../../components/filter/filter';
+import { CentrosService } from '../../services/centros';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-centers',
+  standalone: true, // 👈 CLAVE
   imports: [
+    CommonModule,   // 👈 CLAVE
     Header,
     Center,
     Footer,
@@ -15,4 +20,12 @@ import {Filter} from '../../components/filter/filter';
   templateUrl: './centers.html',
   styleUrl: './centers.css',
 })
-export class Centers {}
+export class Centers {
+  centros$: Observable<any[]>;
+
+  constructor(private centrosService: CentrosService) {
+    this.centros$ = this.centrosService.getCentros();
+  }
+
+  protected readonly CentrosService = CentrosService;
+}

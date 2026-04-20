@@ -21,6 +21,7 @@
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
     "firebase": "^12.12.0",
+    "firebase-admin": "^13.8.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -32,5 +33,19 @@
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
-  }
+  },
+  "description": "This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enric1005/CanaryMed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Enric1005/CanaryMed/issues"
+  },
+  "homepage": "https://github.com/Enric1005/CanaryMed#readme"
 }

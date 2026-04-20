@@ -1,6 +1,6 @@
 <app-header></app-header>
-<app-filter></app-filter>
-<app-center></app-center>
-<app-center></app-center>
-<app-center></app-center>
+<app-filter [filtro]="{options:['Precio Bajo', 'Precio Medio', 'Precio Alto', 'Norte', 'Sur', `Ciudad`]}"></app-filter>
+@for (centro of centros$ | async; track centro.id) {
+  <app-center [center]="centro"></app-center>
+}
 <app-footer></app-footer>

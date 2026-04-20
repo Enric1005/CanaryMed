@@ -3,18 +3,18 @@
     <div class="center-content">
 
       <div class="favorite">
-        <input type="checkbox" [id]="'fav-' + item.id" [(ngModel)]="item.isFavorite">
-        <label [for]="'fav-' + item.id"></label>
+        <input type="checkbox" [id]="'fav-' + center.id" [(ngModel)]="center.isFavorite">
+        <label [for]="'fav-' + center.id"></label>
       </div>
 
       <div class="center-image">
-        <img class="center" [src]="item.imageUrl" [alt]="item.title">
+        <img class="center" [src]="'assets/' + center.image" [alt]="center.name">
       </div>
 
       <div class="center-text">
-        <h1>{{ item.title }}</h1>
-        <h3>{{ item.subtitle }}</h3>
-        <p>{{ item.description }}</p>
+        <h1>{{ center.name }}</h1>
+        <h3>{{ center.precio }}</h3>
+        <p>{{ center.description }}</p>
       </div>
       <!--- <button type="button" class="center-button" (click)="onButtonClick()">
         {{ item.buttonLabel }}
