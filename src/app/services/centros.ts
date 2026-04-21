@@ -11,13 +11,6 @@ export class CentrosService {
 
   getCentros(): Observable<any[]> {
     const centrosRef = collection(this.firestore, 'centers');
-
-    const data$ = collectionData(centrosRef, { idField: 'id' });
-
-    data$.subscribe(data => {
-      console.log("🔥 DATOS FIREBASE:", data);
-    });
-
-    return data$ as Observable<any[]>;
+    return collectionData(centrosRef, { idField: 'id' }) as Observable<any[]>;
   }
 }
