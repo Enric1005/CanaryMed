@@ -10,4 +10,5 @@ import { Input } from '@angular/core';
   styleUrl: './center.css',
 })
 export class Center {
-  @Input() center: any;}
+  @Input() center: any;
+}

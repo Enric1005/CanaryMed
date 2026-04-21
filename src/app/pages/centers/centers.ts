@@ -7,11 +7,12 @@ import { Filter } from '../../components/filter/filter';
 import { CentrosService } from '../../services/centros';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-centers',
-  standalone: true, // 👈 CLAVE
+  standalone: true,
   imports: [
-    CommonModule,   // 👈 CLAVE
+    CommonModule,
     Header,
     Center,
     Footer,
@@ -26,6 +27,5 @@ export class Centers {
   constructor(private centrosService: CentrosService) {
     this.centros$ = this.centrosService.getCentros();
   }
-
   protected readonly CentrosService = CentrosService;
 }
