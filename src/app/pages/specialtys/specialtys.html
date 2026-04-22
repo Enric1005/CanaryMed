@@ -1,9 +1,9 @@
 <body>
 <app-header></app-header>
 <app-filter [filtro]="{ options: ['Respiratorio', 'Quirúrgico', 'No Quirúrgico', 'Diagnóstico', 'Medicina General', 'Oncología Médica'] }"></app-filter>
-<app-specialty></app-specialty>
-<app-specialty></app-specialty>
-<app-specialty></app-specialty>
+  @for (par of this.especialidades$ | async; track par[0].id) {
+    <app-specialty [specialty1]="par[0]" [specialty2]="par[1]"></app-specialty>
+  }
 <app-footer></app-footer>
 </body>
 

@@ -7,7 +7,6 @@ import { Filter } from '../../components/filter/filter';
 import { CentrosService } from '../../services/centros';
 import { Observable } from 'rxjs';
 
-
 @Component({
   selector: 'app-centers',
   standalone: true,
@@ -26,6 +25,9 @@ export class Centers {
 
   constructor(private centrosService: CentrosService) {
     this.centros$ = this.centrosService.getCentros();
-  }
-  protected readonly CentrosService = CentrosService;
+  }/*
+  loadCenter(id: string) {this.centrosService.getCenterById(id).subscribe(data => {
+      this.data = data;
+      this.type = 'center';
+    });}*/
 }

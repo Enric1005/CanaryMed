@@ -16,7 +16,7 @@
         <h3>{{ center.precio }}</h3>
         <p>{{ center.description }}</p>
       </div>
-      <button type="button" class="center-button">Ver especialidades
+      <button type="button" class="center-button" [routerLink]="['/center_page', center.id]">Ver especialidades
       </button>
     </div>
   </div>

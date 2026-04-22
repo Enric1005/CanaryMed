@@ -1,29 +1,25 @@
 <body>
 
-<header id="main_header" xlu-include-file="../Templates/header.html"></header>
+<app-header/>
 
 <main class="text-section2">
 
   <div class="text-header">
-    <h1></h1>
-    <button class="section-btn" onclick="window.location.href='../Paginas/centers.html'"></button>
+    <h1>{{center?.name}}</h1>
+    <button class="section-btn" routerLink="/centers"></button>
   </div>
   <hr>
   <div class="center-image">
-    <img src="../../../../public/assets/Vacio.png">
+    <img [src]="'assets/' + center?.image">
   </div>
-  <p></p>
+  <p>{{center?.description}}</p>
 </main>
 
-<main xlu-include-file="../Templates/specialty_center.html"></main>
-<main xlu-include-file="../Templates/specialty_center.html"></main>
-<main xlu-include-file="../Templates/specialty_center.html"></main>
+<!--
+@for (especialidad of center.specialities; track especialidad.name) {
+  <app-specialty-center [specialidad]="especialidad"/>
+}
+-->
 
-<footer id="main_footer" xlu-include-file="../Templates/footer.html"></footer>
-
-<script type="module" src="../JS/data.js"></script>
-
+<app-footer></app-footer>
 </body>
-<div id="loader">
-  <div class="spinner"></div>
-</div>

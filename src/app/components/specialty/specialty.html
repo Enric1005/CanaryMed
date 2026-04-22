@@ -2,26 +2,28 @@
   <div class="specialty-section">
     <div class="specialty-content">
       <div class="specialty-image">
-        <img class="specialty">
+        <img class="specialty" [src]="specialty1?.src" [alt]="specialty1?.name">
       </div>
       <div class="specialty-text">
-        <h1></h1>
-        <h3></h3>
-        <button type="button" class="specialty-button"></button>
+        <h1>{{ specialty1?.name }}</h1>
+        <h3>{{ specialty1?.desc }}</h3>
+        <button type="button" class="specialty-button">Ver más</button>
       </div>
     </div>
   </div>
 
   <div class="specialty-section">
-    <div class="specialty-content">
-      <div class="specialty-image">
-        <img class="specialty">
+    @if (specialty2) {
+      <div class="specialty-content">
+        <div class="specialty-image">
+          <img class="specialty" [src]="specialty2?.src" [alt]="specialty2?.name">
+        </div>
+        <div class="specialty-text">
+          <h1>{{ specialty2?.name }}</h1>
+          <h3>{{ specialty2?.desc }}</h3>
+          <button type="button" class="specialty-button">Ver centros</button>
+        </div>
       </div>
-      <div class="specialty-text">
-        <h1></h1>
-        <h3></h3>
-        <button type="button" class="specialty-button"></button>
-      </div>
-    </div>
+    }
   </div>
 </main>
