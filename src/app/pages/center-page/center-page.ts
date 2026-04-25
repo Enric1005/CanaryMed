@@ -1,36 +1,44 @@
-import { Component } from '@angular/core';
-import {SpecialtyCenter} from '../../components/specialty-center/specialty-center';
+import {Component, Input, input} from '@angular/core';
 import {Footer} from '../../components/footer/footer';
 import {Header} from '../../components/header/header';
 import {ActivatedRoute, RouterLink} from '@angular/router';
+import { Firestore, doc, docData } from '@angular/fire/firestore';
+import { setLogLevel, LogLevel } from "@angular/fire";
+import {CommonModule} from '@angular/common';
+import {map, Observable} from 'rxjs';
 import {CentrosService} from '../../services/centros';
-import {AsyncPipe} from '@angular/common';
+import { SpecialtyCenter } from '../../components/specialty-center/specialty-center';
+
+setLogLevel(LogLevel.VERBOSE);
 
 @Component({
   selector: 'app-center-page',
   imports: [
-    SpecialtyCenter,
     Footer,
     Header,
-    AsyncPipe,
+    CommonModule,
+    SpecialtyCenter,
     RouterLink
   ],
   templateUrl: './center-page.html',
   styleUrl: './center-page.css',
 })
 export class CenterPage {
-  center: any;
+  centro$!: Observable<any>;
 
-  constructor(
-    private route: ActivatedRoute,
-    private centersService: CentrosService
-  ) {}
+  constructor(private centroService: CentrosService, private route: ActivatedRoute, private firestore: Firestore) {
+  }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.centersService.getCenterById(id).subscribe(center => {
-        this.center = center;
-      });}
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+
+      if (id) {
+        this.centro$ = this.centroService.getCenterById(id).pipe(
+          map((centro: any) => centro.specialities)
+        );      }
+    });
   }
+
+
 }

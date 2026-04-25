@@ -1,25 +1,21 @@
-<body>
-
 <app-header/>
-
 <main class="text-section2">
 
   <div class="text-header">
-    <h1>{{center?.name}}</h1>
-    <button class="section-btn" routerLink="/centers"></button>
+    <h1></h1>
+    <button class="section-btn" routerLink="/centers">Volver Atrás</button>
   </div>
   <hr>
   <div class="center-image">
-    <img [src]="'assets/' + center?.image">
+    <img src="assets/Vacio.png">
   </div>
-  <p>{{center?.description}}</p>
+  <p></p>
 </main>
 
-<!--
-@for (especialidad of center.specialities; track especialidad.name) {
-  <app-specialty-center [specialidad]="especialidad"/>
-}
--->
+<main class="text-section2">
+  @for (especialidad of (centro$ | async); track especialidad.name) {
+    <app-specialty-center [specialidad]="especialidad"/>
+  }
+</main>
 
 <app-footer></app-footer>
-</body>

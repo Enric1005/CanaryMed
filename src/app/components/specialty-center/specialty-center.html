@@ -1,20 +1,40 @@
 <main>
   <div class="specialty_center-section">
+
     <div class="specialty_center-content">
+
+      <!-- imagen -->
       <div class="specialty_center-image">
-        <img src="" class="specialty_center">
+        <img [src]="specialidad?.src" class="specialty_center">
       </div>
 
+      <!-- texto -->
       <div class="specialty_center-text">
-        <h1></h1>
-        <p data-type="price"></p>
-        <p data-type="location"></p>
-        <p data-type="doctor"></p>
+
+        <h1>{{ specialidad?.name }}</h1>
+
+        <p data-type="price">
+          💰 {{ specialidad?.price }}
+        </p>
+
+        <p data-type="location">
+          📍 {{ specialidad?.location }}
+        </p>
+
+        <p data-type="doctor">
+          👨‍⚕️ {{ specialidad?.doctor?.[0]?.name }}
+        </p>
+
       </div>
 
-      <a href="../Paginas/make_an_appointment.html">
-        <button type="button" id="spc_btn" class="specialty_center-button"></button>
+      <!-- botón -->
+      <a href="#">
+        <button type="button" id="spc_btn" class="specialty_center-button">
+          Reservar
+        </button>
       </a>
+
     </div>
+
   </div>
 </main>
