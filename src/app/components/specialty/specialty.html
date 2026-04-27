@@ -2,12 +2,12 @@
   <div class="specialty-section">
     <div class="specialty-content">
       <div class="specialty-image">
-        <img class="specialty" [src]="specialty1?.src" [alt]="specialty1?.name">
+        <img class="specialty" [src]="'assets/' + specialty1?.src" [alt]="specialty1?.name">
       </div>
       <div class="specialty-text">
         <h1>{{ specialty1?.name }}</h1>
         <h3>{{ specialty1?.desc }}</h3>
-        <button type="button" class="specialty-button">Ver más</button>
+        <button type="button" class="specialty-button" [routerLink]="['/specialty_page', specialty1.id]"> Ver centros</button>
       </div>
     </div>
   </div>
@@ -16,12 +16,12 @@
     @if (specialty2) {
       <div class="specialty-content">
         <div class="specialty-image">
-          <img class="specialty" [src]="specialty2?.src" [alt]="specialty2?.name">
+          <img class="specialty" [src]="'assets/' + specialty2?.src" [alt]="specialty2?.name">
         </div>
         <div class="specialty-text">
           <h1>{{ specialty2?.name }}</h1>
           <h3>{{ specialty2?.desc }}</h3>
-          <button type="button" class="specialty-button">Ver centros</button>
+          <button type="button" class="specialty-button" [routerLink]="['/specialty_page', specialty2.id]">Ver centros</button>
         </div>
       </div>
     }

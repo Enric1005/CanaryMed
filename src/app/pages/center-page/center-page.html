@@ -1,20 +1,22 @@
 <app-header/>
 <main class="text-section2">
 
-  <div class="text-header">
-    <h1></h1>
+  <div class="text-header" *ngIf="centro$ | async as centro">
+    <h1>{{centro.name}}</h1>
     <button class="section-btn" routerLink="/centers">Volver Atrás</button>
   </div>
   <hr>
-  <div class="center-image">
-    <img src="assets/Vacio.png">
+  <div class="center-image" *ngIf="centro$ | async as centro">
+    <img [src]="'assets/' + centro.image">
   </div>
-  <p></p>
+  <p *ngIf="centro$ | async as centro"> {{centro.description}}</p>
 </main>
 
 <main class="text-section2">
-  @for (especialidad of (centro$ | async); track especialidad.name) {
-    <app-specialty-center [specialidad]="especialidad"/>
+  @if (centro$ | async; as centro) {
+    @for (especialidad of centro.specialities; track especialidad.name) {
+      <app-specialty-center [data]="especialidad"/>
+    }
   }
 </main>
 

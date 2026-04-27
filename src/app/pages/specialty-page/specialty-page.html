@@ -1,24 +1,31 @@
 <body>
 
-<header id="main_header" xlu-include-file="../Templates/header.html"></header>
+<app-header/>
 
 <main class="text-section4">
-  <div class="text-header">
-    <h1></h1>
-    <button class="section-btn" onclick="window.history.back()"></button>
+  <div class="text-header" *ngIf="especialidad$ | async as especialidad">
+    <h1> {{especialidad.name}}</h1>
+    <button class="section-btn" routerLink="/specialtys">volver atrás</button>
   </div>
   <hr>
-  <p>
+  <p *ngIf="especialidad$ | async as especialidad">
+    {{especialidad.description}}
   </p>
 </main>
 
-<main id="centers_container"></main>
+<main id="centers_container">
+  @if (especialidad$ | async; as especialidad) {
+    @for (centro of especialidad.centers; track centro.name) {
+      <app-specialty-center [data]="centro"/>
+    }
+  }
+</main>
 
-<footer id="main_footer" xlu-include-file="../Templates/footer.html"></footer>
-
-<script type="module" src="../JS/data.js"></script>
+<app-footer/>
 
 </body>
+<!----------
 <div id="loader">
   <div class="spinner"></div>
 </div>
+----------->

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import {Firestore, collection, collectionData, doc, docData} from '@angular/fire/firestore';
 import {map, Observable} from 'rxjs';
 
 @Injectable({
@@ -24,5 +24,10 @@ export class EspecialidadesService {
         return pares;
       })
     );
+  }
+
+  getEspecialidadById(id: String) {
+    const centerRef = doc(this.firestore, `specialities/${id}`);
+    return docData(centerRef, { idField: 'id' });
   }
 }

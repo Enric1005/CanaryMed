@@ -5,24 +5,31 @@
 
       <!-- imagen -->
       <div class="specialty_center-image">
-        <img [src]="specialidad?.src" class="specialty_center">
+        <img
+          [src]="data.src ? 'assets/' + data.src : 'assets/' + data.image"
+          class="specialty_center">
       </div>
 
       <!-- texto -->
       <div class="specialty_center-text">
 
-        <h1>{{ specialidad?.name }}</h1>
+        <h1>{{ data?.name }}</h1>
 
         <p data-type="price">
-          💰 {{ specialidad?.price }}
+          💰 {{ data?.price }}
         </p>
 
         <p data-type="location">
-          📍 {{ specialidad?.location }}
+          📍 {{ data?.location }}
         </p>
 
         <p data-type="doctor">
-          👨‍⚕️ {{ specialidad?.doctor?.[0]?.name }}
+          👨‍⚕️
+          {{
+            Array.isArray(data.doctor)
+              ? data.doctor.join(', ')
+              : data.doctor
+          }}
         </p>
 
       </div>

@@ -27,5 +27,5 @@ export const routes: Routes = [
   {path: "pending-appointmens", component: PendingAppointments},
   {path: "profile", component: Profile},
   {path: "register-edit", component: RegisterEdit},
-  {path: "specialty-page/:id", component: SpecialtyPage},
+  {path: "specialty_page/:id", component: SpecialtyPage},
 ];

@@ -1,5 +1,13 @@
 import {Component, Input} from '@angular/core';
 
+export interface SpecialtyCenterData {
+  name: string;
+  price?: string;
+  location?: string;
+  doctor?: string | string[]; // 👈 aquí está la clave
+  src?: string;
+  image ?: string;
+}
 
 @Component({
   selector: 'app-specialty-center',
@@ -8,5 +16,6 @@ import {Component, Input} from '@angular/core';
   styleUrl: './specialty-center.css',
 })
 export class SpecialtyCenter {
-  @Input() specialidad: any;
+  @Input() data!: SpecialtyCenterData;
+  protected readonly Array = Array;
 }

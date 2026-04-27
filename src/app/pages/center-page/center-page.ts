@@ -1,4 +1,4 @@
-import {Component, Input, input} from '@angular/core';
+import {Component, Input, input, OnDestroy, OnInit} from '@angular/core';
 import {Footer} from '../../components/footer/footer';
 import {Header} from '../../components/header/header';
 import {ActivatedRoute, RouterLink} from '@angular/router';
@@ -23,22 +23,29 @@ setLogLevel(LogLevel.VERBOSE);
   templateUrl: './center-page.html',
   styleUrl: './center-page.css',
 })
-export class CenterPage {
+export class CenterPage implements OnInit, OnDestroy {
   centro$!: Observable<any>;
 
-  constructor(private centroService: CentrosService, private route: ActivatedRoute, private firestore: Firestore) {
+  constructor(private centroService: CentrosService, private route: ActivatedRoute) {
   }
 
+  private sub: any;
+
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
+    this.sub = this.route.paramMap.subscribe(params => {
       const id = params.get('id');
 
       if (id) {
-        this.centro$ = this.centroService.getCenterById(id).pipe(
-          map((centro: any) => centro.specialities)
-        );      }
+        this.centro$ = this.centroService.getCenterById(id);
+      }
     });
   }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+
 
 
 }
