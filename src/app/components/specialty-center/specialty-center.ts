@@ -1,10 +1,14 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-specialty-center',
   standalone: true,
   templateUrl: './specialty-center.html',
   styleUrl: './specialty-center.css',
+  imports: [
+    RouterLink
+  ]
 })
 export class SpecialtyCenter implements OnChanges {
 

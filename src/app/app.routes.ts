@@ -24,7 +24,6 @@ export const routes: Routes = [
   {path: "client-asist", component: ClientsAsist},
   {path: "login", component: Login},
   {path: "make-an-appointment", component: MakeAnAppointment},
-  {path: "pending-appointmens", component: PendingAppointments},
   {path: "profile", component: Profile},
   {path: "register-edit", component: RegisterEdit},
   {path: "specialty_page/:id", component: SpecialtyPage},
