@@ -1,17 +1,20 @@
 import {Component, Input} from '@angular/core';
+import {RouterLink} from '@angular/router';
 
 export interface SpecialtyCenterData {
   name: string;
   price?: string;
   location?: string;
-  doctor?: string | string[]; // 👈 aquí está la clave
+  doctor?: string | string[];
   src?: string;
   image ?: string;
 }
 
 @Component({
   selector: 'app-specialty-center',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './specialty-center.html',
   styleUrl: './specialty-center.css',
 })
