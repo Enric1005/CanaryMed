@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, RouterLink} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import { getAuth } from '@angular/fire/auth';
 
 @Component({
@@ -7,7 +7,7 @@ import { getAuth } from '@angular/fire/auth';
   templateUrl: './header.html',
   styleUrl: './header.css',
   imports: [
-    RouterLink
+    RouterLink,
   ]
 })
 export class Header {

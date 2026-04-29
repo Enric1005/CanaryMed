@@ -1,44 +1,53 @@
 <app-header/>
 
 <main>
-  <div class="formulario_cita">
+  <div class="appointment_block">
 
     <div class="texto_cita">
-      <h1 id="title"></h1>
+      <h1 id="title">Haz una cita</h1>
     </div>
 
     <form id="formCita">
-      <label for="centro"></label>
-      <input id="centro" type="text" placeholder="Lorem ipsum" readonly>
 
-      <label for="especialidad_input"></label>
-      <input id="especialidad_input" type="text" placeholder="Lorem ipsum" readonly>
+      <label for="centro">Centro</label>
+      <input id="centro" type="text" [value]="centroCampo" readonly>
 
-      <label for="dni"></label>
-      <input id="dni" type="text" placeholder="Lorem ipsum"
+      <label for="especialidad_input">Especialidad</label>
+      <input id="especialidad_input" type="text" [value]="especialidadCampo" readonly>
+
+      <label for="dni">DNI</label>
+      <input id="dni" type="text"
+             placeholder="12345678A"
              required
              pattern="\d{8}[A-Z]"
              title="Formato: 12345678A">
 
-      <label for="fecha"></label>
-      <select id="fecha" required>
-        <option value=""></option>
+      <label for="medico">Médico</label>
+      <select id="medico" [(ngModel)]="medicoSeleccionado" (ngModelChange)="onMedicoChange()" name="medico" required>
+        <option value="">Selecciona un médico</option>
+        <option *ngFor="let m of medicos" [value]="m.name">{{ m.name }}</option>
       </select>
 
-      <label for="hora"></label>
-      <select id="hora" required>
-        <option value=""></option>
+      <label for="fecha">Fecha</label>
+      <select id="fecha" [(ngModel)]="fechaSeleccionada" (ngModelChange)="onFechaChange()" name="fecha" required [disabled]="!medicoSeleccionado">
+        <option value="">Selecciona una fecha</option>
+        <option *ngFor="let f of fechas" [value]="f">{{ f }}</option>
       </select>
 
-      <label for="medico"></label>
-      <select id="medico" required>
-        <option value=""></option>
+      <label for="hora">Hora</label>
+      <select id="hora" [(ngModel)]="horaSeleccionada" name="hora" required [disabled]="!fechaSeleccionada">
+        <option value="">Selecciona una hora</option>
+        <option *ngFor="let h of horas" [value]="h">{{ h }}</option>
       </select>
 
       <div class="boton">
-        <button id="boton_confirmar" type="submit"></button>
+        <button id="boton_confirmar" type="submit">
+          Confirmar cita
+        </button>
       </div>
+
     </form>
   </div>
 </main>
+
 <app-footer/>

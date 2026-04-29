@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Input } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { CitaService } from '../../services/cita';
 
 @Component({
   selector: 'app-center',
@@ -12,4 +12,12 @@ import {RouterLink} from '@angular/router';
 })
 export class Center {
   @Input() center: any;
+
+  constructor(private cita: CitaService) {}
+
+  seleccionarCentro(centro: any) {
+    this.cita.centroId = centro.id;
+    this.cita.centroNombre = centro.name;
+    this.cita.origen = 'centro';
+  }
 }

@@ -7,7 +7,7 @@
       <div class="specialty-text">
         <h1>{{ specialty1?.name }}</h1>
         <h3>{{ specialty1?.desc }}</h3>
-        <button type="button" class="specialty-button" [routerLink]="['/specialty_page', specialty1.id]"> Ver centros</button>
+        <button type="button" class="specialty-button" (click)="seleccionarEspecialidad(specialty1)" [routerLink]="['/specialty_page', specialty1.id]"> Ver centros</button>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@
         <div class="specialty-text">
           <h1>{{ specialty2?.name }}</h1>
           <h3>{{ specialty2?.desc }}</h3>
-          <button type="button" class="specialty-button" [routerLink]="['/specialty_page', specialty2.id]">Ver centros</button>
+          <button type="button" class="specialty-button"   (click)="seleccionarEspecialidad(specialty2)" [routerLink]="['/specialty_page', specialty2.id]">Ver centros</button>
         </div>
       </div>
     }

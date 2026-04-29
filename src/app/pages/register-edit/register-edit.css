@@ -28,6 +28,11 @@ body {
   margin-bottom: 15px;
 }
 
+select {
+  width: 100%;
+  padding: 6px;
+}
+
 .chbox {
   display: flex;
   justify-content: flex-start;

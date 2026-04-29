@@ -2,13 +2,13 @@
 
 <app-colabora-base></app-colabora-base>
 
-@if(!isLoggedAsCompany){
+@if(!user$){
 <div class="no-login">
   <button (click)="goRegister()">Registrarse como empresa</button>
 </div>
 }
 
-@if(isLoggedAsCompany){
+@if(user$){
 <div class="formulario">
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label>*Institución Sanitaria</label>

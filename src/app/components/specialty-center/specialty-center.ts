@@ -1,14 +1,13 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import { Component, Input, OnChanges } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { CitaService } from '../../services/cita';
 
 @Component({
   selector: 'app-specialty-center',
   standalone: true,
   templateUrl: './specialty-center.html',
   styleUrl: './specialty-center.css',
-  imports: [
-    RouterLink
-  ]
+  imports: [RouterLink]
 })
 export class SpecialtyCenter implements OnChanges {
 
@@ -18,8 +17,20 @@ export class SpecialtyCenter implements OnChanges {
   doctorSchedule: any[] = [];
   doctorHours: any[] = [];
 
+  constructor(private cita: CitaService) {}
+
   ngOnChanges(): void {
     this.extractDoctor();
+  }
+
+  reservar() {
+    if (this.cita.origen === 'centro') {
+      this.cita.especialidadId = this.data.id;
+      this.cita.especialidadNombre = this.data.name;
+    } else {
+      this.cita.centroId = this.data.id;
+      this.cita.centroNombre = this.data.name;
+    }
   }
 
   private extractDoctor() {
@@ -32,13 +43,11 @@ export class SpecialtyCenter implements OnChanges {
       return;
     }
 
-    // ✔ string
     if (typeof doctor === 'string') {
       this.doctorName = doctor;
       return;
     }
 
-    // ✔ array
     if (Array.isArray(doctor)) {
       const first = doctor[0];
       this.doctorName = first?.name || first?.doctor || '';
@@ -47,7 +56,6 @@ export class SpecialtyCenter implements OnChanges {
       return;
     }
 
-    // ✔ objeto
     this.doctorName = doctor.name || '';
     this.doctorSchedule = doctor.schedule || [];
     this.doctorHours = doctor.hours || [];

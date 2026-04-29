@@ -1,3 +1,6 @@
+import {initializeApp} from '@angular/fire/app';
+import {getFirestore} from '@angular/fire/firestore';
+
 export const environment = {
   production: false,
   firebase: {
@@ -9,3 +12,7 @@ export const environment = {
     appId: "1:816032465149:web:86c6d1eb068c4bc8bc3e94"
   }
 };
+// Initialize Firebase
+const app = initializeApp(environment.firebase);
+// const analytics = getAnalytics(app);
+export const db = getFirestore(app);

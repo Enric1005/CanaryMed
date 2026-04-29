@@ -16,8 +16,7 @@
         <h3>{{ center.precio }}</h3>
         <p>{{ center.description }}</p>
       </div>
-      <button type="button" class="center-button" [routerLink]="['/center_page', center.id]">Ver especialidades
-      </button>
+      <button type="button" class="center-button"   (click)="seleccionarCentro(center)" [routerLink]="['/specialty_page', center.id]">Ver centros</button>
     </div>
   </div>
 </main>

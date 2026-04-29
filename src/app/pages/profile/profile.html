@@ -5,25 +5,27 @@
   <div class="profile-left">
     <div class="section profile-card">
       <div class="profile-top">
-        <img src="../../../../public/assets/Usuario.webp" alt="Foto de perfil" class="profile-photo">
+        <img src="assets/Usuario.webp" alt="Foto de perfil" class="profile-photo">
         <div class="profile-info">
-          <h3></h3>
-          <h4></h4>
+          <h3>{{user.name}}</h3>
+          <h4>{{user.DNI}}</h4>
         </div>
       </div>
 
       <div class="profile-text">
-        <p id="texto1"></p>
+        <p id="texto1">{{user.surname}}</p>
         <div class="divider"></div>
-        <p id="texto2"></p>
+        <p id="texto2">{{user.email}}</p>
         <div class="divider"></div>
-        <p id="texto3"></p>
+        <p id="texto3">{{user.phoneNumber}}</p>
+        <div class="divider"></div>
+        <p id="texto4">{{user.role}}</p>
         <div class="divider"></div>
       </div>
 
       <div class="profile-buttons">
-        <button onclick="window.location.href='../Paginas/register_edit.html'" id="btn_esp"></button>
-        <button id="log_out_btn"></button>
+        <button routerLink="/register-edit" id="btn_esp">Editar</button>
+        <button id="log_out_btn" (click)="logout()">Cerrar Sesión</button>
       </div>
 
     </div>

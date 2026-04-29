@@ -1,31 +1,28 @@
-<body>
-
 <app-header/>
 
 <main class="text-section4">
-  <div class="text-header" *ngIf="especialidad$ | async as especialidad">
-    <h1> {{especialidad.name}}</h1>
+  <div class="text-header" *ngIf="datos$ | async as datos">
+    <h1>{{ datos.name }}</h1>
     <button class="section-btn" routerLink="/specialtys">volver atrás</button>
   </div>
   <hr>
-  <p *ngIf="especialidad$ | async as especialidad">
-    {{especialidad.description}}
+  <p *ngIf="datos$ | async as datos">
+    {{ datos.description }}
   </p>
 </main>
 
 <main id="centers_container">
-  @if (especialidad$ | async; as especialidad) {
-    @for (centro of especialidad.centers; track centro.name) {
-      <app-specialty-center [data]="centro"/>
+  @if (datos$ | async; as datos) {
+    @if (origen === 'centro') {
+      @for (item of datos.specialities; track item.name) {
+        <app-specialty-center [data]="item"/>
+      }
+    } @else {
+      @for (item of datos.centers; track item.name) {
+        <app-specialty-center [data]="item"/>
+      }
     }
   }
 </main>
 
 <app-footer/>
-
-</body>
-<!----------
-<div id="loader">
-  <div class="spinner"></div>
-</div>
------------>

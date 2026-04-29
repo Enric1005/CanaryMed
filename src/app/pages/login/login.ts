@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
-import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import {Auth, signInWithEmailAndPassword} from '@angular/fire/auth';
 import { setPersistence, browserLocalPersistence } from '@angular/fire/auth';
 
 @Component({
@@ -15,8 +15,9 @@ export class Login {
   constructor(
     private location: Location,
     private auth: Auth,
-    private router: Router
-  ) {}
+    private router: Router,
+  ){
+  }
 
   async login(event: Event) {
     event.preventDefault();
@@ -45,6 +46,6 @@ export class Login {
   }
 
   goBack() {
-    this.location.back();
+    this.router.navigate(['/']);
   }
 }

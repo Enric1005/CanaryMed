@@ -1,41 +1,60 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
+import {FormsModule, NgForm} from '@angular/forms';
+import {CrudService} from '../../services/crudService';
+
+export interface User {
+  id?: string;
+  name: string;
+  surname: string;
+  email: string;
+  DNI: string;
+  phoneNumber: string;
+  role: 'paciente' | 'empresa' | null;
+}
 
 @Component({
   selector: 'app-register-edit',
   templateUrl: './register-edit.html',
   styleUrl: './register-edit.css',
+  imports: [
+    FormsModule
+  ],
   standalone: true
 })
 export class RegisterEdit {
+  users: User[] = [];
+  user: User = {name: '', surname: '', email: '', DNI: '', phoneNumber: '', role: null};
 
   constructor(
     private router: Router,
     private auth: Auth
   ) {}
 
-  async register(event: Event) {
-    console.log("REGISTER CLICK");
-    event.preventDefault();
+  private crudService = inject(CrudService);
 
-    const nombre = (document.getElementById("nombre") as HTMLInputElement).value;
-    const apellidos = (document.getElementById("apellidos") as HTMLInputElement).value;
-    const email = (document.getElementById("email") as HTMLInputElement).value;
-    const emailConfirm = (document.getElementById("email_confirm") as HTMLInputElement).value;
-    const password = (document.getElementById("password") as HTMLInputElement).value;
-    const passwordConfirm = (document.getElementById("password_confirmed") as HTMLInputElement).value;
-    const dni = (document.getElementById("NIF") as HTMLInputElement).value;
-    const tel = (document.getElementById("tel") as HTMLInputElement).value;
+  async onSubmit(form: NgForm) {
+    console.log("valor", form.value);
+    console.log("invalido", form.invalid);
+    if (form.invalid) {
+      alert("Completa todos los campos");
+      return;
+    }
 
-    console.log(email, password);
+    const {
+      email,
+      email_confirm,
+      password,
+      password_confirmed
+    } = form.value;
 
-    if (password !== passwordConfirm) {
+    if (password !== password_confirmed) {
       alert("Las contraseñas no coinciden");
       return;
     }
 
-    if (email !== emailConfirm) {
+    if (email !== email_confirm) {
       alert("El correo no coincide");
       return;
     }
@@ -49,8 +68,15 @@ export class RegisterEdit {
 
       console.log("USUARIO CREADO:", userCredential.user.uid);
 
-      // aquí podrías guardar datos extra en Firestore si quieres
-      // (nombre, apellidos, dni, tel)
+      // 👉 guardar en Firestore
+      await this.crudService.add<User>("users", {
+        name: form.value.name,
+        surname: form.value.surname,
+        email: form.value.email,
+        DNI: form.value.DNI,
+        phoneNumber: form.value.phone,
+        role: form.value.role
+      });
 
       await this.router.navigate(['/login']);
 

@@ -4,40 +4,46 @@
 
   <div class="contenedor2">
     <div class="text_box">
-      <form (submit)="register($event)">
-        <label>Nombre</label>
-        <input id="nombre" type="text" required>
+      <form #registracion="ngForm" (ngSubmit)="onSubmit(registracion)">
+        <label>*Nombre</label>
+        <input name="name" id="nombre" type="text" ngModel required>
 
-        <label>Apellidos</label>
-        <input id="apellidos" type="text" required>
+        <label>*Apellidos</label>
+        <input name="surname" id="apellidos" type="text" ngModel required>
 
-        <label>Email</label>
-        <input id="email" type="email" required>
+        <label>*Email</label>
+        <input name="email" id="email" type="email" placeholder="ejemplo@gmail.com" ngModel required>
 
-        <label>Confirmar Email</label>
-        <input id="email_confirm" type="email" required>
+        <label>*Confirmar Email</label>
+        <input name="email_confirm" id="email_confirm" type="email" ngModel required>
 
-        <label>Contraseña</label>
-        <input id="password" type="password" required>
+        <label>*Contraseña</label>
+        <input name="password" id="password" type="password" ngModel required>
 
-        <label>Confirmar Contraseña</label>
-        <input id="password_confirmed" type="password" required>
+        <label>*Confirmar Contraseña</label>
+        <input name="password_confirmed" id="password_confirmed" type="password" ngModel required>
 
-        <label>DNI</label>
-        <input id="NIF" type="text" required>
+        <label>*DNI</label>
+        <input name="DNI" id="NIF" type="text" placeholder="XXXXXXXXH" ngModel required>
 
-        <label>Teléfono</label>
-        <input id="tel" type="tel" required>
+        <label>*Teléfono</label>
+        <input name="phone" id="tel" type="tel" ngModel required>
+
+        <label>*¿Que eres?</label>
+        <select name="role" ngModel required>
+          <option [ngValue]="null">Seleccione</option>
+          <option value="paciente">Paciente</option>
+          <option value="empresa">Empresa</option>
+        </select>
 
         <div class="chbox">
-          <input type="checkbox" id="mi-check">
+          <input type="checkbox" id="mi-check" name="term" ngModel required>
           <label>Acepto términos</label>
         </div>
 
         <div class="boton">
           <button type="submit">Registrarse</button>
         </div>
-
       </form>
 
     </div>
