@@ -6,7 +6,6 @@ header {
   );
 }
 
-
 /* linea idioma */
 .zero_line {
   display: inline-block;
@@ -45,6 +44,7 @@ header {
 .center_group {
   display: flex;
   justify-self: center;
+  position: relative; /* IMPORTANTE para el dropdown */
 }
 
 .search-bar {
@@ -55,6 +55,46 @@ header {
   border: none;
 }
 
+/* ===== DROPDOWN RESULTADOS ===== */
+.results {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 400px;
+  max-height: 250px;
+  overflow-y: auto;
+
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+.results li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.results li:hover {
+  background: #f1f1f1;
+}
+
+/* scrollbar fino */
+.results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.results::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* boton buscar */
 .filter-btn {
   margin-left: 10px;
   padding: 5px 10px;
@@ -149,6 +189,13 @@ header {
 
   .search-bar {
     width: 80%;
+  }
+
+  /* dropdown adaptado a móvil */
+  .results {
+    width: 80%;
+    left: 10%;
+    top: 50px;
   }
 
   .btn_user {

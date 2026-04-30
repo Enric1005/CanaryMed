@@ -13,15 +13,35 @@
     </a>
 
     <div class="center_group">
-      <input id="searchInput" type="search" placeholder="Busca Centro/Especialidad" class="search-bar">
-      <button id="filterButton" class="filter-btn">Buscar</button>
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Busca Centro/Especialidad"
+        class="search-bar"
+        [(ngModel)]="searchText"
+        (input)="onSearch()">
+
+      @if (resultados.length > 0) {
+        <ul class="results">
+          @for (item of resultados; track item.id) {
+            <li (click)="selectItem(item)">
+              {{ item.name }}
+            </li>
+          }
+        </ul>
+      }
+
+      <button id="filterButton" class="filter-btn" (click)="buscar()">
+        Buscar
+      </button>
     </div>
 
     <button class="btn_user" id="btn_user" routerLink="/login">
       <img
         class="usuario"
         (click)="goToProfile()"
-        src="assets/Usuario.webp">  </button>
+        src="assets/Usuario.webp">
+    </button>
   </div>
 
   <div class="second_line">
