@@ -1,9 +1,16 @@
 <body>
-<app-header></app-header>
-<app-filter [filtro]="{ options: ['Respiratorio', 'Quirúrgico', 'No Quirúrgico', 'Diagnóstico', 'Medicina General', 'Oncología Médica'] }"></app-filter>
-  @for (par of this.especialidades$ | async; track par[0].id) {
-    <app-specialty [specialty1]="par[0]" [specialty2]="par[1]"></app-specialty>
-  }
+  <app-header></app-header>
+
+  <app-filter
+    [filtro]="{ options: ['Respiratorio', 'Quirúrgico', 'No Quirúrgico', 'Diagnóstico', 'Medicina General', 'Oncología Médica'] }"
+    (apply)="applyFilter($event)">
+  </app-filter>
+  <div class="container">
+    @for (especialidad of filteredEspecialidades$ | async; track $index) {
+      <app-specialty [specialty1]="especialidad"></app-specialty>
+    }
+  </div>
+
 <app-footer></app-footer>
 </body>
 
