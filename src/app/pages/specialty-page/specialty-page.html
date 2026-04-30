@@ -1,18 +1,16 @@
 <app-header/>
 
-<main class="text-section4">
-  <div class="text-header" *ngIf="datos$ | async as datos">
-    <h1>{{ datos.name }}</h1>
-    <button class="section-btn" routerLink="/specialtys">volver atrás</button>
-  </div>
-  <hr>
-  <p *ngIf="datos$ | async as datos">
-    {{ datos.description }}
-  </p>
-</main>
+@if (datos$ | async; as datos) {
+  <main class="text-section4">
+    <div class="text-header">
+      <h1>{{ datos.name }}</h1>
+      <button class="section-btn" routerLink="/specialtys">volver atrás</button>
+    </div>
+    <hr>
+    <p>{{ datos.description }}</p>
+  </main>
 
-<main id="centers_container">
-  @if (datos$ | async; as datos) {
+  <main id="centers_container">
     @if (origen === 'centro') {
       @for (item of datos.specialities; track item.name) {
         <app-specialty-center [data]="item"/>
@@ -22,7 +20,9 @@
         <app-specialty-center [data]="item"/>
       }
     }
-  }
-</main>
+  </main>
+} @else {
+  <app-loading-spinner/>
+}
 
 <app-footer/>

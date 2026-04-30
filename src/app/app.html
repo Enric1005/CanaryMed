@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+@if (loading.isLoading()) {
+  <div class="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+}
+
+<router-outlet/>

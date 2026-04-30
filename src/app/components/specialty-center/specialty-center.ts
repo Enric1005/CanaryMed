@@ -1,41 +1,55 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 import { CitaService } from '../../services/cita';
+import {getAuth} from '@angular/fire/auth';
+import { NgIf } from '@angular/common';
+
 
 @Component({
   selector: 'app-specialty-center',
   standalone: true,
   templateUrl: './specialty-center.html',
   styleUrl: './specialty-center.css',
-  imports: [RouterLink]
+  imports: [NgIf]
 })
 export class SpecialtyCenter implements OnChanges {
 
   @Input() data: any;
+  showLoginPopup = false;
 
   doctorName = '';
   doctorSchedule: any[] = [];
   doctorHours: any[] = [];
 
-  constructor(private cita: CitaService) {}
+  constructor(private cita: CitaService, private router: Router) {}
 
   ngOnChanges(): void {
     this.extractDoctor();
   }
 
   reservar() {
-    if (this.cita.origen === 'centro') {
-      this.cita.especialidadId = this.data.id;
-      this.cita.especialidadNombre = this.data.name;
+    const user = getAuth().currentUser;
+
+    if (user) {
+      if (this.cita.origen === 'centro') {
+        this.cita.especialidadId = this.data.id;
+        this.cita.especialidadNombre = this.data.name;
+      } else {
+        const centroId = this.data.name?.replace(/\s+/g, '_');
+
+        this.cita.centroId = centroId;
+        this.cita.centroNombre = this.data.name;
+      }
+
+      this.router.navigate(['/make-an-appointment']);
     } else {
-      // ✅ Solo reemplaza espacios, sin quitar tildes
-      const centroId = this.data.name?.replace(/\s+/g, '_');
-
-      console.log('🏥 centroId generado:', centroId);
-
-      this.cita.centroId = centroId;
-      this.cita.centroNombre = this.data.name;
+      this.showLoginPopup = true;
     }
+  }
+
+  goToLogin() {
+    this.showLoginPopup = false;
+    this.router.navigate(['/login']);
   }
 
   private extractDoctor() {

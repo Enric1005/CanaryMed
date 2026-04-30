@@ -8,11 +8,12 @@ import { SpecialityModel } from '../../models/speciality';
 
 import { Observable, BehaviorSubject, combineLatest, map } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 
 @Component({
   selector: 'app-specialtys',
   standalone: true,
-  imports: [CommonModule, Header, Footer, Specialty, Filter],
+  imports: [CommonModule, Header, Footer, Specialty, Filter, LoadingSpinner],
   templateUrl: './specialtys.html',
   styleUrl: './specialtys.css',
 })

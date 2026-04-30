@@ -8,11 +8,12 @@ import { CentrosService } from '../../services/centros';
 import { CenterModel } from '../../models/center';
 
 import { Observable, BehaviorSubject, combineLatest, map } from 'rxjs';
+import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 
 @Component({
   selector: 'app-centers',
   standalone: true,
-  imports: [CommonModule, Header, Center, Footer, Filter],
+  imports: [CommonModule, Header, Center, Footer, Filter, LoadingSpinner],
   templateUrl: './centers.html',
   styleUrl: './centers.css',
 })

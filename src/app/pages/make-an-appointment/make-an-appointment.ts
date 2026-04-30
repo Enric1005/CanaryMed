@@ -36,15 +36,7 @@ export class MakeAnAppointment implements OnInit {
     this.centroCampo = this.cita.centroNombre || '';
     this.especialidadCampo = this.cita.especialidadNombre || '';
 
-    console.log("🏥 CENTRO ID:", this.cita.centroId);
-    console.log("🩺 ESPECIALIDAD NOMBRE:", this.cita.especialidadNombre);
-    console.log("📍 ORIGEN:", this.cita.origen);
-
     if (!this.cita.centroId || !this.cita.especialidadNombre) {
-      console.error("❌ Faltan datos:", {
-        centroId: this.cita.centroId,
-        especialidadNombre: this.cita.especialidadNombre
-      });
       return;
     }
 
@@ -54,10 +46,9 @@ export class MakeAnAppointment implements OnInit {
         this.cita.especialidadNombre
       )
       .subscribe((medicos: any[]) => {
-        console.log("📦 MÉDICOS RECIBIDOS:", medicos);
         this.medicos = medicos || [];
         this.medicoSeleccionadoIndex = '';
-        this.cdRef.detectChanges(); // ✅ fuerza actualización del DOM
+        this.cdRef.detectChanges();
       });
   }
 
@@ -66,32 +57,22 @@ export class MakeAnAppointment implements OnInit {
 
     this.medicoSeleccionado = this.medicos[this.medicoSeleccionadoIndex];
 
-    console.log("➡️ MÉDICO SELECCIONADO:", this.medicoSeleccionado);
-
     if (this.medicoSeleccionado?.schedule) {
       this.fechas = Object.keys(this.medicoSeleccionado.schedule);
-      console.log("📅 FECHAS DISPONIBLES:", this.fechas);
       this.fechaSeleccionada = '';
       this.horas = [];
       this.horaSeleccionada = '';
-    } else {
-      console.warn("⚠️ Este médico no tiene schedule");
     }
 
-    this.cdRef.detectChanges(); // ✅ fuerza actualización del DOM
+    this.cdRef.detectChanges();
   }
 
   onFechaChange() {
-    console.log("📅 FECHA SELECCIONADA:", this.fechaSeleccionada);
-
     if (this.medicoSeleccionado?.schedule && this.fechaSeleccionada) {
       this.horas = this.medicoSeleccionado.schedule[this.fechaSeleccionada] || [];
-      console.log("⏰ HORAS DISPONIBLES:", this.horas);
       this.horaSeleccionada = '';
-    } else {
-      console.warn("⚠️ No hay horas disponibles");
     }
 
-    this.cdRef.detectChanges(); // ✅ fuerza actualización del DOM
+    this.cdRef.detectChanges();
   }
 }

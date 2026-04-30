@@ -8,6 +8,7 @@ import {CommonModule} from '@angular/common';
 import {map, Observable} from 'rxjs';
 import {CentrosService} from '../../services/centros';
 import { SpecialtyCenter } from '../../components/specialty-center/specialty-center';
+import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 
 setLogLevel(LogLevel.VERBOSE);
 
@@ -18,7 +19,8 @@ setLogLevel(LogLevel.VERBOSE);
     Header,
     CommonModule,
     SpecialtyCenter,
-    RouterLink
+    RouterLink,
+    LoadingSpinner
   ],
   templateUrl: './center-page.html',
   styleUrl: './center-page.css',

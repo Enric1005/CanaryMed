@@ -49,6 +49,15 @@
 
 }
 
+.filter_zone.small {
+  width: 65%;
+}
+
+.filter_zone.large {
+  width: 90%;
+}
+
+
 
 @media (max-width: 830px) {
 

@@ -8,10 +8,11 @@ import { EspecialidadesService } from '../../services/especialidades';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { SpecialtyCenter } from '../../components/specialty-center/specialty-center';
 import { CitaService } from '../../services/cita';
+import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 
 @Component({
   selector: 'app-specialty-page',
-  imports: [Footer, Header, RouterLink, NgIf, AsyncPipe, SpecialtyCenter],
+  imports: [Footer, Header, RouterLink, AsyncPipe, SpecialtyCenter, LoadingSpinner],
   templateUrl: './specialty-page.html',
   styleUrl: './specialty-page.css',
 })
