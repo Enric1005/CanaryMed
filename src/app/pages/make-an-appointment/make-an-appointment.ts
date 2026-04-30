@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { CitaService } from '../../services/cita';
@@ -21,47 +21,77 @@ export class MakeAnAppointment implements OnInit {
   fechas: string[] = [];
   horas: string[] = [];
 
-  medicoSeleccionado = '';
+  medicoSeleccionadoIndex: any = '';
+  medicoSeleccionado: any = null;
   fechaSeleccionada = '';
   horaSeleccionada = '';
 
-  private especialidad: any = null;
-
-  constructor(private cita: CitaService, private centrosService: CentrosService) {}
+  constructor(
+    private cita: CitaService,
+    private centrosService: CentrosService,
+    private cdRef: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     this.centroCampo = this.cita.centroNombre || '';
     this.especialidadCampo = this.cita.especialidadNombre || '';
 
-    if (this.cita.centroId) {
-      this.centrosService.getCenterById(String(this.cita.centroId)).subscribe((centro: any) => {
-        const especialidades = centro?.specialities || [];
-        this.especialidad = especialidades.find(
-          (e: any) => e.desc === this.cita.especialidadNombre || e.name === this.cita.especialidadNombre
-        );
+    console.log("🏥 CENTRO ID:", this.cita.centroId);
+    console.log("🩺 ESPECIALIDAD NOMBRE:", this.cita.especialidadNombre);
+    console.log("📍 ORIGEN:", this.cita.origen);
 
-        if (this.especialidad) {
-          this.medicos = this.especialidad.doctor || [];
-        }
+    if (!this.cita.centroId || !this.cita.especialidadNombre) {
+      console.error("❌ Faltan datos:", {
+        centroId: this.cita.centroId,
+        especialidadNombre: this.cita.especialidadNombre
       });
+      return;
     }
+
+    this.centrosService
+      .getDoctorsBySpecialty(
+        this.cita.centroId,
+        this.cita.especialidadNombre
+      )
+      .subscribe((medicos: any[]) => {
+        console.log("📦 MÉDICOS RECIBIDOS:", medicos);
+        this.medicos = medicos || [];
+        this.medicoSeleccionadoIndex = '';
+        this.cdRef.detectChanges(); // ✅ fuerza actualización del DOM
+      });
   }
 
   onMedicoChange() {
-    const medico = this.medicos.find(m => m.name === this.medicoSeleccionado);
-    if (medico?.schedule) {
-      this.fechas = Object.keys(medico.schedule);
-      this.horas = [];
+    if (this.medicoSeleccionadoIndex === '' || this.medicoSeleccionadoIndex === undefined) return;
+
+    this.medicoSeleccionado = this.medicos[this.medicoSeleccionadoIndex];
+
+    console.log("➡️ MÉDICO SELECCIONADO:", this.medicoSeleccionado);
+
+    if (this.medicoSeleccionado?.schedule) {
+      this.fechas = Object.keys(this.medicoSeleccionado.schedule);
+      console.log("📅 FECHAS DISPONIBLES:", this.fechas);
       this.fechaSeleccionada = '';
+      this.horas = [];
       this.horaSeleccionada = '';
+    } else {
+      console.warn("⚠️ Este médico no tiene schedule");
     }
+
+    this.cdRef.detectChanges(); // ✅ fuerza actualización del DOM
   }
 
   onFechaChange() {
-    const medico = this.medicos.find(m => m.name === this.medicoSeleccionado);
-    if (medico?.schedule && this.fechaSeleccionada) {
-      this.horas = medico.schedule[this.fechaSeleccionada] || [];
+    console.log("📅 FECHA SELECCIONADA:", this.fechaSeleccionada);
+
+    if (this.medicoSeleccionado?.schedule && this.fechaSeleccionada) {
+      this.horas = this.medicoSeleccionado.schedule[this.fechaSeleccionada] || [];
+      console.log("⏰ HORAS DISPONIBLES:", this.horas);
       this.horaSeleccionada = '';
+    } else {
+      console.warn("⚠️ No hay horas disponibles");
     }
+
+    this.cdRef.detectChanges(); // ✅ fuerza actualización del DOM
   }
 }

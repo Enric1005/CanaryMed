@@ -25,9 +25,5 @@ export class Centers {
 
   constructor(private centrosService: CentrosService) {
     this.centros$ = this.centrosService.getCentros();
-  }/*
-  loadCenter(id: string) {this.centrosService.getCenterById(id).subscribe(data => {
-      this.data = data;
-      this.type = 'center';
-    });}*/
+  }
 }

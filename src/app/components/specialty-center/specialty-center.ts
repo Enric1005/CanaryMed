@@ -28,7 +28,12 @@ export class SpecialtyCenter implements OnChanges {
       this.cita.especialidadId = this.data.id;
       this.cita.especialidadNombre = this.data.name;
     } else {
-      this.cita.centroId = this.data.id;
+      // ✅ Solo reemplaza espacios, sin quitar tildes
+      const centroId = this.data.name?.replace(/\s+/g, '_');
+
+      console.log('🏥 centroId generado:', centroId);
+
+      this.cita.centroId = centroId;
       this.cita.centroNombre = this.data.name;
     }
   }

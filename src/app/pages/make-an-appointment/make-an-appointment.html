@@ -10,34 +10,56 @@
     <form id="formCita">
 
       <label for="centro">Centro</label>
-      <input id="centro" type="text" [value]="centroCampo" readonly>
+      <input id="centro" name="centro" type="text" [value]="centroCampo" readonly>
 
       <label for="especialidad_input">Especialidad</label>
-      <input id="especialidad_input" type="text" [value]="especialidadCampo" readonly>
+      <input id="especialidad_input" name="especialidad" type="text" [value]="especialidadCampo" readonly>
 
       <label for="dni">DNI</label>
-      <input id="dni" type="text"
+      <input id="dni" name="dni" type="text"
              placeholder="12345678A"
              required
              pattern="\d{8}[A-Z]"
              title="Formato: 12345678A">
 
+      <!-- MÉDICO -->
       <label for="medico">Médico</label>
-      <select id="medico" [(ngModel)]="medicoSeleccionado" (ngModelChange)="onMedicoChange()" name="medico" required>
-        <option value="">Selecciona un médico</option>
-        <option *ngFor="let m of medicos" [value]="m.name">{{ m.name }}</option>
+      <select id="medico"
+              [(ngModel)]="medicoSeleccionadoIndex"
+              (ngModelChange)="onMedicoChange()"
+              name="medico"
+              required>
+        <option [ngValue]="''">Selecciona un médico</option>
+        <option *ngFor="let m of medicos; let i = index" [ngValue]="i">
+          {{ m.name }}
+        </option>
       </select>
 
+      <!-- FECHA -->
       <label for="fecha">Fecha</label>
-      <select id="fecha" [(ngModel)]="fechaSeleccionada" (ngModelChange)="onFechaChange()" name="fecha" required [disabled]="!medicoSeleccionado">
+      <select id="fecha"
+              [(ngModel)]="fechaSeleccionada"
+              (ngModelChange)="onFechaChange()"
+              name="fecha"
+              [disabled]="!medicoSeleccionado"
+              required>
         <option value="">Selecciona una fecha</option>
-        <option *ngFor="let f of fechas" [value]="f">{{ f }}</option>
+        <option *ngFor="let f of fechas" [value]="f">
+          {{ f }}
+        </option>
       </select>
 
+      <!-- HORA -->
       <label for="hora">Hora</label>
-      <select id="hora" [(ngModel)]="horaSeleccionada" name="hora" required [disabled]="!fechaSeleccionada">
+      <select id="hora"
+              [(ngModel)]="horaSeleccionada"
+              name="hora"
+              [disabled]="!fechaSeleccionada"
+              required>
         <option value="">Selecciona una hora</option>
-        <option *ngFor="let h of horas" [value]="h">{{ h }}</option>
+        <option *ngFor="let h of horas" [value]="h">
+          {{ h }}
+        </option>
       </select>
 
       <div class="boton">
