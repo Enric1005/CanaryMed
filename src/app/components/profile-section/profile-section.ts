@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {RouterLink} from '@angular/router';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-profile-section',
-  imports: [],
+  imports: [
+    RouterLink,
+    NgForOf
+  ],
   templateUrl: './profile-section.html',
   styleUrl: './profile-section.css',
 })
-export class ProfileSection {}
+export class ProfileSection {
+  @Input() titulo: string = '';
+  @Input() items: string[] = [];
+}

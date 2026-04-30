@@ -1,20 +1,25 @@
-import {ChangeDetectorRef, Component, inject, OnDestroy, OnInit} from '@angular/core';
+ import {ChangeDetectorRef, Component, inject, OnDestroy, OnInit} from '@angular/core';
 import { Header } from '../../components/header/header';
 import { ProfileSection } from '../../components/profile-section/profile-section';
 import { Router, RouterLink } from '@angular/router';
-import { Auth, signOut } from '@angular/fire/auth';
+import {Auth, deleteUser, signOut} from '@angular/fire/auth';
 import { Subscription } from 'rxjs';
 import { CrudService } from '../../services/crudService';
 import {ChangeDetection} from '@angular/cli/lib/config/workspace-schema';
+ import {User} from '../register-edit/register-edit';
 
-interface AppUser {
+export interface AppUser {
   id?: string;
+  uid?: string;
   name: string;
   surname: string;
   email: string;
   DNI: string;
   phoneNumber: string;
   role: 'paciente' | 'empresa' | null;
+  favs: [],
+  pendientes: [],
+  hist: []
 }
 
 @Component({
@@ -28,6 +33,7 @@ export class Profile implements OnInit, OnDestroy {
 
   user!: AppUser;
   subscription!: Subscription;
+  private authUnsub!: () => void;
 
   private crudService = inject(CrudService);
   private cd = inject(ChangeDetectorRef)
@@ -38,16 +44,14 @@ export class Profile implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.auth.onAuthStateChanged(user => {
+    this.authUnsub = this.auth.onAuthStateChanged(user => { // <-- falta el this.authUnsub =
       if (user) {
-
         this.subscription = this.crudService
-          .getWhere<AppUser>("users", "email", "==", user.email)
+          .getWhere<AppUser>("users", "uid", "==", user.uid)
           .subscribe(res => {
             this.user = res[0];
             this.cd.detectChanges();
           });
-
       }
     });
   }
@@ -55,6 +59,9 @@ export class Profile implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.subscription) {
       this.subscription.unsubscribe();
+    }
+    if (this.authUnsub) {
+      this.authUnsub();
     }
   }
 
@@ -64,6 +71,36 @@ export class Profile implements OnInit, OnDestroy {
       this.router.navigate(['/login']);
     } catch (error) {
       console.error('Error al cerrar sesión', error);
+    }
+  }
+
+  async deleteMode() {
+    if (!this.user.id) {
+      alert("No se encontró al usuario")
+      return
+    }
+
+    const confirmado = confirm("¿Estás seguro de que quieres eliminar tu cuenta? Esta acción no se puede deshacer.");
+    if (!confirmado) return;
+
+    try {
+      const user = this.auth.currentUser;
+      if (user) {
+        if (this.subscription) this.subscription.unsubscribe();
+        if (this.authUnsub) this.authUnsub();
+        // reautentica primero
+        await this.crudService.delete("users", this.user.id);
+        await deleteUser(user);
+      }
+      alert("Cuenta eliminada correctamente");
+      await this.router.navigate(['/login']);
+    }  catch (error: any) {
+      switch (error.code) {
+        case 'auth/requires-recent-login':
+          alert("Sesión expirada, vuelve a iniciar sesión antes de eliminar la cuenta");
+          break;
+        default:
+          alert("Error: " + error.message);}
     }
   }
 }

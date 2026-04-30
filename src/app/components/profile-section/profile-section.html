@@ -1,11 +1,16 @@
 <div class="section-header">
-  <span></span>
+  <span>{{titulo}}</span>
 </div>
 <div class="divider"></div>
 <div class="card-body">
+  <ul>
+    <li *ngFor="let item of items">
+      {{ item }}
+    </li>
+  </ul>
 </div>
 <div class="divider"></div>
 <div class="card-footer">
-  <p><a href="#" class="section-link" target="_blank"></a></p>
+  <p><a routerLink="/pendingAppointments" class="section-link" target="_blank">Ver más</a></p>
 </div>
 

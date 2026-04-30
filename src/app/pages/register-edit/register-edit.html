@@ -1,34 +1,41 @@
 <body>
 <main>
-  <div class="text"><h1>Registrarse</h1></div>
+  <div class="text"><h1>{{isEditMode ? "Editar Perfíl" : "Registro"}}</h1></div>
 
   <div class="contenedor2">
     <div class="text_box">
-      <form #registracion="ngForm" (ngSubmit)="onSubmit(registracion)">
+      <form #registracion="ngForm" (ngSubmit)="isEditMode ?  updateMode(registracion) : onSubmit(registracion)" ngNativeValidate>
         <label>*Nombre</label>
-        <input name="name" id="nombre" type="text" ngModel required>
+        <input name="name" id="nombre" type="text" required pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,20}" [ngModel]="userData.name">
 
         <label>*Apellidos</label>
-        <input name="surname" id="apellidos" type="text" ngModel required>
+        <input name="surname" id="apellidos" type="text" [ngModel]="userData.surname" required>
 
+        @if(!isEditMode) {
         <label>*Email</label>
-        <input name="email" id="email" type="email" placeholder="ejemplo@gmail.com" ngModel required>
+        <input name="email" id="email" type="email" placeholder="ejemplo@gmail.com" [ngModel]="userData.email" required>
 
         <label>*Confirmar Email</label>
         <input name="email_confirm" id="email_confirm" type="email" ngModel required>
-
+        }
+        @if(!isEditMode) {
         <label>*Contraseña</label>
-        <input name="password" id="password" type="password" ngModel required>
+        <input name="password" id="password" type="password" ngModel required pattern="[a-zA-Z0-9]{6,}">
 
         <label>*Confirmar Contraseña</label>
         <input name="password_confirmed" id="password_confirmed" type="password" ngModel required>
-
+        }
+        @if(isEditMode) {
+          <label>*Contraseña (para confirmar cambios)</label>
+          <input name="currentPassword" type="password" ngModel required>
+        }
         <label>*DNI</label>
-        <input name="DNI" id="NIF" type="text" placeholder="XXXXXXXXH" ngModel required>
+        <input name="DNI" id="NIF" type="text" placeholder="XXXXXXXXH" [ngModel]="userData.DNI" required pattern="[0-9]{8}[A-Z]{1}">
 
         <label>*Teléfono</label>
-        <input name="phone" id="tel" type="tel" ngModel required>
+        <input name="phone" id="tel" type="tel" [ngModel]="userData.phoneNumber" required pattern="[0-9]{9}">
 
+        @if(!isEditMode) {
         <label>*¿Que eres?</label>
         <select name="role" ngModel required>
           <option [ngValue]="null">Seleccione</option>
@@ -40,9 +47,9 @@
           <input type="checkbox" id="mi-check" name="term" ngModel required>
           <label>Acepto términos</label>
         </div>
-
+        }
         <div class="boton">
-          <button type="submit">Registrarse</button>
+          <button type="submit">{{isEditMode ? "Guardar Cambios" : "Registrarse"}}</button>
         </div>
       </form>
 

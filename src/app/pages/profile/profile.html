@@ -27,15 +27,32 @@
         <button routerLink="/register-edit" id="btn_esp">Editar</button>
         <button id="log_out_btn" (click)="logout()">Cerrar Sesión</button>
       </div>
+      <hr>
+      <button id="delete_btn" (click)="deleteMode()" )>Eliminar Cuenta</button>
 
     </div>
   </div>
 
   <div class="profile-right">
     <div class="profile-sections">
-      <app-profile-section/>
-      <app-profile-section/>
-      <app-profile-section/>
+      <app-profile-section
+        titulo="Favoritos"
+        [items]="user.favs">
+      </app-profile-section>
+    </div>
+    <hr>
+    <div class="profile-sections">
+      <app-profile-section
+        titulo="Pendientes"
+        [items]="user.pendientes">
+      </app-profile-section>
+    </div>
+    <hr>
+    <div class="profile-sections">
+      <app-profile-section
+        titulo="Historial"
+        [items]="user.hist">
+      </app-profile-section>
     </div>
   </div>
 </div>

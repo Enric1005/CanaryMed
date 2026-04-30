@@ -8,6 +8,10 @@ main {
   font-family: Arial, sans-serif;
 }
 
+a {
+  text-decoration: none; /* quita el subrayado */
+  color: black;
+}
 .section {
   width: 100%;
   min-height: 400px;
@@ -18,7 +22,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+.section-link {
+  margin-left: 5px;
+}
 .section-header {
   display: flex;
   align-items: center;
@@ -28,12 +34,28 @@ main {
 
 .divider {
   height: 6px;
-  background-color: #8d8d98;
+  background-color: lightgray;
   border-radius: 10px;
 }
 
-.card-body {
-  flex: 1;
+
+li {
+  background: white;              /* color de la caja */
+  padding: 12px 16px;             /* espacio interno */
+  border-radius: 12px;            /* bordes redondeados */
+  margin-bottom: 12px;            /* separación entre cajas */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
 }
 
 .card-footer {

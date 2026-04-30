@@ -2,26 +2,26 @@
 
 <app-colabora-base></app-colabora-base>
 
-@if(!user$){
+@if(!user){
 <div class="no-login">
   <button (click)="goRegister()">Registrarse como empresa</button>
 </div>
 }
 
-@if(user$){
+@if(user && user.role === 'empresa'){
 <div class="formulario">
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label>*Institución Sanitaria</label>
-    <input name="institucion" ngModel required minlength="2">
+    <input name="institucion" ngModel required minlength="2" placeholder="Hospital San Roque">
 
     <label>*Correo Institucional</label>
-    <input name="correo" type="email" ngModel required>
+    <input name="correo" type="email" ngModel required placeholder="institucionEjemplo@gmail.com">
 
     <label>*Número Telefónico</label>
-    <input name="telefono" ngModel required pattern="\d{9}">
+    <input name="telefono" ngModel required pattern="\d{9}" placeholder="Número de la institución">
 
     <label>*Dirección</label>
-    <input name="direccion" ngModel required minlength="5">
+    <input name="direccion" ngModel required minlength="5" placeholder="Calle Diego Betancourt">
 
     <label>*Tipo de Especialidad</label>
     <select name="tipoEspecialidad" ngModel required>
@@ -36,7 +36,7 @@
     </select>
 
     <label>*Especialidad</label>
-    <input name="especialidad" ngModel required minlength="2">
+    <input name="especialidad" ngModel required minlength="2" placeholder="Cardiología">
 
     <div class="boton">
       <button type="submit">Colaborar</button>
