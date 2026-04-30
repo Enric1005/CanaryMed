@@ -6,6 +6,9 @@ import {
 import { Observable } from 'rxjs';
 import {db} from '../../environments/environment';
 import { Firestore, query, where, collectionData } from '@angular/fire/firestore';
+import { arrayUnion } from '@angular/fire/firestore';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -51,4 +54,12 @@ export class CrudService {
   async update<T>(collectionName: string, id: string, data: Partial<T>) {
     await updateDoc(doc(db, collectionName, id), data);
   }
+
+  async addToArray(collectionName: string, id: string, field: string, value: any) {
+    await updateDoc(doc(this.firestore, collectionName, id), {
+      [field]: arrayUnion(value)
+    });
+  }
 }
+
+

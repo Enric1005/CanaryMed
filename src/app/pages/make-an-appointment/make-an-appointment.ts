@@ -3,8 +3,11 @@ import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { CitaService } from '../../services/cita';
 import { CentrosService } from '../../services/centros';
+import { CrudService } from '../../services/crudService';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { getAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-make-an-appointment',
@@ -29,22 +32,19 @@ export class MakeAnAppointment implements OnInit {
   constructor(
     private cita: CitaService,
     private centrosService: CentrosService,
-    private cdRef: ChangeDetectorRef
+    private crudService: CrudService,
+    private cdRef: ChangeDetectorRef,
+    private router: Router
   ) {}
 
   ngOnInit() {
     this.centroCampo = this.cita.centroNombre || '';
     this.especialidadCampo = this.cita.especialidadNombre || '';
 
-    if (!this.cita.centroId || !this.cita.especialidadNombre) {
-      return;
-    }
+    if (!this.cita.centroId || !this.cita.especialidadNombre) return;
 
     this.centrosService
-      .getDoctorsBySpecialty(
-        this.cita.centroId,
-        this.cita.especialidadNombre
-      )
+      .getDoctorsBySpecialty(this.cita.centroId, this.cita.especialidadNombre)
       .subscribe((medicos: any[]) => {
         this.medicos = medicos || [];
         this.medicoSeleccionadoIndex = '';
@@ -74,5 +74,40 @@ export class MakeAnAppointment implements OnInit {
     }
 
     this.cdRef.detectChanges();
+  }
+
+  async confirmarCita() {
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (!user) {
+      alert('Debes iniciar sesión para reservar una cita');
+      return;
+    }
+
+    if (!this.fechaSeleccionada || !this.horaSeleccionada) {
+      alert('Por favor selecciona fecha y hora');
+      return;
+    }
+
+    const citaString = `${this.fechaSeleccionada}, ${this.horaSeleccionada} - ${this.especialidadCampo} - ${this.centroCampo}`;
+
+    try {
+      this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
+        .subscribe(async (users) => {
+          if (users.length === 0) {
+            alert('No se encontró tu usuario');
+            return;
+          }
+
+          const userId = users[0].id;
+
+          await this.crudService.addToArray('users', userId, 'pendientes', citaString);
+          this.router.navigate(['/profile']);
+        });
+    } catch (error) {
+      console.error('Error al guardar la cita:', error);
+      alert('Hubo un error al reservar la cita');
+    }
   }
 }

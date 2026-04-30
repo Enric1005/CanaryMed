@@ -3,12 +3,19 @@
     <div class="center-content">
 
       <div class="favorite">
-        <input type="checkbox" [id]="'fav-' + center.id" [(ngModel)]="center.isFavorite">
+        <input
+          type="checkbox"
+          [id]="'fav-' + center.id"
+          [checked]="center.isFavorite"
+          (click)="handleFavoriteClick($event, center)">
         <label [for]="'fav-' + center.id"></label>
       </div>
 
       <div class="center-image">
-        <img class="center" [src]="'assets/' + center.image" [alt]="center.name">
+        <img
+          class="center"
+          [src]="'assets/' + center.image"
+          [alt]="center.name">
       </div>
 
       <div class="center-text">
@@ -16,8 +23,28 @@
         <h3>{{ center.precio }}</h3>
         <p>{{ center.description }}</p>
       </div>
-      <button type="button" class="center-button"   (click)="seleccionarCentro(center)" [routerLink]="['/specialty_page', center.id]">Ver centros</button>
+
+      <button
+        type="button"
+        class="center-button"
+        (click)="seleccionarCentro(center)"
+        [routerLink]="['/specialty_page', center.id]">
+        Ver centros
+      </button>
+
     </div>
   </div>
-</main>
 
+  <div class="popup-overlay" *ngIf="showLoginPopup">
+    <div class="popup">
+      <h2>Inicia sesión</h2>
+      <p>Debes registrarte o iniciar sesión para poder añadir centros a favoritos.</p>
+
+      <div class="popup-buttons">
+        <button (click)="goToLogin()">Ir al login</button>
+        <button (click)="showLoginPopup = false">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+</main>
