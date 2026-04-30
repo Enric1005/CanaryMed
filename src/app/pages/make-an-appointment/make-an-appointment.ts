@@ -103,6 +103,13 @@ export class MakeAnAppointment implements OnInit {
           const userId = users[0].id;
 
           await this.crudService.addToArray('users', userId, 'pendientes', citaString);
+          await this.centrosService.removeHoraFromSchedule(
+            this.cita.centroId!,
+            this.cita.especialidadNombre!,
+            this.medicoSeleccionado.name,
+            this.fechaSeleccionada,
+            this.horaSeleccionada
+          );
           this.router.navigate(['/profile']);
         });
     } catch (error) {

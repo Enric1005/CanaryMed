@@ -4,6 +4,7 @@ import {
   Auth,
   createUserWithEmailAndPassword,
   reauthenticateWithCredential,
+  signOut
 } from '@angular/fire/auth';
 import {FormsModule, NgForm} from '@angular/forms';
 import {CrudService} from '../../services/crudService';
@@ -29,9 +30,7 @@ export interface User {
   selector: 'app-register-edit',
   templateUrl: './register-edit.html',
   styleUrl: './register-edit.css',
-  imports: [
-    FormsModule
-  ],
+  imports: [FormsModule],
   standalone: true
 })
 export class RegisterEdit implements OnInit, OnDestroy {
@@ -52,10 +51,7 @@ export class RegisterEdit implements OnInit, OnDestroy {
   ngOnInit() {
     this.authUnsub = this.auth.onAuthStateChanged(user => {
       if (user) {
-        // hay sesión = modo edición, carga sus datos
         this.isEditMode = true;
-        console.log(user);
-        console.log("modo edicion", this.isEditMode);
         this.userSub = this.crudService
           .getWhere<AppUser>("users", "uid", "==", user.uid)
           .subscribe(res => {
@@ -63,32 +59,23 @@ export class RegisterEdit implements OnInit, OnDestroy {
             this.cd.detectChanges();
           });
       } else {
-        // no hay sesión = modo registro
         this.isEditMode = false;
       }
     });
   }
 
   ngOnDestroy() {
-    if (this.userSub) {this.userSub.unsubscribe();}
-    if (this.authUnsub) {this.authUnsub();}
+    if (this.userSub) this.userSub.unsubscribe();
+    if (this.authUnsub) this.authUnsub();
   }
 
-
   async onSubmit(form: NgForm) {
-    console.log("valor", form.value);
-    console.log("invalido", form.invalid);
     if (form.invalid) {
       alert("Completa todos los campos");
       return;
     }
 
-    const {
-      email,
-      email_confirm,
-      password,
-      password_confirmed,
-    } = form.value;
+    const { email, email_confirm, password, password_confirmed } = form.value;
 
     if (password !== password_confirmed) {
       alert("Las contraseñas no coinciden");
@@ -101,15 +88,16 @@ export class RegisterEdit implements OnInit, OnDestroy {
     }
 
     try {
+      if (this.authUnsub) this.authUnsub();
+
       const userCredential = await createUserWithEmailAndPassword(
         this.auth,
         email,
         password
       );
 
-      console.log("USUARIO CREADO:", userCredential.user.uid);
+      console.log('✅ AUTH CREADO:', userCredential.user.uid);
 
-      // 👉 guardar en Firestore
       await this.crudService.add<User>("users", {
         uid: userCredential.user.uid,
         name: form.value.name,
@@ -123,10 +111,20 @@ export class RegisterEdit implements OnInit, OnDestroy {
         hist: []
       });
 
+      console.log('✅ FIRESTORE GUARDADO');
+
+      await signOut(this.auth);
+
+      console.log('✅ SIGNOUT HECHO');
+
       await this.router.navigate(['/login']);
 
+      console.log('✅ NAVEGADO');
+
     } catch (error: any) {
-      console.log("ERROR FIREBASE:", error.code, error.message);
+      console.log("❌ ERROR CODIGO:", error.code);
+      console.log("❌ ERROR MENSAJE:", error.message);
+      console.log("❌ ERROR COMPLETO:", error);
       switch (error.code) {
         case 'auth/email-already-in-use':
           alert("Este correo ya está registrado");
@@ -142,8 +140,8 @@ export class RegisterEdit implements OnInit, OnDestroy {
 
   async updateMode(form: NgForm) {
     if (!this.userData.id) {
-      alert("No se encontró al usuario")
-      return
+      alert("No se encontró al usuario");
+      return;
     }
 
     if (form.invalid) {
@@ -156,7 +154,7 @@ export class RegisterEdit implements OnInit, OnDestroy {
       if (user) {
         if (this.userSub) this.userSub.unsubscribe();
         if (this.authUnsub) this.authUnsub();
-        // reautentica primero
+
         const credential = EmailAuthProvider.credential(user.email!, form.value.currentPassword);
         await reauthenticateWithCredential(user, credential);
 
@@ -165,7 +163,7 @@ export class RegisterEdit implements OnInit, OnDestroy {
           surname: form.value.surname,
           DNI: form.value.DNI,
           phoneNumber: form.value.phone,
-        })
+        });
       }
 
       await this.router.navigate(['/profile']);

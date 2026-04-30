@@ -9,6 +9,7 @@ import {
 } from '@angular/fire/firestore';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {updateDoc} from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -76,5 +77,47 @@ export class CentrosService {
         return doctor?.schedule || {};
       })
     );
+  }
+
+  async removeHoraFromSchedule(
+    centerId: string,
+    specialtyName: string,
+    doctorName: string,
+    fecha: string,
+    hora: string
+  ) {
+    const centerRef = doc(this.firestore, `centers/${centerId}`);
+    const snap = await getDoc(centerRef);
+
+    if (!snap.exists()) return;
+
+    const center = snap.data() as any;
+
+    const specialities = center.specialities.map((s: any) => {
+      const matchEsp =
+        s.desc?.toLowerCase() === specialtyName?.toLowerCase() ||
+        s.name?.toLowerCase() === specialtyName?.toLowerCase();
+
+      if (!matchEsp) return s;
+
+      const doctors = s.doctor.map((d: any) => {
+        if (d.name !== doctorName) return d;
+
+        const horasActuales = d.schedule[fecha] || [];
+        const horasActualizadas = horasActuales.filter((h: string) => h !== hora);
+
+        return {
+          ...d,
+          schedule: {
+            ...d.schedule,
+            [fecha]: horasActualizadas
+          }
+        };
+      });
+
+      return { ...s, doctor: doctors };
+    });
+
+    await updateDoc(centerRef, { specialities });
   }
 }
