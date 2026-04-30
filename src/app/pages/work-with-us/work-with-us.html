@@ -3,13 +3,13 @@
 <app-colabora-base></app-colabora-base>
 
 
-@if(!user){
+@if(!user || (user && user.role === "Paciente")){
 <div class="no-login">
   <button (click)="goRegister()">Registrarse como empresa</button>
 </div>
 }
 
-@else if(user && user.role === 'empresa'){
+@else if(user && user.role === 'Empresa'){
 <div class="formulario">
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label>*Institución Sanitaria</label>
@@ -44,8 +44,5 @@
     </div>
   </form>
 </div>
-}
-@else {
-  <app-loading-spinner/>
 }
 <app-footer></app-footer>

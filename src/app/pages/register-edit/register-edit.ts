@@ -19,7 +19,7 @@ export interface User {
   email: string;
   DNI: string;
   phoneNumber: string;
-  role: 'paciente' | 'empresa' | null;
+  role: 'Paciente' | 'Empresa' | null;
   favs: string[];
   pendientes: string[];
   hist: string[];

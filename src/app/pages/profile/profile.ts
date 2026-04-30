@@ -15,7 +15,7 @@ export interface AppUser {
   email: string;
   DNI: string;
   phoneNumber: string;
-  role: 'paciente' | 'empresa' | null;
+  role: 'Paciente' | 'Empresa' | null;
   favs: [],
   pendientes: [],
   hist: []
