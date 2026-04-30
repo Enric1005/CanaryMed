@@ -19,6 +19,5 @@ export class Specialty {
     this.cita.especialidadId = specialty.id;
     this.cita.especialidadNombre = specialty.name;
     this.cita.origen = 'especialidad';
-
   }
 }

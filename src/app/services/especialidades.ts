@@ -1,6 +1,14 @@
 import { Injectable } from '@angular/core';
-import {Firestore, collection, collectionData, doc, docData} from '@angular/fire/firestore';
-import {map, Observable} from 'rxjs';
+import {
+  Firestore,
+  collection,
+  collectionData,
+  doc,
+  docData
+} from '@angular/fire/firestore';
+
+import { Observable } from 'rxjs';
+import { SpecialityModel } from '../models/speciality';
 
 @Injectable({
   providedIn: 'root'
@@ -9,25 +17,13 @@ export class EspecialidadesService {
 
   constructor(private firestore: Firestore) {}
 
-  getEspecialidades(): Observable<any[]> {
-    const especialidadesRef = collection(this.firestore, 'specialities');
-    return collectionData(especialidadesRef, { idField: 'id' }) as Observable<any[]>;
+  getEspecialidades(): Observable<SpecialityModel[]> {
+    const ref = collection(this.firestore, 'specialities');
+    return collectionData(ref, { idField: 'id' }) as Observable<SpecialityModel[]>;
   }
 
-  getEspecialidadesPares(): Observable<any[][]> {
-    return this.getEspecialidades().pipe(
-      map(lista => {
-        const pares = [];
-        for (let i = 0; i < lista.length; i += 2) {
-          pares.push(lista.slice(i, i + 2));
-        }
-        return pares;
-      })
-    );
-  }
-
-  getEspecialidadById(id: String) {
-    const centerRef = doc(this.firestore, `specialities/${id}`);
-    return docData(centerRef, { idField: 'id' });
+  getEspecialidadById(id: string): Observable<SpecialityModel> {
+    const ref = doc(this.firestore, `specialities/${id}`);
+    return docData(ref, { idField: 'id' }) as Observable<SpecialityModel>;
   }
 }

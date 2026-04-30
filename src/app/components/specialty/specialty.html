@@ -11,19 +11,4 @@
       </div>
     </div>
   </div>
-
-  <div class="specialty-section">
-    @if (specialty2) {
-      <div class="specialty-content">
-        <div class="specialty-image">
-          <img class="specialty" [src]="'assets/' + specialty2?.src" [alt]="specialty2?.name">
-        </div>
-        <div class="specialty-text">
-          <h1>{{ specialty2?.name }}</h1>
-          <h3>{{ specialty2?.desc }}</h3>
-          <button type="button" class="specialty-button"   (click)="seleccionarEspecialidad(specialty2)" [routerLink]="['/specialty_page', specialty2.id]">Ver centros</button>
-        </div>
-      </div>
-    }
-  </div>
 </main>
