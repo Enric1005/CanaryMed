@@ -23,6 +23,7 @@ export class PendingAppointments implements OnInit {
   ngOnInit() {
     this.titulo = this.route.snapshot.queryParams['titulo'];
     this.items = this.dataService.items;
+    console.log("ITEMS:", this.items); // 👈
   }
 
 }
