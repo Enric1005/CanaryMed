@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { getAuth } from '@angular/fire/auth';
+import {Auth, getAuth} from '@angular/fire/auth';
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
+import {AppUser} from '../../pages/profile/profile';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './header.css',
   imports: [RouterLink, FormsModule]
 })
-export class Header {
+export class Header implements OnInit, OnDestroy {
 
   centros: any[] = [];
   especialidades: any[] = [];
@@ -18,11 +19,20 @@ export class Header {
 
   searchText: string = '';
   selectedItem: any = null;
+  isLoggedIn: boolean = false;
+  constructor(private router: Router, private firestore: Firestore, private auth: Auth, private cd: ChangeDetectorRef) {}
 
-  constructor(private router: Router, private firestore: Firestore) {}
+  private authUnsub!: () => void;
 
   async ngOnInit() {
-    await this.cargarDatos();
+    this.authUnsub = this.auth.onAuthStateChanged((user) => {
+      this.isLoggedIn = !!user;
+      this.cd.detectChanges();
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.authUnsub) this.authUnsub();
   }
 
   goToProfile() {

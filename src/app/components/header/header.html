@@ -37,10 +37,17 @@
     </div>
 
     <button class="btn_user" id="btn_user" routerLink="/login">
-      <img
-        class="usuario"
-        (click)="goToProfile()"
-        src="assets/Usuario.webp">
+      @if (!isLoggedIn) {
+        <img
+          class="usuario"
+          (click)="goToProfile()"
+          src="assets/Usuario.webp"/>
+      } @else {
+        <img
+          class="usuario"
+          (click)="goToProfile()"
+          src="assets/icono_check.png"/>
+      }
     </button>
   </div>
 
