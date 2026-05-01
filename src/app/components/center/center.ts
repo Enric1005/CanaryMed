@@ -50,7 +50,6 @@ export class Center {
               await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
             }
             center.isFavorite = !yaEsFavorito;
-            console.log(center.isFavorite);
           });
       } catch (error) {
         console.error('Error al guardar su centro como favorito:', error);

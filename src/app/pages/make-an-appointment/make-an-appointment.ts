@@ -18,8 +18,8 @@ import { NgZone } from '@angular/core';
   templateUrl: './make-an-appointment.html',
   styleUrl: './make-an-appointment.css',
 })
-export class MakeAnAppointment implements OnInit, OnDestroy {
 
+export class MakeAnAppointment implements OnInit, OnDestroy {
   centroCampo = '';
   especialidadCampo = '';
 
@@ -62,9 +62,7 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
     this.authUnsub = this.auth.onAuthStateChanged(user => {
       this.ngZone.run(() => {
         if (this.userSub) this.userSub.unsubscribe();
-
         if (user) {
-          console.log("User found");
           this.userSub = this.crudService
             .getWhere<AppUser>("users", "uid", "==", user.uid)
             .subscribe(res => {
