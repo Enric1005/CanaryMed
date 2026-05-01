@@ -18,8 +18,8 @@ import { NgZone } from '@angular/core';
   templateUrl: './make-an-appointment.html',
   styleUrl: './make-an-appointment.css',
 })
-export class MakeAnAppointment implements OnInit, OnDestroy {
 
+export class MakeAnAppointment implements OnInit, OnDestroy {
   centroCampo = '';
   especialidadCampo = '';
 
@@ -44,7 +44,7 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
 
   appuser: AppUser | null | undefined = undefined;
   private userSub!: Subscription;
-  private authUnsub!: () => void; // onAuthStateChanged devuelve una función para desuscribirse
+  private authUnsub!: () => void;
 
   ngOnInit() {
     this.centroCampo = this.cita.centroNombre || '';
@@ -60,11 +60,9 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
         this.cdRef.detectChanges();
       });
     this.authUnsub = this.auth.onAuthStateChanged(user => {
-      this.ngZone.run(() => {  // 👈 envuelve todo aquí
+      this.ngZone.run(() => {
         if (this.userSub) this.userSub.unsubscribe();
-
         if (user) {
-          console.log("User found");
           this.userSub = this.crudService
             .getWhere<AppUser>("users", "uid", "==", user.uid)
             .subscribe(res => {
@@ -145,7 +143,6 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
           this.router.navigate(['/profile']);
         });
     } catch (error) {
-      console.error('Error al guardar la cita:', error);
       alert('Hubo un error al reservar la cita');
     }
   }

@@ -11,6 +11,6 @@ export class ColaboraBase {
   constructor(private location: Location) {}
 
   goBack() {
-    this.location.back();  // ahora sí existe
+    this.location.back();
   }
 }

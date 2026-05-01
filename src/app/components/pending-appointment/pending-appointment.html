@@ -1,6 +1,7 @@
-<main>
-  <div class="appointment_block">
-    <p data-type="center">{{item}}</p>
-  </div>
-</main>
+<div class="appointment_block">
+  <p class="text">{{ item }}</p>
 
+  @if(titulo === "Favoritos" || titulo === "Pendientes") {
+    <button (click)="removeItem()">Eliminar</button>
+  }
+</div>

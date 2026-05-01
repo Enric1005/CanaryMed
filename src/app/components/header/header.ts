@@ -3,7 +3,6 @@ import { Router, RouterLink } from '@angular/router';
 import {Auth, getAuth} from '@angular/fire/auth';
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
-import {AppUser} from '../../pages/profile/profile';
 
 @Component({
   selector: 'app-header',

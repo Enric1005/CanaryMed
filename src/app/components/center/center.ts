@@ -19,7 +19,7 @@ export class Center {
   @Input() center: any;
   showLoginPopup = false
 
-  constructor(private cita: CitaService, private router: Router, private auth: AuthService, private crudService: CrudService,
+  constructor(private cita: CitaService, private router: Router, private crudService: CrudService,
   ) {}
 
 
@@ -50,7 +50,6 @@ export class Center {
               await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
             }
             center.isFavorite = !yaEsFavorito;
-            console.log(center.isFavorite);
           });
       } catch (error) {
         console.error('Error al guardar su centro como favorito:', error);

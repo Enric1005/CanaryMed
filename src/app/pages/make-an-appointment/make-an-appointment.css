@@ -27,7 +27,7 @@
 
 #formCita input,
 #formCita select {
-  border-radius: 10px; /* añade esto */
+  border-radius: 10px;
   width: 100%;
   max-width: 300px;
   padding: 6px;

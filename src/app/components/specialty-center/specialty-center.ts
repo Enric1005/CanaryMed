@@ -53,7 +53,6 @@ export class SpecialtyCenter implements OnChanges {
   }
 
   private extractDoctor() {
-    console.log('SPECIALTY DATA 👉', this.data);
 
     const doctor = this.data?.doctor;
 

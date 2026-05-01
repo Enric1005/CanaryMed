@@ -6,5 +6,5 @@ export class CitaService {
   centroNombre: string | null = null;
   especialidadId: string | null = null;
   especialidadNombre: string | null = null;
-  origen: 'centro' | 'especialidad' | null = null; // <-- añade esto
+  origen: 'centro' | 'especialidad' | null = null;
 }

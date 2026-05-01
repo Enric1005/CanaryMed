@@ -35,7 +35,6 @@ export class CenterPage implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.route.paramMap.subscribe(params => {
       const id = params.get('id');
-      console.log("ID RECIBIDO:", id);
       if (id) {
         this.centro$ = this.centroService.getCenterById(id).pipe(
           map(centro => {

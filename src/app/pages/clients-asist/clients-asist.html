@@ -1,10 +1,18 @@
-<body>
-<main id = "main_asist_header">
+<main id="main_asist_header">
   <h1>Asistencia Cliente</h1>
+
   <div class="contenedor">
     <label for="lorem01">Escriba su consulta o queja</label>
-    <textarea id="lorem01" placeholder="" required>Empieza aquí...</textarea>
-    <div class="boton"> <input type="submit" value="subir">  </div>
+    <textarea
+      id="lorem01"
+      [(ngModel)]="consulta"
+      placeholder="Empieza aquí..."
+      required
+    ></textarea>
+    <div class="boton">
+      <button (click)="enviar()" [disabled]="cargando || !consulta.trim()">
+        {{ cargando ? 'Enviando...' : 'Subir' }}
+      </button>
+    </div>
   </div>
 </main>
-</body>

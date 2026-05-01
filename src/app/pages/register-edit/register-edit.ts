@@ -96,8 +96,6 @@ export class RegisterEdit implements OnInit, OnDestroy {
         password
       );
 
-      console.log('✅ AUTH CREADO:', userCredential.user.uid);
-
       await this.crudService.add<User>("users", {
         uid: userCredential.user.uid,
         name: form.value.name,
@@ -111,20 +109,12 @@ export class RegisterEdit implements OnInit, OnDestroy {
         hist: []
       });
 
-      console.log('✅ FIRESTORE GUARDADO');
-
       await signOut(this.auth);
-
-      console.log('✅ SIGNOUT HECHO');
 
       await this.router.navigate(['/login']);
 
-      console.log('✅ NAVEGADO');
 
     } catch (error: any) {
-      console.log("❌ ERROR CODIGO:", error.code);
-      console.log("❌ ERROR MENSAJE:", error.message);
-      console.log("❌ ERROR COMPLETO:", error);
       switch (error.code) {
         case 'auth/email-already-in-use':
           alert("Este correo ya está registrado");
@@ -168,7 +158,6 @@ export class RegisterEdit implements OnInit, OnDestroy {
 
       await this.router.navigate(['/profile']);
     } catch (error: any) {
-      console.log("ERROR FIREBASE:", error.code, error.message);
       alert("Error" + error.message);
     }
   }

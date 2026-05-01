@@ -10,37 +10,28 @@ import { setPersistence, browserLocalPersistence } from '@angular/fire/auth';
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-export class Login {
 
+export class Login {
   constructor(
     private location: Location,
     private auth: Auth,
     private router: Router,
-  ){
-  }
+  ){}
 
   async login(event: Event) {
     event.preventDefault();
-
     const email = (document.getElementById("email") as HTMLInputElement).value;
     const password = (document.getElementById("password") as HTMLInputElement).value;
-
     try {
-
       await setPersistence(this.auth, browserLocalPersistence);
-
       const userCredential = await signInWithEmailAndPassword(
         this.auth,
         email,
         password
       );
-
-      console.log("Usuario logueado:", userCredential.user);
-
       await this.router.navigate(['/profile']);
-
-    } catch (error: any) {
-      console.log(error.code);
+    }
+    catch (error: any) {
       alert("Correo o contraseña incorrectos");
     }
   }

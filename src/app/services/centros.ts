@@ -33,18 +33,11 @@ export class CentrosService {
   getDoctorsBySpecialty(centerId: string, specialtyName: string): Observable<any[]> {
     return this.getCenterById(centerId).pipe(
       map((center: any) => {
-        console.log('🏥 Centro completo:', center);
-        console.log('🔍 Buscando especialidad:', specialtyName);
-        console.log('📋 Especialidades disponibles:', center?.specialities?.map((s: any) => s.desc));
-
         const specialty = center?.specialities?.find(
           (s: any) =>
             s.desc?.toLowerCase() === specialtyName?.toLowerCase() ||
             s.name?.toLowerCase() === specialtyName?.toLowerCase()
         );
-
-        console.log('✅ Especialidad encontrada:', specialty);
-        console.log('👨‍⚕️ Médicos:', specialty?.doctor);
 
         return specialty?.doctor || [];
       })

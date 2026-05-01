@@ -52,6 +52,7 @@ export class Profile implements OnInit, OnDestroy {
             this.user = res[0];
             this.userLoaded = true;
             this.cd.detectChanges();
+            this.checkYMoverExpiradas();
           });
       }
     });
@@ -97,6 +98,29 @@ export class Profile implements OnInit, OnDestroy {
           break;
         default:
           alert("Error: " + error.message);
+      }
+    }
+  }
+  getFechaCita(item: string): Date | null {
+    const match = item.match(/^(\d{4}-\d{2}-\d{2}), (\d{2}:\d{2})/);
+    if (!match) return null;
+
+    const [_, fecha, hora] = match;
+    return new Date(`${fecha}T${hora}:00`);
+  }
+
+  async checkYMoverExpiradas() {
+    if (!this.user?.id) return;
+
+    const ahora = new Date();
+
+    for (const cita of this.user.pendientes ?? []) {
+      const fechaCita = this.getFechaCita(cita);
+      if (!fechaCita) continue;
+
+      if (fechaCita < ahora) {
+        await this.crudService.removeFromArray('users', this.user.id, 'pendientes', cita);
+        await this.crudService.addToArray('users', this.user.id, 'hist', cita);
       }
     }
   }
