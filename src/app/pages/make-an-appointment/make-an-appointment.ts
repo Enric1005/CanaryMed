@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import {Component, OnInit, ChangeDetectorRef, inject, OnDestroy} from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { CitaService } from '../../services/cita';
@@ -6,8 +6,11 @@ import { CentrosService } from '../../services/centros';
 import { CrudService } from '../../services/crudService';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
-import { getAuth } from '@angular/fire/auth';
+import {Auth, getAuth} from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import {Subscription, take} from 'rxjs';
+import {AppUser} from '../profile/profile';
+import { NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-make-an-appointment',
@@ -15,7 +18,7 @@ import { Router } from '@angular/router';
   templateUrl: './make-an-appointment.html',
   styleUrl: './make-an-appointment.css',
 })
-export class MakeAnAppointment implements OnInit {
+export class MakeAnAppointment implements OnInit, OnDestroy {
 
   centroCampo = '';
   especialidadCampo = '';
@@ -34,8 +37,14 @@ export class MakeAnAppointment implements OnInit {
     private centrosService: CentrosService,
     private crudService: CrudService,
     private cdRef: ChangeDetectorRef,
-    private router: Router
+    private router: Router,
+    private auth: Auth,
+    private ngZone: NgZone
   ) {}
+
+  appuser: AppUser | null | undefined = undefined;
+  private userSub!: Subscription;
+  private authUnsub!: () => void; // onAuthStateChanged devuelve una función para desuscribirse
 
   ngOnInit() {
     this.centroCampo = this.cita.centroNombre || '';
@@ -50,6 +59,28 @@ export class MakeAnAppointment implements OnInit {
         this.medicoSeleccionadoIndex = '';
         this.cdRef.detectChanges();
       });
+    this.authUnsub = this.auth.onAuthStateChanged(user => {
+      this.ngZone.run(() => {  // 👈 envuelve todo aquí
+        if (this.userSub) this.userSub.unsubscribe();
+
+        if (user) {
+          console.log("User found");
+          this.userSub = this.crudService
+            .getWhere<AppUser>("users", "uid", "==", user.uid)
+            .subscribe(res => {
+              this.appuser = res[0];
+              this.cdRef.detectChanges();
+            });
+        } else {
+          this.appuser = null;
+        }
+      });
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.userSub) this.userSub.unsubscribe();
+    if (this.authUnsub) this.authUnsub();
   }
 
   onMedicoChange() {
@@ -80,8 +111,8 @@ export class MakeAnAppointment implements OnInit {
     const auth = getAuth();
     const user = auth.currentUser;
 
-    if (!user) {
-      alert('Debes iniciar sesión para reservar una cita');
+    if (!user || (user && this.appuser?.role !== 'Paciente')) {
+      alert('Debes iniciar sesión como paciente para reservar una cita');
       return;
     }
 
@@ -94,6 +125,7 @@ export class MakeAnAppointment implements OnInit {
 
     try {
       this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
+        .pipe(take(1))
         .subscribe(async (users) => {
           if (users.length === 0) {
             alert('No se encontró tu usuario');

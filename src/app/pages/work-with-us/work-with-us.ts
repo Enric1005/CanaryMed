@@ -9,12 +9,11 @@ import { Subscription} from 'rxjs';
 import {AppUser} from '../profile/profile';
 import {CrudService} from '../../services/crudService';
 import { NgZone } from '@angular/core';
-import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 
 @Component({
   selector: 'app-work-with-us',
   standalone: true,
-  imports: [Header, Footer, FormsModule, ColaboraBase, LoadingSpinner],
+  imports: [Header, Footer, FormsModule, ColaboraBase],
   templateUrl: './work-with-us.html',
   styleUrl: './work-with-us.css',
 })
