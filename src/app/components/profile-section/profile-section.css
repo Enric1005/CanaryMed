@@ -11,6 +11,7 @@ main {
 a {
   text-decoration: none; /* quita el subrayado */
   color: black;
+  cursor: pointer;
 }
 .section {
   width: 100%;

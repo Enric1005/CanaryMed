@@ -1,25 +1,21 @@
-<body>
+<app-header/>
 <div class="page-container">
-  <header id="main_header" xlu-include-file="../Templates/header.html"></header>
 
   <!-- Botón entre header y citas -->
   <main class="text-section3">
     <div class="text-header">
-      <h1></h1>
-      <button type="button" class="section-btn" onclick="window.location.href='../Paginas/profile.html'"></button>
+      <h1>{{titulo}}</h1>
+      <button type="button" class="section-btn" routerLink="/profile">Volver Atrás</button>
     </div>
     <hr>
   </main>
 
   <div class="appointments-container">
-    <div xlu-include-file="../Templates/pending_appointment.html"></div>
-    <div xlu-include-file="../Templates/pending_appointment.html"></div>
-    <div xlu-include-file="../Templates/pending_appointment.html"></div>
+    @for (item of items ; track item) {
+      <app-pending-appointment [item]="item"></app-pending-appointment>
+    }
   </div>
 </div>
-
-<script type="module" src="../JS/data.js"></script>
-</body>
-<div id="loader">
-  <div class="spinner"></div>
-</div>
+<!-----------
+<app-loading-spinner/>
+-------------->

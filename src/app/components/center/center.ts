@@ -6,6 +6,7 @@ import {getAuth} from '@angular/fire/auth';
 import {NgIf} from '@angular/common';
 import {AuthService} from '../../services/auth';
 import {CrudService} from '../../services/crudService';
+import {take} from 'rxjs';
 
 @Component({
   selector: 'app-center',
@@ -33,20 +34,29 @@ export class Center {
       const favoritoString = `${center.name} - ${this.center.sitio} - ${this.center.precio}`;
       try {
         this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
+          .pipe(take(1))
           .subscribe(async (users) => {
             if (users.length === 0) {
               alert('No se encontró tu usuario');
               return;
             }
             const userId = users[0].id;
-            await this.crudService.addToArray('users', userId, 'favs', favoritoString);
+            const favs: string[] = users[0].favs ?? [];
+            const yaEsFavorito = favs.includes(favoritoString);
+
+            if (!yaEsFavorito) {
+              await this.crudService.addToArray('users', userId, 'favs', favoritoString);
+            } else {
+              await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
+            }
+            center.isFavorite = !yaEsFavorito;
+            console.log(center.isFavorite);
           });
       } catch (error) {
         console.error('Error al guardar su centro como favorito:', error);
         alert('Hubo un error al guardar su centro como favorito');
       }
     }
-    center.isFavorite = !center.isFavorite;
   }
 
   goToLogin() {

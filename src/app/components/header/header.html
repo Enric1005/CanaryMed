@@ -6,7 +6,7 @@
   </div>
 
   <div class="first_line">
-    <button class="menu-toggle">☰</button>
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
 
     <a class="name_of_company" routerLink="/" id="logo">
       <h1>CanaryMed</h1>
@@ -45,7 +45,7 @@
   </div>
 
   <div class="second_line">
-    <ul id="navMenu">
+    <ul id="navMenu" [class.show]="menuAbierto">
       <li><a routerLink="/centers">Centros</a></li>
       <li><a routerLink="/specialtys">Especialidades</a></li>
       <li><a routerLink="/work-with-us">Trabaja con nosotros</a></li>

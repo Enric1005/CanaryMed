@@ -81,4 +81,9 @@ export class Header {
       this.router.navigate(['/specialty_page', this.selectedItem.id]);
     }
   }
+
+  menuAbierto = false;
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+  }
 }

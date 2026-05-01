@@ -6,7 +6,7 @@ import {
 import { Observable } from 'rxjs';
 import {db} from '../../environments/environment';
 import { Firestore, query, where, collectionData } from '@angular/fire/firestore';
-import { arrayUnion } from '@angular/fire/firestore';
+import { arrayUnion, arrayRemove} from '@angular/fire/firestore';
 
 
 
@@ -61,6 +61,11 @@ export class CrudService {
     });
   }
 
+  async removeFromArray(collectionName: string, id: string, field: string, value: any) {
+    await updateDoc(doc(this.firestore, collectionName, id), {
+      [field]: arrayRemove(value)
+    })
+  }
 
 }
 

@@ -175,6 +175,7 @@ header {
     font-size: 40px;
   }
 
+
   .menu-toggle {
     display: block;
     position: absolute;
@@ -255,6 +256,7 @@ header {
   .second_line ul li::before {
     flex-shrink: 0;
     margin-right: 8px;
+    content: none;
   }
 
   .second_line ul li a {

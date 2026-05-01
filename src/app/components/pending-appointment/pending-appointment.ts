@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-pending-appointment',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './pending-appointment.html',
   styleUrl: './pending-appointment.css',
 })
-export class PendingAppointment {}
+export class PendingAppointment {
+  @Input() item: any;
+}
