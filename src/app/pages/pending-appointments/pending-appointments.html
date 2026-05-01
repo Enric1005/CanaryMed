@@ -12,7 +12,7 @@
 
   <div class="appointments-container">
     @for (item of items ; track item) {
-      <app-pending-appointment [item]="item"></app-pending-appointment>
+      <app-pending-appointment [item]="item" (delete)="deleteItem($event)">></app-pending-appointment>
     }
   </div>
 </div>

@@ -1,11 +1,80 @@
-import {Component, Input} from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  ChangeDetectorRef,
+  OnDestroy
+} from '@angular/core';
+
+import { CrudService } from '../../services/crudService';
+import { AppUser } from '../../pages/profile/profile';
+import { Auth } from '@angular/fire/auth';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-pending-appointment',
-  imports: [],
   templateUrl: './pending-appointment.html',
   styleUrl: './pending-appointment.css',
 })
-export class PendingAppointment {
+export class PendingAppointment implements OnInit, OnDestroy {
+
   @Input() item: any;
+  @Output() delete = new EventEmitter<any>();
+
+  user!: AppUser & { id: string }; // 👈 importante: guardamos docId
+  private authUnsub!: () => void;
+  subscription!: Subscription;
+
+  constructor(
+    private crudService: CrudService,
+    private auth: Auth,
+    private cd: ChangeDetectorRef
+  ) {}
+
+  ngOnInit() {
+    this.authUnsub = this.auth.onAuthStateChanged(user => {
+      if (user) {
+
+        this.subscription = this.crudService
+          .getWhere<AppUser>('users', 'uid', '==', user.uid)
+          .subscribe((res: any[]) => {
+
+            const doc = res[0];
+
+            this.user = {
+              ...doc.data,
+              id: doc.id // 👈 ESTE ES EL DOC ID REAL
+            };
+
+            this.cd.detectChanges();
+          });
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) this.subscription.unsubscribe();
+    if (this.authUnsub) this.authUnsub();
+  }
+
+  async removeItem() {
+    if (!this.user?.id || !this.item) return;
+
+    try {
+      await this.crudService.removeFromArray(
+        'users',
+        this.user.id,   // 👈 docId correcto
+        'favs',
+        this.item
+      );
+
+      // actualizar UI padre
+      this.delete.emit(this.item);
+
+    } catch (err) {
+      console.error('Error eliminando favorito:', err);
+    }
+  }
 }

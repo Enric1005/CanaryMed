@@ -25,4 +25,8 @@ export class PendingAppointments implements OnInit {
     this.items = this.dataService.items;
   }
 
+  deleteItem(item: any) {
+    this.items = this.items.filter(i => i !== item);
+    this.dataService.items = this.items;
+  }
 }

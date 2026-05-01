@@ -5,9 +5,6 @@ import {DataService} from '../../services/dataService';
 
 @Component({
   selector: 'app-profile-section',
-  imports: [
-    NgForOf
-  ],
   templateUrl: './profile-section.html',
   styleUrl: './profile-section.css',
 })
