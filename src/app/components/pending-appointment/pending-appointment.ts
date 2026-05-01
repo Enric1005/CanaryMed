@@ -24,14 +24,14 @@ export class PendingAppointment implements OnInit, OnDestroy {
   @Input() titulo: string = '';
   @Output() delete = new EventEmitter<any>();
 
-  user!: AppUser & { id: string }; // 👈 importante: guardamos docId
+  user!: AppUser & { id: string }; // guardamos docId
   private authUnsub!: () => void;
   subscription!: Subscription;
 
   constructor(
     private crudService: CrudService,
     private auth: Auth,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {
@@ -43,7 +43,7 @@ export class PendingAppointment implements OnInit, OnDestroy {
             const doc = res[0];
             this.user = {
               ...doc.data,
-              id: doc.id // 👈 ESTE ES EL DOC ID REAL
+              id: doc.id
             };
             this.cd.detectChanges();
           });
@@ -63,7 +63,7 @@ export class PendingAppointment implements OnInit, OnDestroy {
       try {
         await this.crudService.removeFromArray(
           'users',
-          this.user.id,   // 👈 docId correcto
+          this.user.id,
           'favs',
           this.item
         );
@@ -79,17 +79,17 @@ export class PendingAppointment implements OnInit, OnDestroy {
       try {
         await this.crudService.removeFromArray(
           'users',
-          this.user.id,   // 👈 docId correcto
+          this.user.id,
           'pendientes',
           this.item
         );
-
         // actualizar UI padre
         this.delete.emit(this.item);
-
-      } catch (err) {
-        console.error('Error eliminando favorito:', err);
+      }
+      catch (err) {
+        console.error('Error eliminando cita pendiente:', err);
       }
     }
   }
+
 }

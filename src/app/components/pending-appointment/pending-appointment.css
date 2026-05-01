@@ -6,6 +6,24 @@
   border-radius: 5px;
   padding: 10px;
   box-sizing: border-box;
+  display: flex;
+}
+
+button {
+  border-radius: 5px;
+  width: 60px;
+  height: 40px;
+  background-color: indianred;
+  margin-left: 660px;
+}
+
+button:hover {
+  background-color: darkred;
+  color: white;
+}
+
+p {
+  margin-top: 13px;
 }
 
 @media (max-width: 830px) {
