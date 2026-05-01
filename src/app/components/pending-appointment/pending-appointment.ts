@@ -21,6 +21,7 @@ import { Subscription } from 'rxjs';
 export class PendingAppointment implements OnInit, OnDestroy {
 
   @Input() item: any;
+  @Input() titulo: string = '';
   @Output() delete = new EventEmitter<any>();
 
   user!: AppUser & { id: string }; // 👈 importante: guardamos docId
@@ -36,18 +37,14 @@ export class PendingAppointment implements OnInit, OnDestroy {
   ngOnInit() {
     this.authUnsub = this.auth.onAuthStateChanged(user => {
       if (user) {
-
         this.subscription = this.crudService
           .getWhere<AppUser>('users', 'uid', '==', user.uid)
           .subscribe((res: any[]) => {
-
             const doc = res[0];
-
             this.user = {
               ...doc.data,
               id: doc.id // 👈 ESTE ES EL DOC ID REAL
             };
-
             this.cd.detectChanges();
           });
       }
@@ -62,19 +59,37 @@ export class PendingAppointment implements OnInit, OnDestroy {
   async removeItem() {
     if (!this.user?.id || !this.item) return;
 
-    try {
-      await this.crudService.removeFromArray(
-        'users',
-        this.user.id,   // 👈 docId correcto
-        'favs',
-        this.item
-      );
+    if (this.titulo === "Favoritos") {
+      try {
+        await this.crudService.removeFromArray(
+          'users',
+          this.user.id,   // 👈 docId correcto
+          'favs',
+          this.item
+        );
 
-      // actualizar UI padre
-      this.delete.emit(this.item);
+        // actualizar UI padre
+        this.delete.emit(this.item);
 
-    } catch (err) {
-      console.error('Error eliminando favorito:', err);
+      } catch (err) {
+        console.error('Error eliminando favorito:', err);
+      }
+    }
+    else if (this.titulo === "Pendientes") {
+      try {
+        await this.crudService.removeFromArray(
+          'users',
+          this.user.id,   // 👈 docId correcto
+          'pendientes',
+          this.item
+        );
+
+        // actualizar UI padre
+        this.delete.emit(this.item);
+
+      } catch (err) {
+        console.error('Error eliminando favorito:', err);
+      }
     }
   }
 }
