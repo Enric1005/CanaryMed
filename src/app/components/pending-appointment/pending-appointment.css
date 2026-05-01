@@ -1,51 +1,164 @@
-.appointment_block {
-  width: 1065px;
-  margin: 5px auto;
-  background-color: rgba(255,254,134,0.84);
-  border: 3px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  box-sizing: border-box;
+.page-container {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  align-items: center;
 }
 
-button {
+/* =========================
+   HEADER
+========================= */
+.text-section3 {
+  width: 79%;
+}
+
+.text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.text-header h1 {
+  margin: 0;
+}
+
+.section-btn {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* =========================
+   LISTA
+========================= */
+.appointments-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* =========================
+   TARJETA (UNIFORME)
+========================= */
+.appointment_block {
+  width: 100%;
+  max-width: 1025px;
+  height: 80px;
+  min-height: 80px;
+
+  margin: 5px auto;
+  padding: 10px;
+  box-sizing: border-box;
+
+  background-color: rgba(255, 254, 134, 0.84);
+  border: 3px solid black;
   border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+/* =========================
+   TEXTO (NO ROMPE TARJETA)
+========================= */
+.text {
+  margin: 0;
+  flex: 1;
+
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  word-break: break-word;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+button {
   width: 60px;
   height: 40px;
+
+  margin-left: 10px;
+
+  border-radius: 5px;
   background-color: indianred;
-  margin-left: 660px;
+  border: none;
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover {
   background-color: darkred;
-  color: white;
 }
 
-p {
-  margin-top: 13px;
-}
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 830px) {
   .page-container {
     align-items: stretch;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .text-section3 {
+    width: 100%;
   }
 
   .appointments-container {
     width: 100%;
-    padding: 0 10px;
+    padding: 0;
     box-sizing: border-box;
     align-items: stretch;
   }
 
   .appointment_block {
     width: 100%;
+    max-width: 100%;
+    height: 80px;
+    min-height: 80px;
+
+    margin: 5px 0;
+    padding: 10px;
     box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
   }
 
-  .text-section3 {
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
+  .text {
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+  }
+
+  button {
+    width: 60px;
+    height: 40px;
+    flex-shrink: 0;
   }
 }

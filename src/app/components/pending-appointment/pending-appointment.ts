@@ -18,13 +18,13 @@ import { Subscription } from 'rxjs';
   templateUrl: './pending-appointment.html',
   styleUrl: './pending-appointment.css',
 })
-export class PendingAppointment implements OnInit, OnDestroy {
 
+export class PendingAppointment implements OnInit, OnDestroy {
   @Input() item: any;
   @Input() titulo: string = '';
   @Output() delete = new EventEmitter<any>();
 
-  user!: AppUser & { id: string }; // guardamos docId
+  user!: AppUser & { id: string };
   private authUnsub!: () => void;
   subscription!: Subscription;
 
@@ -67,8 +67,6 @@ export class PendingAppointment implements OnInit, OnDestroy {
           'favs',
           this.item
         );
-
-        // actualizar UI padre
         this.delete.emit(this.item);
 
       } catch (err) {
@@ -83,7 +81,6 @@ export class PendingAppointment implements OnInit, OnDestroy {
           'pendientes',
           this.item
         );
-        // actualizar UI padre
         this.delete.emit(this.item);
       }
       catch (err) {
@@ -91,5 +88,4 @@ export class PendingAppointment implements OnInit, OnDestroy {
       }
     }
   }
-
 }

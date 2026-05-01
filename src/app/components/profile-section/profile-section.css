@@ -9,7 +9,7 @@ main {
 }
 
 a {
-  text-decoration: none; /* quita el subrayado */
+  text-decoration: none;
   color: black;
   cursor: pointer;
 }

@@ -102,7 +102,6 @@ export class Profile implements OnInit, OnDestroy {
     }
   }
   getFechaCita(item: string): Date | null {
-    // formato: "2026-04-02, 12:00 - Cardiología - Hospital Perpetuo Socorro"
     const match = item.match(/^(\d{4}-\d{2}-\d{2}), (\d{2}:\d{2})/);
     if (!match) return null;
 
@@ -120,7 +119,6 @@ export class Profile implements OnInit, OnDestroy {
       if (!fechaCita) continue;
 
       if (fechaCita < ahora) {
-        // ha expirado → mover a historial
         await this.crudService.removeFromArray('users', this.user.id, 'pendientes', cita);
         await this.crudService.addToArray('users', this.user.id, 'hist', cita);
       }

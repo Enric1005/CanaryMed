@@ -1,6 +1,5 @@
-import {Component, Injectable, Input} from '@angular/core';
-import {ActivatedRoute, Router, RouterLink} from '@angular/router';
-import {NgForOf} from '@angular/common';
+import {Component, Input} from '@angular/core';
+import {Router} from '@angular/router';
 import {DataService} from '../../services/dataService';
 
 @Component({

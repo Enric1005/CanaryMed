@@ -19,7 +19,7 @@ export class Center {
   @Input() center: any;
   showLoginPopup = false
 
-  constructor(private cita: CitaService, private router: Router, private auth: AuthService, private crudService: CrudService,
+  constructor(private cita: CitaService, private router: Router, private crudService: CrudService,
   ) {}
 
 

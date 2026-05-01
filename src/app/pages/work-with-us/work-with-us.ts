@@ -33,7 +33,7 @@ export class WorkWithUs implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.authUnsub = this.auth.onAuthStateChanged(user => {
-      this.ngZone.run(() => {  // 👈 envuelve todo aquí
+      this.ngZone.run(() => {
         if (this.userSub) this.userSub.unsubscribe();
 
         if (user) {
@@ -53,7 +53,7 @@ export class WorkWithUs implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     if (this.userSub) this.userSub.unsubscribe();
-    if (this.authUnsub) this.authUnsub(); // desuscribe el listener de Firebase
+    if (this.authUnsub) this.authUnsub();
   }
 
 
