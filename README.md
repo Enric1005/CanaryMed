@@ -168,12 +168,19 @@ En el interior del proyecto se encuentra una carpeta llamada Documents, donde se
 
 ## Servicios
  `auth.ts`  Registro, login y cierre de sesión con Firebase Auth 
+ 
  `centros.ts`  Lectura y gestión de centros médicos desde Firestore 
+ 
  `especialidades.ts`  Lectura y gestión de especialidades desde Firestore 
+ 
  `cita.ts`  Gestión de citas: creación, consulta y cancelación 
+ 
  `crudService.ts`  Operaciones CRUD genéricas reutilizables contra Firebase 
+ 
  `dataService.ts`  Servicio central de acceso y distribución de datos 
+ 
  `data.ts`  Modelos y estructuras de datos de la aplicación 
+ 
  `loading.ts`  Control del estado de carga (spinner/loading global) 
 
 ---
