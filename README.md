@@ -63,14 +63,6 @@ En el interior del proyecto se encuentra una carpeta llamada Documents, donde se
 
 ---
 
-## Ubicación del contenido JSON
-
-El contenido JSON se encuentra de forma **local** en el proyecto, dentro de la carpeta `JSON`, dividido en 3 archivos:
-
-- `data-es.json` → Contenido de la aplicación en español.
-- `data-en.json` → Contenido de la aplicación en inglés.
-- `test_profile_data.json` → Datos de usuario para la autenticación de prueba.
-
 ## Componentes
 
 ### **HOME**
