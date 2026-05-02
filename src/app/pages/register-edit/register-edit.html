@@ -20,7 +20,7 @@
         }
         @if(!isEditMode) {
         <label>*Contraseña</label>
-        <input name="password" id="password" type="password" ngModel required pattern="^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$">
+        <input name="password" id="password" type="password" placeholder="123456A_" ngModel required pattern="^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$">
 
         <label>*Confirmar Contraseña</label>
         <input name="password_confirmed" id="password_confirmed" type="password" ngModel required>
