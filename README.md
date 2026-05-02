@@ -71,8 +71,7 @@ El contenido JSON se encuentra de forma **local** en el proyecto, dentro de la c
 - `data-en.json` → Contenido de la aplicación en inglés.
 - `test_profile_data.json` → Datos de usuario para la autenticación de prueba.
 
-#### Componentes
-| Componente | Funcionalidad |
+## Componentes
 
 ### **HOME**
 
@@ -175,17 +174,15 @@ El contenido JSON se encuentra de forma **local** en el proyecto, dentro de la c
   
 ---
 
-#### Servicios
-| Servicio | Funcionalidad |
-|---|---|
-| `auth.ts` | Registro, login y cierre de sesión con Firebase Auth |
-| `centros.ts` | Lectura y gestión de centros médicos desde Firestore |
-| `especialidades.ts` | Lectura y gestión de especialidades desde Firestore |
-| `cita.ts` | Gestión de citas: creación, consulta y cancelación |
-| `crudService.ts` | Operaciones CRUD genéricas reutilizables contra Firebase |
-| `dataService.ts` | Servicio central de acceso y distribución de datos |
-| `data.ts` | Modelos y estructuras de datos de la aplicación |
-| `loading.ts` | Control del estado de carga (spinner/loading global) |
+## Servicios
+ `auth.ts`  Registro, login y cierre de sesión con Firebase Auth 
+ `centros.ts`  Lectura y gestión de centros médicos desde Firestore 
+ `especialidades.ts`  Lectura y gestión de especialidades desde Firestore 
+ `cita.ts`  Gestión de citas: creación, consulta y cancelación 
+ `crudService.ts`  Operaciones CRUD genéricas reutilizables contra Firebase 
+ `dataService.ts`  Servicio central de acceso y distribución de datos 
+ `data.ts`  Modelos y estructuras de datos de la aplicación 
+ `loading.ts`  Control del estado de carga (spinner/loading global) 
 
 ---
 
