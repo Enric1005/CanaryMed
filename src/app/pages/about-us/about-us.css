@@ -48,10 +48,14 @@
   align-items: center;
 }
 
+hr {
+  height: 15px;
+  border: none;
+}
 
 @media (max-width: 830px) {
   .overlay  p{
-    font-size: 11px;
+    font-size: 15px;
   }
 
 }
