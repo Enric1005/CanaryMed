@@ -28,6 +28,7 @@ export class Header implements OnInit, OnDestroy {
       this.isLoggedIn = !!user;
       this.cd.detectChanges();
     });
+    await this.cargarDatos();
   }
 
   ngOnDestroy() {
