@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CanaryMed.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/mcp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/Listado_De_Paginas_HTML.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/Listado_templates.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/MockupsTabletMovil.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/MockupsWeb_storyboards.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/lista_HTLM_MOCKUPS.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Cardiologia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/EC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Neumología.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Perpetuo_socorro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Quimio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Radiodiagnóstico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/San_jose.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/San_roque.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Traumotologia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Usuario.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Vacio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Vithas.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/YT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/about_us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/icono_check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/insta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/filter/filter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/filter/filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/filter/filter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/loading-spinner/loading-spinner.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/center.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/speciality.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/center-page/center-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/center-page/center-page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/center-page/center-page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/centers/centers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/centers/centers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/centers/centers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending_line.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/centros.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/cita.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/crudService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/dataService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/especialidades.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/loading.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" />
+    </list>
+    <list id="c4111587-1aa6-42ae-904c-8040af100271" name="Changes by casba" comment="" />
+    <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="SPRINT2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="39wgk5L7z1sX28EGruW8GZhJNdx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.about_us.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.app.component.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.app.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.center.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.center_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.centers.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.centro.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.clients_asist.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.colabora_base.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.filter.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.make_an_appointment.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.pending_appointment.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.pending_appointments.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile_section.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register-edit.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register_edit.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty_center.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialtys.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.work_with_us.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SPRINT4&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/enriq/WebstormProjects/CanaryMed&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/enriq/AppData/Roaming/JetBrains/WebStorm2025.3/node/versions/24.14.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;consents&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\miApp\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Documents" />
+      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Templates" />
+      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Mockups" />
+      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Paginas" />
+      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="" />
+      <created>1771612688084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771612688084</updated>
+      <workItem from="1771612689153" duration="2577000" />
+      <workItem from="1771615813828" duration="13523000" />
+      <workItem from="1771952515524" duration="7433000" />
+      <workItem from="1772035883087" duration="703000" />
+      <workItem from="1772039626893" duration="729000" />
+      <workItem from="1772042206566" duration="11731000" />
+      <workItem from="1772211965127" duration="1535000" />
+      <workItem from="1772216074228" duration="662000" />
+      <workItem from="1772283923566" duration="1232000" />
+      <workItem from="1772290385845" duration="2333000" />
+      <workItem from="1772373386094" duration="5281000" />
+      <workItem from="1772557947980" duration="16000" />
+      <workItem from="1772559140636" duration="2173000" />
+      <workItem from="1773162787010" duration="5923000" />
+      <workItem from="1773241634991" duration="885000" />
+      <workItem from="1773249175806" duration="1731000" />
+      <workItem from="1773332124347" duration="810000" />
+      <workItem from="1773354083237" duration="5433000" />
+      <workItem from="1773421639490" duration="4681000" />
+      <workItem from="1773506005557" duration="16762000" />
+      <workItem from="1773766977416" duration="37628000" />
+      <workItem from="1774111465446" duration="10216000" />
+      <workItem from="1774390033223" duration="7663000" />
+      <workItem from="1774547003989" duration="80000" />
+      <workItem from="1774547454763" duration="21000" />
+      <workItem from="1774631036585" duration="16457000" />
+      <workItem from="1774784695351" duration="3060000" />
+      <workItem from="1774789710055" duration="9106000" />
+      <workItem from="1775322141308" duration="690000" />
+      <workItem from="1775579509478" duration="1370000" />
+      <workItem from="1775660869917" duration="1783000" />
+      <workItem from="1775837026396" duration="5662000" />
+      <workItem from="1775856300533" duration="218000" />
+      <workItem from="1776016657916" duration="2432000" />
+      <workItem from="1776288340390" duration="1715000" />
+      <workItem from="1776441857192" duration="3193000" />
+      <workItem from="1776704496653" duration="5038000" />
+      <workItem from="1776787868117" duration="954000" />
+      <workItem from="1777047268931" duration="322000" />
+      <workItem from="1777136653651" duration="201000" />
+      <workItem from="1777137892113" duration="887000" />
+      <workItem from="1777140114713" duration="2185000" />
+      <workItem from="1777329332121" duration="4697000" />
+      <workItem from="1777397541361" duration="502000" />
+      <workItem from="1777398499758" duration="329000" />
+      <workItem from="1777487148830" duration="6357000" />
+      <workItem from="1777562361390" duration="13344000" />
+      <workItem from="1777640078550" duration="304000" />
+      <workItem from="1777706728852" duration="10104000" />
+      <workItem from="1777998261394" duration="5203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
