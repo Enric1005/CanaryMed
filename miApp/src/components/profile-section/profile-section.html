@@ -1,18 +1,17 @@
-<div class="section-header">
-  <span>{{titulo}}</span>
-</div>
-<div class="divider"></div>
-<div class="card-body">
-  <ul>
-    @for(item of items.slice(0, 3); track item) {
-      <li>
-        {{item}}
-      </li>
-    }
-  </ul>
-</div>
-<div class="divider"></div>
-<div class="card-footer">
-  <p><a (click)="verMas()" class="section-link" target="_blank">Ver más</a></p>
-</div>
-
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{titulo}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      @for(item of items.slice(0, 3); track item) {
+        <ion-item>
+          <ion-label>{{item}}</ion-label>
+        </ion-item>
+      }
+    </ion-list>
+  </ion-card-content>
+  <ion-item button lines="none" (click)="verMas()">
+    <ion-label color="primary">Ver más</ion-label>
+  </ion-item>
+</ion-card>

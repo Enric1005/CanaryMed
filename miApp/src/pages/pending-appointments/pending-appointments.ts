@@ -7,15 +7,19 @@ import {Auth} from '@angular/fire/auth';
 import {AppUser} from '../profile/profile';
 import {Subscription} from 'rxjs';
 import {NgZone} from '@angular/core';
+import {
+  IonHeader, IonContent, IonFooter, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-pending-appointments',
-  imports: [PendingAppointment, RouterLink, Header],
+  imports: [PendingAppointment, RouterLink, Header,
+    IonHeader, IonContent, IonFooter, IonButton
+  ],
   templateUrl: './pending-appointments.html',
   styleUrl: './pending-appointments.css',
 })
 export class PendingAppointments implements OnInit, OnDestroy {
-
   titulo: string = '';
   items: string[] = [];
   userId: string = '';
@@ -43,7 +47,6 @@ export class PendingAppointments implements OnInit, OnDestroy {
               const userData = res[0];
               this.userId = userData.id!;
 
-              // Carga el array correcto según el título
               if (this.titulo === 'Favoritos') this.items = userData.favs ?? [];
               else if (this.titulo === 'Pendientes') this.items = userData.pendientes ?? [];
               else if (this.titulo === 'Historial') this.items = userData.hist ?? [];

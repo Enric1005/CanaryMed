@@ -2,10 +2,15 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {CitaService} from '../../services/cita';
+import {
+  IonCard, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-specialty',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink,
+    IonCard, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton
+  ],
   templateUrl: './specialty.html',
   styleUrl: './specialty.css',
 })

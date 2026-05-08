@@ -1,7 +1,8 @@
-<div class="appointment_block">
-  <p class="text">{{ item }}</p>
-
+<ion-item class="appointment_block">
+  <ion-label>
+    <p class="text">{{ item }}</p>
+  </ion-label>
   @if(titulo === "Favoritos" || titulo === "Pendientes") {
-    <button (click)="removeItem()">Eliminar</button>
+    <ion-button slot="end" (click)="removeItem()" fill="outline" color="danger">Eliminar</ion-button>
   }
-</div>
+</ion-item>

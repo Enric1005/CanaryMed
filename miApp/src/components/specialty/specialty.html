@@ -1,14 +1,18 @@
-<main>
-  <div class="specialty-section">
-    <div class="specialty-content">
-      <div class="specialty-image">
-        <img class="specialty" [src]="'assets/' + specialty1?.src" [alt]="specialty1?.name">
-      </div>
-      <div class="specialty-text">
-        <h1>{{ specialty1?.name }}</h1>
-        <h3>{{ specialty1?.desc }}</h3>
-        <button type="button" class="specialty-button" (click)="seleccionarEspecialidad(specialty1)" [routerLink]="['/specialty_page', specialty1.id]"> Ver centros</button>
-      </div>
+<ion-card class="specialty-section">
+  <ion-card-content class="specialty-content">
+    <div class="specialty-image">
+      <img class="specialty" [src]="'assets/' + specialty1?.src" [alt]="specialty1?.name">
     </div>
-  </div>
-</main>
+    <div class="specialty-text">
+      <ion-card-title>{{ specialty1?.name }}</ion-card-title>
+      <ion-card-subtitle>{{ specialty1?.desc }}</ion-card-subtitle>
+      <ion-button
+        type="button"
+        class="specialty-button"
+        (click)="seleccionarEspecialidad(specialty1)"
+        routerLink="/specialty_page" [routerLink]="['/specialty_page', specialty1.id]">
+        Ver centros
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

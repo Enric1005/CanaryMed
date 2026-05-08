@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectorRef, inject, OnDestroy} from '@angular/core';
+import {Component, OnInit, ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { CitaService } from '../../services/cita';
@@ -11,14 +11,20 @@ import { Router } from '@angular/router';
 import {Subscription, take} from 'rxjs';
 import {AppUser} from '../profile/profile';
 import { NgZone } from '@angular/core';
+import {
+  IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+  IonInput, IonSelect, IonSelectOption, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-make-an-appointment',
-  imports: [Header, Footer, FormsModule, NgFor],
+  imports: [Header, Footer, FormsModule, NgFor,
+    IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+    IonInput, IonSelect, IonSelectOption, IonButton
+  ],
   templateUrl: './make-an-appointment.html',
   styleUrl: './make-an-appointment.css',
 })
-
 export class MakeAnAppointment implements OnInit, OnDestroy {
   centroCampo = '';
   especialidadCampo = '';
@@ -32,6 +38,10 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
   fechaSeleccionada = '';
   horaSeleccionada = '';
 
+  appuser: AppUser | null | undefined = undefined;
+  private userSub!: Subscription;
+  private authUnsub!: () => void;
+
   constructor(
     private cita: CitaService,
     private centrosService: CentrosService,
@@ -41,10 +51,6 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
     private auth: Auth,
     private ngZone: NgZone
   ) {}
-
-  appuser: AppUser | null | undefined = undefined;
-  private userSub!: Subscription;
-  private authUnsub!: () => void;
 
   ngOnInit() {
     this.centroCampo = this.cita.centroNombre || '';
@@ -92,7 +98,6 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
       this.horas = [];
       this.horaSeleccionada = '';
     }
-
     this.cdRef.detectChanges();
   }
 
@@ -101,7 +106,6 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
       this.horas = this.medicoSeleccionado.schedule[this.fechaSeleccionada] || [];
       this.horaSeleccionada = '';
     }
-
     this.cdRef.detectChanges();
   }
 
@@ -129,7 +133,6 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
             alert('No se encontró tu usuario');
             return;
           }
-
           const userId = users[0].id;
 
           await this.crudService.addToArray('users', userId, 'pendientes', citaString);

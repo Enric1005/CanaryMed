@@ -7,18 +7,20 @@ import {
   ChangeDetectorRef,
   OnDestroy
 } from '@angular/core';
-
 import { CrudService } from '../../services/crudService';
 import { AppUser } from '../../pages/profile/profile';
 import { Auth } from '@angular/fire/auth';
 import { Subscription } from 'rxjs';
+import {
+  IonItem, IonLabel, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-pending-appointment',
   templateUrl: './pending-appointment.html',
   styleUrl: './pending-appointment.css',
+  imports: [IonItem, IonLabel, IonButton]
 })
-
 export class PendingAppointment implements OnInit, OnDestroy {
   @Input() item: any;
   @Input() titulo: string = '';
@@ -61,26 +63,15 @@ export class PendingAppointment implements OnInit, OnDestroy {
 
     if (this.titulo === "Favoritos") {
       try {
-        await this.crudService.removeFromArray(
-          'users',
-          this.user.id,
-          'favs',
-          this.item
-        );
+        await this.crudService.removeFromArray('users', this.user.id, 'favs', this.item);
         this.delete.emit(this.item);
-
       } catch (err) {
         console.error('Error eliminando favorito:', err);
       }
     }
     else if (this.titulo === "Pendientes") {
       try {
-        await this.crudService.removeFromArray(
-          'users',
-          this.user.id,
-          'pendientes',
-          this.item
-        );
+        await this.crudService.removeFromArray('users', this.user.id, 'pendientes', this.item);
         this.delete.emit(this.item);
       }
       catch (err) {

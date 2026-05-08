@@ -5,19 +5,25 @@ import {FormsModule, NgForm} from '@angular/forms';
 import {ColaboraBase} from '../../components/colabora-base/colabora-base';
 import {Router} from '@angular/router';
 import {Auth} from '@angular/fire/auth';
-import { Subscription} from 'rxjs';
+import {Subscription} from 'rxjs';
 import {AppUser} from '../profile/profile';
 import {CrudService} from '../../services/crudService';
-import { NgZone } from '@angular/core';
+import {NgZone} from '@angular/core';
+import {
+  IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+  IonInput, IonSelect, IonSelectOption, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-work-with-us',
   standalone: true,
-  imports: [Header, Footer, FormsModule, ColaboraBase],
+  imports: [Header, Footer, FormsModule, ColaboraBase,
+    IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+    IonInput, IonSelect, IonSelectOption, IonButton
+  ],
   templateUrl: './work-with-us.html',
   styleUrl: './work-with-us.css',
 })
-
 export class WorkWithUs implements OnInit, OnDestroy {
   constructor(
     private router: Router,
@@ -35,7 +41,6 @@ export class WorkWithUs implements OnInit, OnDestroy {
     this.authUnsub = this.auth.onAuthStateChanged(user => {
       this.ngZone.run(() => {
         if (this.userSub) this.userSub.unsubscribe();
-
         if (user) {
           this.userSub = this.crudService
             .getWhere<AppUser>("users", "uid", "==", user.uid)
@@ -75,16 +80,10 @@ export class WorkWithUs implements OnInit, OnDestroy {
         especialidad,
         creadoEn: new Date()
       });
-
       form.resetForm();
-
     } catch (error: any) {
       alert("Error al enviar el colaborador: " + error.message);
     }
-  }
-
-  goHome() {
-    this.router.navigate([""]);
   }
 
   goRegister() {

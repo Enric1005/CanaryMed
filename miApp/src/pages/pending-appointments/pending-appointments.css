@@ -1,103 +1,26 @@
 .page-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: white;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .text-section3 {
-  width: 100%;
-  max-width: 1025px;  /* 👈 mismo ancho que las tarjetas */
+  margin-bottom: 20px;
 }
 
 .text-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
 }
 
 .text-header h1 {
   margin: 0;
-}
-
-.section-btn {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  font-size: 1rem;
-  cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .appointments-container {
-  width: 100%;
-  max-width: 1025px;  /* 👈 mismo ancho que las tarjetas */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
 }
-
-@media (max-width: 830px) {
-  .page-container {
-    padding: 0 10px;
-  }
-
-  .text-section3 {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .text-header h1 {
-    font-size: 1.3rem;
-  }
-
-  .text-section3 hr {
-    width: 130px;
-    margin-left: 0;
-    border: 1px solid #ccc;
-  }
-
-  .section-btn {
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-
-  .appointments-container {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 830px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-  .text-section3 {
-    width: 74%;
-  }
-
-  .text-header h1 {
-    margin: 0;
-    font-size: 1.3rem;
-    text-align: left;
-  }
-
-  .text-section3 hr {
-    width: 130px;
-    margin-left: 0;
-    border: 1px solid #ccc;
-  }
-
-  .section-btn {
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-}
-

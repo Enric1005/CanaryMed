@@ -1,27 +1,13 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+ion-toolbar {
+  --background: royalblue;
+  --color: white;
+  --padding-top: 30px;
+  --padding-bottom: 30px;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-main {
-  flex: 1;
-}
-
-/* Footer principal */
-footer {
-  background: royalblue;
-  color: white;
-  padding: 50px 0 30px;
-  margin-top: auto;
-  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
+ion-grid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo_section {
@@ -30,69 +16,30 @@ footer {
   align-items: flex-start;
 }
 
-
-.first_line_fo h1 {
-  font-size: 70px;
-  font-weight: 1000;
-  background: whitesmoke;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 10px 0 0 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.social_icons{
+.social_icons {
   display: flex;
-  gap: 20px;
+  gap: 12px;
 }
 
-.social_icons img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.first_line_fo {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.first_line_fo h1 {
-  font-size: 70px;
-  font-weight: 1000;
-  background: whitesmoke;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 30px;
+.social_icons ion-button {
+  --color: white;
 }
 
 .name_of_company {
   text-decoration: none;
-  display: block;
-  line-height: 1;
-  margin: 0;
+}
+
+.name_of_company ion-title {
+  font-size: 70px;
+  font-weight: 1000;
+  background: whitesmoke;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 0;
+  margin-top: 20px;
+  line-height: 1;
 }
 
-/* Contenedor de las secciones de navegación */
-.nav-sections {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-}
-
-/* Estilo común para todas las secciones */
-.seccion1, .seccion2 {
-  min-width: 200px;
-}
-
-/* Títulos de las secciones */
 .seccion1 h3, .seccion2 h3 {
   color: #fff;
   font-size: 18px;
@@ -104,7 +51,6 @@ footer {
   padding-bottom: 10px;
 }
 
-/* Línea decorativa debajo de los títulos */
 .seccion1 h3::after, .seccion2 h3::after {
   content: '';
   position: absolute;
@@ -116,88 +62,53 @@ footer {
   transition: width 0.3s ease;
 }
 
-/* Efecto hover para la línea decorativa */
 .seccion1:hover h3::after, .seccion2:hover h3::after {
   width: 80px;
 }
 
-/* Estilos para la navegación */
-.seccion1 nav ul, .seccion2 nav ul {
-  list-style: none;
+.seccion1 ion-list, .seccion2 ion-list {
+  background: transparent;
 }
 
-.seccion1 nav ul,
-.seccion2 nav ul {
-  list-style: none;
-  padding-left: 0;
-}
-/* Estilos para los enlaces */
-.seccion1 nav ul li a, .seccion2 nav ul li a {
-  color: #333333;
-  text-decoration: none;
+.seccion1 ion-item, .seccion2 ion-item {
+  --background: transparent;
+  --color: #333;
+  --padding-start: 0;
+  --inner-padding-end: 0;
   font-size: 14px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  position: relative;
+  --min-height: 36px;
+}
+
+.seccion1 ion-item::part(native), .seccion2 ion-item::part(native) {
+  padding-left: 0;
 }
 
 @media (max-width: 830px) {
-
-  footer {
-    padding: 40px 0 20px;
-  }
-
   .logo_section {
     align-items: center;
-    width: 100%;
   }
 
   .social_icons {
     justify-content: center;
-    flex-wrap: wrap;
   }
 
-  .social_icons img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .first_line_fo {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .first_line_fo h1 {
+  .name_of_company ion-title {
     font-size: 60px;
-    margin-top: 10px;
+    text-align: center;
   }
 
-  .nav-sections {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
+  .seccion1, .seccion2 {
+    text-align: center;
   }
 
-  .seccion1,
-  .seccion2 {
-    min-width: auto;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .seccion1 nav ul li,
-  .seccion2 nav ul li {
-    margin-bottom: 10px;
-  }
-
-  .seccion1 h3::after,
-  .seccion2 h3::after {
+  .seccion1 h3::after, .seccion2 h3::after {
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
   }
-}
 
+  .seccion1 ion-item, .seccion2 ion-item {
+    --color: #333;
+    justify-content: center;
+  }
+}

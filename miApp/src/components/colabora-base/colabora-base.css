@@ -1,100 +1,17 @@
-.formulario input,
-.formulario select {
-  width: 100%;
-  height: 35px;
-  margin-bottom: 15px;
-  padding: 5px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-
 .text-section {
-  padding: 30px 80px;
-}
-
-.text-section2 {
-  padding: 30px 80px;
-}
-
-.text-section4 {
-  padding: 30px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .text-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 20px;
-
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.title-wrapper h1 {
-  color: red;
-  font-size: 48px;
+.text-header h1 {
+  font-size: 2rem;
   margin: 0;
-  display: inline-block;
-}
-
-.title-line {
-  display: block;
-  border: none;
-  height: 2px;
-  background-color: #aaa;
-  width: 100%;
-  margin: 0;
-}
-
-.section-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-hr {
-  margin: 20px 0;
-  border: none;
-  height: 2px;
-  background-color: #aaa;
-  width: 70%;
-}
-
-.text-section p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-.text-section2 p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.text-section4 p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-@media (max-width: 830px) {
-
-  .text-section {
-    padding: 20px;
-  }
-  .text-section2 {
-    padding: 20px;
-  }
-  .text-section4 {
-    padding: 20px;
-  }
-
-  .text-header {
-    justify-content: space-between;
-  }
-
-  .title-wrapper {
-    flex: 1;
-  }
-
-  .section-btn {
-    margin-left: auto;
-  }
-
 }

@@ -1,19 +1,25 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import {Router, RouterLink} from '@angular/router';
+import {Router} from '@angular/router';
 import { CitaService } from '../../services/cita';
 import {getAuth} from '@angular/fire/auth';
-import { NgIf } from '@angular/common';
-
+import {
+  IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
+  IonButton, IonText, IonModal,
+  IonHeader, IonToolbar, IonTitle, IonContent
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-specialty-center',
   standalone: true,
   templateUrl: './specialty-center.html',
   styleUrl: './specialty-center.css',
-  imports: [NgIf]
+  imports: [
+    IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
+    IonButton, IonText, IonModal,
+    IonHeader, IonToolbar, IonTitle, IonContent
+  ]
 })
 export class SpecialtyCenter implements OnChanges {
-
   @Input() data: any;
   showLoginPopup = false;
 
@@ -36,11 +42,9 @@ export class SpecialtyCenter implements OnChanges {
         this.cita.especialidadNombre = this.data.name;
       } else {
         const centroId = this.data.name?.replace(/\s+/g, '_');
-
         this.cita.centroId = centroId;
         this.cita.centroNombre = this.data.name;
       }
-
       this.router.navigate(['/make-an-appointment']);
     } else {
       this.showLoginPopup = true;
@@ -53,19 +57,15 @@ export class SpecialtyCenter implements OnChanges {
   }
 
   private extractDoctor() {
-
     const doctor = this.data?.doctor;
-
     if (!doctor) {
       this.reset();
       return;
     }
-
     if (typeof doctor === 'string') {
       this.doctorName = doctor;
       return;
     }
-
     if (Array.isArray(doctor)) {
       const first = doctor[0];
       this.doctorName = first?.name || first?.doctor || '';
@@ -73,7 +73,6 @@ export class SpecialtyCenter implements OnChanges {
       this.doctorHours = first?.hours || [];
       return;
     }
-
     this.doctorName = doctor.name || '';
     this.doctorSchedule = doctor.schedule || [];
     this.doctorHours = doctor.hours || [];

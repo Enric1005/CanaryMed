@@ -1,53 +1,65 @@
-<app-header></app-header>
+<ion-header>
+  <app-header></app-header>
+</ion-header>
 
-@if (userLoaded) {
-  <div class="content-wrapper">
+<ion-content>
+  @if (userLoaded) {
+    <div class="content-wrapper">
+      <div class="profile-left">
+        <ion-card class="profile-card">
+          <ion-card-content>
+            <div class="profile-top">
+              <ion-avatar>
+                <img src="assets/Usuario.webp" alt="Foto de perfil">
+              </ion-avatar>
+              <div class="profile-info">
+                <h3>{{user.name}}</h3>
+                <h4>{{user.DNI}}</h4>
+              </div>
+            </div>
 
-    <div class="profile-left">
-      <div class="section profile-card">
-        <div class="profile-top">
-          <img src="assets/Usuario.webp" alt="Foto de perfil" class="profile-photo">
-          <div class="profile-info">
-            <h3>{{user.name}}</h3>
-            <h4>{{user.DNI}}</h4>
-          </div>
+            <div class="profile-text">
+              <ion-item lines="none">
+                <ion-label>{{user.surname}}</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-label>{{user.email}}</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-label>{{user.phoneNumber}}</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-label>{{user.role}}</ion-label>
+              </ion-item>
+            </div>
+
+            <div class="profile-buttons">
+              <ion-button routerLink="/register-edit">Editar</ion-button>
+              <ion-button fill="outline" (click)="logout()">Cerrar Sesión</ion-button>
+            </div>
+            <hr>
+            <ion-button expand="block" color="danger" fill="outline" id="delete_btn" (click)="deleteMode()">Eliminar Cuenta</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="profile-right">
+        <div class="profile-sections">
+          <app-profile-section titulo="Favoritos" [items]="user.favs"></app-profile-section>
         </div>
-
-        <div class="profile-text">
-          <p id="texto1">{{user.surname}}</p>
-          <div class="divider"></div>
-          <p id="texto2">{{user.email}}</p>
-          <div class="divider"></div>
-          <p id="texto3">{{user.phoneNumber}}</p>
-          <div class="divider"></div>
-          <p id="texto4">{{user.role}}</p>
-          <div class="divider"></div>
+        <div class="profile-sections">
+          <app-profile-section titulo="Pendientes" [items]="user.pendientes"></app-profile-section>
         </div>
-
-        <div class="profile-buttons">
-          <button routerLink="/register-edit" id="btn_esp">Editar</button>
-          <button id="log_out_btn" (click)="logout()">Cerrar Sesión</button>
+        <div class="profile-sections">
+          <app-profile-section titulo="Historial" [items]="user.hist"></app-profile-section>
         </div>
-        <hr>
-        <button id="delete_btn" (click)="deleteMode()">Eliminar Cuenta</button>
       </div>
     </div>
+  } @else {
+    <app-loading-spinner/>
+  }
+</ion-content>
 
-    <div class="profile-right">
-      <div class="profile-sections">
-        <app-profile-section titulo="Favoritos" [items]="user.favs"></app-profile-section>
-      </div>
-      <hr>
-      <div class="profile-sections">
-        <app-profile-section titulo="Pendientes" [items]="user.pendientes"></app-profile-section>
-      </div>
-      <hr>
-      <div class="profile-sections">
-        <app-profile-section titulo="Historial" [items]="user.hist"></app-profile-section>
-      </div>
-    </div>
-
-  </div>
-} @else {
-  <app-loading-spinner/>
-}
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer>

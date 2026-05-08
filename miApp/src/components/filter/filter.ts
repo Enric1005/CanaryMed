@@ -1,10 +1,14 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import {
+  IonContent, IonItem, IonLabel, IonCheckbox, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.html',
   styleUrl: './filter.css',
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  imports: [IonContent, IonItem, IonLabel, IonCheckbox, IonButton]
 })
 export class Filter {
   @Input() filtro: { options: string[] } = { options: [] };

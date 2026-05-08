@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
-import {Auth, signInWithEmailAndPassword} from '@angular/fire/auth';
-import { setPersistence, browserLocalPersistence } from '@angular/fire/auth';
+import {Auth, signInWithEmailAndPassword, setPersistence, browserLocalPersistence} from '@angular/fire/auth';
+import {
+  IonContent, IonItem, IonLabel, IonInput, IonButton
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink],
+  imports: [RouterLink, IonContent, IonItem, IonLabel, IonInput, IonButton],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
-
 export class Login {
   constructor(
     private location: Location,

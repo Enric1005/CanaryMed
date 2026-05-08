@@ -6,6 +6,10 @@ import {Auth, deleteUser, signOut} from '@angular/fire/auth';
 import { Subscription } from 'rxjs';
 import { CrudService } from '../../services/crudService';
 import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
+import {
+  IonHeader, IonContent, IonFooter, IonCard, IonCardContent,
+  IonAvatar, IonItem, IonLabel, IonButton
+} from '@ionic/angular/standalone';
 
 export interface AppUser {
   id?: string;
@@ -16,20 +20,22 @@ export interface AppUser {
   DNI: string;
   phoneNumber: string;
   role: 'Paciente' | 'Empresa' | null;
-  favs: [],
-  pendientes: [],
-  hist: []
+  favs: string[];
+  pendientes: string[];
+  hist: string[];
 }
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [Header, ProfileSection, RouterLink, LoadingSpinner],
+  imports: [Header, ProfileSection, RouterLink, LoadingSpinner,
+    IonHeader, IonContent, IonFooter, IonCard, IonCardContent,
+    IonAvatar, IonItem, IonLabel, IonButton
+  ],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
 export class Profile implements OnInit, OnDestroy {
-
   user!: AppUser;
   userLoaded = false;
   subscription!: Subscription;
@@ -101,23 +107,20 @@ export class Profile implements OnInit, OnDestroy {
       }
     }
   }
+
   getFechaCita(item: string): Date | null {
     const match = item.match(/^(\d{4}-\d{2}-\d{2}), (\d{2}:\d{2})/);
     if (!match) return null;
-
     const [_, fecha, hora] = match;
     return new Date(`${fecha}T${hora}:00`);
   }
 
   async checkYMoverExpiradas() {
     if (!this.user?.id) return;
-
     const ahora = new Date();
-
     for (const cita of this.user.pendientes ?? []) {
       const fechaCita = this.getFechaCita(cita);
       if (!fechaCita) continue;
-
       if (fechaCita < ahora) {
         await this.crudService.removeFromArray('users', this.user.id, 'pendientes', cita);
         await this.crudService.addToArray('users', this.user.id, 'hist', cita);

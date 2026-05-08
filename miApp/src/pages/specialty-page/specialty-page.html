@@ -1,28 +1,34 @@
-<app-header/>
+<ion-header>
+  <app-header/>
+</ion-header>
 
-@if (datos$ | async; as datos) {
-  <main class="text-section4">
-    <div class="text-header">
-      <h1>{{ datos.name }}</h1>
-      <button class="section-btn" routerLink="/specialtys">Volver atrás</button>
+<ion-content>
+  @if (datos$ | async; as datos) {
+    <div class="text-section4">
+      <div class="text-header">
+        <h1>{{ datos.name }}</h1>
+        <ion-button routerLink="/specialtys">Volver atrás</ion-button>
+      </div>
+      <hr>
+      <ion-text><p>{{ datos.description }}</p></ion-text>
     </div>
-    <hr>
-    <p>{{ datos.description }}</p>
-  </main>
 
-  <main id="centers_container">
-    @if (origen === 'centro') {
-      @for (item of datos.specialities; track item.name) {
-        <app-specialty-center [data]="item"/>
+    <div id="centers_container">
+      @if (origen === 'centro') {
+        @for (item of datos.specialities; track item.name) {
+          <app-specialty-center [data]="item"/>
+        }
+      } @else {
+        @for (item of datos.centers; track item.name) {
+          <app-specialty-center [data]="item"/>
+        }
       }
-    } @else {
-      @for (item of datos.centers; track item.name) {
-        <app-specialty-center [data]="item"/>
-      }
-    }
-  </main>
-} @else {
-  <app-loading-spinner/>
-}
+    </div>
+  } @else {
+    <app-loading-spinner/>
+  }
+</ion-content>
 
-<app-footer/>
+<ion-footer>
+  <app-footer/>
+</ion-footer>

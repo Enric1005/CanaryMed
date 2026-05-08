@@ -1,46 +1,40 @@
-<main>
-  <div class="specialty_center-section">
-
-    <div class="specialty_center-content">
-
-      <!-- imagen -->
-      <div class="specialty_center-image">
-        <img
-          [src]="data?.src ? 'assets/' + data.src : 'assets/' + data?.image"
-          alt="Imagen">
-      </div>
-
-      <!-- texto -->
-      <div class="specialty_center-text">
-        <h1>{{ data?.name }}</h1>
-
-        <p class="price">💰 {{ data?.price }}</p>
-        <p class="location">📍 {{ data?.location }}</p>
-        <p class="doctor">👨‍⚕️ {{ doctorName }}</p>
-      </div>
-
-      <!-- botón -->
-      <button
-        type="button"
-        class="specialty_center-button"
-        (click)="reservar()">
-        Reservar
-      </button>
-
+<ion-card class="specialty_center-section">
+  <ion-card-content class="specialty_center-content">
+    <div class="specialty_center-image">
+      <img
+        [src]="data?.src ? 'assets/' + data.src : 'assets/' + data?.image"
+        alt="Imagen">
     </div>
 
-  </div>
-
-  <div class="popup-overlay" *ngIf="showLoginPopup">
-    <div class="popup">
-      <h2>Inicia sesión</h2>
-      <p>Debes registrarte o iniciar sesión para poder reservar una cita.</p>
-
-      <div class="popup-buttons">
-        <button (click)="goToLogin()">Ir al login</button>
-        <button (click)="showLoginPopup = false">Cancelar</button>
-      </div>
+    <div class="specialty_center-text">
+      <ion-card-title>{{ data?.name }}</ion-card-title>
+      <ion-card-subtitle>💰 {{ data?.price }}</ion-card-subtitle>
+      <ion-text><p class="location">📍 {{ data?.location }}</p></ion-text>
+      <ion-text><p class="doctor">👨‍⚕️ {{ doctorName }}</p></ion-text>
     </div>
-  </div>
 
-</main>
+    <ion-button
+      type="button"
+      class="specialty_center-button"
+      (click)="reservar()">
+      Reservar
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-modal [isOpen]="showLoginPopup" (didDismiss)="showLoginPopup = false">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Inicia sesión</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="ion-padding">
+        <p>Debes registrarte o iniciar sesión para poder reservar una cita.</p>
+        <ion-button expand="block" (click)="goToLogin()">Ir al login</ion-button>
+        <ion-button expand="block" fill="outline" (click)="showLoginPopup = false">Cancelar</ion-button>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

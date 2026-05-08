@@ -11,10 +11,14 @@ import {CrudService} from '../../services/crudService';
 import {AppUser} from '../profile/profile';
 import {Subscription} from 'rxjs';
 import { EmailAuthProvider} from 'firebase/auth';
+import {
+  IonContent, IonItem, IonLabel, IonInput, IonSelect,
+  IonSelectOption, IonCheckbox, IonButton
+} from '@ionic/angular/standalone';
 
 export interface User {
   id?: string;
-  uid?: string
+  uid?: string;
   name: string;
   surname: string;
   email: string;
@@ -30,7 +34,10 @@ export interface User {
   selector: 'app-register-edit',
   templateUrl: './register-edit.html',
   styleUrl: './register-edit.css',
-  imports: [FormsModule],
+  imports: [FormsModule,
+    IonContent, IonItem, IonLabel, IonInput, IonSelect,
+    IonSelectOption, IonCheckbox, IonButton
+  ],
   standalone: true
 })
 export class RegisterEdit implements OnInit, OnDestroy {
@@ -110,9 +117,7 @@ export class RegisterEdit implements OnInit, OnDestroy {
       });
 
       await signOut(this.auth);
-
       await this.router.navigate(['/login']);
-
 
     } catch (error: any) {
       switch (error.code) {

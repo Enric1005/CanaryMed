@@ -10,16 +10,19 @@ import { Observable, BehaviorSubject, combineLatest, map, of } from 'rxjs';
 import { LoadingSpinner } from '../../components/loading-spinner/loading-spinner';
 import { getAuth } from '@angular/fire/auth';
 import { CrudService } from '../../services/crudService';
+import {
+  IonHeader, IonContent, IonFooter
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-centers',
   standalone: true,
-  imports: [CommonModule, Header, Center, Footer, Filter, LoadingSpinner],
+  imports: [CommonModule, Header, Center, Footer, Filter, LoadingSpinner,
+    IonHeader, IonContent, IonFooter],
   templateUrl: './centers.html',
   styleUrl: './centers.css',
 })
 export class Centers {
-
   private filters$ = new BehaviorSubject<string[]>([]);
   centros$: Observable<CenterModel[]>;
   filteredCentros$: Observable<CenterModel[]>;

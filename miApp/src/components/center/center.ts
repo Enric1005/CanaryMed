@@ -3,25 +3,30 @@ import { FormsModule } from '@angular/forms';
 import {Router, RouterLink} from '@angular/router';
 import { CitaService } from '../../services/cita';
 import {getAuth} from '@angular/fire/auth';
-import {NgIf} from '@angular/common';
-import {AuthService} from '../../services/auth';
 import {CrudService} from '../../services/crudService';
 import {take} from 'rxjs';
+import {
+  IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
+  IonButton, IonCheckbox, IonText, IonModal,
+  IonHeader, IonToolbar, IonTitle, IonContent
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-center',
   standalone: true,
-  imports: [FormsModule, RouterLink, NgIf],
+  imports: [FormsModule, RouterLink,
+    IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
+    IonButton, IonCheckbox, IonText, IonModal,
+    IonHeader, IonToolbar, IonTitle, IonContent
+  ],
   templateUrl: './center.html',
   styleUrl: './center.css',
 })
 export class Center {
   @Input() center: any;
-  showLoginPopup = false
+  showLoginPopup = false;
 
-  constructor(private cita: CitaService, private router: Router, private crudService: CrudService,
-  ) {}
-
+  constructor(private cita: CitaService, private router: Router, private crudService: CrudService) {}
 
   handleFavoriteClick(event: MouseEvent, center: any) {
     const user = getAuth().currentUser;
@@ -30,31 +35,31 @@ export class Center {
       event.preventDefault();
       this.showLoginPopup = true;
       return;
-    } else {
-      const favoritoString = `${center.name} - ${this.center.sitio} - ${this.center.precio}`;
-      try {
-        this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
-          .pipe(take(1))
-          .subscribe(async (users) => {
-            if (users.length === 0) {
-              alert('No se encontró tu usuario');
-              return;
-            }
-            const userId = users[0].id;
-            const favs: string[] = users[0].favs ?? [];
-            const yaEsFavorito = favs.includes(favoritoString);
+    }
 
-            if (!yaEsFavorito) {
-              await this.crudService.addToArray('users', userId, 'favs', favoritoString);
-            } else {
-              await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
-            }
-            center.isFavorite = !yaEsFavorito;
-          });
-      } catch (error) {
-        console.error('Error al guardar su centro como favorito:', error);
-        alert('Hubo un error al guardar su centro como favorito');
-      }
+    const favoritoString = `${center.name} - ${this.center.sitio} - ${this.center.precio}`;
+    try {
+      this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
+        .pipe(take(1))
+        .subscribe(async (users) => {
+          if (users.length === 0) {
+            alert('No se encontró tu usuario');
+            return;
+          }
+          const userId = users[0].id;
+          const favs: string[] = users[0].favs ?? [];
+          const yaEsFavorito = favs.includes(favoritoString);
+
+          if (!yaEsFavorito) {
+            await this.crudService.addToArray('users', userId, 'favs', favoritoString);
+          } else {
+            await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
+          }
+          center.isFavorite = !yaEsFavorito;
+        });
+    } catch (error) {
+      console.error('Error al guardar su centro como favorito:', error);
+      alert('Hubo un error al guardar su centro como favorito');
     }
   }
 
@@ -62,7 +67,6 @@ export class Center {
     this.showLoginPopup = false;
     this.router.navigate(['/login']);
   }
-
 
   seleccionarCentro(centro: any) {
     this.cita.centroId = centro.id;

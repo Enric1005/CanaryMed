@@ -5,21 +5,25 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CentrosService } from '../../services/centros';
 import { EspecialidadesService } from '../../services/especialidades';
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { SpecialtyCenter } from '../../components/specialty-center/specialty-center';
 import { CitaService } from '../../services/cita';
 import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
+import {
+  IonHeader, IonContent, IonFooter, IonButton, IonText
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-specialty-page',
-  imports: [Footer, Header, RouterLink, AsyncPipe, SpecialtyCenter, LoadingSpinner],
+  imports: [Footer, Header, RouterLink, AsyncPipe, SpecialtyCenter, LoadingSpinner,
+    IonHeader, IonContent, IonFooter, IonButton, IonText
+  ],
   templateUrl: './specialty-page.html',
   styleUrl: './specialty-page.css',
 })
 export class SpecialtyPage implements OnInit, OnDestroy {
   datos$!: Observable<any>;
   origen: string | null = null;
-
   private sub: any;
 
   constructor(

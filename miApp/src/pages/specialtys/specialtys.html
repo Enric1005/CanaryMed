@@ -1,17 +1,24 @@
-<app-header></app-header>
-<app-filter
-  [filtro]="{ options: ['Respiratorio', 'Quirúrgico', 'No Quirúrgico', 'Diagnóstico', 'Medicina General', 'Oncología Médica'] }" size="small"
-  (apply)="applyFilter($event)">
-</app-filter>
+<ion-header>
+  <app-header></app-header>
+</ion-header>
 
-@if (filteredEspecialidades$ | async; as especialidades) {
-  <div class="container">
-    @for (especialidad of especialidades; track $index) {
-      <app-specialty [specialty1]="especialidad"></app-specialty>
-    }
-  </div>
-} @else {
-  <app-loading-spinner/>
-}
+<ion-content>
+  <app-filter
+    [filtro]="{ options: ['Respiratorio', 'Quirúrgico', 'No Quirúrgico', 'Diagnóstico', 'Medicina General', 'Oncología Médica'] }" size="small"
+    (apply)="applyFilter($event)">
+  </app-filter>
 
-<app-footer></app-footer>
+  @if (filteredEspecialidades$ | async; as especialidades) {
+    <div class="container">
+      @for (especialidad of especialidades; track $index) {
+        <app-specialty [specialty1]="especialidad"></app-specialty>
+      }
+    </div>
+  } @else {
+    <app-loading-spinner/>
+  }
+</ion-content>
+
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer>
