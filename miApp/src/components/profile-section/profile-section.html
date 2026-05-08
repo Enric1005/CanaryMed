@@ -1,0 +1,18 @@
+<div class="section-header">
+  <span>{{titulo}}</span>
+</div>
+<div class="divider"></div>
+<div class="card-body">
+  <ul>
+    @for(item of items.slice(0, 3); track item) {
+      <li>
+        {{item}}
+      </li>
+    }
+  </ul>
+</div>
+<div class="divider"></div>
+<div class="card-footer">
+  <p><a (click)="verMas()" class="section-link" target="_blank">Ver más</a></p>
+</div>
+

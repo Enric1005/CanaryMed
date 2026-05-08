@@ -1,0 +1,14 @@
+<main>
+  <div class="specialty-section">
+    <div class="specialty-content">
+      <div class="specialty-image">
+        <img class="specialty" [src]="'assets/' + specialty1?.src" [alt]="specialty1?.name">
+      </div>
+      <div class="specialty-text">
+        <h1>{{ specialty1?.name }}</h1>
+        <h3>{{ specialty1?.desc }}</h3>
+        <button type="button" class="specialty-button" (click)="seleccionarEspecialidad(specialty1)" [routerLink]="['/specialty_page', specialty1.id]"> Ver centros</button>
+      </div>
+    </div>
+  </div>
+</main>

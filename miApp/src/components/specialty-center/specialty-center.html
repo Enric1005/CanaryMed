@@ -1,0 +1,46 @@
+<main>
+  <div class="specialty_center-section">
+
+    <div class="specialty_center-content">
+
+      <!-- imagen -->
+      <div class="specialty_center-image">
+        <img
+          [src]="data?.src ? 'assets/' + data.src : 'assets/' + data?.image"
+          alt="Imagen">
+      </div>
+
+      <!-- texto -->
+      <div class="specialty_center-text">
+        <h1>{{ data?.name }}</h1>
+
+        <p class="price">💰 {{ data?.price }}</p>
+        <p class="location">📍 {{ data?.location }}</p>
+        <p class="doctor">👨‍⚕️ {{ doctorName }}</p>
+      </div>
+
+      <!-- botón -->
+      <button
+        type="button"
+        class="specialty_center-button"
+        (click)="reservar()">
+        Reservar
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="popup-overlay" *ngIf="showLoginPopup">
+    <div class="popup">
+      <h2>Inicia sesión</h2>
+      <p>Debes registrarte o iniciar sesión para poder reservar una cita.</p>
+
+      <div class="popup-buttons">
+        <button (click)="goToLogin()">Ir al login</button>
+        <button (click)="showLoginPopup = false">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+</main>
