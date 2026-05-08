@@ -1,0 +1,15 @@
+<app-header></app-header>
+<app-filter
+  [filtro]="{options:['Precio Bajo', 'Precio Medio', 'Precio Alto', 'Norte', 'Sur', 'Ciudad']}" size="large"
+  (apply)="applyFilter($event)">
+</app-filter>
+
+@if (filteredCentros$ | async; as centros) {
+  @for (centro of centros; track centro.id) {
+    <app-center [center]="centro"></app-center>
+  }
+} @else {
+  <app-loading-spinner/>
+}
+
+<app-footer></app-footer>
