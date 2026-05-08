@@ -1,0 +1,5 @@
+.appointment_block {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --inner-padding-end: 8px;
+}

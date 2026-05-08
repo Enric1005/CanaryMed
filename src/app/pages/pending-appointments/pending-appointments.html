@@ -1,0 +1,25 @@
+<ion-header>
+  <app-header/>
+</ion-header>
+
+<ion-content>
+  <div class="page-container">
+    <div class="text-section3">
+      <div class="text-header">
+        <h1>{{titulo}}</h1>
+        <ion-button routerLink="/profile">Volver Atrás</ion-button>
+      </div>
+      <hr>
+    </div>
+
+    <div class="appointments-container">
+      @for (item of items ; track item) {
+        <app-pending-appointment [item]="item" (delete)="deleteItem($event)" [titulo]="titulo"></app-pending-appointment>
+      }
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <app-footer/>
+</ion-footer>

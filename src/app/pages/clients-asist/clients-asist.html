@@ -1,0 +1,29 @@
+<ion-header>
+  <app-header></app-header>
+</ion-header>
+
+<ion-content>
+  <div id="main_asist_header">
+    <h1>Asistencia Cliente</h1>
+
+    <div class="contenedor">
+      <ion-item>
+        <ion-label position="stacked">Escriba su consulta o queja</ion-label>
+        <ion-textarea
+          [(ngModel)]="consulta"
+          placeholder="Empieza aquí..."
+          required
+        ></ion-textarea>
+      </ion-item>
+      <div class="boton">
+        <ion-button (click)="enviar()" [disabled]="cargando || !consulta.trim()">
+          {{ cargando ? 'Enviando...' : 'Subir' }}
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer>

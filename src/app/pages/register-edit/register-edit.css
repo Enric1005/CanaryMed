@@ -1,0 +1,20 @@
+.text {
+  text-align: center;
+  padding: 40px 20px 0;
+}
+
+.text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.contenedor2 {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.boton {
+  margin-top: 24px;
+  text-align: center;
+}

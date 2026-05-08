@@ -1,0 +1,22 @@
+.image-section {
+  background: linear-gradient(135deg, #2A7DE1, #174a84);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.overlay {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.overlay p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}

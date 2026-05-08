@@ -1,0 +1,22 @@
+.filter_zone {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_zone.small {
+  max-width: 300px;
+}
+
+.filter_zone.large {
+  max-width: 600px;
+}
+
+.filter_zone2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+ion-item {
+  --min-height: 40px;
+}
