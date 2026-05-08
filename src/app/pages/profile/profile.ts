@@ -1,5 +1,6 @@
 import {ChangeDetectorRef, Component, inject, OnDestroy, OnInit} from '@angular/core';
 import { Header } from '../../components/header/header';
+import { Footer } from '../../components/footer/footer';
 import { ProfileSection } from '../../components/profile-section/profile-section';
 import { Router, RouterLink } from '@angular/router';
 import {Auth, deleteUser, signOut} from '@angular/fire/auth';
@@ -28,7 +29,7 @@ export interface AppUser {
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [Header, ProfileSection, RouterLink, LoadingSpinner,
+  imports: [Header, Footer, ProfileSection, RouterLink, LoadingSpinner,
     IonHeader, IonContent, IonFooter, IonCard, IonCardContent,
     IonAvatar, IonItem, IonLabel, IonButton
   ],

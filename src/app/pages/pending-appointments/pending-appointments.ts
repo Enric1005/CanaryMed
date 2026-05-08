@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, inject, OnDestroy, OnInit} from '@angular/
 import {PendingAppointment} from '../../components/pending-appointment/pending-appointment';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Header} from '../../components/header/header';
+import {Footer} from '../../components/footer/footer';
 import {CrudService} from '../../services/crudService';
 import {Auth} from '@angular/fire/auth';
 import {AppUser} from '../profile/profile';
@@ -13,7 +14,7 @@ import {
 
 @Component({
   selector: 'app-pending-appointments',
-  imports: [PendingAppointment, RouterLink, Header,
+  imports: [PendingAppointment, RouterLink, Header, Footer,
     IonHeader, IonContent, IonFooter, IonButton
   ],
   templateUrl: './pending-appointments.html',
