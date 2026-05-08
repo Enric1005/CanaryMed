@@ -1,0 +1,134 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   ESTADO NO LOGEADO
+========================= */
+.no-login {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+}
+
+.no-login button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.no-login button:hover {
+  background-color: #555;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+.formulario {
+  width: 400px;
+  max-width: 90%;
+  background-color: #E8F2FF;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+.formulario h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  height: 38px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: none;
+}
+
+/* focus bonito */
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #2b6cff;
+}
+
+/* BOTÓN */
+.boton {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario button {
+  width: 130px;
+  height: 38px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  margin-top: 10px;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.formulario button:hover {
+  background-color: #555;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 830px) {
+  .formulario {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .formulario h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .formulario input,
+  .formulario select {
+    height: 40px;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+
+  .no-login {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .no-login button {
+    width: 80%;
+  }
+}

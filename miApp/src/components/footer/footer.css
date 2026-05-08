@@ -1,0 +1,203 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer principal */
+footer {
+  background: royalblue;
+  color: white;
+  padding: 50px 0 30px;
+  margin-top: auto;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.logo_section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.first_line_fo h1 {
+  font-size: 70px;
+  font-weight: 1000;
+  background: whitesmoke;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.social_icons{
+  display: flex;
+  gap: 20px;
+}
+
+.social_icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.first_line_fo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.first_line_fo h1 {
+  font-size: 70px;
+  font-weight: 1000;
+  background: whitesmoke;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 30px;
+}
+
+.name_of_company {
+  text-decoration: none;
+  display: block;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de las secciones de navegación */
+.nav-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+/* Estilo común para todas las secciones */
+.seccion1, .seccion2 {
+  min-width: 200px;
+}
+
+/* Títulos de las secciones */
+.seccion1 h3, .seccion2 h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Línea decorativa debajo de los títulos */
+.seccion1 h3::after, .seccion2 h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: yellow;
+  transition: width 0.3s ease;
+}
+
+/* Efecto hover para la línea decorativa */
+.seccion1:hover h3::after, .seccion2:hover h3::after {
+  width: 80px;
+}
+
+/* Estilos para la navegación */
+.seccion1 nav ul, .seccion2 nav ul {
+  list-style: none;
+}
+
+.seccion1 nav ul,
+.seccion2 nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* Estilos para los enlaces */
+.seccion1 nav ul li a, .seccion2 nav ul li a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+@media (max-width: 830px) {
+
+  footer {
+    padding: 40px 0 20px;
+  }
+
+  .logo_section {
+    align-items: center;
+    width: 100%;
+  }
+
+  .social_icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social_icons img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .first_line_fo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .first_line_fo h1 {
+    font-size: 60px;
+    margin-top: 10px;
+  }
+
+  .nav-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .seccion1,
+  .seccion2 {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .seccion1 nav ul li,
+  .seccion2 nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .seccion1 h3::after,
+  .seccion2 h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+}
+

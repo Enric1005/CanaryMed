@@ -1,0 +1,59 @@
+<header>
+  <div class="zero_line">
+  </div>
+
+  <div class="first_line">
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+    <a class="name_of_company" routerLink="/" id="logo">
+      <h1>CanaryMed</h1>
+    </a>
+
+    <div class="center_group">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Busca Centro/Especialidad"
+        class="search-bar"
+        [(ngModel)]="searchText"
+        (input)="onSearch()">
+
+      @if (resultados.length > 0) {
+        <ul class="results">
+          @for (item of resultados; track item.id) {
+            <li (click)="selectItem(item)">
+              {{ item.name }}
+            </li>
+          }
+        </ul>
+      }
+
+      <button id="filterButton" class="filter-btn" (click)="buscar()">
+        Buscar
+      </button>
+    </div>
+
+    <button class="btn_user" id="btn_user"  (click)="goToProfile()">
+      @if (!isLoggedIn) {
+        <img
+          class="usuario"
+          src="assets/Usuario.webp"/>
+      } @else {
+        <img
+          class="usuario"
+          src="assets/icono_check.png"/>
+      }
+    </button>
+  </div>
+
+  <div class="second_line">
+    <ul id="navMenu" [class.show]="menuAbierto">
+      <li><a routerLink="/centers">Centros</a></li>
+      <li><a routerLink="/specialtys">Especialidades</a></li>
+      <li><a routerLink="/work-with-us">Trabaja con nosotros</a></li>
+      <li><a routerLink="/about-us">Sobre nosotros</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-overlay"></div>
+</header>

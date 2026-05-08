@@ -1,0 +1,147 @@
+.center-button {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  margin-top: 130px;
+}
+
+.center-section {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #E8F2FF;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* IMPORTANTE para la estrella */
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.center-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+
+.center-text {
+  flex: 1;
+}
+
+.center-text h1 {
+  margin: 0;
+}
+
+.center-text h3 {
+  margin-top: 1px;
+  font-weight: normal;
+  color: #555;
+}
+
+.center-text p {
+  margin-top: 80px;
+}
+
+.favorite {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.favorite input {
+  display: none;
+}
+
+.favorite label {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.favorite label::before {
+  content: "☆";
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.favorite input:checked + label::before {
+  content: "★";
+  color: gold;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-buttons button {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-buttons button:first-child {
+  background-color: #2A7DE1;
+  color: white;
+}
+
+.popup-buttons button:last-child {
+  background-color: #ccc;
+}
+
+
+/* 📱 RESPONSIVE */
+@media (max-width: 830px) {
+  .center-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .center-image img {
+    width: 200px;
+  }
+
+  .center-text p {
+    margin-top: 10px;
+  }
+
+  .center-button {
+    margin-top: 10px;
+  }
+}

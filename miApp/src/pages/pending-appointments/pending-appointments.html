@@ -1,0 +1,17 @@
+<app-header/>
+<div class="page-container">
+
+  <main class="text-section3">
+    <div class="text-header">
+      <h1>{{titulo}}</h1>
+      <button type="button" class="section-btn" routerLink="/profile">Volver Atrás</button>
+    </div>
+    <hr>
+  </main>
+
+  <div class="appointments-container">
+    @for (item of items ; track item) {
+      <app-pending-appointment [item]="item" (delete)="deleteItem($event)" [titulo]="titulo"></app-pending-appointment>
+    }
+  </div>
+</div>
