@@ -37,9 +37,11 @@
           name="medico"
           required>
           <ion-select-option [value]="''">Selecciona un médico</ion-select-option>
-          <ion-select-option *ngFor="let m of medicos; let i = index" [value]="i">
-            {{ m.name }}
-          </ion-select-option>
+          @for (m of medicos; track i; let i = $index) {
+            <ion-select-option [value]="i">
+              {{ m.name }}
+            </ion-select-option>
+          }
         </ion-select>
       </ion-item>
 
@@ -53,9 +55,11 @@
           [disabled]="!medicoSeleccionado"
           required>
           <ion-select-option value="">Selecciona una fecha</ion-select-option>
-          <ion-select-option *ngFor="let f of fechas" [value]="f">
-            {{ f }}
-          </ion-select-option>
+          @for (f of fechas; track f) {
+            <ion-select-option [value]="f">
+              {{ f }}
+            </ion-select-option>
+          }
         </ion-select>
       </ion-item>
 
@@ -68,9 +72,11 @@
           [disabled]="!fechaSeleccionada"
           required>
           <ion-select-option value="">Selecciona una hora</ion-select-option>
-          <ion-select-option *ngFor="let h of horas" [value]="h">
-            {{ h }}
-          </ion-select-option>
+          @for (h of horas; track h) {
+            <ion-select-option [value]="h">
+              {{ h }}
+            </ion-select-option>
+          }
         </ion-select>
       </ion-item>
 

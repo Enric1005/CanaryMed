@@ -1,8 +1,0 @@
-<ion-item class="appointment_block">
-  <ion-label>
-    <p class="text">{{ item }}</p>
-  </ion-label>
-  @if(titulo === "Favoritos" || titulo === "Pendientes") {
-    <ion-button slot="end" (click)="removeItem()" fill="outline" color="danger">Eliminar</ion-button>
-  }
-</ion-item>

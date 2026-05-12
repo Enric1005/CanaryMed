@@ -13,7 +13,6 @@ import {
 export class Filter {
   @Input() filtro: { options: string[] } = { options: [] };
   @Input() size: 'normal' | 'small' | 'large' = 'normal';
-  @Output() filterChange = new EventEmitter<string[]>();
   @Output() apply = new EventEmitter<string[]>();
 
   selected: string[] = [];

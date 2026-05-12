@@ -1,14 +1,8 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-
-const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID',
+export const firebaseConfig = {
+  apiKey: 'AIzaSyCPvwuA7wMDE7-tq-Bn5TmcpdJ3GnOJ9Ac',
+  authDomain: 'canarymed-9d526.firebaseapp.com',
+  projectId: 'canarymed-9d526',
+  storageBucket: 'canarymed-9d526.firebasestorage.app',
+  messagingSenderId: '816032465149',
+  appId: '1:816032465149:web:86c6d1eb068c4bc8bc3e94',
 };
-
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);

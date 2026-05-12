@@ -4,7 +4,7 @@ import {Header} from '../../components/header/header';
 import {FormsModule, NgForm} from '@angular/forms';
 import {ColaboraBase} from '../../components/colabora-base/colabora-base';
 import {Router} from '@angular/router';
-import {Auth} from '@angular/fire/auth';
+import {Auth, signOut} from '@angular/fire/auth';
 import {Subscription} from 'rxjs';
 import {AppUser} from '../profile/profile';
 import {CrudService} from '../../services/crudService';
@@ -86,9 +86,8 @@ export class WorkWithUs implements OnInit, OnDestroy {
     }
   }
 
-  goRegister() {
-    this.auth.signOut().then(() => {
-      this.router.navigate(['/register-edit']);
-    });
+  async goRegister() {
+    await signOut(this.auth);
+    this.router.navigate(['/register-edit']);
   }
 }

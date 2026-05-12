@@ -5,7 +5,6 @@ import { CitaService } from '../../services/cita';
 import { CentrosService } from '../../services/centros';
 import { CrudService } from '../../services/crudService';
 import { FormsModule } from '@angular/forms';
-import { NgFor } from '@angular/common';
 import {Auth, getAuth} from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import {Subscription, take} from 'rxjs';
@@ -18,7 +17,7 @@ import {
 
 @Component({
   selector: 'app-make-an-appointment',
-  imports: [Header, Footer, FormsModule, NgFor,
+  imports: [Header, Footer, FormsModule,
     IonHeader, IonContent, IonFooter, IonItem, IonLabel,
     IonInput, IonSelect, IonSelectOption, IonButton
   ],

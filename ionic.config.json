@@ -1,0 +1,7 @@
+{
+  "name": "CanaryMed2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

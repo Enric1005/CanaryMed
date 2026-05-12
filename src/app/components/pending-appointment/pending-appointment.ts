@@ -44,8 +44,7 @@ export class PendingAppointment implements OnInit, OnDestroy {
           .subscribe((res: any[]) => {
             const doc = res[0];
             this.user = {
-              ...doc.data,
-              id: doc.id
+              ...doc,
             };
             this.cd.detectChanges();
           });

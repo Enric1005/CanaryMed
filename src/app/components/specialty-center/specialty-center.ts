@@ -24,8 +24,8 @@ export class SpecialtyCenter implements OnChanges {
   showLoginPopup = false;
 
   doctorName = '';
-  doctorSchedule: any[] = [];
-  doctorHours: any[] = [];
+  doctorSchedule: Record<string, string[]> = {};
+  doctorHours: string[] = [];
 
   constructor(private cita: CitaService, private router: Router) {}
 
@@ -69,18 +69,18 @@ export class SpecialtyCenter implements OnChanges {
     if (Array.isArray(doctor)) {
       const first = doctor[0];
       this.doctorName = first?.name || first?.doctor || '';
-      this.doctorSchedule = first?.schedule || [];
+      this.doctorSchedule = first?.schedule || {};
       this.doctorHours = first?.hours || [];
       return;
     }
     this.doctorName = doctor.name || '';
-    this.doctorSchedule = doctor.schedule || [];
+    this.doctorSchedule = doctor.schedule || {};
     this.doctorHours = doctor.hours || [];
   }
 
   private reset() {
     this.doctorName = '';
-    this.doctorSchedule = [];
+    this.doctorSchedule = {};
     this.doctorHours = [];
   }
 }

@@ -4,11 +4,8 @@ import {
   doc, updateDoc, onSnapshot
 } from 'firebase/firestore';
 import { Observable } from 'rxjs';
-import {db} from '../../environments/environment';
 import { Firestore, query, where, collectionData } from '@angular/fire/firestore';
 import { arrayUnion, arrayRemove} from '@angular/fire/firestore';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +25,7 @@ export class CrudService {
 
   getAll<T>(collectionName: string): Observable<T[]> {
     return new Observable(observer => {
-      const ref = collection(db, collectionName);
+      const ref = collection(this.firestore, collectionName);
 
       const unsubscribe = onSnapshot(ref, snapshot => {
         const data = snapshot.docs.map(doc => ({
@@ -44,15 +41,15 @@ export class CrudService {
   }
 
   async add<T extends object>(collectionName: string, data: T) {
-    await addDoc(collection(db, collectionName), data);
+    await addDoc(collection(this.firestore, collectionName), data);
   }
 
   async delete(collectionName: string, id: string) {
-    await deleteDoc(doc(db, collectionName, id));
+    await deleteDoc(doc(this.firestore, collectionName, id));
   }
 
   async update<T>(collectionName: string, id: string, data: Partial<T>) {
-    await updateDoc(doc(db, collectionName, id), data);
+    await updateDoc(doc(this.firestore, collectionName, id), data);
   }
 
   async addToArray(collectionName: string, id: string, field: string, value: any) {

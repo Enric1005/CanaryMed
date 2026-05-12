@@ -16,20 +16,6 @@ import {
   IonSelectOption, IonCheckbox, IonButton
 } from '@ionic/angular/standalone';
 
-export interface User {
-  id?: string;
-  uid?: string;
-  name: string;
-  surname: string;
-  email: string;
-  DNI: string;
-  phoneNumber: string;
-  role: 'Paciente' | 'Empresa' | null;
-  favs: string[];
-  pendientes: string[];
-  hist: string[];
-}
-
 @Component({
   selector: 'app-register-edit',
   templateUrl: './register-edit.html',
@@ -41,11 +27,10 @@ export interface User {
   standalone: true
 })
 export class RegisterEdit implements OnInit, OnDestroy {
-  users: User[] = [];
   userSub!: Subscription;
   private authUnsub!: () => void;
   isEditMode: boolean = false;
-  userData: User = {uid: '', name:'', surname: '', email:'', DNI: '', phoneNumber: '', role: null, favs: [], pendientes: [], hist: []};
+  userData: AppUser & { id?: string } = {uid: '', name:'', surname: '', email:'', DNI: '', phoneNumber: '', role: null, favs: [], pendientes: [], hist: []};
 
   constructor(
     private router: Router,
@@ -95,15 +80,13 @@ export class RegisterEdit implements OnInit, OnDestroy {
     }
 
     try {
-      if (this.authUnsub) this.authUnsub();
-
       const userCredential = await createUserWithEmailAndPassword(
         this.auth,
         email,
         password
       );
 
-      await this.crudService.add<User>("users", {
+      await this.crudService.add<AppUser>("users", {
         uid: userCredential.user.uid,
         name: form.value.name,
         surname: form.value.surname,
@@ -147,13 +130,10 @@ export class RegisterEdit implements OnInit, OnDestroy {
     try {
       const user = this.auth.currentUser;
       if (user) {
-        if (this.userSub) this.userSub.unsubscribe();
-        if (this.authUnsub) this.authUnsub();
-
         const credential = EmailAuthProvider.credential(user.email!, form.value.currentPassword);
         await reauthenticateWithCredential(user, credential);
 
-        await this.crudService.update<User>("users", this.userData.id, {
+        await this.crudService.update<AppUser>("users", this.userData.id, {
           name: form.value.name,
           surname: form.value.surname,
           DNI: form.value.DNI,
