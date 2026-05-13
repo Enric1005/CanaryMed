@@ -9,7 +9,7 @@ import {CentrosService} from '../../services/centros';
 import { SpecialtyCenter } from '../../components/specialty-center/specialty-center';
 import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 import {
-  IonHeader, IonContent, IonFooter, IonButton, IonText
+  IonHeader, IonContent, IonButton, IonText
 } from '@ionic/angular/standalone';
 
 setLogLevel(LogLevel.VERBOSE);
@@ -18,7 +18,7 @@ setLogLevel(LogLevel.VERBOSE);
   selector: 'app-center-page',
   imports: [
     Footer, Header, CommonModule, SpecialtyCenter, RouterLink, LoadingSpinner,
-    IonHeader, IonContent, IonFooter, IonButton, IonText
+    IonHeader, IonContent, IonButton, IonText
   ],
   templateUrl: './center-page.html',
   styleUrl: './center-page.css',

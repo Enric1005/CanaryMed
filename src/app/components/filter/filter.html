@@ -1,16 +1,13 @@
-<ion-content>
-  <ion-item lines="none">
+<div class="filter-container" [class.small]="size === 'small'" [class.large]="size === 'large'">
+  <div class="filter-header">
     <ion-label>Filtros</ion-label>
-  </ion-item>
-
-  <div class="filter_zone" [class.small]="size === 'small'" [class.large]="size === 'large'">
-    <div class="filter_zone2">
-      @for (option of filtro.options; track option) {
-        <ion-item lines="none">
-          <ion-checkbox (click)="onChange(option, $event)">{{option}}</ion-checkbox>
-        </ion-item>
-      }
-      <ion-button expand="block" (click)="applyFilters()">Filtrar</ion-button>
-    </div>
   </div>
-</ion-content>
+  <div class="filter-options">
+    @for (option of filtro.options; track option) {
+      <div class="filter-option">
+        <ion-checkbox (click)="onChange(option, $event)">{{option}}</ion-checkbox>
+      </div>
+    }
+    <ion-button class="filter-button" (click)="applyFilters()">Filtrar</ion-button>
+  </div>
+</div>

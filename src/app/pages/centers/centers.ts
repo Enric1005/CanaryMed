@@ -11,14 +11,14 @@ import { LoadingSpinner } from '../../components/loading-spinner/loading-spinner
 import { getAuth } from '@angular/fire/auth';
 import { CrudService } from '../../services/crudService';
 import {
-  IonHeader, IonContent, IonFooter
+  IonHeader, IonContent
 } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-centers',
   standalone: true,
   imports: [CommonModule, Header, Center, Footer, Filter, LoadingSpinner,
-    IonHeader, IonContent, IonFooter],
+    IonHeader, IonContent],
   templateUrl: './centers.html',
   styleUrl: './centers.css',
 })

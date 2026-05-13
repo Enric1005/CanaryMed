@@ -11,14 +11,14 @@ import {Subscription, take} from 'rxjs';
 import {AppUser} from '../profile/profile';
 import { NgZone } from '@angular/core';
 import {
-  IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+  IonHeader, IonContent, IonItem, IonLabel,
   IonInput, IonSelect, IonSelectOption, IonButton
 } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-make-an-appointment',
   imports: [Header, Footer, FormsModule,
-    IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+    IonHeader, IonContent, IonItem, IonLabel,
     IonInput, IonSelect, IonSelectOption, IonButton
   ],
   templateUrl: './make-an-appointment.html',

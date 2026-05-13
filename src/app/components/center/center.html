@@ -1,10 +1,9 @@
 <ion-card class="center-section">
   <ion-card-content class="center-content">
-    <div class="favorite">
-      <ion-checkbox
-        [checked]="center.isFavorite"
-        (click)="handleFavoriteClick($event, center)">
-      </ion-checkbox>
+    <div class="favorite" (click)="handleFavoriteClick($event, center)">
+      <ion-icon [name]="center.isFavorite ? 'star' : 'star-outline'"
+                [color]="center.isFavorite ? 'warning' : 'medium'">
+      </ion-icon>
     </div>
 
     <div class="center-image">

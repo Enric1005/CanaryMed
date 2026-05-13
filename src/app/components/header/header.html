@@ -1,45 +1,111 @@
-<ion-toolbar>
-  <ion-buttons slot="start">
-    <ion-button class="menu-toggle" (click)="toggleMenu()">
-      <ion-icon name="menu-outline" slot="icon-only"></ion-icon>
-    </ion-button>
-  </ion-buttons>
+<header>
 
-  <ion-title class="name_of_company" routerLink="/">CanaryMed</ion-title>
+  <!-- primera línea -->
+  <div class="first_line">
 
-  <ion-searchbar
-    placeholder="Busca Centro/Especialidad"
-    [(ngModel)]="searchText"
-    (ionInput)="onSearch()">
-  </ion-searchbar>
+    <!-- hamburguesa -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
 
-  @if (resultados.length > 0) {
-    <ion-list class="results">
-      @for (item of resultados; track item.id) {
-        <ion-item button (click)="selectItem(item)">
-          <ion-label>{{ item.name }}</ion-label>
-        </ion-item>
+    <!-- logo -->
+    <a class="name_of_company" routerLink="/" id="logo">
+      <h1>CanaryMed</h1>
+    </a>
+
+    <!-- centro -->
+    <div class="center_group">
+
+      <!-- buscador ionic -->
+      <ion-searchbar
+        class="search-bar"
+        placeholder="Busca Centro/Especialidad"
+        [(ngModel)]="searchText"
+        (ionInput)="onSearch()">
+      </ion-searchbar>
+
+      <!-- resultados -->
+      @if (resultados.length > 0) {
+
+        <ion-list class="results">
+
+          @for (item of resultados; track item.id) {
+
+            <ion-item
+              button
+              (click)="selectItem(item)">
+
+              {{ item.name }}
+
+            </ion-item>
+
+          }
+
+        </ion-list>
+
       }
-    </ion-list>
-  }
 
-  <ion-buttons slot="end">
-    <ion-button (click)="buscar()">Buscar</ion-button>
-    <ion-button (click)="goToProfile()" class="btn_user">
+      <!-- botón buscar -->
+      <ion-button
+        class="filter-btn"
+        (click)="buscar()">
+
+        Buscar
+
+      </ion-button>
+
+    </div>
+
+    <!-- usuario -->
+    <button
+      class="btn_user"
+      (click)="goToProfile()">
+
       @if (!isLoggedIn) {
-        <ion-icon name="person-outline" slot="icon-only"></ion-icon>
-      } @else {
-        <ion-icon name="checkmark-circle" slot="icon-only"></ion-icon>
-      }
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
 
-<ion-toolbar class="nav-toolbar" [class.show]="menuAbierto">
-  <ion-buttons>
-    <ion-button routerLink="/centers" (click)="menuAbierto = false">Centros</ion-button>
-    <ion-button routerLink="/specialtys" (click)="menuAbierto = false">Especialidades</ion-button>
-    <ion-button routerLink="/work-with-us" (click)="menuAbierto = false">Trabaja con nosotros</ion-button>
-    <ion-button routerLink="/about-us" (click)="menuAbierto = false">Sobre nosotros</ion-button>
-  </ion-buttons>
-</ion-toolbar>
+        <img
+          class="usuario"
+          src="assets/Usuario.webp"/>
+
+      } @else {
+
+        <img
+          class="usuario"
+          src="assets/icono_check.png"/>
+
+      }
+
+    </button>
+
+  </div>
+
+  <!-- menú -->
+  <div class="second_line">
+
+    <ul [class.show]="menuAbierto">
+
+      <li>
+        <a routerLink="/centers">Centros</a>
+      </li>
+
+      <li>
+        <a routerLink="/specialtys">Especialidades</a>
+      </li>
+
+      <li>
+        <a routerLink="/work-with-us">
+          Trabaja con nosotros
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/about-us">
+          Sobre nosotros
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</header>

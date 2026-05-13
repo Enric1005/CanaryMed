@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
 import { CrudService } from '../../services/crudService';
 import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 import {
-  IonHeader, IonContent, IonFooter, IonCard, IonCardContent,
+  IonHeader, IonContent, IonCard, IonCardContent,
   IonAvatar, IonItem, IonLabel, IonButton
 } from '@ionic/angular/standalone';
 
@@ -30,7 +30,7 @@ export interface AppUser {
   selector: 'app-profile',
   standalone: true,
   imports: [Header, Footer, ProfileSection, RouterLink, LoadingSpinner,
-    IonHeader, IonContent, IonFooter, IonCard, IonCardContent,
+    IonHeader, IonContent, IonCard, IonCardContent,
     IonAvatar, IonItem, IonLabel, IonButton
   ],
   templateUrl: './profile.html',

@@ -10,13 +10,13 @@ import { SpecialtyCenter } from '../../components/specialty-center/specialty-cen
 import { CitaService } from '../../services/cita';
 import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
 import {
-  IonHeader, IonContent, IonFooter, IonButton, IonText
+  IonHeader, IonContent, IonButton, IonText
 } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-specialty-page',
   imports: [Footer, Header, RouterLink, AsyncPipe, SpecialtyCenter, LoadingSpinner,
-    IonHeader, IonContent, IonFooter, IonButton, IonText
+    IonHeader, IonContent, IonButton, IonText
   ],
   templateUrl: './specialty-page.html',
   styleUrl: './specialty-page.css',

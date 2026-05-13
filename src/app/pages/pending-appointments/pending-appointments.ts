@@ -9,13 +9,13 @@ import {AppUser} from '../profile/profile';
 import {Subscription} from 'rxjs';
 import {NgZone} from '@angular/core';
 import {
-  IonHeader, IonContent, IonFooter, IonButton
+  IonHeader, IonContent, IonButton
 } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-pending-appointments',
   imports: [PendingAppointment, RouterLink, Header, Footer,
-    IonHeader, IonContent, IonFooter, IonButton
+    IonHeader, IonContent, IonButton
   ],
   templateUrl: './pending-appointments.html',
   styleUrl: './pending-appointments.css',

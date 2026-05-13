@@ -10,7 +10,7 @@ import {AppUser} from '../profile/profile';
 import {CrudService} from '../../services/crudService';
 import {NgZone} from '@angular/core';
 import {
-  IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+  IonHeader, IonContent, IonItem, IonLabel,
   IonInput, IonSelect, IonSelectOption, IonButton
 } from '@ionic/angular/standalone';
 
@@ -18,7 +18,7 @@ import {
   selector: 'app-work-with-us',
   standalone: true,
   imports: [Header, Footer, FormsModule, ColaboraBase,
-    IonHeader, IonContent, IonFooter, IonItem, IonLabel,
+    IonHeader, IonContent, IonItem, IonLabel,
     IonInput, IonSelect, IonSelectOption, IonButton
   ],
   templateUrl: './work-with-us.html',
