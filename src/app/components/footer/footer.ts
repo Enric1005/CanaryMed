@@ -9,7 +9,7 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./footer.css'],
 })
 
-export class FooterComponent {
+export class Footer {
   youtube = 'assets/YT.png';
   x = 'assets/tw.png';
   instagram = 'assets/insta.png';

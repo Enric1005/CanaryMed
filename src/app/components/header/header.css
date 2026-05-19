@@ -1,15 +1,6 @@
 
-/* El toolbar es quien realmente pinta el fondo */
-ion-header {
-  color: red;
-}
-
 ion-toolbar {
-  --background: linear-gradient(
-    to bottom,
-    #2A7DE1 92%,
-    rgba(42, 125, 225, 0)
-  );
+  --background: #2A7DE1;
 }
 
 /* linea idioma */
@@ -138,7 +129,6 @@ ion-toolbar {
   justify-content: center;
   gap: 25px;
   margin: 0;
-  padding-bottom: 10px;
 }
 
 .second_line ul li a {
