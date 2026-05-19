@@ -1,91 +1,91 @@
-<ion-header>
-  <app-header/>
-</ion-header>
+<app-header/>
 
 <ion-content>
-  <div class="appointment_block">
-    <div class="texto_cita">
-      <h1 id="title">Haz una cita</h1>
-    </div>
 
-    <form id="formCita">
-      <ion-item>
-        <ion-label position="stacked">Centro</ion-label>
-        <ion-input id="centro" name="centro" type="text" [value]="centroCampo" readonly></ion-input>
-      </ion-item>
+  <main>
+    <div class="appointment_block">
 
-      <ion-item>
-        <ion-label position="stacked">Especialidad</ion-label>
-        <ion-input id="especialidad_input" name="especialidad" type="text" [value]="especialidadCampo" readonly></ion-input>
-      </ion-item>
+      <div class="texto_cita">
+        <h1 id="title">Haz una cita</h1>
+      </div>
 
-      <ion-item>
-        <ion-label position="stacked">DNI</ion-label>
-        <ion-input id="dni" name="dni" type="text"
-          placeholder="12345678A"
-          required
-          pattern="\d{8}[A-Z]"
-          title="Formato: 12345678A"></ion-input>
-      </ion-item>
+      <form id="formCita">
 
-      <ion-item>
-        <ion-label position="stacked">Médico</ion-label>
-        <ion-select
-          id="medico"
-          [(ngModel)]="medicoSeleccionadoIndex"
-          (ngModelChange)="onMedicoChange()"
-          name="medico"
-          required>
-          <ion-select-option [value]="''">Selecciona un médico</ion-select-option>
-          @for (m of medicos; track i; let i = $index) {
-            <ion-select-option [value]="i">
+        <ion-item>
+          <ion-label position="stacked">Centro</ion-label>
+          <ion-input id="centro" name="centro" type="text" [value]="centroCampo" readonly></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Especialidad</ion-label>
+          <ion-input id="especialidad_input" name="especialidad" type="text" [value]="especialidadCampo" readonly></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">DNI</ion-label>
+          <ion-input id="dni" name="dni" type="text"
+                     placeholder="12345678A"
+                     required
+                     pattern="\d{8}[A-Z]"
+                     title="Formato: 12345678A"></ion-input>
+        </ion-item>
+
+        <!-- MÉDICO -->
+        <ion-item>
+          <ion-label position="stacked">Médico</ion-label>
+          <ion-select id="medico"
+                      [(ngModel)]="medicoSeleccionadoIndex"
+                      (ngModelChange)="onMedicoChange()"
+                      name="medico"
+                      required>
+            <ion-select-option [value]="''">Selecciona un médico</ion-select-option>
+            <ion-select-option *ngFor="let m of medicos; let i = index" [value]="i">
               {{ m.name }}
             </ion-select-option>
-          }
-        </ion-select>
-      </ion-item>
+          </ion-select>
+        </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Fecha</ion-label>
-        <ion-select
-          id="fecha"
-          [(ngModel)]="fechaSeleccionada"
-          (ngModelChange)="onFechaChange()"
-          name="fecha"
-          [disabled]="!medicoSeleccionado"
-          required>
-          <ion-select-option value="">Selecciona una fecha</ion-select-option>
-          @for (f of fechas; track f) {
-            <ion-select-option [value]="f">
+        <!-- FECHA -->
+        <ion-item>
+          <ion-label position="stacked">Fecha</ion-label>
+          <ion-select id="fecha"
+                      [(ngModel)]="fechaSeleccionada"
+                      (ngModelChange)="onFechaChange()"
+                      name="fecha"
+                      [disabled]="!medicoSeleccionado"
+                      required>
+            <ion-select-option value="">Selecciona una fecha</ion-select-option>
+            <ion-select-option *ngFor="let f of fechas" [value]="f">
               {{ f }}
             </ion-select-option>
-          }
-        </ion-select>
-      </ion-item>
+          </ion-select>
+        </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Hora</ion-label>
-        <ion-select
-          id="hora"
-          [(ngModel)]="horaSeleccionada"
-          name="hora"
-          [disabled]="!fechaSeleccionada"
-          required>
-          <ion-select-option value="">Selecciona una hora</ion-select-option>
-          @for (h of horas; track h) {
-            <ion-select-option [value]="h">
+        <!-- HORA -->
+        <ion-item>
+          <ion-label position="stacked">Hora</ion-label>
+          <ion-select id="hora"
+                      [(ngModel)]="horaSeleccionada"
+                      name="hora"
+                      [disabled]="!fechaSeleccionada"
+                      required>
+            <ion-select-option value="">Selecciona una hora</ion-select-option>
+            <ion-select-option *ngFor="let h of horas" [value]="h">
               {{ h }}
             </ion-select-option>
-          }
-        </ion-select>
-      </ion-item>
+          </ion-select>
+        </ion-item>
 
-      <div class="boton">
-        <ion-button id="boton_confirmar" type="button" (click)="confirmarCita()">
-          Confirmar cita
-        </ion-button>
-      </div>
-    </form>
-  </div>
-  <app-footer/>
+        <div class="boton">
+          <ion-button id="boton_confirmar" type="button" (click)="confirmarCita()">
+            Confirmar cita
+          </ion-button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
 </ion-content>
+
+<app-footer/>

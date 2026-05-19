@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {Component, OnInit, ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
@@ -17,7 +18,7 @@ import {
 
 @Component({
   selector: 'app-make-an-appointment',
-  imports: [Header, Footer, FormsModule,
+  imports: [Header, Footer, FormsModule, CommonModule,
     IonHeader, IonContent, IonItem, IonLabel,
     IonInput, IonSelect, IonSelectOption, IonButton
   ],

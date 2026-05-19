@@ -6,417 +6,86 @@
   <component name="ChangeListManager">
     <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/capacitor.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/ionic.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/app.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/app.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/explore-container/explore-container.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/explore-container/explore-container.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/explore-container/explore-container.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/explore-container/explore-container.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab1/tab1.page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab1/tab1.page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab1/tab1.page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab1/tab1.page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab2/tab2.page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab2/tab2.page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab2/tab2.page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab2/tab2.page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab3/tab3.page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab3/tab3.page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab3/tab3.page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tab3/tab3.page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tabs/tabs.page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tabs/tabs.page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tabs/tabs.page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tabs/tabs.page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/app/tabs/tabs.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/assets/icon/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/assets/shapes.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/center/center.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/center/center.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/center/center.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/colabora-base/colabora-base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/colabora-base/colabora-base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/colabora-base/colabora-base.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/filter/filter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/filter/filter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/filter/filter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/footer/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/footer/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/footer/footer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/header/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/header/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/header/header.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/home/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/home/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/home/home.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/home/home.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/loading-spinner/loading-spinner.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/pending-appointment/pending-appointment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/pending-appointment/pending-appointment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/pending-appointment/pending-appointment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/profile-section/profile-section.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/profile-section/profile-section.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/profile-section/profile-section.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/specialty-center/specialty-center.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/specialty-center/specialty-center.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/specialty-center/specialty-center.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/specialty/specialty.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/specialty/specialty.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/components/specialty/specialty.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/global.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/about-us/about-us.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/about-us/about-us.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/about-us/about-us.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/about-us/about-us.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/center-page/center-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/center-page/center-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/center-page/center-page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/centers/centers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/centers/centers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/centers/centers.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/clients-asist/clients-asist.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/clients-asist/clients-asist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/clients-asist/clients-asist.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/clients-asist/clients-asist.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/home-page/home-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/home-page/home-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/home-page/home-page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/home-page/home-page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/login/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/login/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/login/login.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/make-an-appointment/make-an-appointment.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/make-an-appointment/make-an-appointment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/make-an-appointment/make-an-appointment.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/make-an-appointment/make-an-appointment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/pending-appointments/pending-appointments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/pending-appointments/pending-appointments.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/pending-appointments/pending-appointments.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/pending-appointments/pending_line.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/profile/profile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/profile/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/profile/profile.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/register-edit/register-edit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/register-edit/register-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/register-edit/register-edit.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialty-page/specialty-page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialty-page/specialty-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialty-page/specialty-page.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialty-page/specialty-page.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialtys/specialtys.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialtys/specialtys.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/specialtys/specialtys.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/work-with-us/work-with-us.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/work-with-us/work-with-us.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/pages/work-with-us/work-with-us.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/auth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/centros.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/cita.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/crudService.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/data.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/dataService.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/especialidades.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/services/loading.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/theme/variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/src/zone-flags.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miApp/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/assert.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/assert.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/assert/strict.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/assert/strict.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/async_hooks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/async_hooks.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/buffer.buffer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/buffer.buffer.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/buffer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/buffer.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/child_process.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/child_process.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/cluster.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/cluster.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/console.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/console.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/constants.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/constants.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/crypto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/crypto.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/dgram.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/dgram.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/diagnostics_channel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/diagnostics_channel.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/dns.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/dns.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/dns/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/dns/promises.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/domain.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/domain.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/events.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/fs.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/fs.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/fs/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/fs/promises.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/globals.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/globals.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/globals.typedarray.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/globals.typedarray.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/http.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/http.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/http2.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/http2.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/https.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/https.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/inspector.generated.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/inspector.generated.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/module.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/net.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/net.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/os.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/os.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/path.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/path.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/perf_hooks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/perf_hooks.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/process.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/process.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/punycode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/punycode.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/querystring.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/querystring.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/readline.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/readline.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/readline/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/readline/promises.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/repl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/repl.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/sea.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/sea.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/stream.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/stream.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/stream/consumers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/stream/consumers.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/stream/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/stream/promises.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/stream/web.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/stream/web.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/string_decoder.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/string_decoder.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/test.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/test.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/timers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/timers.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/timers/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/timers/promises.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/tls.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/tls.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/trace_events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/trace_events.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/ts5.6/buffer.buffer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/ts5.6/buffer.buffer.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/ts5.6/globals.typedarray.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/ts5.6/globals.typedarray.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/ts5.6/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/ts5.6/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/tty.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/tty.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/url.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/url.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/util.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/util.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/v8.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/v8.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/vm.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/vm.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/wasi.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/wasi.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/web-globals/abortcontroller.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/web-globals/abortcontroller.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/web-globals/events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/web-globals/events.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/web-globals/fetch.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/web-globals/fetch.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/worker_threads.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/worker_threads.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/zlib.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/zlib.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-regex/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-regex/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-regex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-regex/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-regex/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-regex/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-regex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-regex/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-regex/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-regex/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/brace-expansion/dist/commonjs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/brace-expansion/dist/commonjs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/brace-expansion/dist/esm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/brace-expansion/dist/esm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/brace-expansion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/brace-expansion/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/LICENSE-MIT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/LICENSE-MIT.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/es2015/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/es2015/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/es2015/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/es2015/text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/emoji-regex/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/emoji-regex/text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-fullwidth-code-point/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lru-cache/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/diagnostics-channel-browser.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/diagnostics-channel-browser.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/diagnostics-channel.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/diagnostics-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/index.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/perf.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/perf.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/browser/perf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/diagnostics-channel-cjs.cjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/diagnostics-channel-cjs.d.cts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/diagnostics-channel.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/diagnostics-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/index.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/diagnostics-channel-node.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/diagnostics-channel-node.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/diagnostics-channel.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/diagnostics-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/index.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/perf.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/perf.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/node/perf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/perf.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/perf.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/commonjs/perf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/diagnostics-channel-browser.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/diagnostics-channel-browser.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/diagnostics-channel.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/diagnostics-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/index.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/perf.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/perf.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/browser/perf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/diagnostics-channel-esm.d.mts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/diagnostics-channel-esm.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/diagnostics-channel.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/diagnostics-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/index.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/diagnostics-channel-node.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/diagnostics-channel-node.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/diagnostics-channel.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/diagnostics-channel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/index.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/perf.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/perf.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/node/perf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/perf.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/perf.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/perf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/dist/esm/perf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lru-cache/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lru-cache/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string-width/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string-width/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string-width/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string-width/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string-width/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string-width/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string-width/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string-width/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string-width/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string-width/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/strip-ansi/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/strip-ansi/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/strip-ansi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/strip-ansi/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/strip-ansi/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/strip-ansi/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/strip-ansi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/strip-ansi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/strip-ansi/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/strip-ansi/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/index.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/index.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/index.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/pack.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/pack.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/commonjs/pack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/esm/index.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/esm/index.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/esm/index.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/esm/index.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/esm/pack.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/esm/pack.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/dist/esm/pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/dist/esm/pack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/tar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/agent.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/agent.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/api.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/api.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/balanced-pool.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/balanced-pool.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/client.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/client.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/connector.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/connector.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/cookies.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/cookies.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/diagnostics-channel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/diagnostics-channel.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/dispatcher.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/dispatcher.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/env-http-proxy-agent.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/env-http-proxy-agent.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/errors.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/errors.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/eventsource.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/eventsource.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/fetch.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/fetch.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/formdata.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/formdata.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/global-dispatcher.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/global-dispatcher.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/global-origin.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/global-origin.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/handlers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/handlers.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/header.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/interceptors.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/interceptors.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/mock-agent.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/mock-agent.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/mock-client.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/mock-client.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/mock-errors.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/mock-errors.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/mock-interceptor.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/mock-interceptor.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/mock-pool.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/mock-pool.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/patch.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/patch.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/pool-stats.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/pool-stats.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/pool.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/pool.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/proxy-agent.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/proxy-agent.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/readable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/readable.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/retry-agent.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/retry-agent.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/retry-handler.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/retry-handler.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/util.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/util.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/webidl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/webidl.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/undici-types/websocket.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/undici-types/websocket.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yallist/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/commonjs/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/commonjs/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/commonjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/commonjs/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/commonjs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/esm/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/esm/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/esm/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/dist/esm/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/yallist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yallist/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/center/center.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/center/center.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/filter/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/filter/filter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/filter/filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/filter/filter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/profile-section/profile-section.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/about-us/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/about-us/about-us.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/center-page/center-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/center-page/center-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/center-page/center-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/center-page/center-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/centers/centers.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/centers/centers.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/centers/centers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/centers/centers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home-page/home-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/crudService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/crudService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/data.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/dataService.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profile/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specialtys/specialtys.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
     </list>
     <list id="c4111587-1aa6-42ae-904c-8040af100271" name="Changes by casba" comment="" />
-    <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
+    <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="">
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home-page/home-page.html" afterDir="false" />
+    </list>
+    <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/app.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/center/center.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/colabora-base/colabora-base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/filter/filter.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/filter/filter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty-center/specialty-center.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/about-us/about-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/about-us/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/about-us/about-us.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/about-us/about-us.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/clients-asist/clients-asist.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home-page/home-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home-page/home-page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/make-an-appointment/make-an-appointment.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profile/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/register-edit/register-edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/specialty-page/specialty-page.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -447,12 +116,69 @@
     &quot;assignee&quot;: &quot;Enric1005&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Enric1005/CanaryMed",
-    "accountId": "b51b23df-7d7b-4d2a-af2a-20779dcf14fe"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Enric1005/CanaryMed&quot;,
+    &quot;accountId&quot;: &quot;b51b23df-7d7b-4d2a-af2a-20779dcf14fe&quot;
   }
-}]]></component>
+}</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/app/pages/home-page/home-page.html">
+      <ranges>
+        <range start1="0" end1="3" start2="0" end2="3" changelist="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" />
+        <range start1="4" end1="5" start2="4" end2="5" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+        <range start1="7" end1="7" start2="7" end2="8" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/app/components/specialty/specialty.css">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="4" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="1" end1="4" start2="5" end2="6" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="5" end1="6" start2="7" end2="14" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="11" end1="12" start2="19" end2="20" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="15" end1="18" start2="23" end2="27" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="19" end1="20" start2="28" end2="28" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="26" end1="26" start2="34" end2="46" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="27" end1="45" start2="47" end2="56" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/app/pages/about-us/about-us.ts">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+        <range start1="9" end1="10" start2="9" end2="10" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+        <range start1="14" end1="14" start2="14" end2="15" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="49" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="1" end1="4" start2="50" end2="163" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/app/pages/work-with-us/work-with-us.css">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="15" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="1" end1="3" start2="16" end2="35" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="5" end1="5" start2="37" end2="40" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="6" end1="8" start2="41" end2="46" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="9" end1="9" start2="47" end2="49" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="11" end1="13" start2="51" end2="52" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="14" end1="15" start2="53" end2="129" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="16" end1="16" start2="130" end2="135" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/app/pages/about-us/about-us.html">
+      <ranges>
+        <range start1="0" end1="3" start2="0" end2="1" changelist="e66bc472-ba2d-4063-9142-338b067e5077" />
+        <range start1="5" end1="5" start2="3" end2="4" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="9" end1="12" start2="8" end2="15" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="13" end1="18" start2="16" end2="25" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="19" end1="24" start2="26" end2="35" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="25" end1="28" start2="36" end2="44" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+        <range start1="29" end1="29" start2="45" end2="46" changelist="ea985af9-e282-485b-9dd4-eb554bd5827c" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -461,60 +187,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.about_us.html.executor": "Run",
-    "JavaScript Debug.app.component.html.executor": "Run",
-    "JavaScript Debug.app.html.executor": "Run",
-    "JavaScript Debug.center.html.executor": "Run",
-    "JavaScript Debug.center_page.html.executor": "Run",
-    "JavaScript Debug.centers.html.executor": "Run",
-    "JavaScript Debug.centro.html.executor": "Run",
-    "JavaScript Debug.clients_asist.html.executor": "Run",
-    "JavaScript Debug.colabora_base.html.executor": "Run",
-    "JavaScript Debug.filter.html.executor": "Run",
-    "JavaScript Debug.footer.html.executor": "Run",
-    "JavaScript Debug.header.html.executor": "Run",
-    "JavaScript Debug.home.html.executor": "Run",
-    "JavaScript Debug.home_page.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.login.html.executor": "Run",
-    "JavaScript Debug.make_an_appointment.html.executor": "Run",
-    "JavaScript Debug.pending_appointment.html.executor": "Run",
-    "JavaScript Debug.pending_appointments.html.executor": "Run",
-    "JavaScript Debug.profile.html.executor": "Run",
-    "JavaScript Debug.profile_section.html.executor": "Run",
-    "JavaScript Debug.register-edit.html.executor": "Run",
-    "JavaScript Debug.register_edit.html.executor": "Run",
-    "JavaScript Debug.specialty.html.executor": "Run",
-    "JavaScript Debug.specialty_center.html.executor": "Run",
-    "JavaScript Debug.specialty_page.html.executor": "Run",
-    "JavaScript Debug.specialtys.html.executor": "Run",
-    "JavaScript Debug.work_with_us.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "SPRINT4",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/enriq/WebstormProjects/CanaryMed",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "consents",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\casba\\WebstormProjects\\CanaryMed2\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.about_us.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.app.component.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.app.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.center.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.center_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.centers.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.centro.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.clients_asist.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.colabora_base.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.filter.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.make_an_appointment.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.pending_appointment.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.pending_appointments.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile_section.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register-edit.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register_edit.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty_center.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialtys.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.work_with_us.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SPRINT4&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/enriq/WebstormProjects/CanaryMed&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\casba\\WebstormProjects\\CanaryMed2\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\casba\\WebstormProjects\\CanaryMed2\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Documents" />
@@ -605,6 +333,8 @@
       <workItem from="1777998261394" duration="5203000" />
       <workItem from="1778257288009" duration="3787000" />
       <workItem from="1778602042247" duration="6094000" />
+      <workItem from="1778881879219" duration="1806000" />
+      <workItem from="1779207567708" duration="2517000" />
     </task>
     <servers />
   </component>

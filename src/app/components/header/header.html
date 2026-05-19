@@ -1,23 +1,26 @@
-<header>
+<ion-header>
 
-  <!-- primera línea -->
-  <div class="first_line">
+  <ion-toolbar>
 
     <!-- hamburguesa -->
-    <button class="menu-toggle" (click)="toggleMenu()">
-      <ion-icon name="menu-outline"></ion-icon>
-    </button>
+    <ion-buttons slot="start">
+      <ion-menu-button (click)="toggleMenu()">
+      </ion-menu-button>
+    </ion-buttons>
 
     <!-- logo -->
-    <a class="name_of_company" routerLink="/" id="logo">
-      <h1>CanaryMed</h1>
-    </a>
+    <ion-title class="logo">
+      <a routerLink="/" id="name_of_company">
+        CanaryMed
+      </a>
+    </ion-title>
 
     <!-- centro -->
     <div class="center_group">
 
       <!-- buscador ionic -->
       <ion-searchbar
+        id="searchInput"
         class="search-bar"
         placeholder="Busca Centro/Especialidad"
         [(ngModel)]="searchText"
@@ -31,8 +34,7 @@
 
           @for (item of resultados; track item.id) {
 
-            <ion-item
-              button
+            <ion-item [button]="true"
               (click)="selectItem(item)">
 
               {{ item.name }}
@@ -47,6 +49,7 @@
 
       <!-- botón buscar -->
       <ion-button
+        id="filterButton"
         class="filter-btn"
         (click)="buscar()">
 
@@ -57,55 +60,44 @@
     </div>
 
     <!-- usuario -->
-    <button
-      class="btn_user"
-      (click)="goToProfile()">
+    <ion-buttons slot="end">
+      <ion-button
+        class="btn_user"
+        id="btn_user"
+        (click)="goToProfile()">
 
-      @if (!isLoggedIn) {
+        @if (!isLoggedIn) {
 
-        <img
-          class="usuario"
-          src="assets/Usuario.webp"/>
+          <img
+            class="usuario"
+            src="assets/Usuario.webp"/>
 
-      } @else {
+        } @else {
 
-        <img
-          class="usuario"
-          src="assets/icono_check.png"/>
+          <img
+            class="usuario"
+            src="assets/icono_check.png"/>
 
-      }
+        }
 
-    </button>
+      </ion-button>
+    </ion-buttons>
 
-  </div>
+  </ion-toolbar>
 
   <!-- menú -->
-  <div class="second_line">
+  <!-- menú -->
+  <ion-toolbar>
+    <div class="second_line">
+      <ul [class.show]="menuAbierto">
+        <li><a routerLink="/centers">Centros</a></li>
+        <li><a routerLink="/specialtys">Especialidades</a></li>
+        <li><a routerLink="/work-with-us">Trabaja con nosotros</a></li>
+        <li><a routerLink="/about-us">Sobre nosotros</a></li>
+      </ul>
+    </div>
+  </ion-toolbar>
 
-    <ul [class.show]="menuAbierto">
+  <div class="menu-overlay"></div>
 
-      <li>
-        <a routerLink="/centers">Centros</a>
-      </li>
-
-      <li>
-        <a routerLink="/specialtys">Especialidades</a>
-      </li>
-
-      <li>
-        <a routerLink="/work-with-us">
-          Trabaja con nosotros
-        </a>
-      </li>
-
-      <li>
-        <a routerLink="/about-us">
-          Sobre nosotros
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-</header>
+</ion-header>

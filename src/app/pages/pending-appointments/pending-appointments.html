@@ -1,16 +1,15 @@
-<ion-header>
-  <app-header/>
-</ion-header>
+<app-header/>
 
 <ion-content>
   <div class="page-container">
-    <div class="text-section3">
+
+    <main class="text-section3">
       <div class="text-header">
         <h1>{{titulo}}</h1>
-        <ion-button routerLink="/profile">Volver Atrás</ion-button>
+        <ion-button type="button" class="section-btn" routerLink="/profile">Volver Atrás</ion-button>
       </div>
       <hr>
-    </div>
+    </main>
 
     <div class="appointments-container">
       @for (item of items ; track item) {
@@ -18,5 +17,4 @@
       }
     </div>
   </div>
-  <app-footer/>
 </ion-content>

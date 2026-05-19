@@ -1,8 +1,9 @@
-<ion-header>
-  <app-header></app-header>
-</ion-header>
+
+<app-header></app-header>
+
 
 <ion-content>
+
   <app-colabora-base></app-colabora-base>
 
   @if(!user || (user && user.role === "Paciente")){
@@ -16,28 +17,28 @@
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <ion-item>
           <ion-label position="stacked">*Institución Sanitaria</ion-label>
-          <ion-input name="institucion" ngModel required minlength="2" placeholder="Hospital San Roque"></ion-input>
+          <ion-input name="institucion" ngModel [required]="true" [minlength]="2" placeholder="Hospital San Roque"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="stacked">*Correo Institucional</ion-label>
-          <ion-input name="correo" type="email" ngModel required placeholder="institucionEjemplo@gmail.com"></ion-input>
+          <ion-input name="correo" type="email" ngModel [required]="true" placeholder="institucionEjemplo@gmail.com"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="stacked">*Número Telefónico</ion-label>
-          <ion-input name="telefono" ngModel required pattern="\d{9}" placeholder="Número de la institución"></ion-input>
+          <ion-input name="telefono" ngModel [required]="true" pattern="\d{9}" placeholder="Número de la institución"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="stacked">*Dirección</ion-label>
-          <ion-input name="direccion" ngModel required minlength="5" placeholder="Calle Diego Betancourt"></ion-input>
+          <ion-input name="direccion" ngModel [required]="true" [minlength]="5" placeholder="Calle Diego Betancourt"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="stacked">*Tipo de Especialidad</ion-label>
-          <ion-select name="tipoEspecialidad" ngModel required>
-            <ion-select-option value="" disabled selected></ion-select-option>
+          <ion-select name="tipoEspecialidad" ngModel [required]="true">
+            <ion-select-option value="" selected></ion-select-option>
             <ion-select-option value="oncología">Oncología Médica</ion-select-option>
             <ion-select-option value="quirúrgico">Quirúrgico</ion-select-option>
             <ion-select-option value="no_quirúrgico">No Quirúrgico</ion-select-option>
@@ -50,7 +51,7 @@
 
         <ion-item>
           <ion-label position="stacked">*Especialidad</ion-label>
-          <ion-input name="especialidad" ngModel required minlength="2" placeholder="Cardiología"></ion-input>
+          <ion-input name="especialidad" ngModel [required]="true" [minlength]="2" placeholder="Cardiología"></ion-input>
         </ion-item>
 
         <div class="boton">
@@ -59,5 +60,7 @@
       </form>
     </div>
   }
-  <app-footer></app-footer>
+
 </ion-content>
+
+<app-footer></app-footer>

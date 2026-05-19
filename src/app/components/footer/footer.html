@@ -1,85 +1,63 @@
-<ion-toolbar>
-  <ion-grid>
-    <ion-row class="first_line_fo">
+<ion-footer>
+  <ion-toolbar class="footer-toolbar">
 
-      <!-- IZQUIERDA: LOGO -->
-      <ion-col size="12" size-md="4" class="logo_section">
+    <div class="footer-container">
 
-        <div class="social_icons">
-          <ion-button fill="clear" href="https://www.youtube.com/" target="_blank">
-            <ion-icon slot="icon-only" name="logo-youtube"></ion-icon>
-          </ion-button>
+      <!-- LOGO (IZQUIERDA) -->
+      <div class="logo-section">
 
-          <ion-button fill="clear" href="https://x.com/" target="_blank">
-            <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
-          </ion-button>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/" target="_blank">
+            <ion-img [src]="youtube"></ion-img>
+          </a>
 
-          <ion-button fill="clear" href="https://www.instagram.com/" target="_blank">
-            <ion-icon slot="icon-only" name="logo-instagram"></ion-icon>
-          </ion-button>
+          <a href="https://x.com/" target="_blank">
+            <ion-img [src]="x"></ion-img>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank">
+            <ion-img [src]="instagram"></ion-img>
+          </a>
         </div>
 
-        <a class="name_of_company" routerLink="/" id="footerLogo">
-          <ion-title>CanaryMed</ion-title>
-        </a>
+        <ion-button fill="clear" routerLink="/" class="company-name">
+          CanaryMed
+        </ion-button>
 
-      </ion-col>
+      </div>
 
-      <!-- DERECHA: TODO AGRUPADO -->
-      <ion-col size="12" size-md="8" class="right_footer">
+      <!-- SECCIONES (DERECHA) -->
+      <div class="sections-wrapper">
 
-        <ion-row>
+        <div class="footer-section">
+          <h3>El Hospital</h3>
+          <div class="links">
+            <a routerLink="/work-with-us">Colabora con nosotros</a>
+            <a routerLink="/about-us">Sobre nosotros</a>
+          </div>
+        </div>
 
-          <ion-col size="6" size-md="4">
-            <div class="seccion1">
-              <h3>El Hospital</h3>
-              <ion-list>
-                <ion-item button routerLink="/work-with-us" lines="none">
-                  Colabora con nosotros
-                </ion-item>
-                <ion-item button routerLink="/about-us" lines="none">
-                  Sobre nosotros
-                </ion-item>
-              </ion-list>
-            </div>
-          </ion-col>
+        <div class="footer-section">
+          <h3>Nuestros Servicios</h3>
+          <div class="links">
+            <a routerLink="/centers">Centros colaboradores</a>
+            <a routerLink="/specialtys">Especialidades</a>
+          </div>
+        </div>
 
-          <ion-col size="6" size-md="4">
-            <div class="seccion2">
-              <h3>Nuestros Servicios</h3>
-              <ion-list>
-                <ion-item button routerLink="/centers" lines="none">
-                  Centros colaboradores
-                </ion-item>
-                <ion-item button routerLink="/specialtys" lines="none">
-                  Especialidades
-                </ion-item>
-              </ion-list>
-            </div>
-          </ion-col>
+        <div class="footer-section">
+          <h3>Enlaces de interés</h3>
+          <div class="links">
+            <a href="https://guanchipedia.com/historia-de-la-medicina-en-canarias/" target="_blank">
+              Historia de la medicina canaria
+            </a>
+            <a routerLink="/client-asist">Asistencia de usuario</a>
+          </div>
+        </div>
 
-          <ion-col size="12" size-md="4">
-            <div class="seccion2">
-              <h3>Enlaces de interés</h3>
-              <ion-list>
-                <ion-item button
-                          href="https://guanchipedia.com/historia-de-la-medicina-en-canarias/"
-                          target="_blank"
-                          lines="none">
-                  Historia de la medicina canaria
-                </ion-item>
+      </div>
 
-                <ion-item button routerLink="/clients-asist" lines="none">
-                  Asistencia de usuario
-                </ion-item>
-              </ion-list>
-            </div>
-          </ion-col>
+    </div>
 
-        </ion-row>
-
-      </ion-col>
-
-    </ion-row>
-  </ion-grid>
-</ion-toolbar>
+  </ion-toolbar>
+</ion-footer>

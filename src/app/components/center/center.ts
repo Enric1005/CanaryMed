@@ -7,7 +7,7 @@ import {CrudService} from '../../services/crudService';
 import {take} from 'rxjs';
 import {
   IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
-  IonButton, IonIcon, IonText, IonModal,
+  IonButton, IonText, IonModal,
   IonHeader, IonToolbar, IonTitle, IonContent
 } from '@ionic/angular/standalone';
 
@@ -16,7 +16,7 @@ import {
   standalone: true,
   imports: [FormsModule, RouterLink,
     IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
-    IonButton, IonIcon, IonText, IonModal,
+    IonButton, IonText, IonModal,
     IonHeader, IonToolbar, IonTitle, IonContent
   ],
   templateUrl: './center.html',

@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterModule} from '@angular/router';
-import {
-  IonToolbar, IonGrid, IonRow, IonCol, IonButton, IonIcon,
-  IonTitle, IonList, IonItem
-} from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-footer',
-  imports: [
-    RouterLink, RouterModule,
-    IonToolbar, IonGrid, IonRow, IonCol, IonButton, IonIcon,
-    IonTitle, IonList, IonItem
-  ],
+  standalone: true,
+  imports: [IonicModule],
   templateUrl: './footer.html',
-  styleUrl: './footer.css',
+  styleUrls: ['./footer.css'],
 })
-export class Footer {}
+
+export class FooterComponent {
+  youtube = 'assets/YT.png';
+  x = 'assets/tw.png';
+  instagram = 'assets/insta.png';
+}

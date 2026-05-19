@@ -9,10 +9,8 @@ import {
   selector: 'app-profile-section',
   templateUrl: './profile-section.html',
   styleUrl: './profile-section.css',
-  imports: [
-    IonCard, IonCardHeader, IonCardTitle, IonCardContent,
-    IonList, IonItem, IonLabel
-  ]
+  standalone: true,
+  imports: [IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonList, IonItem, IonLabel],
 })
 export class ProfileSection {
   @Input() titulo: string = '';

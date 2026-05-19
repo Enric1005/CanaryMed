@@ -1,26 +1,29 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import {
-  IonLabel, IonCheckbox, IonButton
-} from '@ionic/angular/standalone';
+import { IonLabel, IonCheckbox, IonButton, IonContent, IonItem } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.html',
-  styleUrl: './filter.css',
-  imports: [IonLabel, IonCheckbox, IonButton]
+  styleUrls: ['./filter.css'],
+  standalone: true,
+  imports: [IonLabel, IonCheckbox, IonButton, IonContent, IonItem],
 })
 export class Filter {
   @Input() filtro: { options: string[] } = { options: [] };
+
   @Input() size: 'normal' | 'small' | 'large' = 'normal';
+
   @Output() apply = new EventEmitter<string[]>();
 
   selected: string[] = [];
 
-  onChange(option: string, event: any) {
-    if (event.target.checked) {
-      this.selected.push(option);
+  onChange(option: string, checked: boolean) {
+    if (checked) {
+      if (!this.selected.includes(option)) {
+        this.selected.push(option);
+      }
     } else {
-      this.selected = this.selected.filter(o => o !== option);
+      this.selected = this.selected.filter((o) => o !== option);
     }
   }
 

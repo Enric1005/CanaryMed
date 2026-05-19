@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {
-  IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent
+  IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonContent
 } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   imports: [
     RouterLink,
-    IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent
+    IonButton, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonContent
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',

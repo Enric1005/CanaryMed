@@ -8,11 +8,18 @@ import {
 
 @Component({
   selector: 'app-specialty',
-  imports: [CommonModule, RouterLink,
-    IonCard, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton
+  imports: [
+    CommonModule,
+    RouterLink,
+    IonCard,
+    IonCardContent,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonButton,
   ],
   templateUrl: './specialty.html',
   styleUrl: './specialty.css',
+  standalone: true,
 })
 export class Specialty {
   @Input() specialty1: any;

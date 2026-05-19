@@ -1,21 +1,32 @@
-import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import {Auth, getAuth} from '@angular/fire/auth';
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import {
-  IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar,
-  IonList, IonItem, IonLabel, IonIcon
+  IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar,
+  IonList, IonItem, IonLabel, IonMenuButton
 } from '@ionic/angular/standalone';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrl: './header.css',
-  imports: [RouterLink, FormsModule,
-    IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar,
-    IonList, IonItem, IonLabel, IonIcon
-  ]
+  standalone: true,
+  imports: [
+    RouterLink,
+    FormsModule,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonButton,
+    IonTitle,
+    IonSearchbar,
+    IonList,
+    IonItem,
+    IonMenuButton,
+  ],
 })
 export class Header implements OnInit, OnDestroy {
   centros: any[] = [];
@@ -26,7 +37,12 @@ export class Header implements OnInit, OnDestroy {
   isLoggedIn: boolean = false;
   menuAbierto = false;
 
-  constructor(private router: Router, private firestore: Firestore, private auth: Auth, private cd: ChangeDetectorRef) {}
+  constructor(
+    private router: Router,
+    private firestore: Firestore,
+    private auth: Auth,
+    private cd: ChangeDetectorRef,
+  ) {}
 
   private authUnsub!: () => void;
 
@@ -57,25 +73,25 @@ export class Header implements OnInit, OnDestroy {
 
   async cargarDatos() {
     const centrosSnap = await getDocs(collection(this.firestore, 'centers'));
-    this.centros = centrosSnap.docs.map(doc => ({
+    this.centros = centrosSnap.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
-      type: 'center'
+      type: 'center',
     }));
 
     const especialidadesSnap = await getDocs(collection(this.firestore, 'specialities'));
-    this.especialidades = especialidadesSnap.docs.map(doc => ({
+    this.especialidades = especialidadesSnap.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
-      type: 'speciality'
+      type: 'speciality',
     }));
   }
 
   onSearch() {
     const texto = this.searchText.toLowerCase();
     this.resultados = [
-      ...this.centros.filter(c => c.name?.toLowerCase().includes(texto)),
-      ...this.especialidades.filter(e => e.name?.toLowerCase().includes(texto))
+      ...this.centros.filter((c) => c.name?.toLowerCase().includes(texto)),
+      ...this.especialidades.filter((e) => e.name?.toLowerCase().includes(texto)),
     ];
   }
 

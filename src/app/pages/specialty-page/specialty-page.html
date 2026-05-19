@@ -1,19 +1,17 @@
-<ion-header>
-  <app-header/>
-</ion-header>
+<app-header/>
 
 <ion-content>
   @if (datos$ | async; as datos) {
-    <div class="text-section4">
+    <main class="text-section4">
       <div class="text-header">
         <h1>{{ datos.name }}</h1>
-        <ion-button routerLink="/specialtys">Volver atrás</ion-button>
+        <ion-button class="section-btn" routerLink="/specialtys">Volver atrás</ion-button>
       </div>
       <hr>
       <ion-text><p>{{ datos.description }}</p></ion-text>
-    </div>
+    </main>
 
-    <div id="centers_container">
+    <main id="centers_container">
       @if (origen === 'centro') {
         @for (item of datos.specialities; track item.name) {
           <app-specialty-center [data]="item"/>
@@ -23,9 +21,10 @@
           <app-specialty-center [data]="item"/>
         }
       }
-    </div>
+    </main>
   } @else {
     <app-loading-spinner/>
   }
+
   <app-footer/>
 </ion-content>

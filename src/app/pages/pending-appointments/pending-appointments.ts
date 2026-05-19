@@ -14,7 +14,7 @@ import {
 
 @Component({
   selector: 'app-pending-appointments',
-  imports: [PendingAppointment, RouterLink, Header, Footer,
+  imports: [PendingAppointment, RouterLink, Header,
     IonHeader, IonContent, IonButton
   ],
   templateUrl: './pending-appointments.html',

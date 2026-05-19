@@ -1,15 +1,33 @@
-header {
-  background: linear-gradient(
+
+/* El toolbar es quien realmente pinta el fondo */
+ion-header {
+  color: red;
+}
+
+ion-toolbar {
+  --background: linear-gradient(
     to bottom,
     #2A7DE1 92%,
     rgba(42, 125, 225, 0)
   );
 }
 
-/* ========================= */
-/* PRIMERA LINEA */
-/* ========================= */
+/* linea idioma */
+.zero_line {
+  display: inline-block;
+}
 
+.idioma {
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+/* primera linea */
 .first_line {
   display: grid;
   align-items: center;
@@ -18,131 +36,108 @@ header {
   gap: 30px;
 }
 
-.first_line h1 {
+.logo {
   margin: 0;
   font-size: 65px;
 }
 
-.name_of_company {
+#name_of_company{
   text-decoration: none;
   color: whitesmoke;
 }
 
-/* ========================= */
-/* BUSCADOR */
-/* ========================= */
-
+/* buscador */
 .center_group {
   display: flex;
-  align-items: center;
   justify-self: center;
-  position: relative;
+  position: relative; /* IMPORTANTE para el dropdown */
 }
-
-/* ion-searchbar */
 
 .search-bar {
   width: 400px;
-}
-
-.search-bar::part(container) {
+  max-width: 400px;
+  padding: 10px 20px;
   border-radius: 50px;
-  background: white;
-  box-shadow: none;
+  border: none;
 }
 
-/* botón buscar */
-
-.filter-btn {
-  margin-left: 10px;
-
-  --background: white;
-  --color: black;
-
-  --border-radius: 15px;
-}
-
-/* ========================= */
-/* RESULTADOS */
-/* ========================= */
-
+/* ===== DROPDOWN RESULTADOS ===== */
 .results {
   position: absolute;
-
-  top: 55px;
+  top: 50px;
   left: 0;
-
   width: 400px;
-
   max-height: 250px;
-
   overflow-y: auto;
 
   background: white;
-
   border-radius: 10px;
-
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 
+  padding: 5px 0;
+  margin: 0;
+  list-style: none;
   z-index: 1000;
-
-  padding: 0;
 }
 
-.results ion-item {
-  --background: white;
+.results li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.results ion-item:hover {
-  --background: #f1f1f1;
+.results li:hover {
+  background: #f1f1f1;
 }
 
-/* ========================= */
-/* USUARIO */
-/* ========================= */
+/* scrollbar fino */
+.results::-webkit-scrollbar {
+  width: 6px;
+}
 
+.results::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* boton buscar */
+.filter-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+}
+
+/* boton usuario */
 .btn_user {
   justify-self: end;
-
   width: 80px;
   height: 80px;
-
   border-radius: 50%;
-
   overflow: hidden;
-
   border: none;
-
   padding: 0;
-
   cursor: pointer;
-
   background: white;
-
   margin-right: 50px;
 }
 
 .usuario {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
 }
 
-/* ========================= */
-/* MENU */
-/* ========================= */
-
+/* menu normal */
 .second_line ul {
   display: flex;
-
   list-style: none;
-
   justify-content: center;
-
   gap: 25px;
-
   margin: 0;
-
   padding-bottom: 10px;
 }
 
@@ -159,29 +154,22 @@ header {
   font-size: 20px;
 }
 
-/* ========================= */
-/* MENU HAMBURGUESA */
-/* ========================= */
-
+/* boton hamburguesa */
 .menu-toggle {
   display: none;
-
   font-size: 30px;
-
   background: none;
-
   border: none;
-
   color: white;
-
   cursor: pointer;
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
+/* ===== MOVIL ===== */
 @media (max-width: 830px) {
+
+  header {
+    padding-bottom: 25px;
+  }
 
   .first_line {
     grid-template-columns: 1fr;
@@ -193,13 +181,12 @@ header {
     font-size: 40px;
   }
 
+
   .menu-toggle {
     display: block;
-
     position: absolute;
-
     left: 5px;
-    top: 5px;
+    top: 0px;
   }
 
   .center_group {
@@ -211,44 +198,40 @@ header {
     width: 80%;
   }
 
+  /* dropdown adaptado a móvil */
   .results {
     width: 80%;
     left: 10%;
+    top: 50px;
   }
 
   .btn_user {
     justify-self: center;
-
     margin-right: 0;
-
     width: 55px;
     height: 55px;
   }
 
+  .zero_line {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+
   .second_line ul {
-
     position: fixed;
-
     top: 50px;
     left: 0;
-
     width: 180px;
     max-width: 70%;
-
+    height: auto;
     background: #2A7DE1;
-
     padding-top: 20px;
-
     transform: translateX(-100%);
-
     transition: transform 0.3s ease;
-
     z-index: 1000;
-
     flex-direction: column;
-
     gap: 10px;
-
     border-radius: 0 8px 8px 0;
   }
 
@@ -256,4 +239,37 @@ header {
     transform: translateX(0);
   }
 
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 900;
+  }
+
+  .menu-overlay.show {
+    display: block;
+  }
+
+  .second_line ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  .second_line ul li::before {
+    flex-shrink: 0;
+    margin-right: 8px;
+    content: none;
+  }
+
+  .second_line ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    font-weight: 500;
+  }
 }

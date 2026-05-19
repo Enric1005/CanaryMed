@@ -1,20 +1,109 @@
-.text {
-  text-align: center;
-  padding: 40px 20px 0;
-}
-
-.text h1 {
-  font-size: 2rem;
-  margin: 0;
+ion-content {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor2 {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 500px;
+  background-color: #E8F2FF;
+  border: 3px solid black;
+  border-radius: 50px;
+  padding: 40px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.text_box label {
+  display: block;
+  text-align: left;
+}
+
+.text_box input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+ion-select {
+  width: 100%;
+  padding: 6px;
+}
+
+.chbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegura que el checkbox no se estire */
+.chbox input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.chbox label {
+  flex: 1;
+  text-align: left;
 }
 
 .boton {
-  margin-top: 24px;
+  display: flex;
+  justify-content: center;
   text-align: center;
+}
+
+.boton button {
+  margin-top: 20px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #3a3a3a, #1f1f1f);
+  color: white;
+  cursor: pointer;
+  padding: 15px 30px;
+  border: none;
+
+  /* sombra */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  transition: all 0.2s ease;
+}
+
+.text {
+  text-align: center;
+}
+
+
+
+@media (max-width: 830px) {
+
+  .contenedor2 {
+    width: 300px;
+    margin: 20px;
+    height: 100%;
+  }
+
+  .text h1 {
+    margin: 10px;
+  }
+
+  .text_box input {
+    height: 20px;
+  }
+
+  .boton input {
+    text-align: center;
+    line-height: 10px;
+    height: 30px;
+  }
 }
