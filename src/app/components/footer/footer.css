@@ -1,5 +1,6 @@
 .footer-toolbar {
-  --background: #fff;
+  --background: #2A7DE1;
+  padding: 40px 0 70px;
 }
 
 .footer-container {
@@ -7,7 +8,7 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 60px;
 }
 
 /* IZQUIERDA */
@@ -15,20 +16,36 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
 }
 
-/* ICONOS */
+/* ICONOS pequeños */
 .social-icons {
   display: flex;
-  gap: 10px;
+  gap: 14px;
+}
+
+.social-icons ion-img {
+  width: 34px;
+  height: 34px;
+}
+
+/* Título grande */
+.company-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  --color: #fff;
+  padding: 0;
+  margin: 0;
+  --padding-start: 0;
+  --padding-end: 0;
 }
 
 /* DERECHA */
 .sections-wrapper {
   display: flex;
   justify-content: flex-end;
-  gap: 50px;
+  gap: 40px;
   flex: 1;
 }
 
@@ -36,19 +53,49 @@
 .footer-section {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .footer-section h3 {
-  margin-bottom: 8px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0A1F3F;
+  margin-bottom: 16px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #FFD700;
+  transition: width 0.3s ease;
+}
+
+.footer-section h3:hover::after {
+  width: 100%;
 }
 
 /* links */
 .links {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .links a {
   text-decoration: none;
+  color: #fff;
+  font-size: 1.05rem;
+  padding: 3px 0;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #FFD700;
 }

@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="">
+    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Se ha arreglado el problema de scroll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
-    <list id="c4111587-1aa6-42ae-904c-8040af100271" name="Changes by casba" comment="" />
+    <list id="c4111587-1aa6-42ae-904c-8040af100271" name="Changes by casba" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.html" afterDir="false" />
+    </list>
     <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="" />
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,6 +208,15 @@
       <workItem from="1778881879219" duration="1806000" />
       <workItem from="1779207567708" duration="2517000" />
     </task>
+    <task id="LOCAL-00001" summary="Se ha arreglado el problema de scroll">
+      <option name="closed" value="true" />
+      <created>1779211738614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779211738614</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,5 +232,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se ha arreglado el problema de scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se ha arreglado el problema de scroll" />
   </component>
 </project>
