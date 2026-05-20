@@ -1,4 +1,4 @@
-ion-card {
+main {
   margin: 0;
   height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@ ion-card {
   font-family: Arial, sans-serif;
 }
 
-ion-item {
+a {
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -40,21 +40,28 @@ ion-item {
 }
 
 
-ion-item {
-  background: white;
-  padding: 12px 16px;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.card-item {
+  background: white;              /* color de la caja */
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --border-radius: 12px;
+  --inner-border-radius: 12px;
+  margin-bottom: 12px;            /* separación entre cajas */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+  --border-color: transparent;
+  --inner-border-width: 0;
 }
 
 ion-list {
   list-style: none;
   padding: 0;
   margin: 15px 0;
+  --ion-item-background: transparent;
 }
 
-ion-item:hover {
+.card-item:hover {
   transform: translateY(-2px);
   transition: 0.2s;
 }

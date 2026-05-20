@@ -13,7 +13,12 @@
 
 .profile-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
 }
+
 
 .profile-card {
   display: flex;
@@ -71,7 +76,7 @@
   color: #555;
 }
 
-.profile-text p {
+.profile-text ion-label {
   margin: 0;
   padding: 8px 0;
   font-size: 20px;
@@ -93,7 +98,7 @@
   justify-content: center;
 }
 
-.profile-buttons button {
+.profile-buttons ion-button {
   padding: 8px 16px;
   border: 2px solid;
   background-color: #ffffff;
@@ -102,7 +107,7 @@
   font-size: 14px;
 }
 
-.profile-buttons button:hover {
+.profile-buttons ion-button:hover {
   background-color: #4a90e2;
   color: #fff;
 }
@@ -116,13 +121,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 50vh;
-  margin-right: 5vh;
+  margin-left: 0;
   background-color: lightskyblue;
   border-radius: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
-  min-width: 300px;
+  padding: 15px;
+  width: 100%;
 }
 
 hr {

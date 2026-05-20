@@ -27,14 +27,14 @@ ion-toolbar {
   gap: 30px;
 }
 
-.logo {
-  margin: 0;
-  font-size: 65px;
-}
-
-#name_of_company{
+.name_of_company{
   text-decoration: none;
   color: whitesmoke;
+}
+
+.name_of_company h1 {
+  margin: 0;
+  font-size: 65px;
 }
 
 /* buscador */

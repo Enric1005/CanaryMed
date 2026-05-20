@@ -29,9 +29,20 @@ export interface AppUser {
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [Header, Footer, ProfileSection, RouterLink, LoadingSpinner,
-    IonHeader, IonContent, IonCard, IonCardContent,
-    IonAvatar, IonItem, IonLabel, IonButton
+  imports: [
+    Header,
+    Footer,
+    ProfileSection,
+    RouterLink,
+    LoadingSpinner,
+    IonHeader,
+    IonContent,
+    IonCard,
+    IonCardContent,
+    IonAvatar,
+    IonItem,
+    IonLabel,
+    IonButton,
   ],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
@@ -47,15 +58,15 @@ export class Profile implements OnInit, OnDestroy {
 
   constructor(
     private auth: Auth,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
-    this.authUnsub = this.auth.onAuthStateChanged(user => {
+    this.authUnsub = this.auth.onAuthStateChanged((user) => {
       if (user) {
         this.subscription = this.crudService
-          .getWhere<AppUser>("users", "uid", "==", user.uid)
-          .subscribe(res => {
+          .getWhere<AppUser>('users', 'uid', '==', user.uid)
+          .subscribe((res) => {
             this.user = res[0];
             this.userLoaded = true;
             this.cd.detectChanges();
@@ -81,11 +92,13 @@ export class Profile implements OnInit, OnDestroy {
 
   async deleteMode() {
     if (!this.user.id) {
-      alert("No se encontró al usuario");
+      alert('No se encontró al usuario');
       return;
     }
 
-    const confirmado = confirm("¿Estás seguro de que quieres eliminar tu cuenta? Esta acción no se puede deshacer.");
+    const confirmado = confirm(
+      '¿Estás seguro de que quieres eliminar tu cuenta? Esta acción no se puede deshacer.',
+    );
     if (!confirmado) return;
 
     try {
@@ -93,18 +106,18 @@ export class Profile implements OnInit, OnDestroy {
       if (user) {
         if (this.subscription) this.subscription.unsubscribe();
         if (this.authUnsub) this.authUnsub();
-        await this.crudService.delete("users", this.user.id);
+        await this.crudService.delete('users', this.user.id);
         await deleteUser(user);
       }
-      alert("Cuenta eliminada correctamente");
+      alert('Cuenta eliminada correctamente');
       await this.router.navigate(['/login']);
     } catch (error: any) {
       switch (error.code) {
         case 'auth/requires-recent-login':
-          alert("Sesión expirada, vuelve a iniciar sesión antes de eliminar la cuenta");
+          alert('Sesión expirada, vuelve a iniciar sesión antes de eliminar la cuenta');
           break;
         default:
-          alert("Error: " + error.message);
+          alert('Error: ' + error.message);
       }
     }
   }

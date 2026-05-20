@@ -1,41 +1,19 @@
 <ion-card>
-
-  <ion-card-header>
+  <ion-card-header class="section-header">
     <ion-card-title>{{titulo}}</ion-card-title>
   </ion-card-header>
-
   <div class="divider"></div>
-
   <ion-card-content class="card-body">
-
     <ion-list>
-
       @for(item of items.slice(0, 3); track item) {
-
-        <ion-item>
-          <ion-label>
-            {{item}}
-          </ion-label>
+        <ion-item class="card-item">
+          <ion-label>{{item}}</ion-label>
         </ion-item>
-
       }
-
     </ion-list>
-
   </ion-card-content>
-
   <div class="divider"></div>
-
-  <ion-item
-    class="card-footer"
-    [button]="true"
-    lines="none"
-    (click)="verMas()">
-
-    <ion-label color="primary">
-      Ver más
-    </ion-label>
-
-  </ion-item>
-
+  <div class="card-footer">
+    <p><a (click)="verMas()" class="section-link" target="_blank">Ver más</a></p>
+  </div>
 </ion-card>
