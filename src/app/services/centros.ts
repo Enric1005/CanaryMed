@@ -23,10 +23,10 @@ export class CentrosService {
     return collectionData(centrosRef, { idField: 'id' }) as Observable<any[]>;
   }
 
-  getCenterById(id: string) {
+  getCenterById(id: string): Observable<any> {
     const centerRef = doc(this.firestore, `centers/${id}`);
     return from(getDoc(centerRef)).pipe(
-      map(snap => snap.exists() ? ({ id: snap.id, ...snap.data() }) : null)
+      map(snap => snap.exists() ? ({ id: snap.id, ...snap.data() } as any) : null)
     );
   }
 

@@ -34,13 +34,17 @@
   font-size: 1rem;
   border: none;
   border-radius: 8px;
-  background-color: #000000;
   color: white;
   cursor: pointer;
 }
 
-.hero-btn:hover {
-  background-color: #174a84;
+.image-btn {
+  --background: #174a84;
+  transition: transform 0.2s ease;
+}
+
+.image-btn:hover {
+  transform: scale(1.5);
 }
 
 .main_center {

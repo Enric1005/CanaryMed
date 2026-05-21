@@ -1,9 +1,31 @@
-
-ion-toolbar {
-  --background: #2A7DE1;
+ion-header {
+  background: linear-gradient(
+    to bottom,
+    #2A7DE1 92%,
+    rgba(42, 125, 225, 0)
+  );
+  contain: none;
+  overflow: visible;
+  margin-top: 0;
+  box-shadow: none;
 }
 
-/* linea idioma */
+ion-header::after {
+  display: none;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --border-width: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  contain: none;
+  overflow: visible;
+}
+
+/* línea idioma */
 .zero_line {
   display: inline-block;
 }
@@ -18,90 +40,95 @@ ion-toolbar {
   margin-top: 10px;
 }
 
-/* primera linea */
 .first_line {
   display: grid;
   align-items: center;
   grid-template-columns: 2fr auto 2fr;
-  padding: 0 20px;
+  padding: 20px 20px 10px 20px;
   gap: 30px;
 }
 
-.name_of_company{
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-.name_of_company h1 {
+.first_line h1 {
   margin: 0;
   font-size: 65px;
+}
+
+.name_of_company {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 /* buscador */
 .center_group {
   display: flex;
   justify-self: center;
-  position: relative; /* IMPORTANTE para el dropdown */
+  position: relative;
 }
 
-.search-bar {
+ion-searchbar.search-bar {
   width: 400px;
   max-width: 400px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: none;
+  --border-radius: 50px;
+  --background: white;
+  --box-shadow: none;
+  --color: black;
+  --placeholder-color: #888;
+  --padding-start: 20px;
+  padding: 0;
+  height: 42px;
 }
 
-/* ===== DROPDOWN RESULTADOS ===== */
-.results {
+/* dropdown resultados */
+ion-list.results {
   position: absolute;
   top: 50px;
   left: 0;
   width: 400px;
   max-height: 250px;
   overflow-y: auto;
-
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-
   padding: 5px 0;
   margin: 0;
-  list-style: none;
   z-index: 1000;
 }
 
-.results li {
-  padding: 10px 15px;
+ion-list.results ion-item {
+  --background: white;
+  --color: black;
   cursor: pointer;
-  transition: background 0.2s;
+  --padding-start: 15px;
+  font-size: 14px;
 }
 
-.results li:hover {
-  background: #f1f1f1;
+ion-list.results ion-item:hover {
+  --background: #f1f1f1;
 }
 
-/* scrollbar fino */
-.results::-webkit-scrollbar {
+ion-list.results::-webkit-scrollbar {
   width: 6px;
 }
 
-.results::-webkit-scrollbar-thumb {
+ion-list.results::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 10px;
 }
 
-/* boton buscar */
-.filter-btn {
+/* botón buscar */
+ion-button.filter-btn {
+  --background: white;
+  --color: black;
+  --border-radius: 15px;
+  --box-shadow: none;
+  --padding-start: 10px;
+  --padding-end: 10px;
   margin-left: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 15px;
-  background-color: white;
+  height: 36px;
+  font-size: 14px;
 }
 
-/* boton usuario */
+/* botón usuario */
 .btn_user {
   justify-self: end;
   width: 80px;
@@ -113,6 +140,9 @@ ion-toolbar {
   cursor: pointer;
   background: white;
   margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .usuario {
@@ -120,15 +150,17 @@ ion-toolbar {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
 }
 
-/* menu normal */
+/* menú */
 .second_line ul {
   display: flex;
   list-style: none;
   justify-content: center;
   gap: 25px;
   margin: 0;
+  padding-bottom: 10px;
 }
 
 .second_line ul li a {
@@ -144,20 +176,18 @@ ion-toolbar {
   font-size: 20px;
 }
 
-/* boton hamburguesa */
-.menu-toggle {
+/* botón hamburguesa */
+ion-menu-button.menu-toggle {
   display: none;
   font-size: 30px;
-  background: none;
-  border: none;
   color: white;
-  cursor: pointer;
+  --color: white;
 }
 
-/* ===== MOVIL ===== */
+/* ===== MÓVIL ===== */
 @media (max-width: 830px) {
 
-  header {
+  ion-header {
     padding-bottom: 25px;
   }
 
@@ -171,12 +201,11 @@ ion-toolbar {
     font-size: 40px;
   }
 
-
-  .menu-toggle {
+  ion-menu-button.menu-toggle {
     display: block;
     position: absolute;
     left: 5px;
-    top: 0px;
+    top: 0;
   }
 
   .center_group {
@@ -184,12 +213,11 @@ ion-toolbar {
     justify-content: center;
   }
 
-  .search-bar {
+  ion-searchbar.search-bar {
     width: 80%;
   }
 
-  /* dropdown adaptado a móvil */
-  .results {
+  ion-list.results {
     width: 80%;
     left: 10%;
     top: 50px;
@@ -250,8 +278,6 @@ ion-toolbar {
   }
 
   .second_line ul li::before {
-    flex-shrink: 0;
-    margin-right: 8px;
     content: none;
   }
 

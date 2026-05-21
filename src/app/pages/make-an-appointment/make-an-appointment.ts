@@ -18,9 +18,18 @@ import {
 
 @Component({
   selector: 'app-make-an-appointment',
-  imports: [Header, Footer, FormsModule, CommonModule,
-    IonHeader, IonContent, IonItem, IonLabel,
-    IonInput, IonSelect, IonSelectOption, IonButton
+  imports: [
+    Header,
+    Footer,
+    FormsModule,
+    CommonModule,
+    IonContent,
+    IonItem,
+    IonLabel,
+    IonInput,
+    IonSelect,
+    IonSelectOption,
+    IonButton,
   ],
   templateUrl: './make-an-appointment.html',
   styleUrl: './make-an-appointment.css',
@@ -49,10 +58,13 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
     private cdRef: ChangeDetectorRef,
     private router: Router,
     private auth: Auth,
-    private ngZone: NgZone
+    private ngZone: NgZone,
   ) {}
 
   ngOnInit() {
+    console.log('centroId:', this.cita.centroId);
+    console.log('centroNombre:', this.cita.centroNombre);
+    console.log('especialidadNombre:', this.cita.especialidadNombre);
     this.centroCampo = this.cita.centroNombre || '';
     this.especialidadCampo = this.cita.especialidadNombre || '';
 
@@ -65,13 +77,13 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
         this.medicoSeleccionadoIndex = '';
         this.cdRef.detectChanges();
       });
-    this.authUnsub = this.auth.onAuthStateChanged(user => {
+    this.authUnsub = this.auth.onAuthStateChanged((user) => {
       this.ngZone.run(() => {
         if (this.userSub) this.userSub.unsubscribe();
         if (user) {
           this.userSub = this.crudService
-            .getWhere<AppUser>("users", "uid", "==", user.uid)
-            .subscribe(res => {
+            .getWhere<AppUser>('users', 'uid', '==', user.uid)
+            .subscribe((res) => {
               this.appuser = res[0];
               this.cdRef.detectChanges();
             });
@@ -126,7 +138,8 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
     const citaString = `${this.fechaSeleccionada}, ${this.horaSeleccionada} - ${this.especialidadCampo} - ${this.centroCampo}`;
 
     try {
-      this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
+      this.crudService
+        .getWhere<any>('users', 'uid', '==', user.uid)
         .pipe(take(1))
         .subscribe(async (users) => {
           if (users.length === 0) {
@@ -141,7 +154,7 @@ export class MakeAnAppointment implements OnInit, OnDestroy {
             this.cita.especialidadNombre!,
             this.medicoSeleccionado.name,
             this.fechaSeleccionada,
-            this.horaSeleccionada
+            this.horaSeleccionada,
           );
           this.router.navigate(['/profile']);
         });

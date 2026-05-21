@@ -1,12 +1,12 @@
 .appointment_block {
-  width: 400px;
+  width: 600px;
   margin: 40px auto;
+  margin-bottom: 60px;
   background-color: #E8F2FF;
   border: 3px solid black;
   border-radius: 40px;
-  padding: 20px;
+  padding: 30px 40px;
   box-sizing: border-box;
-  height: 100%;
 }
 
 .texto_cita {
@@ -16,8 +16,8 @@
 #formCita {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 #formCita label {
@@ -33,16 +33,31 @@
   padding: 6px;
 }
 
+#formCita ion-item {
+  width: 100%;
+  --border-radius: 10px;
+  --background: white;
+  --border-color: #ccc;
+  --border-width: 1px;
+  --border-style: solid;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 0;
+}
+
+ion-input, ion-select {
+  width: 100%;
+}
+
 .boton {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #boton_confirmar {
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 20px;
-  background-color: white;
+  width: 100%;
+  --border-radius: 20px;
 }
 @media (max-width: 830px) {
   .page-container {
@@ -57,8 +72,9 @@
   }
 
   .appointment_block {
-    width: 100%;
-    box-sizing: border-box;
+    width: 95%;
+    padding: 20px;
+    border-radius: 20px;
   }
 
   .text-section3 {

@@ -14,20 +14,33 @@ import {
   templateUrl: './specialty-center.html',
   styleUrl: './specialty-center.css',
   imports: [
-    IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
-    IonButton, IonText, IonModal,
-    IonHeader, IonToolbar, IonTitle, IonContent
-  ]
+    IonCard,
+    IonCardContent,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonButton,
+    IonText,
+    IonModal,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+  ],
 })
 export class SpecialtyCenter implements OnChanges {
   @Input() data: any;
-  showLoginPopup = false;
+  @Input() centroId: string = '';
+  @Input() centroNombre: string = '';
 
+  showLoginPopup = false;
   doctorName = '';
   doctorSchedule: Record<string, string[]> = {};
   doctorHours: string[] = [];
 
-  constructor(private cita: CitaService, private router: Router) {}
+  constructor(
+    private cita: CitaService,
+    private router: Router,
+  ) {}
 
   ngOnChanges(): void {
     this.extractDoctor();
@@ -37,14 +50,10 @@ export class SpecialtyCenter implements OnChanges {
     const user = getAuth().currentUser;
 
     if (user) {
-      if (this.cita.origen === 'centro') {
-        this.cita.especialidadId = this.data.id;
-        this.cita.especialidadNombre = this.data.name;
-      } else {
-        const centroId = this.data.name?.replace(/\s+/g, '_');
-        this.cita.centroId = centroId;
-        this.cita.centroNombre = this.data.name;
-      }
+      this.cita.centroId = this.centroId;
+      this.cita.centroNombre = this.centroNombre;
+      this.cita.especialidadNombre = this.data.name;
+      this.cita.origen = 'centro';
       this.router.navigate(['/make-an-appointment']);
     } else {
       this.showLoginPopup = true;

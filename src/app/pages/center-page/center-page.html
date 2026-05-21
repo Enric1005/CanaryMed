@@ -2,22 +2,32 @@
 
 <ion-content>
   @if (centro$ | async; as centro) {
-    <div class="text-section2">
+    <div class="page-wrapper">
+
       <div class="text-header">
         <h1>{{centro.name}}</h1>
         <ion-button routerLink="/centers">Volver Atrás</ion-button>
       </div>
       <hr>
+
       <div class="center-image">
         <img [src]="'assets/' + centro.image">
       </div>
-      <ion-text><p>{{centro.description}}</p></ion-text>
-    </div>
 
-    <div class="text-section2">
-      @for (especialidad of centro.specialities; track especialidad.name) {
-        <app-specialty-center [data]="especialidad"/>
-      }
+      <ion-text class="center-description">
+        <p>{{centro.description}}</p>
+      </ion-text>
+
+      <div class="specialties-list">
+        @for (especialidad of centro.specialities; track especialidad.name) {
+          <app-specialty-center
+            [data]="especialidad"
+            [centroId]="centro.id"
+            [centroNombre]="centro.name">
+          </app-specialty-center>
+        }
+      </div>
+
     </div>
   } @else {
     <app-loading-spinner/>
