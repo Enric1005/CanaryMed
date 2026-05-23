@@ -1,9 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CitaService } from '../../services/cita';
-import { getAuth } from '@angular/fire/auth';
+import { Auth } from '@angular/fire/auth';
+import { CrudService } from '../../services/crudService';
 import { SqliteService } from '../../services/sqlite';
+import { take } from 'rxjs';
+import { Capacitor } from '@capacitor/core';
 import {
   IonCard,
   IonCardContent,
@@ -41,14 +44,14 @@ export class Center {
   @Input() center: any;
   showLoginPopup = false;
 
-  constructor(
-    private cita: CitaService,
-    private router: Router,
-    private sqlite: SqliteService,
-  ) {}
+  private auth = inject(Auth);
+  private cita = inject(CitaService);
+  private router = inject(Router);
+  private crudService = inject(CrudService);
+  private sqlite = inject(SqliteService);
 
   async handleFavoriteClick(event: MouseEvent, center: any) {
-    const user = getAuth().currentUser;
+    const user = this.auth.currentUser;
 
     if (!user) {
       event.preventDefault();
@@ -58,19 +61,45 @@ export class Center {
 
     const favoritoString = `${center.name} - ${center.sitio} - ${center.precio}`;
 
-    try {
-      const yaEsFavorito = await this.sqlite.isFavorito(user.uid, favoritoString);
-
-      if (yaEsFavorito) {
-        await this.sqlite.removeFavorito(user.uid, favoritoString);
-      } else {
-        await this.sqlite.addFavorito(user.uid, favoritoString);
+    if (Capacitor.isNativePlatform()) {
+      try {
+        const yaEsFavorito = await this.sqlite.isFavorito(user.uid, favoritoString);
+        if (yaEsFavorito) {
+          await this.sqlite.removeFavorito(user.uid, favoritoString);
+        } else {
+          await this.sqlite.addFavorito(user.uid, favoritoString);
+        }
+        center.isFavorite = !yaEsFavorito;
+      } catch (error) {
+        console.error('Error al guardar favorito en SQLite:', error);
+        alert('Hubo un error al guardar el favorito');
       }
+    } else {
+      try {
+        this.crudService
+          .getWhere<any>('users', 'uid', '==', user.uid)
+          .pipe(take(1))
+          .subscribe(async (users) => {
+            if (users.length === 0) {
+              alert('No se encontró tu usuario');
+              return;
+            }
+            const userId = users[0].id;
+            const favs: string[] = users[0].favs ?? [];
+            const yaEsFavorito = favs.includes(favoritoString);
 
-      center.isFavorite = !yaEsFavorito;
-    } catch (error) {
-      console.error('Error al guardar favorito:', error);
-      alert('Hubo un error al guardar el favorito');
+            if (!yaEsFavorito) {
+              await this.crudService.addToArray('users', userId, 'favs', favoritoString);
+            } else {
+              await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
+            }
+
+            center.isFavorite = !yaEsFavorito;
+          });
+      } catch (error) {
+        console.error('Error al guardar favorito en Firestore:', error);
+        alert('Hubo un error al guardar el favorito');
+      }
     }
   }
 

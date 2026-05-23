@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Resolución de conflictos">
-      <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
+    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Adaptacion a android">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/example/app/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/center/center.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/center/center.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/sqlite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/sqlite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
     </list>
     <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="" />
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
@@ -41,12 +44,12 @@
     &quot;assignee&quot;: &quot;Enric1005&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Enric1005/CanaryMed.git",
-    "accountId": "b400d61a-abcf-4aed-9a21-32405755eefd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Enric1005/CanaryMed.git&quot;,
+    &quot;accountId&quot;: &quot;b400d61a-abcf-4aed-9a21-32405755eefd&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -212,7 +215,8 @@
       <workItem from="1778602042247" duration="6094000" />
       <workItem from="1778881879219" duration="1806000" />
       <workItem from="1779207567708" duration="2517000" />
-      <workItem from="1779557693675" duration="1369000" />
+      <workItem from="1779557693675" duration="7526000" />
+      <workItem from="1779571638347" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="Se ha arreglado el problema de scroll">
       <option name="closed" value="true" />
@@ -238,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779553957235</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adaptacion a android">
+      <option name="closed" value="true" />
+      <created>1779559196942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779559196942</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +271,7 @@
     <MESSAGE value="Se ha arreglado el problema de scroll" />
     <MESSAGE value="Se ha añadido la base de datos sqlite" />
     <MESSAGE value="Resolución de conflictos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolución de conflictos" />
+    <MESSAGE value="Adaptacion a android" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adaptacion a android" />
   </component>
 </project>

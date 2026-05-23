@@ -7,9 +7,10 @@ export class SqliteService {
   private db!: SQLiteDBConnection;
 
   async init() {
-    this.db = await this.sqlite.createConnection('favoritosDB', false, 'no-encryption', 1, false);
-    await this.db.open();
-    await this.db.execute(`
+    try {
+      this.db = await this.sqlite.createConnection('favoritosDB', false, 'no-encryption', 1, false);
+      await this.db.open();
+      await this.db.execute(`
       CREATE TABLE IF NOT EXISTS favoritos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         uid TEXT NOT NULL,
@@ -17,6 +18,10 @@ export class SqliteService {
         UNIQUE(uid, item)
       );
     `);
+      console.log('SQLite DB creada correctamente');
+    } catch (error) {
+      console.error('Error en SQLite init:', error);
+    }
   }
 
   async addFavorito(uid: string, item: string) {

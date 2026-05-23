@@ -1,11 +1,25 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewEncapsulation,
+  inject,
+  Injector,
+} from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import {Auth, getAuth} from '@angular/fire/auth';
+import { Auth, getAuth } from '@angular/fire/auth';
 import { Firestore, collection, getDocs } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
+import { runInInjectionContext } from '@angular/core';
 import {
-  IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonSearchbar,
-  IonList, IonItem, IonLabel, IonMenuButton
+  IonHeader,
+  IonToolbar,
+  IonButton,
+  IonSearchbar,
+  IonList,
+  IonItem,
+  IonMenuButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -34,6 +48,8 @@ export class Header implements OnInit, OnDestroy {
   selectedItem: any = null;
   isLoggedIn: boolean = false;
   menuAbierto = false;
+
+  private injector = inject(Injector);
 
   constructor(
     private router: Router,
@@ -70,19 +86,21 @@ export class Header implements OnInit, OnDestroy {
   }
 
   async cargarDatos() {
-    const centrosSnap = await getDocs(collection(this.firestore, 'centers'));
-    this.centros = centrosSnap.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-      type: 'center',
-    }));
+    await runInInjectionContext(this.injector, async () => {
+      const centrosSnap = await getDocs(collection(this.firestore, 'centers'));
+      this.centros = centrosSnap.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+        type: 'center',
+      }));
 
-    const especialidadesSnap = await getDocs(collection(this.firestore, 'specialities'));
-    this.especialidades = especialidadesSnap.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-      type: 'speciality',
-    }));
+      const especialidadesSnap = await getDocs(collection(this.firestore, 'specialities'));
+      this.especialidades = especialidadesSnap.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+        type: 'speciality',
+      }));
+    });
   }
 
   onSearch() {
