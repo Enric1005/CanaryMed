@@ -1,82 +1,184 @@
 <ion-content>
   <div class="page-wrapper">
 
-    <div class="text"><h1>{{isEditMode ? "Editar Perfil" : "Registro"}}</h1></div>
+    <div class="text">
+      <h1>{{isEditMode ? "Editar Perfil" : "Registro"}}</h1>
+    </div>
 
     <div class="contenedor2">
       <div class="text_box">
-        <form #registracion="ngForm" (ngSubmit)="isEditMode ? updateMode(registracion) : onSubmit(registracion)">
 
+        <form
+          #registracion="ngForm"
+          (ngSubmit)="isEditMode ? updateMode(registracion) : onSubmit(registracion)">
+
+          <!-- NOMBRE -->
           <ion-item>
             <ion-label position="stacked">*Nombre</ion-label>
-            <ion-input name="name" type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,20}" [ngModel]="userData.name" required></ion-input>
+            <ion-input
+              name="name"
+              type="text"
+              [(ngModel)]="userData.name"
+              required
+              pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,20}">
+            </ion-input>
           </ion-item>
 
+          <!-- APELLIDOS -->
           <ion-item>
             <ion-label position="stacked">*Apellidos</ion-label>
-            <ion-input name="surname" type="text" [ngModel]="userData.surname" required></ion-input>
+            <ion-input
+              name="surname"
+              type="text"
+              [(ngModel)]="userData.surname"
+              required>
+            </ion-input>
           </ion-item>
 
           @if(!isEditMode) {
+
+            <!-- EMAIL -->
             <ion-item>
               <ion-label position="stacked">*Email</ion-label>
-              <ion-input name="email" type="email" placeholder="ejemplo@gmail.com" [ngModel]="userData.email" required></ion-input>
+              <ion-input
+                name="email"
+                type="email"
+                placeholder="ejemplo@gmail.com"
+                ngModel
+                required>
+              </ion-input>
             </ion-item>
+
+            <!-- CONFIRM EMAIL -->
             <ion-item>
               <ion-label position="stacked">*Confirmar Email</ion-label>
-              <ion-input name="email_confirm" type="email" ngModel required></ion-input>
+              <ion-input
+                name="email_confirm"
+                type="email"
+                ngModel
+                required>
+              </ion-input>
             </ion-item>
-          }
 
-          @if(!isEditMode) {
+            <!-- PASSWORD -->
             <ion-item>
               <ion-label position="stacked">*Contraseña</ion-label>
-              <ion-input name="password" type="password" placeholder="123456A_" ngModel pattern="^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required></ion-input>
+              <ion-input
+                name="password"
+                type="password"
+                placeholder="123456A_"
+                ngModel
+                required
+                pattern="^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$">
+              </ion-input>
             </ion-item>
+
+            <!-- CONFIRM PASSWORD -->
             <ion-item>
               <ion-label position="stacked">*Confirmar Contraseña</ion-label>
-              <ion-input name="password_confirmed" type="password" ngModel required></ion-input>
+              <ion-input
+                name="password_confirmed"
+                type="password"
+                ngModel
+                required>
+              </ion-input>
             </ion-item>
           }
 
           @if(isEditMode) {
+
+            <!-- PASSWORD CONFIRM -->
             <ion-item>
-              <ion-label position="stacked">*Contraseña (para confirmar cambios)</ion-label>
-              <ion-input name="currentPassword" type="password" ngModel></ion-input>
+              <ion-label position="stacked">
+                *Contraseña (para confirmar cambios)
+              </ion-label>
+
+              <ion-input
+                name="currentPassword"
+                type="password"
+                ngModel
+                required>
+              </ion-input>
             </ion-item>
           }
 
+          <!-- DNI -->
           <ion-item>
             <ion-label position="stacked">*DNI</ion-label>
-            <ion-input name="DNI" type="text" placeholder="XXXXXXXXH" [ngModel]="userData.DNI" pattern="[0-9]{8}[A-Z]{1}" required></ion-input>
+            <ion-input
+              name="DNI"
+              type="text"
+              placeholder="XXXXXXXXH"
+              [(ngModel)]="userData.DNI"
+              required
+              pattern="[0-9]{8}[A-Z]{1}">
+            </ion-input>
           </ion-item>
 
+          <!-- PHONE -->
           <ion-item>
             <ion-label position="stacked">*Teléfono</ion-label>
-            <ion-input name="phone" type="tel" [ngModel]="userData.phoneNumber" pattern="[0-9]{9}" required></ion-input>
+            <ion-input
+              name="phone"
+              type="tel"
+              [(ngModel)]="userData.phoneNumber"
+              required
+              pattern="[0-9]{9}">
+            </ion-input>
           </ion-item>
 
           @if(!isEditMode) {
+
+            <!-- ROLE -->
             <ion-item>
               <ion-label position="stacked">*¿Qué eres?</ion-label>
-              <ion-select name="role" ngModel required>
-                <ion-select-option [value]="null">Seleccione</ion-select-option>
-                <ion-select-option value="Paciente">Paciente</ion-select-option>
-                <ion-select-option value="Empresa">Empresa</ion-select-option>
+
+              <ion-select
+                name="role"
+                ngModel
+                >
+
+                <ion-select-option value="">
+                  Seleccione
+                </ion-select-option>
+
+                <ion-select-option value="Paciente">
+                  Paciente
+                </ion-select-option>
+
+                <ion-select-option value="Empresa">
+                  Empresa
+                </ion-select-option>
+
               </ion-select>
             </ion-item>
 
+            <!-- TERMS -->
             <ion-item>
-              <ion-checkbox slot="start" name="term" ngModel required></ion-checkbox>
-              <ion-label>Acepto términos</ion-label>
+
+              <ion-checkbox
+                slot="start"
+                name="term"
+                ngModel
+                >
+              </ion-checkbox>
+
+              <ion-label>
+                Acepto términos
+              </ion-label>
+
             </ion-item>
           }
 
+          <!-- BUTTON -->
           <div class="boton">
-            <ion-button type="submit">{{isEditMode ? "Guardar Cambios" : "Registrarse"}}</ion-button>
+            <ion-button type="submit">
+              {{isEditMode ? "Guardar Cambios" : "Registrarse"}}
+            </ion-button>
           </div>
 
         </form>
+
       </div>
     </div>
 
