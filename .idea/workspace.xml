@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Se ha arreglado el problema de scroll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
+    <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="" />
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +41,12 @@
     &quot;assignee&quot;: &quot;Enric1005&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Enric1005/CanaryMed.git",
-    "accountId": "c3da7310-c75f-47d8-bc64-413dee4639a8"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Enric1005/CanaryMed.git&quot;,
+    &quot;accountId&quot;: &quot;c3da7310-c75f-47d8-bc64-413dee4639a8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -53,62 +55,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.about_us.html.executor": "Run",
-    "JavaScript Debug.app.component.html.executor": "Run",
-    "JavaScript Debug.app.html.executor": "Run",
-    "JavaScript Debug.center.html.executor": "Run",
-    "JavaScript Debug.center_page.html.executor": "Run",
-    "JavaScript Debug.centers.html.executor": "Run",
-    "JavaScript Debug.centro.html.executor": "Run",
-    "JavaScript Debug.clients_asist.html.executor": "Run",
-    "JavaScript Debug.colabora_base.html.executor": "Run",
-    "JavaScript Debug.filter.html.executor": "Run",
-    "JavaScript Debug.footer.html.executor": "Run",
-    "JavaScript Debug.header.html.executor": "Run",
-    "JavaScript Debug.home.html.executor": "Run",
-    "JavaScript Debug.home_page.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.login.html.executor": "Run",
-    "JavaScript Debug.make_an_appointment.html.executor": "Run",
-    "JavaScript Debug.pending_appointment.html.executor": "Run",
-    "JavaScript Debug.pending_appointments.html.executor": "Run",
-    "JavaScript Debug.profile.html.executor": "Run",
-    "JavaScript Debug.profile_section.html.executor": "Run",
-    "JavaScript Debug.register-edit.html.executor": "Run",
-    "JavaScript Debug.register_edit.html.executor": "Run",
-    "JavaScript Debug.specialty.html.executor": "Run",
-    "JavaScript Debug.specialty_center.html.executor": "Run",
-    "JavaScript Debug.specialty_page.html.executor": "Run",
-    "JavaScript Debug.specialtys.html.executor": "Run",
-    "JavaScript Debug.work_with_us.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "SPRINT4",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/enriq/WebstormProjects/CanaryMed",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.Angular CLI Server.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\erick_lxsq22o\\Desktop\\3º\\Segundo Cuatrimeste\\4. PWM\\CanaryMed\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Users\\erick_lxsq22o\\Desktop\\3º\\Segundo Cuatrimeste\\4. PWM\\CanaryMed\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.about_us.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.app.component.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.app.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.center.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.center_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.centers.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.centro.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.clients_asist.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.colabora_base.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.filter.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.localhost:8100.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.make_an_appointment.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.pending_appointment.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.pending_appointments.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile_section.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register-edit.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register_edit.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty_center.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialty_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.specialtys.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.work_with_us.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SPRINT4&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/enriq/WebstormProjects/CanaryMed&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\erick_lxsq22o\\Desktop\\3º\\Segundo Cuatrimeste\\4. PWM\\CanaryMed\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Documents" />
@@ -118,8 +121,11 @@
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="JavaScript Debug.localhost:8100">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost:8100" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8100/">
       <method v="2" />
     </configuration>
     <configuration name="Angular CLI Server" type="js.build_tools.npm">
@@ -132,6 +138,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:8100" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
