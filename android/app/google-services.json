@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816032465149",
+    "project_id": "canarymed-9d526",
+    "storage_bucket": "canarymed-9d526.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816032465149:android:77bfac1d86cb8722bc3e94",
+        "android_client_info": {
+          "package_name": "com.canarymed.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMQhislkiaj2h9OC0Woyz16YKAveUBnRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

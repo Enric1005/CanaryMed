@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Se ha arreglado el problema de scroll">
+    <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Resolución de conflictos">
+      <change afterPath="$PROJECT_DIR$/android/app/google-services.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
     </list>
     <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="" />
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
@@ -41,12 +41,12 @@
     &quot;assignee&quot;: &quot;Enric1005&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Enric1005/CanaryMed.git&quot;,
-    &quot;accountId&quot;: &quot;c3da7310-c75f-47d8-bc64-413dee4639a8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Enric1005/CanaryMed.git",
+    "accountId": "b400d61a-abcf-4aed-9a21-32405755eefd"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -105,7 +105,7 @@
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\erick_lxsq22o\\Desktop\\3º\\Segundo Cuatrimeste\\4. PWM\\CanaryMed\\node_modules\\prettier&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\node_modules\\typescript\\lib&quot;,
@@ -114,11 +114,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\android\app" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Documents" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Templates" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Mockups" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Paginas" />
-      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.localhost:8100">
@@ -212,6 +212,7 @@
       <workItem from="1778602042247" duration="6094000" />
       <workItem from="1778881879219" duration="1806000" />
       <workItem from="1779207567708" duration="2517000" />
+      <workItem from="1779557693675" duration="1369000" />
     </task>
     <task id="LOCAL-00001" summary="Se ha arreglado el problema de scroll">
       <option name="closed" value="true" />
@@ -221,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779211738614</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se ha añadido la base de datos sqlite">
+      <option name="closed" value="true" />
+      <created>1779553845884</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779553845884</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Resolución de conflictos">
+      <option name="closed" value="true" />
+      <created>1779553957235</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779553957235</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +257,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se ha arreglado el problema de scroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se ha arreglado el problema de scroll" />
+    <MESSAGE value="Se ha añadido la base de datos sqlite" />
+    <MESSAGE value="Resolución de conflictos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolución de conflictos" />
   </component>
 </project>
