@@ -1,23 +1,38 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {Router, RouterLink} from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CitaService } from '../../services/cita';
-import {getAuth} from '@angular/fire/auth';
-import {CrudService} from '../../services/crudService';
-import {take} from 'rxjs';
+import { getAuth } from '@angular/fire/auth';
+import { SqliteService } from '../../services/sqlite';
 import {
-  IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
-  IonButton, IonText, IonModal,
-  IonHeader, IonToolbar, IonTitle, IonContent
+  IonCard,
+  IonCardContent,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonButton,
+  IonText,
+  IonModal,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
 } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-center',
   standalone: true,
-  imports: [FormsModule, RouterLink,
-    IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
-    IonButton, IonText, IonModal,
-    IonHeader, IonToolbar, IonTitle
+  imports: [
+    FormsModule,
+    RouterLink,
+    IonCard,
+    IonCardContent,
+    IonCardTitle,
+    IonCardSubtitle,
+    IonButton,
+    IonText,
+    IonModal,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
   ],
   templateUrl: './center.html',
   styleUrl: './center.css',
@@ -26,9 +41,13 @@ export class Center {
   @Input() center: any;
   showLoginPopup = false;
 
-  constructor(private cita: CitaService, private router: Router, private crudService: CrudService) {}
+  constructor(
+    private cita: CitaService,
+    private router: Router,
+    private sqlite: SqliteService,
+  ) {}
 
-  handleFavoriteClick(event: MouseEvent, center: any) {
+  async handleFavoriteClick(event: MouseEvent, center: any) {
     const user = getAuth().currentUser;
 
     if (!user) {
@@ -37,29 +56,21 @@ export class Center {
       return;
     }
 
-    const favoritoString = `${center.name} - ${this.center.sitio} - ${this.center.precio}`;
-    try {
-      this.crudService.getWhere<any>('users', 'uid', '==', user.uid)
-        .pipe(take(1))
-        .subscribe(async (users) => {
-          if (users.length === 0) {
-            alert('No se encontró tu usuario');
-            return;
-          }
-          const userId = users[0].id;
-          const favs: string[] = users[0].favs ?? [];
-          const yaEsFavorito = favs.includes(favoritoString);
+    const favoritoString = `${center.name} - ${center.sitio} - ${center.precio}`;
 
-          if (!yaEsFavorito) {
-            await this.crudService.addToArray('users', userId, 'favs', favoritoString);
-          } else {
-            await this.crudService.removeFromArray('users', userId, 'favs', favoritoString);
-          }
-          center.isFavorite = !yaEsFavorito;
-        });
+    try {
+      const yaEsFavorito = await this.sqlite.isFavorito(user.uid, favoritoString);
+
+      if (yaEsFavorito) {
+        await this.sqlite.removeFavorito(user.uid, favoritoString);
+      } else {
+        await this.sqlite.addFavorito(user.uid, favoritoString);
+      }
+
+      center.isFavorite = !yaEsFavorito;
     } catch (error) {
-      console.error('Error al guardar su centro como favorito:', error);
-      alert('Hubo un error al guardar su centro como favorito');
+      console.error('Error al guardar favorito:', error);
+      alert('Hubo un error al guardar el favorito');
     }
   }
 

@@ -20,6 +20,7 @@ import {
   templateUrl: './pending-appointments.html',
   styleUrl: './pending-appointments.css',
 })
+
 export class PendingAppointments implements OnInit, OnDestroy {
   titulo: string = '';
   items: string[] = [];
@@ -47,7 +48,7 @@ export class PendingAppointments implements OnInit, OnDestroy {
             .subscribe(res => {
               const userData = res[0];
               this.userId = userData.id!;
-
+              console.log('TITULO REAL:', this.titulo);
               if (this.titulo === 'Favoritos') this.items = userData.favs ?? [];
               else if (this.titulo === 'Pendientes') this.items = userData.pendientes ?? [];
               else if (this.titulo === 'Historial') this.items = userData.hist ?? [];
