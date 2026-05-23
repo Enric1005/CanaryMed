@@ -36,7 +36,7 @@ export class RegisterEdit implements OnInit, OnDestroy {
     private router: Router,
     private auth: Auth,
   ) {}
-
+  termAccepted: boolean = false;
   private crudService = inject(CrudService);
   private cd = inject(ChangeDetectorRef);
 
@@ -64,6 +64,12 @@ export class RegisterEdit implements OnInit, OnDestroy {
   async onSubmit(form: NgForm) {
     if (form.invalid) {
       alert("Completa todos los campos");
+      console.log(form.value);
+      return;
+    }
+
+    if (!this.termAccepted) {
+      alert("Debes de aceptar los terminos");
       return;
     }
 

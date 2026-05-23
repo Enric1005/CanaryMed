@@ -19,7 +19,6 @@
               name="name"
               type="text"
               [(ngModel)]="userData.name"
-              required
               pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,20}">
             </ion-input>
           </ion-item>
@@ -31,7 +30,7 @@
               name="surname"
               type="text"
               [(ngModel)]="userData.surname"
-              required>
+              >
             </ion-input>
           </ion-item>
 
@@ -45,7 +44,7 @@
                 type="email"
                 placeholder="ejemplo@gmail.com"
                 ngModel
-                required>
+                >
               </ion-input>
             </ion-item>
 
@@ -56,7 +55,7 @@
                 name="email_confirm"
                 type="email"
                 ngModel
-                required>
+                >
               </ion-input>
             </ion-item>
 
@@ -68,7 +67,6 @@
                 type="password"
                 placeholder="123456A_"
                 ngModel
-                required
                 pattern="^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$">
               </ion-input>
             </ion-item>
@@ -80,7 +78,7 @@
                 name="password_confirmed"
                 type="password"
                 ngModel
-                required>
+                >
               </ion-input>
             </ion-item>
           }
@@ -97,7 +95,7 @@
                 name="currentPassword"
                 type="password"
                 ngModel
-                required>
+                >
               </ion-input>
             </ion-item>
           }
@@ -108,9 +106,8 @@
             <ion-input
               name="DNI"
               type="text"
-              placeholder="XXXXXXXXH"
+              placeholder="11111111H"
               [(ngModel)]="userData.DNI"
-              required
               pattern="[0-9]{8}[A-Z]{1}">
             </ion-input>
           </ion-item>
@@ -122,7 +119,6 @@
               name="phone"
               type="tel"
               [(ngModel)]="userData.phoneNumber"
-              required
               pattern="[0-9]{9}">
             </ion-input>
           </ion-item>
@@ -156,12 +152,7 @@
             <!-- TERMS -->
             <ion-item>
 
-              <ion-checkbox
-                slot="start"
-                name="term"
-                ngModel
-                >
-              </ion-checkbox>
+            <ion-checkbox slot="start" name="term" [(ngModel)]="termAccepted"></ion-checkbox>
 
               <ion-label>
                 Acepto términos
