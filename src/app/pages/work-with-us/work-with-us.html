@@ -1,12 +1,11 @@
-<app-header></app-header>
-
 <ion-content>
+  <app-header></app-header>
 
   <app-colabora-base></app-colabora-base>
 
   @if(loading){
     <div class="no-login">
-      <ion-button disabled>Cargando...</ion-button>
+      <ion-button [disabled] = "true">Cargando...</ion-button>
     </div>
   } @else if(!user || user.role === "Paciente" || (user && user.role !== 'Empresa')){
     <div class="no-login">
@@ -51,6 +50,6 @@
     </div>
   }
 
+  <app-footer></app-footer>
 </ion-content>
 
-<app-footer></app-footer>
