@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Se ha arreglado el problema de scroll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/footer/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/footer/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.html" afterDir="false" />
     </list>
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
     <option name="SHOW_DIALOG" value="false" />

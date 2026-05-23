@@ -1,7 +1,5 @@
 <ion-card class="specialty-section">
-
   <ion-card-content class="specialty-content">
-
     <div class="specialty-image">
       <img
         class="specialty"
@@ -10,27 +8,16 @@
     </div>
 
     <div class="specialty-text">
-
-      <ion-card-title>
-        {{ specialty1?.name }}
-      </ion-card-title>
-
-      <ion-card-subtitle>
-        {{ specialty1?.desc }}
-      </ion-card-subtitle>
+      <ion-card-title>{{ specialty1?.name }}</ion-card-title>
+      <ion-card-subtitle>{{ specialty1?.desc }}</ion-card-subtitle>
 
       <ion-button
         type="button"
         class="specialty-button"
         (click)="seleccionarEspecialidad(specialty1)"
         [routerLink]="['/specialty_page', specialty1.id]">
-
         Ver centros
-
       </ion-button>
-
     </div>
-
   </ion-card-content>
-
 </ion-card>
