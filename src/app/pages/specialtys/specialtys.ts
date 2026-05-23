@@ -16,7 +16,7 @@ import {
   selector: 'app-specialtys',
   standalone: true,
   imports: [CommonModule, Header, Footer, Specialty, Filter, LoadingSpinner,
-    IonHeader, IonContent
+   IonContent
   ],
   templateUrl: './specialtys.html',
   styleUrl: './specialtys.css',

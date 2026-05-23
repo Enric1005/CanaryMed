@@ -16,7 +16,7 @@ import {
 @Component({
   selector: 'app-specialty-page',
   imports: [Footer, Header, RouterLink, AsyncPipe, SpecialtyCenter, LoadingSpinner,
-    IonHeader, IonContent, IonButton, IonText
+    IonContent, IonButton, IonText
   ],
   templateUrl: './specialty-page.html',
   styleUrl: './specialty-page.css',

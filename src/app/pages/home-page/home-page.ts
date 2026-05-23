@@ -9,8 +9,7 @@ import {
 @Component({
   selector: 'app-home-page',
   imports: [
-    Header, Home, Footer,
-    IonHeader, IonContent
+    Header, Home, Footer, IonContent
   ],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',

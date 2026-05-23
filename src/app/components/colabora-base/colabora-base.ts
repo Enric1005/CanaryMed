@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import {Location} from '@angular/common';
-import { IonButton, IonText, IonContent } from '@ionic/angular/standalone';
+import { IonButton, IonText } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-colabora-base',
-  imports: [IonButton, IonText, IonContent],
+  imports: [IonButton, IonText],
   templateUrl: './colabora-base.html',
   styleUrl: './colabora-base.css',
   standalone: true,

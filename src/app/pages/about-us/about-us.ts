@@ -6,8 +6,7 @@ import { IonHeader, IonContent, IonText, IonCard, IonCardContent } from '@ionic/
 @Component({
   selector: 'app-about-us',
   imports: [
-    Footer, Header,
-    IonHeader, IonContent, IonText, IonCard, IonCardContent
+    Footer, Header, IonContent, IonText, IonCard, IonCardContent
   ],
   templateUrl: './about-us.html',
   styleUrl: './about-us.css',

@@ -34,8 +34,18 @@ main {
   margin-bottom: 24px;
 }
 
+ion-item {
+  --border-radius: 12px;
+  --background: white;
+  --border-color: transparent;
+  --inner-border-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
 .login ion-input {
-  --border-radius: 8px;
+  --border-radius: 20px;
   --padding-end: 12px;
   --min-height: 36px;
 }

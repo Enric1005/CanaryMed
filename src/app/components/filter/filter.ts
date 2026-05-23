@@ -6,7 +6,7 @@ import { IonLabel, IonCheckbox, IonButton, IonContent, IonItem } from '@ionic/an
   templateUrl: './filter.html',
   styleUrls: ['./filter.css'],
   standalone: true,
-  imports: [IonLabel, IonCheckbox, IonButton, IonContent, IonItem],
+  imports: [IonCheckbox, IonButton],
 })
 export class Filter {
   @Input() filtro: { options: string[] } = { options: [] };

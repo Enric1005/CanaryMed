@@ -19,6 +19,6 @@ export class ProfileSection {
   constructor(private router: Router) {}
 
   verMas() {
-    this.router.navigate(['/pendingAppointments'], { queryParams: { titulo: this.titulo } });
+    this.router.navigate(['/pending-appointments'], { queryParams: { titulo: this.titulo } });
   }
 }

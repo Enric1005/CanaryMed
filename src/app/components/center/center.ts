@@ -17,7 +17,7 @@ import {
   imports: [FormsModule, RouterLink,
     IonCard, IonCardContent, IonCardTitle, IonCardSubtitle,
     IonButton, IonText, IonModal,
-    IonHeader, IonToolbar, IonTitle, IonContent
+    IonHeader, IonToolbar, IonTitle
   ],
   templateUrl: './center.html',
   styleUrl: './center.css',

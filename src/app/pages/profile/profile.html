@@ -25,11 +25,17 @@
           </div>
 
           <div class="profile-buttons">
-            <ion-button [routerLink]="['/register-edit']" id ="btn_esp">Editar</ion-button>
-            <ion-button fill="outline" (click)="logout()">Cerrar Sesión</ion-button>
+            <ion-button [routerLink]="['/register-edit']" fill="solid" color="primary">
+              Editar
+            </ion-button>
+            <ion-button fill="outline" color="medium" (click)="logout()">
+              Cerrar Sesión
+            </ion-button>
           </div>
           <hr>
-          <ion-button expand="block" color="danger" fill="outline" id="delete_btn" (click)="deleteMode()">Eliminar Cuenta</ion-button>
+          <ion-button expand="block" id="delete_btn" (click)="deleteMode()">
+            Eliminar Cuenta
+          </ion-button>
         </div>
       </div>
 
@@ -48,5 +54,4 @@
   } @else {
     <app-loading-spinner/>
   }
-  <app-footer></app-footer>
 </ion-content>

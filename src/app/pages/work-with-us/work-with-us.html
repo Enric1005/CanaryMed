@@ -1,62 +1,52 @@
-
 <app-header></app-header>
-
 
 <ion-content>
 
   <app-colabora-base></app-colabora-base>
 
-  @if(!user || (user && user.role === "Paciente")){
+  @if(loading){
+    <div class="no-login">
+      <ion-button disabled>Cargando...</ion-button>
+    </div>
+  } @else if(!user || user.role === "Paciente" || (user && user.role !== 'Empresa')){
     <div class="no-login">
       <ion-button (click)="goRegister()">Registrarse como empresa</ion-button>
     </div>
-  }
-
-  @else if(user && user.role === 'Empresa'){
+  } @else if(user && user.role === 'Empresa'){
     <div class="formulario">
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <ion-item>
-          <ion-label position="stacked">*Institución Sanitaria</ion-label>
-          <ion-input name="institucion" ngModel [required]="true" [minlength]="2" placeholder="Hospital San Roque"></ion-input>
-        </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked">*Correo Institucional</ion-label>
-          <ion-input name="correo" type="email" ngModel [required]="true" placeholder="institucionEjemplo@gmail.com"></ion-input>
-        </ion-item>
+        <label>*Institución Sanitaria</label>
+        <input name="institucion" ngModel required minlength="2" placeholder="Hospital San Roque">
 
-        <ion-item>
-          <ion-label position="stacked">*Número Telefónico</ion-label>
-          <ion-input name="telefono" ngModel [required]="true" pattern="\d{9}" placeholder="Número de la institución"></ion-input>
-        </ion-item>
+        <label>*Correo Institucional</label>
+        <input name="correo" type="email" ngModel required placeholder="institucionEjemplo@gmail.com">
 
-        <ion-item>
-          <ion-label position="stacked">*Dirección</ion-label>
-          <ion-input name="direccion" ngModel [required]="true" [minlength]="5" placeholder="Calle Diego Betancourt"></ion-input>
-        </ion-item>
+        <label>*Número Telefónico</label>
+        <input name="telefono" ngModel required pattern="\d{9}" placeholder="Número de la institución">
 
-        <ion-item>
-          <ion-label position="stacked">*Tipo de Especialidad</ion-label>
-          <ion-select name="tipoEspecialidad" ngModel [required]="true">
-            <ion-select-option value="" selected></ion-select-option>
-            <ion-select-option value="oncología">Oncología Médica</ion-select-option>
-            <ion-select-option value="quirúrgico">Quirúrgico</ion-select-option>
-            <ion-select-option value="no_quirúrgico">No Quirúrgico</ion-select-option>
-            <ion-select-option value="diagnóstico">Diagnóstico</ion-select-option>
-            <ion-select-option value="medicina_general">Medicina General</ion-select-option>
-            <ion-select-option value="respiratorio">Respiratorio</ion-select-option>
-            <ion-select-option value="otro">Otro</ion-select-option>
-          </ion-select>
-        </ion-item>
+        <label>*Dirección</label>
+        <input name="direccion" ngModel required minlength="5" placeholder="Calle Diego Betancourt">
 
-        <ion-item>
-          <ion-label position="stacked">*Especialidad</ion-label>
-          <ion-input name="especialidad" ngModel [required]="true" [minlength]="2" placeholder="Cardiología"></ion-input>
-        </ion-item>
+        <label>*Tipo de Especialidad</label>
+        <select name="tipoEspecialidad" ngModel required>
+          <option value="" disabled selected></option>
+          <option value="oncología">Oncología Médica</option>
+          <option value="quirúrgico">Quirúrgico</option>
+          <option value="no_quirúrgico">No Quirúrgico</option>
+          <option value="diagnóstico">Diagnóstico</option>
+          <option value="medicina_general">Medicina General</option>
+          <option value="respiratorio">Respiratorio</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label>*Especialidad</label>
+        <input name="especialidad" ngModel required minlength="2" placeholder="Cardiología">
 
         <div class="boton">
           <ion-button type="submit">Colaborar</ion-button>
         </div>
+
       </form>
     </div>
   }

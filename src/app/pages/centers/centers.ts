@@ -17,8 +17,7 @@ import {
 @Component({
   selector: 'app-centers',
   standalone: true,
-  imports: [CommonModule, Header, Center, Footer, Filter, LoadingSpinner,
-    IonHeader, IonContent],
+  imports: [CommonModule, Header, Center, Footer, Filter, LoadingSpinner, IonContent],
   templateUrl: './centers.html',
   styleUrl: './centers.css',
 })
