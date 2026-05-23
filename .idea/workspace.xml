@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Se ha arreglado el problema de scroll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/center-page/center-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/center-page/center-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" afterDir="false" />
     </list>
     <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="" />
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />

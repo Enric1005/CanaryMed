@@ -3,27 +3,31 @@
   flex-direction: column;
   gap: 20px;
   background-color: white;
-  align-items: center;
-  padding: 0 20px;
+  width: 100%;
+  padding: 16px;
   box-sizing: border-box;
+  align-items: center;
 }
 
+/* CONTENEDOR DEL HEADER + TITULO */
 .text-section3 {
   width: 100%;
-  max-width: 1025px;  /* 👈 mismo ancho que las tarjetas */
+  max-width: 1025px;
 }
 
+/* HEADER (TITULO + BOTÓN) */
 .text-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  gap: 12px;
 }
 
 .text-header h1 {
   margin: 0;
 }
 
+/* BOTÓN */
 .section-btn {
   height: 40px;
   display: flex;
@@ -33,92 +37,55 @@
   cursor: pointer;
 }
 
+/* SEPARADOR */
+hr {
+  margin: 20px 0;
+  border: none;
+  height: 2px;
+  background-color: #aaa;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* CONTENEDOR DE TARJETAS */
 .appointments-container {
   width: 100%;
-  max-width: 1025px;  /* 👈 mismo ancho que las tarjetas */
+  max-width: 1025px;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  align-items: stretch; /* importante para tarjetas */
 }
 
+/* RESPONSIVE */
 @media (max-width: 830px) {
+
   .page-container {
-    padding: 0 10px;
+    padding: 10px;
   }
 
-  .text-section3 {
-    width: 100%;
-    max-width: 100%;
+  .text-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .text-header h1 {
     font-size: 1.3rem;
   }
 
-  .text-section3 hr {
-    width: 130px;
-    margin-left: 0;
-    border: 1px solid #ccc;
-  }
-
   .section-btn {
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    white-space: nowrap;
+    width: 100%;
+    justify-content: center;
   }
 
+  hr {
+    width: 100%;
+  }
+
+  .text-section3,
   .appointments-container {
     max-width: 100%;
-  }
-}
-
-@media (max-width: 830px) {
-  ion-content {
-    margin: 0;
-    padding: 0;
-  }
-
-  .text-section3 {
-    width: 74%;
-  }
-
-  .text-header h1 {
-    margin: 0;
-    font-size: 1.3rem;
-    text-align: left;
-  }
-
-  .text-section3 hr {
-    width: 130px;
-    margin-left: 0;
-    border: 1px solid #ccc;
-  }
-
-  .section-btn {
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-
-  .text-section3 {
-    width: 74%;
-  }
-
-  .text-header h1 {
-    margin: 0;
-    font-size: 1.3rem;
-    text-align: left;
-  }
-
-  .text-section3 hr {
-    width: 130px;
-    margin-left: 0;
-    border: 1px solid #ccc;
-  }
-
-  .section-btn {
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    white-space: nowrap;
   }
 }
