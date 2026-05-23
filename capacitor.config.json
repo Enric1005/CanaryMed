@@ -1,6 +1,6 @@
 {
   "appId": "com.canarymed.app",
-  "appName": "CanaryMed2",
+  "appName": "CanaryMed",
   "webDir": "dist/tempapp/browser",
   "server": {
     "androidScheme": "https"
