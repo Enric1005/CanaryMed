@@ -29,7 +29,7 @@
               Editar
             </ion-button>
             <ion-button fill="outline" color="medium" (click)="logout()">
-              Cerrar Sesión
+              Cerrar SesiÃ³n
             </ion-button>
           </div>
           <hr>
@@ -41,13 +41,17 @@
 
       <div class="profile-right">
         <div class="profile-sections">
-          <app-profile-section titulo="Favoritos" [items]="user.favs"></app-profile-section>
+          <!-- En Android los favoritos vienen de SQLite, en web de Firestore -->
+          <app-profile-section
+            titulo="Favoritos"
+            [items]="isAndroid() ? favoritosAndroid : (user.favs ?? [])">
+          </app-profile-section>
         </div>
         <div class="profile-sections">
-          <app-profile-section titulo="Pendientes" [items]="user.pendientes"></app-profile-section>
+          <app-profile-section titulo="Pendientes" [items]="user.pendientes ?? []"></app-profile-section>
         </div>
         <div class="profile-sections">
-          <app-profile-section titulo="Historial" [items]="user.hist"></app-profile-section>
+          <app-profile-section titulo="Historial" [items]="user.hist ?? []"></app-profile-section>
         </div>
       </div>
     </div>

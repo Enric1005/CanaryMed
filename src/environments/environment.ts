@@ -1,5 +1,5 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDMQhislkiaj2h9OC0Woyz16YKAveUBnRk',
+  apiKey: 'AIzaSyCPvwuA7wMDE7-tq-Bn5TmcpdJ3GnOJ9Ac',
   authDomain: 'canarymed-9d526.firebaseapp.com',
   projectId: 'canarymed-9d526',
   storageBucket: 'canarymed-9d526.firebasestorage.app',

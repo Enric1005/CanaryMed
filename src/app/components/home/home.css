@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .home-content {
   display: flex;
   flex-direction: column;

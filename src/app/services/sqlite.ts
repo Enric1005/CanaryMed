@@ -5,39 +5,54 @@ import { CapacitorSQLite, SQLiteConnection, SQLiteDBConnection } from '@capacito
 export class SqliteService {
   private sqlite = new SQLiteConnection(CapacitorSQLite);
   private db!: SQLiteDBConnection;
+  private initPromise: Promise<void> | null = null;
 
-  async init() {
+  async init(): Promise<void> {
+    if (this.initPromise) return this.initPromise;
+    this.initPromise = this._init();
+    return this.initPromise;
+  }
+
+  private async _init(): Promise<void> {
     try {
       this.db = await this.sqlite.createConnection('favoritosDB', false, 'no-encryption', 1, false);
       await this.db.open();
       await this.db.execute(`
-      CREATE TABLE IF NOT EXISTS favoritos (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        uid TEXT NOT NULL,
-        item TEXT NOT NULL,
-        UNIQUE(uid, item)
-      );
-    `);
+        CREATE TABLE IF NOT EXISTS favoritos (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          uid TEXT NOT NULL,
+          item TEXT NOT NULL,
+          UNIQUE(uid, item)
+        );
+      `);
       console.log('SQLite DB creada correctamente');
     } catch (error) {
       console.error('Error en SQLite init:', error);
     }
   }
 
-  async addFavorito(uid: string, item: string) {
+  private async waitReady(): Promise<void> {
+    if (this.initPromise) await this.initPromise;
+  }
+
+  async addFavorito(uid: string, item: string): Promise<void> {
+    await this.waitReady();
     await this.db.run(`INSERT OR IGNORE INTO favoritos (uid, item) VALUES (?, ?)`, [uid, item]);
   }
 
-  async removeFavorito(uid: string, item: string) {
+  async removeFavorito(uid: string, item: string): Promise<void> {
+    await this.waitReady();
     await this.db.run(`DELETE FROM favoritos WHERE uid = ? AND item = ?`, [uid, item]);
   }
 
   async getFavoritos(uid: string): Promise<string[]> {
+    await this.waitReady();
     const result = await this.db.query(`SELECT item FROM favoritos WHERE uid = ?`, [uid]);
     return result.values?.map((r: any) => r.item) ?? [];
   }
 
   async isFavorito(uid: string, item: string): Promise<boolean> {
+    await this.waitReady();
     const result = await this.db.query(`SELECT id FROM favoritos WHERE uid = ? AND item = ?`, [
       uid,
       item,

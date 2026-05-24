@@ -14,12 +14,13 @@ import { Subscription } from 'rxjs';
 import {
   IonItem, IonLabel, IonButton
 } from '@ionic/angular/standalone';
+import { SqliteService } from '../../services/sqlite';
 
 @Component({
   selector: 'app-pending-appointment',
   templateUrl: './pending-appointment.html',
   styleUrl: './pending-appointment.css',
-  imports: [IonItem, IonLabel, IonButton]
+  imports: [IonItem, IonLabel, IonButton],
 })
 export class PendingAppointment implements OnInit, OnDestroy {
   @Input() item: any;
@@ -34,10 +35,11 @@ export class PendingAppointment implements OnInit, OnDestroy {
     private crudService: CrudService,
     private auth: Auth,
     private cd: ChangeDetectorRef,
+    private sqlite: SqliteService,
   ) {}
 
   ngOnInit() {
-    this.authUnsub = this.auth.onAuthStateChanged(user => {
+    this.authUnsub = this.auth.onAuthStateChanged((user) => {
       if (user) {
         this.subscription = this.crudService
           .getWhere<AppUser>('users', 'uid', '==', user.uid)
@@ -60,20 +62,18 @@ export class PendingAppointment implements OnInit, OnDestroy {
   async removeItem() {
     if (!this.user?.id || !this.item) return;
 
-    if (this.titulo === "Favoritos") {
+    if (this.titulo === 'Favoritos') {
       try {
         await this.crudService.removeFromArray('users', this.user.id, 'favs', this.item);
         this.delete.emit(this.item);
       } catch (err) {
         console.error('Error eliminando favorito:', err);
       }
-    }
-    else if (this.titulo === "Pendientes") {
+    } else if (this.titulo === 'Pendientes') {
       try {
         await this.crudService.removeFromArray('users', this.user.id, 'pendientes', this.item);
         this.delete.emit(this.item);
-      }
-      catch (err) {
+      } catch (err) {
         console.error('Error eliminando cita pendiente:', err);
       }
     }

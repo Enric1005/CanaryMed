@@ -8,13 +8,13 @@ import { Firestore, query, where, collectionData } from '@angular/fire/firestore
 import { arrayUnion, arrayRemove} from '@angular/fire/firestore';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CrudService {
-
-  constructor(private ngZone: NgZone) {}
-
-  private firestore = inject(Firestore);
+  constructor(
+    private ngZone: NgZone,
+    private firestore: Firestore,
+  ) {}
 
   getWhere<T>(collectionName: string, field: string, op: any, value: any): Observable<T[]> {
     const ref = collection(this.firestore, collectionName);
@@ -24,13 +24,13 @@ export class CrudService {
   }
 
   getAll<T>(collectionName: string): Observable<T[]> {
-    return new Observable(observer => {
+    return new Observable((observer) => {
       const ref = collection(this.firestore, collectionName);
 
-      const unsubscribe = onSnapshot(ref, snapshot => {
-        const data = snapshot.docs.map(doc => ({
+      const unsubscribe = onSnapshot(ref, (snapshot) => {
+        const data = snapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data()
+          ...doc.data(),
         })) as T[];
 
         this.ngZone.run(() => observer.next(data));
@@ -54,16 +54,15 @@ export class CrudService {
 
   async addToArray(collectionName: string, id: string, field: string, value: any) {
     await updateDoc(doc(this.firestore, collectionName, id), {
-      [field]: arrayUnion(value)
+      [field]: arrayUnion(value),
     });
   }
 
   async removeFromArray(collectionName: string, id: string, field: string, value: any) {
     await updateDoc(doc(this.firestore, collectionName, id), {
-      [field]: arrayRemove(value)
-    })
+      [field]: arrayRemove(value),
+    });
   }
-
 }
 
 

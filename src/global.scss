@@ -18,4 +18,11 @@
   --ion-color-primary: #2A7DE1;
 }
 
+ion-content {
+  --overflow: auto;
+}
+html, body {
+  height: 100%;
+  overflow: auto;
+}
 

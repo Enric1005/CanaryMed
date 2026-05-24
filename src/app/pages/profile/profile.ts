@@ -1,16 +1,15 @@
-import {ChangeDetectorRef, Component, inject, OnDestroy, OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import { ProfileSection } from '../../components/profile-section/profile-section';
 import { Router, RouterLink } from '@angular/router';
-import {Auth, deleteUser, signOut} from '@angular/fire/auth';
+import { Auth, deleteUser, signOut } from '@angular/fire/auth';
 import { Subscription } from 'rxjs';
 import { CrudService } from '../../services/crudService';
-import {LoadingSpinner} from '../../components/loading-spinner/loading-spinner';
-import {
-  IonHeader, IonContent, IonCard, IonCardContent,
-  IonAvatar, IonItem, IonLabel, IonButton
-} from '@ionic/angular/standalone';
+import { LoadingSpinner } from '../../components/loading-spinner/loading-spinner';
+import { Capacitor } from '@capacitor/core';
+import { SqliteService } from '../../services/sqlite';
+import { IonContent, IonButton } from '@ionic/angular/standalone';
 
 export interface AppUser {
   id?: string;
@@ -29,25 +28,20 @@ export interface AppUser {
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [
-    Header,
-    ProfileSection,
-    RouterLink,
-    LoadingSpinner,
-    IonContent,
-    IonButton,
-  ],
+  imports: [Header, ProfileSection, RouterLink, LoadingSpinner, IonContent, IonButton],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
 export class Profile implements OnInit, OnDestroy {
   user!: AppUser;
   userLoaded = false;
+  favoritosAndroid: string[] = [];
   subscription!: Subscription;
   private authUnsub!: () => void;
 
   private crudService = inject(CrudService);
   private cd = inject(ChangeDetectorRef);
+  private sqlite = inject(SqliteService);
 
   constructor(
     private auth: Auth,
@@ -55,8 +49,14 @@ export class Profile implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.authUnsub = this.auth.onAuthStateChanged((user) => {
+    this.authUnsub = this.auth.onAuthStateChanged(async (user) => {
       if (user) {
+        // Cargar favoritos de SQLite en Android
+        if (Capacitor.isNativePlatform()) {
+          this.favoritosAndroid = await this.sqlite.getFavoritos(user.uid);
+          this.cd.detectChanges();
+        }
+
         this.subscription = this.crudService
           .getWhere<AppUser>('users', 'uid', '==', user.uid)
           .subscribe((res) => {
@@ -67,6 +67,18 @@ export class Profile implements OnInit, OnDestroy {
           });
       }
     });
+  }
+
+  // ionViewWillEnter se dispara cada vez que se navega a esta página,
+  // no solo la primera vez. Así el perfil siempre refleja el estado actual de SQLite.
+  async ionViewWillEnter() {
+    if (Capacitor.isNativePlatform()) {
+      const user = this.auth.currentUser;
+      if (user) {
+        this.favoritosAndroid = await this.sqlite.getFavoritos(user.uid);
+        this.cd.detectChanges();
+      }
+    }
   }
 
   ngOnDestroy() {
@@ -133,5 +145,9 @@ export class Profile implements OnInit, OnDestroy {
         await this.crudService.addToArray('users', this.user.id, 'hist', cita);
       }
     }
+  }
+
+  isAndroid(): boolean {
+    return Capacitor.isNativePlatform();
   }
 }

@@ -2,7 +2,6 @@ ion-card {
   width: 100%;
 }
 
-/* CARD PRINCIPAL */
 .specialty-section {
   background-color: #E8F2FF;
   border: 3px solid black;
@@ -10,11 +9,12 @@ ion-card {
   padding: 25px;
   box-sizing: border-box;
   height: 100%;
+  width: 100%;
   max-width: 520px;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
-/* CONTENIDO FLEX */
 .specialty-content {
   display: flex;
   align-items: center;
@@ -70,4 +70,28 @@ ion-card {
   border: none;
   margin-top: 18px;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+
+  .specialty-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .specialty-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .specialty-text {
+    width: 100%;
+  }
+
+  .specialty-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
 }

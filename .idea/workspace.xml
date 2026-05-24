@@ -5,14 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e66bc472-ba2d-4063-9142-338b067e5077" name="Changes" comment="Adaptacion a android">
+      <change afterPath="$PROJECT_DIR$/android/app/src/androidTest/java/com/canarymed/app/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/app/src/main/java/com/canarymed/app/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/example/app/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/.npmkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/center/center.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/center/center.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/pending-appointment/pending-appointment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/centers/centers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/centers/centers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pending-appointments/pending-appointments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profile/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/profile/profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/profile/profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/crudService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/crudService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/services/sqlite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/sqlite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
     </list>
-    <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="" />
+    <list id="e4fcd0ea-d468-43a9-8fc4-d68f9f0fb656" name="Changes by enriq" comment="">
+      <change beforePath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/specialty/specialty.css" afterDir="false" />
+    </list>
     <list id="ea985af9-e282-485b-9dd4-eb554bd5827c" name="Changes by erick_lxsq22o" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +59,12 @@
     &quot;assignee&quot;: &quot;Enric1005&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Enric1005/CanaryMed.git&quot;,
-    &quot;accountId&quot;: &quot;b400d61a-abcf-4aed-9a21-32405755eefd&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Enric1005/CanaryMed.git",
+    "accountId": "b51b23df-7d7b-4d2a-af2a-20779dcf14fe"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -58,73 +73,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.about_us.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.app.component.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.app.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.center.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.center_page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.centers.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.centro.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.clients_asist.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.colabora_base.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.filter.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.footer.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home_page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.localhost:8100.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.make_an_appointment.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.pending_appointment.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.pending_appointments.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.profile.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.profile_section.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.register-edit.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.register_edit.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.specialty.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.specialty_center.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.specialty_page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.specialtys.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.work_with_us.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SPRINT4&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/enriq/WebstormProjects/CanaryMed&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.about_us.html.executor": "Run",
+    "JavaScript Debug.app.component.html.executor": "Run",
+    "JavaScript Debug.app.html.executor": "Run",
+    "JavaScript Debug.center.html.executor": "Run",
+    "JavaScript Debug.center_page.html.executor": "Run",
+    "JavaScript Debug.centers.html.executor": "Run",
+    "JavaScript Debug.centro.html.executor": "Run",
+    "JavaScript Debug.clients_asist.html.executor": "Run",
+    "JavaScript Debug.colabora_base.html.executor": "Run",
+    "JavaScript Debug.filter.html.executor": "Run",
+    "JavaScript Debug.footer.html.executor": "Run",
+    "JavaScript Debug.header.html.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "JavaScript Debug.home_page.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.localhost:8100.executor": "Debug",
+    "JavaScript Debug.login.html.executor": "Run",
+    "JavaScript Debug.make_an_appointment.html.executor": "Run",
+    "JavaScript Debug.pending_appointment.html.executor": "Run",
+    "JavaScript Debug.pending_appointments.html.executor": "Run",
+    "JavaScript Debug.profile.html.executor": "Run",
+    "JavaScript Debug.profile_section.html.executor": "Run",
+    "JavaScript Debug.register-edit.html.executor": "Run",
+    "JavaScript Debug.register_edit.html.executor": "Run",
+    "JavaScript Debug.specialty.html.executor": "Run",
+    "JavaScript Debug.specialty_center.html.executor": "Run",
+    "JavaScript Debug.specialty_page.html.executor": "Run",
+    "JavaScript Debug.specialtys.html.executor": "Run",
+    "JavaScript Debug.work_with_us.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "SPRINT4",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/enriq/WebstormProjects/CanaryMed",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.Angular CLI Server.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\enriq\\WebstormProjects\\CanaryMed\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Users\\casba\\WebstormProjects\\CanaryMed2\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\casba\WebstormProjects\CanaryMed2\android\app\src\androidTest\java\com\canarymed\app" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\android\app" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Documents" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Templates" />
       <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Mockups" />
-      <recent name="C:\Users\enriq\WebstormProjects\CanaryMed\Paginas" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.localhost:8100">
+  <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -217,6 +232,7 @@
       <workItem from="1779207567708" duration="2517000" />
       <workItem from="1779557693675" duration="7526000" />
       <workItem from="1779571638347" duration="348000" />
+      <workItem from="1779640774934" duration="11378000" />
     </task>
     <task id="LOCAL-00001" summary="Se ha arreglado el problema de scroll">
       <option name="closed" value="true" />

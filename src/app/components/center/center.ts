@@ -1,4 +1,4 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { CitaService } from '../../services/cita';
@@ -49,12 +49,14 @@ export class Center {
   private router = inject(Router);
   private crudService = inject(CrudService);
   private sqlite = inject(SqliteService);
+  private cd = inject(ChangeDetectorRef);
 
   async handleFavoriteClick(event: MouseEvent, center: any) {
+    event.preventDefault(); // evitar que el checkbox cambie solo antes de confirmar
+
     const user = this.auth.currentUser;
 
     if (!user) {
-      event.preventDefault();
       this.showLoginPopup = true;
       return;
     }
@@ -69,7 +71,9 @@ export class Center {
         } else {
           await this.sqlite.addFavorito(user.uid, favoritoString);
         }
+        // Actualizar el estado y forzar detección de cambios
         center.isFavorite = !yaEsFavorito;
+        this.cd.detectChanges();
       } catch (error) {
         console.error('Error al guardar favorito en SQLite:', error);
         alert('Hubo un error al guardar el favorito');
@@ -95,6 +99,7 @@ export class Center {
             }
 
             center.isFavorite = !yaEsFavorito;
+            this.cd.detectChanges();
           });
       } catch (error) {
         console.error('Error al guardar favorito en Firestore:', error);
